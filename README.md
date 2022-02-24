@@ -6,3 +6,9 @@ Next JS
 Testing: 
 Cypress 
 Cucumber 
+
+
+Testing Hints
+
+Use by role 
+https://testing-library.com/docs/queries/byrole/
