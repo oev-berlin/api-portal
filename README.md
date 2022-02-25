@@ -24,26 +24,26 @@
 1. Before writing new Component `component`, add new jest component for this component in `__tests__/components/component.tsx`
 2. Write tests:
    1. Screenshot test
-   2. Test which describe a right behavior
-      - For input field for example, set assertion of the output with the right input
+   2. Test which describes a right behavior
+      - For input field, for example, set assertion of the output with the right input
    3. Test which describes a wrong behavior
-      - For input field for example, set assertion of the output with the errors
-3. Always use mockups, never built in data in the tests.
+      - For input field, for example, set assertion of the output with the errors
+3. Always use mockups, never built-in data in the tests.
 
 ### End-To-End tests
 
-Implement the assertions with cypress and the behaviour with cucumber will allow us writing user stories in an easy and understandable.
+Implementing the assertions with cypress and the behavior with cucumber will allow us to write user stories in an easy and understandable.
 The user stories could be written by any stack-holder without any previous knowledge in development.
 This will contribute to the TDD approach.
 
 - Write requirement.
 - we translate into failed tests.
-- we implement the code to pass the test and fulfil the requirements.
+- we implement the code to pass the test and fulfill the requirements.
 
 ---
 
 1. Before writing new Feature `feature`, add `.feature` file and a folder for its steps in `./rsc/cypress/integration/feat.feature, fature\steps.js`
-2. Define different scenarios for this flow, make sure the tests exist before starting to developing the feature and its components
+2. Define different scenarios for this flow, make sure the tests exist before starting to develop the feature and its components
 3. For separate parts of the scenarios with `And` (inside the `When` part, `When I write my username And enter my password And agree to the terms...`) in order to follow the mistakes
 4. ...
 
