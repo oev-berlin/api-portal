@@ -9,8 +9,10 @@
     - [Cypress](https://docs.cypress.io/guides/getting-started/writing-your-first-test),
     - [Cucumber](https://cucumber.io/docs/guides/10-minute-tutorial/),
     - [Cypress-Cucumber-Preprocessor](https://www.npmjs.com/package/cypress-cucumber-preprocessor),
+    - [Playwrite (Safari testing)]() - optional,
   - Unit:
     - [Jest](https://jestjs.io/docs/getting-started)
+    - [Storybook UI](https://storybook.js.org/blog/get-started-with-storybook-and-next-js/)
 - ...
 
 ## TDD Development Process
@@ -18,6 +20,10 @@
 ### Development processes
 
 ### Unit tests
+
+<img src="./assets/jest-logo.png" alt="drawing" width="50"/>
+<img src="./assets/white-plus.png" alt="drawing" width="20" style="position:relative; bottom:10px"/>
+<img src="./assets/storybook.svg" alt="drawing" width="50"/>
 
 ---
 
@@ -38,7 +44,11 @@ This will contribute to the TDD approach.
 
 - Write requirement.
 - we translate into failed tests.
-- we implement the code to pass the test and fulfill the requirements.
+- we imcplement the code to pass the test and fulfill the requirements.
+
+<img src="./assets/cypress-logo.png" alt="drawing" width="50"/> 
+<img src="./assets/white-plus.png" alt="drawing" width="20" style="position:relative; bottom:10px; left: 2px"/> 
+<img src="./assets/cucumberjs-logo.png" alt="drawing" width="50"/>
 
 ---
 
@@ -58,7 +68,14 @@ https://testing-library.com/docs/queries/byrole/
 
 ```
 Project
+    .husky\
+        _\
+        package.json
+        pre-commit              ................... Precommit hook sctipt
     .next\
+    .storybook\
+        main.js                 ................... Declare plugins and other configs
+        preview.js              ................... Determine how to render the stories
     __mocks__\                  ................... Mockups for the Unit tests
     __tests__\                  ................... Unit tests
         components\             ................... Component unit tests
@@ -66,26 +83,33 @@ Project
         page\                   ................... Pages unit tests
         index.test.tsx
     cypress\
-        downloads\              ...................
-        fixtures\               ...................
+        downloads\
+        fixtures\
         integrations\           ................... E2E steps
             main-app.feature    ................... Describe the Feature to test with Gherkin
             main-app\
                 steps.js        ................... Describe the step of the Gherkin feature test
-        plugins\                ...................
-            index.js            ...................
+        plugins\
+            index.js
         support \
             commands.js
             index.js
     node_modules\
     pages\                      ...................
-        api\                    ...................
+        api\
             helo.ts             ...................
-        _app.tsx                ...................
-        index.tsx               ...................
+        _app.tsx
+        index.tsx               ................... Main app
     public\                     ................... Public files
         favicon.ico
         vercel.svg
+    stories\
+        pages\
+            ...
+        components\
+            ...
+        partials\
+            ...
     styles\
         components\             ................... Styles for components only
             ...
