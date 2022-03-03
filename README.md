@@ -52,7 +52,7 @@ This will contribute to the TDD approach.
 
 ---
 
-1. Before writing new Feature `feature`, add `.feature` file and a folder for its steps in `./rsc/cypress/integration/feat.feature, fature\steps.js`
+1. Before writing new Feature `feature`, add `.feature` file and a folder for its steps in `./rsc/cypress/integration/feat.feature, fature\main-app.steps.ts`
 2. Define different scenarios for this flow, make sure the tests exist before starting to develop the feature and its components
 3. For separate parts of the scenarios with `And` (inside the `When` part, `When I write my username And enter my password And agree to the terms...`) in order to follow the mistakes
 4. ...
@@ -88,7 +88,7 @@ Project
         integrations\           ................... E2E steps
             main-app.feature    ................... Describe the Feature to test with Gherkin
             main-app\
-                steps.js        ................... Describe the step of the Gherkin feature test
+                main-app.steps.ts        ................... Describe the step of the Gherkin feature test
         plugins\
             index.js
         support \
