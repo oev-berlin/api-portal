@@ -24,8 +24,7 @@ let browser: ChromiumBrowser | FirefoxBrowser | WebKitBrowser;
 const tracesDir = 'traces';
 
 declare global {
-  // eslint-disable-next-line no-var
-  var browser: ChromiumBrowser | FirefoxBrowser | WebKitBrowser;
+  let browser: ChromiumBrowser | FirefoxBrowser | WebKitBrowser;
 }
 
 setDefaultTimeout(process.env.PWDEBUG ? -1 : 60 * 1000);

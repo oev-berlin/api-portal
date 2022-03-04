@@ -70,6 +70,14 @@ _We can test snapshots by pixels with Playwright_
 - `yarn run cucumber-js path/to/feature.feature` : Run specific E2E test - headless
 - `yarn run debug path/to/feature.feature` : Run specific E2E test in debug mode - headful
 
+For testing in a specific enging (firefox, chromium, webkit(safari) ) add an BROWSER enviroment variable with the engine you would like to test with.
+
+e.g. : `BROWSER=webkit yarn ...`
+
+For **debugging**, use debugging script, or add debug tag (`@debug`) in the first line of the feature
+
+To **ignore** a specific feature, add ignore tag (`@ignore`) in the first line of the feature
+
 ## Project structure
 
 ```
