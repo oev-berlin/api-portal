@@ -1,4 +1,3 @@
-@foo
 Feature: Homepage
 
   Scenario: I navigate to the documentation
@@ -6,4 +5,3 @@ Feature: Homepage
     When The page is loaded
     And I click on the documentation button
     Then I see the documentation page
-

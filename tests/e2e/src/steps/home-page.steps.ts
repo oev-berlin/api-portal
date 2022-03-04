@@ -3,12 +3,6 @@ import expect from 'expect';
 import { ICustomWorld } from '../support/custom-world';
 import { config } from '../support/config';
 
-Then('We see {string} mode', async function (this: ICustomWorld, mode: string) {
-  const page = this.page!;
-  const theme = await page.locator('html').getAttribute('data-theme');
-  expect(theme).toEqual(mode);
-});
-
 Given(
   'I navigate to the homepage',
   { timeout: 60 * 1000 },

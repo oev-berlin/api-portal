@@ -14,7 +14,6 @@ Then('Snapshot', async function (this: ICustomWorld) {
 });
 
 Then('debug', async () => {
-  // eslint-disable-next-line no-debugger
   debugger;
 });
 

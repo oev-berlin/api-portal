@@ -17,5 +17,5 @@ export const config = {
   browserOptions,
   BASE_URL: 'http://localhost:3000/',
   IMG_THRESHOLD: { threshold: 0.4 },
-  BASE_API_URL: 'https://www.boredapi.com/api/',
+  BASE_API_URL: '',
 };
