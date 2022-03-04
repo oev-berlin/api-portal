@@ -1,0 +1,128 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "homepage;i-click-on-the-documentation",
+        "keyword": "Scenario",
+        "line": 2,
+        "name": "I click on the documentation",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 3,
+            "name": "I navigate to the homepage",
+            "match": {
+              "location": "tests/e2e/features/support/steps/pages/home.steps.js:3"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 1000000,
+              "error_message": "TypeError: Cannot read properties of undefined (reading 'goto')\n    at World.<anonymous> (/Users/tamir/WebstormProjects/frontend-template/tests/e2e/features/support/steps/pages/home.steps.js:6:14)\n    at step (/Users/tamir/WebstormProjects/frontend-template/tests/e2e/features/support/steps/pages/home.steps.js:33:23)\n    at Object.next (/Users/tamir/WebstormProjects/frontend-template/tests/e2e/features/support/steps/pages/home.steps.js:14:53)\n    at /Users/tamir/WebstormProjects/frontend-template/tests/e2e/features/support/steps/pages/home.steps.js:8:71\n    at new Promise (<anonymous>)\n    at __awaiter (/Users/tamir/WebstormProjects/frontend-template/tests/e2e/features/support/steps/pages/home.steps.js:4:12)\n    at World.<anonymous> (/Users/tamir/WebstormProjects/frontend-template/tests/e2e/features/support/steps/pages/home.steps.js:40:12)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 4,
+            "name": "The page is loaded",
+            "match": {
+              "location": "tests/e2e/features/support/steps/pages/home.steps.js:11"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 5,
+            "name": "I click on the documentation button",
+            "match": {
+              "location": "tests/e2e/features/support/steps/pages/home.steps.js:15"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "I see the main page",
+            "match": {
+              "location": "tests/e2e/features/support/steps/pages/home.steps.js:20"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "homepage;see-the-home-page",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "See the home page",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "I navigate to the homepage",
+            "match": {
+              "location": "tests/e2e/features/support/steps/pages/home.steps.js:3"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 0,
+              "error_message": "TypeError: Cannot read properties of undefined (reading 'goto')\n    at World.<anonymous> (/Users/tamir/WebstormProjects/frontend-template/tests/e2e/features/support/steps/pages/home.steps.js:6:14)\n    at step (/Users/tamir/WebstormProjects/frontend-template/tests/e2e/features/support/steps/pages/home.steps.js:33:23)\n    at Object.next (/Users/tamir/WebstormProjects/frontend-template/tests/e2e/features/support/steps/pages/home.steps.js:14:53)\n    at /Users/tamir/WebstormProjects/frontend-template/tests/e2e/features/support/steps/pages/home.steps.js:8:71\n    at new Promise (<anonymous>)\n    at __awaiter (/Users/tamir/WebstormProjects/frontend-template/tests/e2e/features/support/steps/pages/home.steps.js:4:12)\n    at World.<anonymous> (/Users/tamir/WebstormProjects/frontend-template/tests/e2e/features/support/steps/pages/home.steps.js:40:12)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "The page is loaded",
+            "match": {
+              "location": "tests/e2e/features/support/steps/pages/home.steps.js:11"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "I see the main page",
+            "match": {
+              "location": "tests/e2e/features/support/steps/pages/home.steps.js:20"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "homepage",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Homepage",
+    "tags": [],
+    "uri": "tests/e2e/features/home.feature"
+  }
+]

@@ -1,9 +1,10 @@
 const { Given, When, Then } = require('@cucumber/cucumber');
 
-Given('I navigate to the homepage', async function () {
+Given('I navigate to the homepage', { timeout: 60 * 1000 }, async function () {
   // Write code here that turns the phrase above into concrete actions
   const { page } = this;
   await page.goto('http://localhost:3000/');
+  console.log(1, this);
   return true;
 });
 
