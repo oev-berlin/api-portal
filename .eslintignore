@@ -1,2 +1,5 @@
 mock.tsx
 *.test*
+test.setup.tsx
+*.steps.ts
+*.feature

@@ -3,27 +3,26 @@
   {
     "./node_modules/@storybook/builder-webpack5/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].use[1]!./stories/button.css":
       (module, __webpack_exports__, __webpack_require__) => {
-        "use strict";
         __webpack_require__.d(__webpack_exports__, {
           Z: () => __WEBPACK_DEFAULT_EXPORT__,
         });
-        var _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ =
-            __webpack_require__(
-              "./node_modules/@storybook/builder-webpack5/node_modules/css-loader/dist/runtime/cssWithMappingToString.js"
-            ),
-          _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default =
-            __webpack_require__.n(
-              _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__
-            ),
-          _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ =
-            __webpack_require__(
-              "./node_modules/@storybook/builder-webpack5/node_modules/css-loader/dist/runtime/api.js"
-            ),
-          ___CSS_LOADER_EXPORT___ = __webpack_require__.n(
-            _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__
-          )()(
-            _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()
+        const _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ =
+          __webpack_require__(
+            "./node_modules/@storybook/builder-webpack5/node_modules/css-loader/dist/runtime/cssWithMappingToString.js"
           );
+        const _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default =
+          __webpack_require__.n(
+            _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__
+          );
+        const _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ =
+          __webpack_require__(
+            "./node_modules/@storybook/builder-webpack5/node_modules/css-loader/dist/runtime/api.js"
+          );
+        const ___CSS_LOADER_EXPORT___ = __webpack_require__.n(
+          _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__
+        )()(
+          _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()
+        );
         ___CSS_LOADER_EXPORT___.push([
           module.id,
           '.storybook-button {\n  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;\n  font-weight: 700;\n  border: 0;\n  border-radius: 3em;\n  cursor: pointer;\n  display: inline-block;\n  line-height: 1;\n}\n.storybook-button--primary {\n  color: white;\n  background-color: #1ea7fd;\n}\n.storybook-button--secondary {\n  color: #333;\n  background-color: transparent;\n  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;\n}\n.storybook-button--small {\n  font-size: 12px;\n  padding: 10px 16px;\n}\n.storybook-button--medium {\n  font-size: 14px;\n  padding: 11px 20px;\n}\n.storybook-button--large {\n  font-size: 16px;\n  padding: 12px 24px;\n}\n',
@@ -44,27 +43,26 @@
       },
     "./node_modules/@storybook/builder-webpack5/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].use[1]!./stories/header.css":
       (module, __webpack_exports__, __webpack_require__) => {
-        "use strict";
         __webpack_require__.d(__webpack_exports__, {
           Z: () => __WEBPACK_DEFAULT_EXPORT__,
         });
-        var _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ =
-            __webpack_require__(
-              "./node_modules/@storybook/builder-webpack5/node_modules/css-loader/dist/runtime/cssWithMappingToString.js"
-            ),
-          _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default =
-            __webpack_require__.n(
-              _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__
-            ),
-          _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ =
-            __webpack_require__(
-              "./node_modules/@storybook/builder-webpack5/node_modules/css-loader/dist/runtime/api.js"
-            ),
-          ___CSS_LOADER_EXPORT___ = __webpack_require__.n(
-            _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__
-          )()(
-            _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()
+        const _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ =
+          __webpack_require__(
+            "./node_modules/@storybook/builder-webpack5/node_modules/css-loader/dist/runtime/cssWithMappingToString.js"
           );
+        const _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default =
+          __webpack_require__.n(
+            _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__
+          );
+        const _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ =
+          __webpack_require__(
+            "./node_modules/@storybook/builder-webpack5/node_modules/css-loader/dist/runtime/api.js"
+          );
+        const ___CSS_LOADER_EXPORT___ = __webpack_require__.n(
+          _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__
+        )()(
+          _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()
+        );
         ___CSS_LOADER_EXPORT___.push([
           module.id,
           '.wrapper {\n  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;\n  border-bottom: 1px solid rgba(0, 0, 0, 0.1);\n  padding: 15px 20px;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n}\n\nsvg {\n  display: inline-block;\n  vertical-align: top;\n}\n\nh1 {\n  font-weight: 900;\n  font-size: 20px;\n  line-height: 1;\n  margin: 6px 0 6px 10px;\n  display: inline-block;\n  vertical-align: top;\n}\n\nbutton + button {\n  margin-left: 10px;\n}\n\n.welcome {\n  color: #333;\n  font-size: 14px;\n  margin-right: 10px;\n}\n',
@@ -85,27 +83,26 @@
       },
     "./node_modules/@storybook/builder-webpack5/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].use[1]!./stories/page.css":
       (module, __webpack_exports__, __webpack_require__) => {
-        "use strict";
         __webpack_require__.d(__webpack_exports__, {
           Z: () => __WEBPACK_DEFAULT_EXPORT__,
         });
-        var _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ =
-            __webpack_require__(
-              "./node_modules/@storybook/builder-webpack5/node_modules/css-loader/dist/runtime/cssWithMappingToString.js"
-            ),
-          _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default =
-            __webpack_require__.n(
-              _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__
-            ),
-          _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ =
-            __webpack_require__(
-              "./node_modules/@storybook/builder-webpack5/node_modules/css-loader/dist/runtime/api.js"
-            ),
-          ___CSS_LOADER_EXPORT___ = __webpack_require__.n(
-            _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__
-          )()(
-            _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()
+        const _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ =
+          __webpack_require__(
+            "./node_modules/@storybook/builder-webpack5/node_modules/css-loader/dist/runtime/cssWithMappingToString.js"
           );
+        const _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default =
+          __webpack_require__.n(
+            _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__
+          );
+        const _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ =
+          __webpack_require__(
+            "./node_modules/@storybook/builder-webpack5/node_modules/css-loader/dist/runtime/api.js"
+          );
+        const ___CSS_LOADER_EXPORT___ = __webpack_require__.n(
+          _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__
+        )()(
+          _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()
+        );
         ___CSS_LOADER_EXPORT___.push([
           module.id,
           'section {\n  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;\n  font-size: 14px;\n  line-height: 24px;\n  padding: 48px 20px;\n  margin: 0 auto;\n  max-width: 600px;\n  color: #333;\n}\n\nsection h2 {\n  font-weight: 900;\n  font-size: 32px;\n  line-height: 1;\n  margin: 0 0 4px;\n  display: inline-block;\n  vertical-align: top;\n}\n\nsection p {\n  margin: 1em 0;\n}\n\nsection a {\n  text-decoration: none;\n  color: #1ea7fd;\n}\n\nsection ul {\n  padding-left: 30px;\n  margin: 1em 0;\n}\n\nsection li {\n  margin-bottom: 8px;\n}\n\nsection .tip {\n  display: inline-block;\n  border-radius: 1em;\n  font-size: 11px;\n  line-height: 12px;\n  font-weight: 700;\n  background: #e7fdd8;\n  color: #66bf3c;\n  padding: 4px 12px;\n  margin-right: 10px;\n  vertical-align: top;\n}\n\nsection .tip-wrapper {\n  font-size: 13px;\n  line-height: 20px;\n  margin-top: 40px;\n  margin-bottom: 40px;\n}\n\nsection .tip-wrapper svg {\n  display: inline-block;\n  height: 12px;\n  width: 12px;\n  margin-right: 4px;\n  vertical-align: top;\n  margin-top: 3px;\n}\n\nsection .tip-wrapper svg path {\n  fill: #1ea7fd;\n}\n',
@@ -126,27 +123,26 @@
       },
     "./node_modules/@storybook/builder-webpack5/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].use[1]!./styles/Home.module.css":
       (module, __webpack_exports__, __webpack_require__) => {
-        "use strict";
         __webpack_require__.d(__webpack_exports__, {
           Z: () => __WEBPACK_DEFAULT_EXPORT__,
         });
-        var _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ =
-            __webpack_require__(
-              "./node_modules/@storybook/builder-webpack5/node_modules/css-loader/dist/runtime/cssWithMappingToString.js"
-            ),
-          _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default =
-            __webpack_require__.n(
-              _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__
-            ),
-          _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ =
-            __webpack_require__(
-              "./node_modules/@storybook/builder-webpack5/node_modules/css-loader/dist/runtime/api.js"
-            ),
-          ___CSS_LOADER_EXPORT___ = __webpack_require__.n(
-            _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__
-          )()(
-            _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()
+        const _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ =
+          __webpack_require__(
+            "./node_modules/@storybook/builder-webpack5/node_modules/css-loader/dist/runtime/cssWithMappingToString.js"
           );
+        const _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default =
+          __webpack_require__.n(
+            _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__
+          );
+        const _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ =
+          __webpack_require__(
+            "./node_modules/@storybook/builder-webpack5/node_modules/css-loader/dist/runtime/api.js"
+          );
+        const ___CSS_LOADER_EXPORT___ = __webpack_require__.n(
+          _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__
+        )()(
+          _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()
+        );
         ___CSS_LOADER_EXPORT___.push([
           module.id,
           ".bC09xwD6phS0ISbpme\\+3nQ\\=\\= {\n  padding: 0 2rem;\n}\n\n._2v\\+MSWfIACJVSTlP1xSBCg\\=\\= {\n  min-height: 100vh;\n  padding: 4rem 0;\n  flex: 1;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n}\n\n.scJyNK5VzKppJPxnMpWf7A\\=\\= {\n  display: flex;\n  flex: 1;\n  padding: 2rem 0;\n  border-top: 1px solid #eaeaea;\n  justify-content: center;\n  align-items: center;\n}\n\n.scJyNK5VzKppJPxnMpWf7A\\=\\= a {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex-grow: 1;\n}\n\n.ocxZhtYNt5JuIXOYxdjgtw\\=\\= a {\n  color: #0070f3;\n  text-decoration: none;\n}\n\n.ocxZhtYNt5JuIXOYxdjgtw\\=\\= a:hover,\n.ocxZhtYNt5JuIXOYxdjgtw\\=\\= a:focus,\n.ocxZhtYNt5JuIXOYxdjgtw\\=\\= a:active {\n  text-decoration: underline;\n}\n\n.ocxZhtYNt5JuIXOYxdjgtw\\=\\= {\n  margin: 0;\n  line-height: 1.15;\n  font-size: 4rem;\n}\n\n.ocxZhtYNt5JuIXOYxdjgtw\\=\\=,\n.oyrIws09OacX6zTOPmeHCQ\\=\\= {\n  text-align: center;\n}\n\n.oyrIws09OacX6zTOPmeHCQ\\=\\= {\n  margin: 4rem 0;\n  line-height: 1.5;\n  font-size: 1.5rem;\n}\n\n.rch0\\+ShRfu40\\+dATgdSMPg\\=\\= {\n  background: #fafafa;\n  border-radius: 5px;\n  padding: 0.75rem;\n  font-size: 1.1rem;\n  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,\n    Bitstream Vera Sans Mono, Courier New, monospace;\n}\n\n.l74DaAKHK6MsYFEO23DWYA\\=\\= {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-wrap: wrap;\n  max-width: 800px;\n}\n\n._4eOxYqtHBsg6LOaTztZkMg\\=\\= {\n  margin: 1rem;\n  padding: 1.5rem;\n  text-align: left;\n  color: inherit;\n  text-decoration: none;\n  border: 1px solid #eaeaea;\n  border-radius: 10px;\n  transition: color 0.15s ease, border-color 0.15s ease;\n  max-width: 300px;\n}\n\n._4eOxYqtHBsg6LOaTztZkMg\\=\\=:hover,\n._4eOxYqtHBsg6LOaTztZkMg\\=\\=:focus,\n._4eOxYqtHBsg6LOaTztZkMg\\=\\=:active {\n  color: #0070f3;\n  border-color: #0070f3;\n}\n\n._4eOxYqtHBsg6LOaTztZkMg\\=\\= h2 {\n  margin: 0 0 1rem 0;\n  font-size: 1.5rem;\n}\n\n._4eOxYqtHBsg6LOaTztZkMg\\=\\= p {\n  margin: 0;\n  font-size: 1.25rem;\n  line-height: 1.5;\n}\n\n.EqhOJ4HbCh3GPe2aPOdcOA\\=\\= {\n  height: 1em;\n  margin-left: 0.5rem;\n}\n\n@media (max-width: 600px) {\n  .l74DaAKHK6MsYFEO23DWYA\\=\\= {\n    width: 100%;\n    flex-direction: column;\n  }\n}\n",
@@ -178,27 +174,26 @@
       },
     "./node_modules/@storybook/builder-webpack5/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].use[1]!./styles/globals.css":
       (module, __webpack_exports__, __webpack_require__) => {
-        "use strict";
         __webpack_require__.d(__webpack_exports__, {
           Z: () => __WEBPACK_DEFAULT_EXPORT__,
         });
-        var _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ =
-            __webpack_require__(
-              "./node_modules/@storybook/builder-webpack5/node_modules/css-loader/dist/runtime/cssWithMappingToString.js"
-            ),
-          _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default =
-            __webpack_require__.n(
-              _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__
-            ),
-          _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ =
-            __webpack_require__(
-              "./node_modules/@storybook/builder-webpack5/node_modules/css-loader/dist/runtime/api.js"
-            ),
-          ___CSS_LOADER_EXPORT___ = __webpack_require__.n(
-            _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__
-          )()(
-            _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()
+        const _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ =
+          __webpack_require__(
+            "./node_modules/@storybook/builder-webpack5/node_modules/css-loader/dist/runtime/cssWithMappingToString.js"
           );
+        const _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default =
+          __webpack_require__.n(
+            _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__
+          );
+        const _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ =
+          __webpack_require__(
+            "./node_modules/@storybook/builder-webpack5/node_modules/css-loader/dist/runtime/api.js"
+          );
+        const ___CSS_LOADER_EXPORT___ = __webpack_require__.n(
+          _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__
+        )()(
+          _node_modules_storybook_builder_webpack5_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()
+        );
         ___CSS_LOADER_EXPORT___.push([
           module.id,
           "html,\nbody {\n  padding: 0;\n  margin: 0;\n  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,\n    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;\n}\n\na {\n  color: inherit;\n  text-decoration: none;\n}\n\n* {\n  box-sizing: border-box;\n}\n",
@@ -222,8 +217,7 @@
       __unused_webpack___webpack_exports__,
       __webpack_require__
     ) => {
-      "use strict";
-      var preview_namespaceObject = {};
+      const preview_namespaceObject = {};
       __webpack_require__.r(preview_namespaceObject),
         __webpack_require__.d(preview_namespaceObject, {
           parameters: () => parameters,
@@ -251,41 +245,41 @@
         __webpack_require__(
           "./node_modules/core-js/modules/es.object.define-property.js"
         );
-      var ClientApi = __webpack_require__(
-          "./node_modules/@storybook/client-api/dist/esm/ClientApi.js"
+      const ClientApi = __webpack_require__(
+        "./node_modules/@storybook/client-api/dist/esm/ClientApi.js"
+      );
+      const esm = __webpack_require__(
+        "./node_modules/@storybook/client-logger/dist/esm/index.js"
+      );
+      const injectStylesIntoStyleTag =
+        (__webpack_require__(
+          "./node_modules/core-js/modules/es.object.assign.js"
         ),
-        esm = __webpack_require__(
-          "./node_modules/@storybook/client-logger/dist/esm/index.js"
-        ),
-        injectStylesIntoStyleTag =
-          (__webpack_require__(
-            "./node_modules/core-js/modules/es.object.assign.js"
-          ),
-          __webpack_require__(
-            "./node_modules/@storybook/builder-webpack5/node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js"
-          )),
-        injectStylesIntoStyleTag_default = __webpack_require__.n(
-          injectStylesIntoStyleTag
-        ),
-        globals = __webpack_require__(
-          "./node_modules/@storybook/builder-webpack5/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].use[1]!./styles/globals.css"
-        ),
-        options = { insert: "head", singleton: !1 };
+        __webpack_require__(
+          "./node_modules/@storybook/builder-webpack5/node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js"
+        ));
+      const injectStylesIntoStyleTag_default = __webpack_require__.n(
+        injectStylesIntoStyleTag
+      );
+      const globals = __webpack_require__(
+        "./node_modules/@storybook/builder-webpack5/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].use[1]!./styles/globals.css"
+      );
+      const options = { insert: "head", singleton: !1 };
       injectStylesIntoStyleTag_default()(globals.Z, options);
       globals.Z.locals;
       __webpack_require__("./node_modules/react/index.js");
-      var next_image = __webpack_require__("./node_modules/next/image.js"),
-        jsx_runtime = __webpack_require__(
-          "./node_modules/react/jsx-runtime.js"
-        ),
-        OriginalNextImage = next_image.default;
+      const next_image = __webpack_require__("./node_modules/next/image.js");
+      const jsx_runtime = __webpack_require__(
+        "./node_modules/react/jsx-runtime.js"
+      );
+      const OriginalNextImage = next_image.default;
       Object.defineProperty(next_image, "default", {
         configurable: !0,
         value: function value(props) {
-          return (0, jsx_runtime.jsx)(
-            OriginalNextImage,
-            Object.assign({}, props, { unoptimized: !0 })
-          );
+          return (0, jsx_runtime.jsx)(OriginalNextImage, {
+            ...props,
+            unoptimized: !0,
+          });
         },
       });
       var parameters = {
@@ -295,13 +289,13 @@
         },
       };
       function ownKeys(object, enumerableOnly) {
-        var keys = Object.keys(object);
+        const keys = Object.keys(object);
         if (Object.getOwnPropertySymbols) {
-          var symbols = Object.getOwnPropertySymbols(object);
+          let symbols = Object.getOwnPropertySymbols(object);
           enumerableOnly &&
-            (symbols = symbols.filter(function (sym) {
-              return Object.getOwnPropertyDescriptor(object, sym).enumerable;
-            })),
+            (symbols = symbols.filter(
+              (sym) => Object.getOwnPropertyDescriptor(object, sym).enumerable
+            )),
             keys.push.apply(keys, symbols);
         }
         return keys;
@@ -319,8 +313,8 @@
           obj
         );
       }
-      Object.keys(preview_namespaceObject).forEach(function (key) {
-        var value = preview_namespaceObject[key];
+      Object.keys(preview_namespaceObject).forEach((key) => {
+        const value = preview_namespaceObject[key];
         switch (key) {
           case "args":
           case "argTypes":
@@ -329,20 +323,18 @@
               JSON.stringify(value)
             );
           case "decorators":
-            return value.forEach(function (decorator) {
-              return (0, ClientApi.$9)(decorator, !1);
-            });
+            return value.forEach((decorator) =>
+              (0, ClientApi.$9)(decorator, !1)
+            );
           case "loaders":
-            return value.forEach(function (loader) {
-              return (0, ClientApi.HZ)(loader, !1);
-            });
+            return value.forEach((loader) => (0, ClientApi.HZ)(loader, !1));
           case "parameters":
             return (0, ClientApi.h1)(
               (function _objectSpread(target) {
-                for (var i = 1; i < arguments.length; i++) {
-                  var source = null != arguments[i] ? arguments[i] : {};
+                for (let i = 1; i < arguments.length; i++) {
+                  var source = arguments[i] != null ? arguments[i] : {};
                   i % 2
-                    ? ownKeys(Object(source), !0).forEach(function (key) {
+                    ? ownKeys(Object(source), !0).forEach((key) => {
                         _defineProperty(target, key, source[key]);
                       })
                     : Object.getOwnPropertyDescriptors
@@ -350,7 +342,7 @@
                         target,
                         Object.getOwnPropertyDescriptors(source)
                       )
-                    : ownKeys(Object(source)).forEach(function (key) {
+                    : ownKeys(Object(source)).forEach((key) => {
                         Object.defineProperty(
                           target,
                           key,
@@ -363,13 +355,9 @@
               !1
             );
           case "argTypesEnhancers":
-            return value.forEach(function (enhancer) {
-              return (0, ClientApi.My)(enhancer);
-            });
+            return value.forEach((enhancer) => (0, ClientApi.My)(enhancer));
           case "argsEnhancers":
-            return value.forEach(function (enhancer) {
-              return (0, ClientApi._C)(enhancer);
-            });
+            return value.forEach((enhancer) => (0, ClientApi._C)(enhancer));
           case "render":
             return (0, ClientApi.$P)(value);
           case "globals":
@@ -381,7 +369,7 @@
           case "renderToDOM":
             return null;
           default:
-            return console.log(key + " was not supported :( !");
+            return console.log(`${key} was not supported :( !`);
         }
       });
     },
@@ -390,7 +378,6 @@
       __unused_webpack_exports,
       __webpack_require__
     ) => {
-      "use strict";
       (module = __webpack_require__.nmd(module)),
         (0,
         __webpack_require__(
@@ -413,7 +400,6 @@
       __webpack_exports__,
       __webpack_require__
     ) => {
-      "use strict";
       __webpack_require__.r(__webpack_exports__),
         __webpack_require__.d(__webpack_exports__, {
           default: () => __WEBPACK_DEFAULT_EXPORT__,
@@ -427,21 +413,20 @@
           "./node_modules/core-js/modules/es.function.bind.js"
         ),
         __webpack_require__("./node_modules/react/index.js");
-      var _Button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-          "./stories/Button.tsx"
-        ),
-        react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-          "./node_modules/react/jsx-runtime.js"
-        );
+      const _Button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+        "./stories/Button.tsx"
+      );
+      const react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ =
+        __webpack_require__("./node_modules/react/jsx-runtime.js");
       const __WEBPACK_DEFAULT_EXPORT__ = {
         title: "Example/Button",
         component: _Button__WEBPACK_IMPORTED_MODULE_3__.z,
         argTypes: { backgroundColor: { control: "color" } },
       };
-      var Template = function Template(args) {
+      const Template = function Template(args) {
         return (0, react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(
           _Button__WEBPACK_IMPORTED_MODULE_3__.z,
-          Object.assign({}, args)
+          { ...args }
         );
       };
       Template.displayName = "Template";
@@ -453,29 +438,28 @@
       Large.args = { size: "large", label: "Button" };
       var Small = Template.bind({});
       (Small.args = { size: "small", label: "Button" }),
-        (Primary.parameters = Object.assign(
-          { storySource: { source: "(args) => <Button {...args} />" } },
-          Primary.parameters
-        )),
-        (Secondary.parameters = Object.assign(
-          { storySource: { source: "(args) => <Button {...args} />" } },
-          Secondary.parameters
-        )),
-        (Large.parameters = Object.assign(
-          { storySource: { source: "(args) => <Button {...args} />" } },
-          Large.parameters
-        )),
-        (Small.parameters = Object.assign(
-          { storySource: { source: "(args) => <Button {...args} />" } },
-          Small.parameters
-        ));
+        (Primary.parameters = {
+          storySource: { source: "(args) => <Button {...args} />" },
+          ...Primary.parameters,
+        }),
+        (Secondary.parameters = {
+          storySource: { source: "(args) => <Button {...args} />" },
+          ...Secondary.parameters,
+        }),
+        (Large.parameters = {
+          storySource: { source: "(args) => <Button {...args} />" },
+          ...Large.parameters,
+        }),
+        (Small.parameters = {
+          storySource: { source: "(args) => <Button {...args} />" },
+          ...Small.parameters,
+        });
     },
     "./stories/Header.stories.tsx": (
       __unused_webpack_module,
       __webpack_exports__,
       __webpack_require__
     ) => {
-      "use strict";
       __webpack_require__.r(__webpack_exports__),
         __webpack_require__.d(__webpack_exports__, {
           default: () => __WEBPACK_DEFAULT_EXPORT__,
@@ -487,21 +471,20 @@
           "./node_modules/core-js/modules/es.function.bind.js"
         ),
         __webpack_require__("./node_modules/react/index.js");
-      var _Header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-          "./stories/Header.tsx"
-        ),
-        react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-          "./node_modules/react/jsx-runtime.js"
-        );
+      const _Header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+        "./stories/Header.tsx"
+      );
+      const react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ =
+        __webpack_require__("./node_modules/react/jsx-runtime.js");
       const __WEBPACK_DEFAULT_EXPORT__ = {
         title: "Example/Header",
         component: _Header__WEBPACK_IMPORTED_MODULE_3__.h,
         parameters: { layout: "fullscreen" },
       };
-      var Template = function Template(args) {
+      const Template = function Template(args) {
         return (0, react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(
           _Header__WEBPACK_IMPORTED_MODULE_3__.h,
-          Object.assign({}, args)
+          { ...args }
         );
       };
       Template.displayName = "Template";
@@ -509,21 +492,20 @@
       LoggedIn.args = { user: { name: "Jane Doe" } };
       var LoggedOut = Template.bind({});
       (LoggedOut.args = {}),
-        (LoggedIn.parameters = Object.assign(
-          { storySource: { source: "(args) => <Header {...args} />" } },
-          LoggedIn.parameters
-        )),
-        (LoggedOut.parameters = Object.assign(
-          { storySource: { source: "(args) => <Header {...args} />" } },
-          LoggedOut.parameters
-        ));
+        (LoggedIn.parameters = {
+          storySource: { source: "(args) => <Header {...args} />" },
+          ...LoggedIn.parameters,
+        }),
+        (LoggedOut.parameters = {
+          storySource: { source: "(args) => <Header {...args} />" },
+          ...LoggedOut.parameters,
+        });
     },
     "./stories/Page.stories.tsx": (
       __unused_webpack_module,
       __webpack_exports__,
       __webpack_require__
     ) => {
-      "use strict";
       __webpack_require__.r(__webpack_exports__),
         __webpack_require__.d(__webpack_exports__, {
           LoggedIn: () => LoggedIn,
@@ -538,53 +520,49 @@
         __webpack_require__(
           "./node_modules/core-js/modules/es.object.to-string.js"
         );
-      var react = __webpack_require__("./node_modules/react/index.js"),
-        esm = __webpack_require__(
-          "./node_modules/@storybook/testing-library/dist/esm/index.js"
+      const react = __webpack_require__("./node_modules/react/index.js");
+      const esm = __webpack_require__(
+        "./node_modules/@storybook/testing-library/dist/esm/index.js"
+      );
+      const Header =
+        (__webpack_require__(
+          "./node_modules/core-js/modules/es.array.is-array.js"
         ),
-        Header =
-          (__webpack_require__(
-            "./node_modules/core-js/modules/es.array.is-array.js"
-          ),
-          __webpack_require__("./node_modules/core-js/modules/es.symbol.js"),
-          __webpack_require__(
-            "./node_modules/core-js/modules/es.symbol.description.js"
-          ),
-          __webpack_require__(
-            "./node_modules/core-js/modules/es.symbol.iterator.js"
-          ),
-          __webpack_require__(
-            "./node_modules/core-js/modules/es.string.iterator.js"
-          ),
-          __webpack_require__(
-            "./node_modules/core-js/modules/es.array.iterator.js"
-          ),
-          __webpack_require__(
-            "./node_modules/core-js/modules/web.dom-collections.iterator.js"
-          ),
-          __webpack_require__(
-            "./node_modules/core-js/modules/es.array.slice.js"
-          ),
-          __webpack_require__(
-            "./node_modules/core-js/modules/es.function.name.js"
-          ),
-          __webpack_require__(
-            "./node_modules/core-js/modules/es.array.from.js"
-          ),
-          __webpack_require__("./stories/Header.tsx")),
-        injectStylesIntoStyleTag = __webpack_require__(
-          "./node_modules/@storybook/builder-webpack5/node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js"
+        __webpack_require__("./node_modules/core-js/modules/es.symbol.js"),
+        __webpack_require__(
+          "./node_modules/core-js/modules/es.symbol.description.js"
         ),
-        injectStylesIntoStyleTag_default = __webpack_require__.n(
-          injectStylesIntoStyleTag
+        __webpack_require__(
+          "./node_modules/core-js/modules/es.symbol.iterator.js"
         ),
-        page = __webpack_require__(
-          "./node_modules/@storybook/builder-webpack5/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].use[1]!./stories/page.css"
+        __webpack_require__(
+          "./node_modules/core-js/modules/es.string.iterator.js"
         ),
-        options = { insert: "head", singleton: !1 };
+        __webpack_require__(
+          "./node_modules/core-js/modules/es.array.iterator.js"
+        ),
+        __webpack_require__(
+          "./node_modules/core-js/modules/web.dom-collections.iterator.js"
+        ),
+        __webpack_require__("./node_modules/core-js/modules/es.array.slice.js"),
+        __webpack_require__(
+          "./node_modules/core-js/modules/es.function.name.js"
+        ),
+        __webpack_require__("./node_modules/core-js/modules/es.array.from.js"),
+        __webpack_require__("./stories/Header.tsx"));
+      const injectStylesIntoStyleTag = __webpack_require__(
+        "./node_modules/@storybook/builder-webpack5/node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js"
+      );
+      const injectStylesIntoStyleTag_default = __webpack_require__.n(
+        injectStylesIntoStyleTag
+      );
+      const page = __webpack_require__(
+        "./node_modules/@storybook/builder-webpack5/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].use[1]!./stories/page.css"
+      );
+      const options = { insert: "head", singleton: !1 };
       injectStylesIntoStyleTag_default()(page.Z, options);
       page.Z.locals;
-      var jsx_runtime = __webpack_require__(
+      const jsx_runtime = __webpack_require__(
         "./node_modules/react/jsx-runtime.js"
       );
       function _slicedToArray(arr, i) {
@@ -593,17 +571,17 @@
             if (Array.isArray(arr)) return arr;
           })(arr) ||
           (function _iterableToArrayLimit(arr, i) {
-            var _i =
-              null == arr
+            let _i =
+              arr == null
                 ? null
-                : ("undefined" != typeof Symbol && arr[Symbol.iterator]) ||
+                : (typeof Symbol !== "undefined" && arr[Symbol.iterator]) ||
                   arr["@@iterator"];
-            if (null == _i) return;
-            var _s,
-              _e,
-              _arr = [],
-              _n = !0,
-              _d = !1;
+            if (_i == null) return;
+            let _s;
+            let _e;
+            const _arr = [];
+            let _n = !0;
+            let _d = !1;
             try {
               for (
                 _i = _i.call(arr);
@@ -615,7 +593,7 @@
               (_d = !0), (_e = err);
             } finally {
               try {
-                _n || null == _i.return || _i.return();
+                _n || _i.return == null || _i.return();
               } finally {
                 if (_d) throw _e;
               }
@@ -624,12 +602,12 @@
           })(arr, i) ||
           (function _unsupportedIterableToArray(o, minLen) {
             if (!o) return;
-            if ("string" == typeof o) return _arrayLikeToArray(o, minLen);
-            var n = Object.prototype.toString.call(o).slice(8, -1);
-            "Object" === n && o.constructor && (n = o.constructor.name);
-            if ("Map" === n || "Set" === n) return Array.from(o);
+            if (typeof o === "string") return _arrayLikeToArray(o, minLen);
+            let n = Object.prototype.toString.call(o).slice(8, -1);
+            n === "Object" && o.constructor && (n = o.constructor.name);
+            if (n === "Map" || n === "Set") return Array.from(o);
             if (
-              "Arguments" === n ||
+              n === "Arguments" ||
               /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)
             )
               return _arrayLikeToArray(o, minLen);
@@ -642,14 +620,14 @@
         );
       }
       function _arrayLikeToArray(arr, len) {
-        (null == len || len > arr.length) && (len = arr.length);
+        (len == null || len > arr.length) && (len = arr.length);
         for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i];
         return arr2;
       }
-      var Page = function Page() {
-        var _React$useState2 = _slicedToArray(react.useState(), 2),
-          user = _React$useState2[0],
-          setUser = _React$useState2[1];
+      const Page = function Page() {
+        const _React$useState2 = _slicedToArray(react.useState(), 2);
+        const user = _React$useState2[0];
+        const setUser = _React$useState2[1];
         return (0, jsx_runtime.jsxs)("article", {
           children: [
             (0, jsx_runtime.jsx)(Header.h, {
@@ -762,8 +740,8 @@
         arg
       ) {
         try {
-          var info = gen[key](arg),
-            value = info.value;
+          var info = gen[key](arg);
+          var { value } = info;
         } catch (error) {
           return void reject(error);
         }
@@ -775,19 +753,19 @@
         component: Page,
         parameters: { layout: "fullscreen" },
       };
-      var Template = function Template(args) {
-        return (0, jsx_runtime.jsx)(Page, Object.assign({}, args));
+      const Template = function Template(args) {
+        return (0, jsx_runtime.jsx)(Page, { ...args });
       };
       Template.displayName = "Template";
-      var LoggedOut = Template.bind({}),
-        LoggedIn = Template.bind({});
+      var LoggedOut = Template.bind({});
+      var LoggedIn = Template.bind({});
       (LoggedIn.play = (function () {
-        var _ref2 = (function _asyncToGenerator(fn) {
+        const _ref2 = (function _asyncToGenerator(fn) {
           return function () {
-            var self = this,
-              args = arguments;
-            return new Promise(function (resolve, reject) {
-              var gen = fn.apply(self, args);
+            const self = this;
+            const args = arguments;
+            return new Promise((resolve, reject) => {
+              const gen = fn.apply(self, args);
               function _next(value) {
                 asyncGeneratorStep(
                   gen,
@@ -815,9 +793,11 @@
           };
         })(
           regeneratorRuntime.mark(function _callee(_ref) {
-            var canvasElement, canvas, loginButton;
-            return regeneratorRuntime.wrap(function _callee$(_context) {
-              for (;;)
+            let canvas;
+            let canvasElement;
+            let loginButton;
+            return regeneratorRuntime.wrap((_context) => {
+              for (;;) {
                 switch ((_context.prev = _context.next)) {
                   case 0:
                     return (
@@ -836,6 +816,7 @@
                   case "end":
                     return _context.stop();
                 }
+              }
             }, _callee);
           })
         );
@@ -843,21 +824,20 @@
           return _ref2.apply(this, arguments);
         };
       })()),
-        (LoggedOut.parameters = Object.assign(
-          { storySource: { source: "(args) => <Page {...args} />" } },
-          LoggedOut.parameters
-        )),
-        (LoggedIn.parameters = Object.assign(
-          { storySource: { source: "(args) => <Page {...args} />" } },
-          LoggedIn.parameters
-        ));
+        (LoggedOut.parameters = {
+          storySource: { source: "(args) => <Page {...args} />" },
+          ...LoggedOut.parameters,
+        }),
+        (LoggedIn.parameters = {
+          storySource: { source: "(args) => <Page {...args} />" },
+          ...LoggedIn.parameters,
+        });
     },
     "./stories/pages/home.stories.tsx": (
       __unused_webpack_module,
       __webpack_exports__,
       __webpack_require__
     ) => {
-      "use strict";
       __webpack_require__.r(__webpack_exports__),
         __webpack_require__.d(__webpack_exports__, {
           HomePage: () => HomePage,
@@ -870,161 +850,161 @@
         __webpack_require__(
           "./node_modules/core-js/modules/es.symbol.description.js"
         );
-      var head = __webpack_require__("./node_modules/next/head.js"),
-        next_image = __webpack_require__("./node_modules/next/image.js"),
-        styled_components_browser_esm = __webpack_require__(
-          "./node_modules/styled-components/dist/styled-components.browser.esm.js"
-        ),
-        injectStylesIntoStyleTag = __webpack_require__(
-          "./node_modules/@storybook/builder-webpack5/node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js"
-        ),
-        injectStylesIntoStyleTag_default = __webpack_require__.n(
-          injectStylesIntoStyleTag
-        ),
-        Home_module = __webpack_require__(
-          "./node_modules/@storybook/builder-webpack5/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].use[1]!./styles/Home.module.css"
-        ),
-        options = { insert: "head", singleton: !1 };
+      const head = __webpack_require__("./node_modules/next/head.js");
+      const next_image = __webpack_require__("./node_modules/next/image.js");
+      const styled_components_browser_esm = __webpack_require__(
+        "./node_modules/styled-components/dist/styled-components.browser.esm.js"
+      );
+      const injectStylesIntoStyleTag = __webpack_require__(
+        "./node_modules/@storybook/builder-webpack5/node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js"
+      );
+      const injectStylesIntoStyleTag_default = __webpack_require__.n(
+        injectStylesIntoStyleTag
+      );
+      const Home_module = __webpack_require__(
+        "./node_modules/@storybook/builder-webpack5/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].use[1]!./styles/Home.module.css"
+      );
+      const options = { insert: "head", singleton: !1 };
       injectStylesIntoStyleTag_default()(Home_module.Z, options);
       const styles_Home_module = Home_module.Z.locals || {};
-      var _templateObject,
-        jsx_runtime = __webpack_require__(
-          "./node_modules/react/jsx-runtime.js"
-        );
-      var Main = styled_components_browser_esm.ZP.div(
-          _templateObject ||
-            (_templateObject = (function _taggedTemplateLiteralLoose(
-              strings,
-              raw
-            ) {
-              return (
-                raw || (raw = strings.slice(0)), (strings.raw = raw), strings
-              );
-            })(["\n  padding: 0 2rem;\n"]))
-        ),
-        Home = function Home() {
-          return (0, jsx_runtime.jsxs)(Main, {
-            className: "container",
-            id: "tamir",
-            children: [
-              (0, jsx_runtime.jsxs)(head.default, {
-                children: [
-                  (0, jsx_runtime.jsx)("title", {
-                    children: "Create Next App",
-                  }),
-                  (0, jsx_runtime.jsx)("meta", {
-                    name: "description",
-                    content: "Generated by create next app",
-                  }),
-                  (0, jsx_runtime.jsx)("link", {
-                    rel: "icon",
-                    href: "/favicon.ico",
-                  }),
-                ],
-              }),
-              (0, jsx_runtime.jsxs)("main", {
-                className: styles_Home_module.main,
-                children: [
-                  (0, jsx_runtime.jsxs)("h1", {
-                    className: styles_Home_module.title,
-                    children: [
-                      "Welcome to ",
-                      (0, jsx_runtime.jsx)("a", {
-                        href: "https://nextjs.org",
-                        children: "Next.js!",
-                      }),
-                    ],
-                  }),
-                  (0, jsx_runtime.jsxs)("p", {
-                    className: styles_Home_module.description,
-                    children: [
-                      "Get started by editing",
-                      " ",
-                      (0, jsx_runtime.jsx)("code", {
-                        className: styles_Home_module.code,
-                        children: "pages/index.tsx",
-                      }),
-                    ],
-                  }),
-                  (0, jsx_runtime.jsxs)("div", {
-                    className: styles_Home_module.grid,
-                    children: [
-                      (0, jsx_runtime.jsxs)("a", {
-                        href: "https://nextjs.org/docs",
-                        className: styles_Home_module.card,
-                        children: [
-                          (0, jsx_runtime.jsx)("h2", {
-                            children: "Documentation →",
-                          }),
-                          (0, jsx_runtime.jsx)("p", {
-                            children:
-                              "Find in-depth information about Next.js features and API.",
-                          }),
-                        ],
-                      }),
-                      (0, jsx_runtime.jsxs)("a", {
-                        href: "https://nextjs.org/learn",
-                        className: styles_Home_module.card,
-                        children: [
-                          (0, jsx_runtime.jsx)("h2", { children: "Learn →" }),
-                          (0, jsx_runtime.jsx)("p", {
-                            children:
-                              "Learn about Next.js in an interactive course with quizzes!",
-                          }),
-                        ],
-                      }),
-                      (0, jsx_runtime.jsxs)("a", {
-                        href: "https://github.com/vercel/next.js/tree/canary/examples",
-                        className: styles_Home_module.card,
-                        children: [
-                          (0, jsx_runtime.jsx)("h2", {
-                            children: "Examples →",
-                          }),
-                          (0, jsx_runtime.jsx)("p", {
-                            children:
-                              "Discover and deploy boilerplate example Next.js projects.",
-                          }),
-                        ],
-                      }),
-                      (0, jsx_runtime.jsxs)("a", {
-                        href: "https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app",
-                        className: styles_Home_module.card,
-                        children: [
-                          (0, jsx_runtime.jsx)("h2", { children: "Deploy →" }),
-                          (0, jsx_runtime.jsx)("p", {
-                            children:
-                              "Instantly deploy your Next.js site to a public URL with Vercel.",
-                          }),
-                        ],
-                      }),
-                    ],
-                  }),
-                ],
-              }),
-              (0, jsx_runtime.jsx)("footer", {
-                className: styles_Home_module.footer,
-                children: (0, jsx_runtime.jsxs)("a", {
-                  href: "https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app",
-                  target: "_blank",
-                  rel: "noopener noreferrer",
+      let _templateObject;
+      const jsx_runtime = __webpack_require__(
+        "./node_modules/react/jsx-runtime.js"
+      );
+      const Main = styled_components_browser_esm.ZP.div(
+        _templateObject ||
+          (_templateObject = (function _taggedTemplateLiteralLoose(
+            strings,
+            raw
+          ) {
+            return (
+              raw || (raw = strings.slice(0)), (strings.raw = raw), strings
+            );
+          })(["\n  padding: 0 2rem;\n"]))
+      );
+      const Home = function Home() {
+        return (0, jsx_runtime.jsxs)(Main, {
+          className: "container",
+          id: "tamir",
+          children: [
+            (0, jsx_runtime.jsxs)(head.default, {
+              children: [
+                (0, jsx_runtime.jsx)("title", {
+                  children: "Create Next App",
+                }),
+                (0, jsx_runtime.jsx)("meta", {
+                  name: "description",
+                  content: "Generated by create next app",
+                }),
+                (0, jsx_runtime.jsx)("link", {
+                  rel: "icon",
+                  href: "/favicon.ico",
+                }),
+              ],
+            }),
+            (0, jsx_runtime.jsxs)("main", {
+              className: styles_Home_module.main,
+              children: [
+                (0, jsx_runtime.jsxs)("h1", {
+                  className: styles_Home_module.title,
                   children: [
-                    "Powered by",
-                    " ",
-                    (0, jsx_runtime.jsx)("span", {
-                      className: styles_Home_module.logo,
-                      children: (0, jsx_runtime.jsx)(next_image.default, {
-                        src: "/vercel.svg",
-                        alt: "Vercel Logo",
-                        width: 72,
-                        height: 16,
-                      }),
+                    "Welcome to ",
+                    (0, jsx_runtime.jsx)("a", {
+                      href: "https://nextjs.org",
+                      children: "Next.js!",
                     }),
                   ],
                 }),
+                (0, jsx_runtime.jsxs)("p", {
+                  className: styles_Home_module.description,
+                  children: [
+                    "Get started by editing",
+                    " ",
+                    (0, jsx_runtime.jsx)("code", {
+                      className: styles_Home_module.code,
+                      children: "pages/index.tsx",
+                    }),
+                  ],
+                }),
+                (0, jsx_runtime.jsxs)("div", {
+                  className: styles_Home_module.grid,
+                  children: [
+                    (0, jsx_runtime.jsxs)("a", {
+                      href: "https://nextjs.org/docs",
+                      className: styles_Home_module.card,
+                      children: [
+                        (0, jsx_runtime.jsx)("h2", {
+                          children: "Documentation →",
+                        }),
+                        (0, jsx_runtime.jsx)("p", {
+                          children:
+                            "Find in-depth information about Next.js features and API.",
+                        }),
+                      ],
+                    }),
+                    (0, jsx_runtime.jsxs)("a", {
+                      href: "https://nextjs.org/learn",
+                      className: styles_Home_module.card,
+                      children: [
+                        (0, jsx_runtime.jsx)("h2", { children: "Learn →" }),
+                        (0, jsx_runtime.jsx)("p", {
+                          children:
+                            "Learn about Next.js in an interactive course with quizzes!",
+                        }),
+                      ],
+                    }),
+                    (0, jsx_runtime.jsxs)("a", {
+                      href: "https://github.com/vercel/next.js/tree/canary/examples",
+                      className: styles_Home_module.card,
+                      children: [
+                        (0, jsx_runtime.jsx)("h2", {
+                          children: "Examples →",
+                        }),
+                        (0, jsx_runtime.jsx)("p", {
+                          children:
+                            "Discover and deploy boilerplate example Next.js projects.",
+                        }),
+                      ],
+                    }),
+                    (0, jsx_runtime.jsxs)("a", {
+                      href: "https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app",
+                      className: styles_Home_module.card,
+                      children: [
+                        (0, jsx_runtime.jsx)("h2", { children: "Deploy →" }),
+                        (0, jsx_runtime.jsx)("p", {
+                          children:
+                            "Instantly deploy your Next.js site to a public URL with Vercel.",
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+              ],
+            }),
+            (0, jsx_runtime.jsx)("footer", {
+              className: styles_Home_module.footer,
+              children: (0, jsx_runtime.jsxs)("a", {
+                href: "https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app",
+                target: "_blank",
+                rel: "noopener noreferrer",
+                children: [
+                  "Powered by",
+                  " ",
+                  (0, jsx_runtime.jsx)("span", {
+                    className: styles_Home_module.logo,
+                    children: (0, jsx_runtime.jsx)(next_image.default, {
+                      src: "/vercel.svg",
+                      alt: "Vercel Logo",
+                      width: 72,
+                      height: 16,
+                    }),
+                  }),
+                ],
               }),
-            ],
-          });
-        };
+            }),
+          ],
+        });
+      };
       Home.displayName = "Home";
       const pages = Home;
       const home_stories = { title: "Pages/Home", component: pages };
@@ -1032,17 +1012,16 @@
         return (0, jsx_runtime.jsx)(pages, {});
       };
       (HomePage.displayName = "HomePage"),
-        (HomePage.parameters = Object.assign(
-          { storySource: { source: "() => <Home />" } },
-          HomePage.parameters
-        ));
+        (HomePage.parameters = {
+          storySource: { source: "() => <Home />" },
+          ...HomePage.parameters,
+        });
     },
     "./stories/Button.tsx": (
       __unused_webpack_module,
       __webpack_exports__,
       __webpack_require__
     ) => {
-      "use strict";
       __webpack_require__.d(__webpack_exports__, { z: () => Button });
       __webpack_require__("./node_modules/core-js/modules/es.object.keys.js"),
         __webpack_require__(
@@ -1054,77 +1033,77 @@
           "./node_modules/core-js/modules/es.object.assign.js"
         ),
         __webpack_require__("./node_modules/react/index.js");
-      var injectStylesIntoStyleTag = __webpack_require__(
-          "./node_modules/@storybook/builder-webpack5/node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js"
-        ),
-        injectStylesIntoStyleTag_default = __webpack_require__.n(
-          injectStylesIntoStyleTag
-        ),
-        cjs_ruleSet_1_rules_7_use_1_stories_button = __webpack_require__(
-          "./node_modules/@storybook/builder-webpack5/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].use[1]!./stories/button.css"
-        ),
-        options = { insert: "head", singleton: !1 };
+      const injectStylesIntoStyleTag = __webpack_require__(
+        "./node_modules/@storybook/builder-webpack5/node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js"
+      );
+      const injectStylesIntoStyleTag_default = __webpack_require__.n(
+        injectStylesIntoStyleTag
+      );
+      const cjs_ruleSet_1_rules_7_use_1_stories_button = __webpack_require__(
+        "./node_modules/@storybook/builder-webpack5/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].use[1]!./stories/button.css"
+      );
+      const options = { insert: "head", singleton: !1 };
       injectStylesIntoStyleTag_default()(
         cjs_ruleSet_1_rules_7_use_1_stories_button.Z,
         options
       );
       cjs_ruleSet_1_rules_7_use_1_stories_button.Z.locals;
-      var jsx_runtime = __webpack_require__(
-          "./node_modules/react/jsx-runtime.js"
-        ),
-        _excluded = ["primary", "size", "backgroundColor", "label"];
+      const jsx_runtime = __webpack_require__(
+        "./node_modules/react/jsx-runtime.js"
+      );
+      const _excluded = ["primary", "size", "backgroundColor", "label"];
       function _objectWithoutProperties(source, excluded) {
-        if (null == source) return {};
-        var key,
-          i,
-          target = (function _objectWithoutPropertiesLoose(source, excluded) {
-            if (null == source) return {};
-            var key,
-              i,
-              target = {},
-              sourceKeys = Object.keys(source);
-            for (i = 0; i < sourceKeys.length; i++)
-              (key = sourceKeys[i]),
-                excluded.indexOf(key) >= 0 || (target[key] = source[key]);
-            return target;
-          })(source, excluded);
+        if (source == null) return {};
+        let key;
+        let i;
+        const target = (function _objectWithoutPropertiesLoose(
+          source,
+          excluded
+        ) {
+          if (source == null) return {};
+          let key;
+          let i;
+          const target = {};
+          const sourceKeys = Object.keys(source);
+          for (i = 0; i < sourceKeys.length; i++) {
+            (key = sourceKeys[i]),
+              excluded.indexOf(key) >= 0 || (target[key] = source[key]);
+          }
+          return target;
+        })(source, excluded);
         if (Object.getOwnPropertySymbols) {
-          var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
-          for (i = 0; i < sourceSymbolKeys.length; i++)
+          const sourceSymbolKeys = Object.getOwnPropertySymbols(source);
+          for (i = 0; i < sourceSymbolKeys.length; i++) {
             (key = sourceSymbolKeys[i]),
               excluded.indexOf(key) >= 0 ||
                 (Object.prototype.propertyIsEnumerable.call(source, key) &&
                   (target[key] = source[key]));
+          }
         }
         return target;
       }
       var Button = function Button(_ref) {
-        var _ref$primary = _ref.primary,
-          primary = void 0 !== _ref$primary && _ref$primary,
-          _ref$size = _ref.size,
-          size = void 0 === _ref$size ? "medium" : _ref$size,
-          backgroundColor = _ref.backgroundColor,
-          label = _ref.label,
-          props = _objectWithoutProperties(_ref, _excluded),
-          mode = primary
-            ? "storybook-button--primary"
-            : "storybook-button--secondary";
-        return (0, jsx_runtime.jsx)(
-          "button",
-          Object.assign(
-            {
-              type: "button",
-              className: [
-                "storybook-button",
-                "storybook-button--" + size,
-                mode,
-              ].join(" "),
-              style: { backgroundColor },
-            },
-            props,
-            { children: label }
-          )
-        );
+        const _ref$primary = _ref.primary;
+        const primary = void 0 !== _ref$primary && _ref$primary;
+        const _ref$size = _ref.size;
+        const size = void 0 === _ref$size ? "medium" : _ref$size;
+        const { backgroundColor } = _ref;
+        const { label } = _ref;
+        const props = _objectWithoutProperties(_ref, _excluded);
+        const mode = primary
+          ? "storybook-button--primary"
+          : "storybook-button--secondary";
+        return (0, jsx_runtime.jsx)("button", {
+          type: "button",
+          className: [
+            "storybook-button",
+            `storybook-button--${size}`,
+            mode,
+          ].join(" "),
+          style: { backgroundColor },
+          ...props,
+          children: label,
+        });
       };
       Button.displayName = "Button";
     },
@@ -1133,105 +1112,104 @@
       __webpack_exports__,
       __webpack_require__
     ) => {
-      "use strict";
       __webpack_require__.d(__webpack_exports__, { h: () => Header });
       __webpack_require__("./node_modules/core-js/modules/es.function.name.js"),
         __webpack_require__("./node_modules/react/index.js");
-      var Button = __webpack_require__("./stories/Button.tsx"),
-        injectStylesIntoStyleTag = __webpack_require__(
-          "./node_modules/@storybook/builder-webpack5/node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js"
-        ),
-        injectStylesIntoStyleTag_default = __webpack_require__.n(
-          injectStylesIntoStyleTag
-        ),
-        header = __webpack_require__(
-          "./node_modules/@storybook/builder-webpack5/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].use[1]!./stories/header.css"
-        ),
-        options = { insert: "head", singleton: !1 };
+      const Button = __webpack_require__("./stories/Button.tsx");
+      const injectStylesIntoStyleTag = __webpack_require__(
+        "./node_modules/@storybook/builder-webpack5/node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js"
+      );
+      const injectStylesIntoStyleTag_default = __webpack_require__.n(
+        injectStylesIntoStyleTag
+      );
+      const header = __webpack_require__(
+        "./node_modules/@storybook/builder-webpack5/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].use[1]!./stories/header.css"
+      );
+      const options = { insert: "head", singleton: !1 };
       injectStylesIntoStyleTag_default()(header.Z, options);
       header.Z.locals;
-      var jsx_runtime = __webpack_require__(
-          "./node_modules/react/jsx-runtime.js"
-        ),
-        Header = function Header(_ref) {
-          var user = _ref.user,
-            onLogin = _ref.onLogin,
-            onLogout = _ref.onLogout,
-            onCreateAccount = _ref.onCreateAccount;
-          return (0, jsx_runtime.jsx)("header", {
-            children: (0, jsx_runtime.jsxs)("div", {
-              className: "wrapper",
-              children: [
-                (0, jsx_runtime.jsxs)("div", {
-                  children: [
-                    (0, jsx_runtime.jsx)("svg", {
-                      width: "32",
-                      height: "32",
-                      viewBox: "0 0 32 32",
-                      xmlns: "http://www.w3.org/2000/svg",
-                      children: (0, jsx_runtime.jsxs)("g", {
-                        fill: "none",
-                        fillRule: "evenodd",
-                        children: [
-                          (0, jsx_runtime.jsx)("path", {
-                            d: "M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z",
-                            fill: "#FFF",
-                          }),
-                          (0, jsx_runtime.jsx)("path", {
-                            d: "M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z",
-                            fill: "#555AB9",
-                          }),
-                          (0, jsx_runtime.jsx)("path", {
-                            d: "M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z",
-                            fill: "#91BAF8",
-                          }),
-                        ],
-                      }),
+      const jsx_runtime = __webpack_require__(
+        "./node_modules/react/jsx-runtime.js"
+      );
+      var Header = function Header(_ref) {
+        const { user } = _ref;
+        const { onLogin } = _ref;
+        const { onLogout } = _ref;
+        const { onCreateAccount } = _ref;
+        return (0, jsx_runtime.jsx)("header", {
+          children: (0, jsx_runtime.jsxs)("div", {
+            className: "wrapper",
+            children: [
+              (0, jsx_runtime.jsxs)("div", {
+                children: [
+                  (0, jsx_runtime.jsx)("svg", {
+                    width: "32",
+                    height: "32",
+                    viewBox: "0 0 32 32",
+                    xmlns: "http://www.w3.org/2000/svg",
+                    children: (0, jsx_runtime.jsxs)("g", {
+                      fill: "none",
+                      fillRule: "evenodd",
+                      children: [
+                        (0, jsx_runtime.jsx)("path", {
+                          d: "M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z",
+                          fill: "#FFF",
+                        }),
+                        (0, jsx_runtime.jsx)("path", {
+                          d: "M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z",
+                          fill: "#555AB9",
+                        }),
+                        (0, jsx_runtime.jsx)("path", {
+                          d: "M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z",
+                          fill: "#91BAF8",
+                        }),
+                      ],
                     }),
-                    (0, jsx_runtime.jsx)("h1", { children: "Acme" }),
-                  ],
-                }),
-                (0, jsx_runtime.jsx)("div", {
-                  children: user
-                    ? (0, jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-                        children: [
-                          (0, jsx_runtime.jsxs)("span", {
-                            className: "welcome",
-                            children: [
-                              "Welcome, ",
-                              (0, jsx_runtime.jsx)("b", {
-                                children: user.name,
-                              }),
-                              "!",
-                            ],
-                          }),
-                          (0, jsx_runtime.jsx)(Button.z, {
-                            size: "small",
-                            onClick: onLogout,
-                            label: "Log out",
-                          }),
-                        ],
-                      })
-                    : (0, jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-                        children: [
-                          (0, jsx_runtime.jsx)(Button.z, {
-                            size: "small",
-                            onClick: onLogin,
-                            label: "Log in",
-                          }),
-                          (0, jsx_runtime.jsx)(Button.z, {
-                            primary: !0,
-                            size: "small",
-                            onClick: onCreateAccount,
-                            label: "Sign up",
-                          }),
-                        ],
-                      }),
-                }),
-              ],
-            }),
-          });
-        };
+                  }),
+                  (0, jsx_runtime.jsx)("h1", { children: "Acme" }),
+                ],
+              }),
+              (0, jsx_runtime.jsx)("div", {
+                children: user
+                  ? (0, jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+                      children: [
+                        (0, jsx_runtime.jsxs)("span", {
+                          className: "welcome",
+                          children: [
+                            "Welcome, ",
+                            (0, jsx_runtime.jsx)("b", {
+                              children: user.name,
+                            }),
+                            "!",
+                          ],
+                        }),
+                        (0, jsx_runtime.jsx)(Button.z, {
+                          size: "small",
+                          onClick: onLogout,
+                          label: "Log out",
+                        }),
+                      ],
+                    })
+                  : (0, jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+                      children: [
+                        (0, jsx_runtime.jsx)(Button.z, {
+                          size: "small",
+                          onClick: onLogin,
+                          label: "Log in",
+                        }),
+                        (0, jsx_runtime.jsx)(Button.z, {
+                          primary: !0,
+                          size: "small",
+                          onClick: onCreateAccount,
+                          label: "Sign up",
+                        }),
+                      ],
+                    }),
+              }),
+            ],
+          }),
+        });
+      };
       Header.displayName = "Header";
     },
     "./storybook-init-framework-entry.js": (
@@ -1239,7 +1217,6 @@
       __unused_webpack___webpack_exports__,
       __webpack_require__
     ) => {
-      "use strict";
       __webpack_require__(
         "./node_modules/@storybook/react/dist/esm/client/index.js"
       );
@@ -1249,7 +1226,6 @@
       __webpack_exports__,
       __webpack_require__
     ) => {
-      "use strict";
       __webpack_require__.r(__webpack_exports__),
         __webpack_require__.d(__webpack_exports__, {
           __page: () => __page,
@@ -1264,45 +1240,41 @@
           "./node_modules/core-js/modules/es.object.assign.js"
         ),
         __webpack_require__("./node_modules/react/index.js");
-      var _mdx_js_react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
-          "./node_modules/@mdx-js/react/dist/esm.js"
-        ),
-        _storybook_addon_docs__WEBPACK_IMPORTED_MODULE_6__ =
-          __webpack_require__(
-            "./node_modules/@storybook/addon-docs/dist/esm/index.js"
-          ),
-        _assets_code_brackets_svg__WEBPACK_IMPORTED_MODULE_7__ =
-          __webpack_require__("./stories/assets/code-brackets.svg"),
-        _assets_colors_svg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
-          "./stories/assets/colors.svg"
-        ),
-        _assets_comments_svg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
-          "./stories/assets/comments.svg"
-        ),
-        _assets_direction_svg__WEBPACK_IMPORTED_MODULE_10__ =
-          __webpack_require__("./stories/assets/direction.svg"),
-        _assets_flow_svg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
-          "./stories/assets/flow.svg"
-        ),
-        _assets_plugin_svg__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
-          "./stories/assets/plugin.svg"
-        ),
-        _assets_repo_svg__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
-          "./stories/assets/repo.svg"
-        ),
-        _assets_stackalt_svg__WEBPACK_IMPORTED_MODULE_14__ =
-          __webpack_require__("./stories/assets/stackalt.svg"),
-        _excluded = ["components"];
+      const _mdx_js_react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+        "./node_modules/@mdx-js/react/dist/esm.js"
+      );
+      const _storybook_addon_docs__WEBPACK_IMPORTED_MODULE_6__ =
+        __webpack_require__(
+          "./node_modules/@storybook/addon-docs/dist/esm/index.js"
+        );
+      const _assets_code_brackets_svg__WEBPACK_IMPORTED_MODULE_7__ =
+        __webpack_require__("./stories/assets/code-brackets.svg");
+      const _assets_colors_svg__WEBPACK_IMPORTED_MODULE_8__ =
+        __webpack_require__("./stories/assets/colors.svg");
+      const _assets_comments_svg__WEBPACK_IMPORTED_MODULE_9__ =
+        __webpack_require__("./stories/assets/comments.svg");
+      const _assets_direction_svg__WEBPACK_IMPORTED_MODULE_10__ =
+        __webpack_require__("./stories/assets/direction.svg");
+      const _assets_flow_svg__WEBPACK_IMPORTED_MODULE_11__ =
+        __webpack_require__("./stories/assets/flow.svg");
+      const _assets_plugin_svg__WEBPACK_IMPORTED_MODULE_12__ =
+        __webpack_require__("./stories/assets/plugin.svg");
+      const _assets_repo_svg__WEBPACK_IMPORTED_MODULE_13__ =
+        __webpack_require__("./stories/assets/repo.svg");
+      const _assets_stackalt_svg__WEBPACK_IMPORTED_MODULE_14__ =
+        __webpack_require__("./stories/assets/stackalt.svg");
+      const _excluded = ["components"];
       function _extends() {
         return (
           (_extends =
             Object.assign ||
             function (target) {
-              for (var i = 1; i < arguments.length; i++) {
-                var source = arguments[i];
-                for (var key in source)
+              for (let i = 1; i < arguments.length; i++) {
+                const source = arguments[i];
+                for (const key in source) {
                   Object.prototype.hasOwnProperty.call(source, key) &&
                     (target[key] = source[key]);
+                }
               }
               return target;
             }),
@@ -1310,40 +1282,47 @@
         );
       }
       function _objectWithoutProperties(source, excluded) {
-        if (null == source) return {};
-        var key,
-          i,
-          target = (function _objectWithoutPropertiesLoose(source, excluded) {
-            if (null == source) return {};
-            var key,
-              i,
-              target = {},
-              sourceKeys = Object.keys(source);
-            for (i = 0; i < sourceKeys.length; i++)
-              (key = sourceKeys[i]),
-                excluded.indexOf(key) >= 0 || (target[key] = source[key]);
-            return target;
-          })(source, excluded);
+        if (source == null) return {};
+        let key;
+        let i;
+        const target = (function _objectWithoutPropertiesLoose(
+          source,
+          excluded
+        ) {
+          if (source == null) return {};
+          let key;
+          let i;
+          const target = {};
+          const sourceKeys = Object.keys(source);
+          for (i = 0; i < sourceKeys.length; i++) {
+            (key = sourceKeys[i]),
+              excluded.indexOf(key) >= 0 || (target[key] = source[key]);
+          }
+          return target;
+        })(source, excluded);
         if (Object.getOwnPropertySymbols) {
-          var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
-          for (i = 0; i < sourceSymbolKeys.length; i++)
+          const sourceSymbolKeys = Object.getOwnPropertySymbols(source);
+          for (i = 0; i < sourceSymbolKeys.length; i++) {
             (key = sourceSymbolKeys[i]),
               excluded.indexOf(key) >= 0 ||
                 (Object.prototype.propertyIsEnumerable.call(source, key) &&
                   (target[key] = source[key]));
+          }
         }
         return target;
       }
-      var layoutProps = {};
+      const layoutProps = {};
       function MDXContent(_ref) {
-        var components = _ref.components,
-          props = _objectWithoutProperties(_ref, _excluded);
+        const { components } = _ref;
+        const props = _objectWithoutProperties(_ref, _excluded);
         return (0, _mdx_js_react__WEBPACK_IMPORTED_MODULE_5__.kt)(
           "wrapper",
-          _extends({}, layoutProps, props, {
+          {
+            ...layoutProps,
+            ...props,
             components,
             mdxType: "MDXLayout",
-          }),
+          },
           (0, _mdx_js_react__WEBPACK_IMPORTED_MODULE_5__.kt)(
             _storybook_addon_docs__WEBPACK_IMPORTED_MODULE_6__.h_,
             { title: "Example/Introduction", mdxType: "Meta" }
@@ -1612,45 +1591,42 @@
         throw new Error("Docs-only story");
       };
       __page.parameters = { docsOnly: !0 };
-      var componentMeta = {
-          title: "Example/Introduction",
-          includeStories: ["__page"],
-        },
-        mdxStoryNameToKey = {};
+      const componentMeta = {
+        title: "Example/Introduction",
+        includeStories: ["__page"],
+      };
+      const mdxStoryNameToKey = {};
       (componentMeta.parameters = componentMeta.parameters || {}),
-        (componentMeta.parameters.docs = Object.assign(
-          {},
-          componentMeta.parameters.docs || {},
-          {
-            page: function page() {
-              return (0, _mdx_js_react__WEBPACK_IMPORTED_MODULE_5__.kt)(
-                _storybook_addon_docs__WEBPACK_IMPORTED_MODULE_6__.aT,
-                { mdxStoryNameToKey, mdxComponentAnnotations: componentMeta },
-                (0, _mdx_js_react__WEBPACK_IMPORTED_MODULE_5__.kt)(
-                  MDXContent,
-                  null
-                )
-              );
-            },
-          }
-        ));
+        (componentMeta.parameters.docs = {
+          ...(componentMeta.parameters.docs || {}),
+          page: function page() {
+            return (0, _mdx_js_react__WEBPACK_IMPORTED_MODULE_5__.kt)(
+              _storybook_addon_docs__WEBPACK_IMPORTED_MODULE_6__.aT,
+              { mdxStoryNameToKey, mdxComponentAnnotations: componentMeta },
+              (0, _mdx_js_react__WEBPACK_IMPORTED_MODULE_5__.kt)(
+                MDXContent,
+                null
+              )
+            );
+          },
+        });
       const __WEBPACK_DEFAULT_EXPORT__ = componentMeta;
     },
     "./stories sync recursive ^\\.(?:(?:^%7C\\/%7C(?:(?:(?%21(?:^%7C\\/)\\.).)*?)\\/)(?%21\\.)(?=.)[^/]*?\\.stories\\.(js%7Cjsx%7Cts%7Ctsx))$":
       (module, __unused_webpack_exports, __webpack_require__) => {
-        var map = {
+        const map = {
           "./Button.stories.tsx": "./stories/Button.stories.tsx",
           "./Header.stories.tsx": "./stories/Header.stories.tsx",
           "./Page.stories.tsx": "./stories/Page.stories.tsx",
           "./pages/home.stories.tsx": "./stories/pages/home.stories.tsx",
         };
         function webpackContext(req) {
-          var id = webpackContextResolve(req);
+          const id = webpackContextResolve(req);
           return __webpack_require__(id);
         }
         function webpackContextResolve(req) {
           if (!__webpack_require__.o(map, req)) {
-            var e = new Error("Cannot find module '" + req + "'");
+            const e = new Error(`Cannot find module '${req}'`);
             throw ((e.code = "MODULE_NOT_FOUND"), e);
           }
           return map[req];
@@ -1665,16 +1641,16 @@
       },
     "./stories sync recursive ^\\.(?:(?:^%7C\\/%7C(?:(?:(?%21(?:^%7C\\/)\\.).)*?)\\/)(?%21\\.)(?=.)[^/]*?\\.stories\\.mdx)$":
       (module, __unused_webpack_exports, __webpack_require__) => {
-        var map = {
+        const map = {
           "./Introduction.stories.mdx": "./stories/Introduction.stories.mdx",
         };
         function webpackContext(req) {
-          var id = webpackContextResolve(req);
+          const id = webpackContextResolve(req);
           return __webpack_require__(id);
         }
         function webpackContextResolve(req) {
           if (!__webpack_require__.o(map, req)) {
-            var e = new Error("Cannot find module '" + req + "'");
+            const e = new Error(`Cannot find module '${req}'`);
             throw ((e.code = "MODULE_NOT_FOUND"), e);
           }
           return map[req];
@@ -1692,75 +1668,61 @@
       __unused_webpack_exports,
       __webpack_require__
     ) => {
-      "use strict";
-      module.exports =
-        __webpack_require__.p + "static/media/code-brackets.2e1112d7.svg";
+      module.exports = `${__webpack_require__.p}static/media/code-brackets.2e1112d7.svg`;
     },
     "./stories/assets/colors.svg": (
       module,
       __unused_webpack_exports,
       __webpack_require__
     ) => {
-      "use strict";
-      module.exports =
-        __webpack_require__.p + "static/media/colors.a4bd0486.svg";
+      module.exports = `${__webpack_require__.p}static/media/colors.a4bd0486.svg`;
     },
     "./stories/assets/comments.svg": (
       module,
       __unused_webpack_exports,
       __webpack_require__
     ) => {
-      "use strict";
-      module.exports =
-        __webpack_require__.p + "static/media/comments.a3859089.svg";
+      module.exports = `${__webpack_require__.p}static/media/comments.a3859089.svg`;
     },
     "./stories/assets/direction.svg": (
       module,
       __unused_webpack_exports,
       __webpack_require__
     ) => {
-      "use strict";
-      module.exports =
-        __webpack_require__.p + "static/media/direction.b770f9af.svg";
+      module.exports = `${__webpack_require__.p}static/media/direction.b770f9af.svg`;
     },
     "./stories/assets/flow.svg": (
       module,
       __unused_webpack_exports,
       __webpack_require__
     ) => {
-      "use strict";
-      module.exports = __webpack_require__.p + "static/media/flow.edad2ac1.svg";
+      module.exports = `${__webpack_require__.p}static/media/flow.edad2ac1.svg`;
     },
     "./stories/assets/plugin.svg": (
       module,
       __unused_webpack_exports,
       __webpack_require__
     ) => {
-      "use strict";
-      module.exports =
-        __webpack_require__.p + "static/media/plugin.d494b228.svg";
+      module.exports = `${__webpack_require__.p}static/media/plugin.d494b228.svg`;
     },
     "./stories/assets/repo.svg": (
       module,
       __unused_webpack_exports,
       __webpack_require__
     ) => {
-      "use strict";
-      module.exports = __webpack_require__.p + "static/media/repo.6d496322.svg";
+      module.exports = `${__webpack_require__.p}static/media/repo.6d496322.svg`;
     },
     "./stories/assets/stackalt.svg": (
       module,
       __unused_webpack_exports,
       __webpack_require__
     ) => {
-      "use strict";
-      module.exports =
-        __webpack_require__.p + "static/media/stackalt.dba9fbb3.svg";
+      module.exports = `${__webpack_require__.p}static/media/stackalt.dba9fbb3.svg`;
     },
     "?4f7e": () => {},
   },
   (__webpack_require__) => {
-    var __webpack_exec__ = (moduleId) =>
+    const __webpack_exec__ = (moduleId) =>
       __webpack_require__((__webpack_require__.s = moduleId));
     __webpack_require__.O(
       0,

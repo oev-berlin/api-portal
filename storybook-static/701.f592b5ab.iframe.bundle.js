@@ -1,4 +1,3 @@
-"use strict";
 (self.webpackChunkfrontend = self.webpackChunkfrontend || []).push([
   [701],
   {
@@ -17,58 +16,60 @@
         __webpack_require__(
           "./node_modules/core-js/modules/es.object.to-string.js"
         );
-      var react = __webpack_require__("./node_modules/react/index.js"),
-        react_dom = __webpack_require__("./node_modules/react-dom/index.js"),
-        wrapper = {
-          fontSize: "14px",
-          letterSpacing: "0.2px",
-          margin: "10px 0",
-        },
-        main = {
-          margin: "auto",
-          padding: 30,
-          borderRadius: 10,
-          background: "rgba(0,0,0,0.03)",
-        },
-        heading = { textAlign: "center" },
-        NoDocs = function NoDocs() {
-          return react.createElement(
+      const react = __webpack_require__("./node_modules/react/index.js");
+      const react_dom = __webpack_require__(
+        "./node_modules/react-dom/index.js"
+      );
+      const wrapper = {
+        fontSize: "14px",
+        letterSpacing: "0.2px",
+        margin: "10px 0",
+      };
+      const main = {
+        margin: "auto",
+        padding: 30,
+        borderRadius: 10,
+        background: "rgba(0,0,0,0.03)",
+      };
+      const heading = { textAlign: "center" };
+      const NoDocs = function NoDocs() {
+        return react.createElement(
+          "div",
+          { style: wrapper, className: "sb-nodocs sb-wrapper" },
+          react.createElement(
             "div",
-            { style: wrapper, className: "sb-nodocs sb-wrapper" },
+            { style: main },
+            react.createElement("h1", { style: heading }, "No Docs"),
             react.createElement(
-              "div",
-              { style: main },
-              react.createElement("h1", { style: heading }, "No Docs"),
+              "p",
+              null,
+              "Sorry, but there are no docs for the selected story. To add them, set the story's ",
+              react.createElement("code", null, "docs"),
+              " parameter. If you think this is an error:"
+            ),
+            react.createElement(
+              "ul",
+              null,
               react.createElement(
-                "p",
+                "li",
                 null,
-                "Sorry, but there are no docs for the selected story. To add them, set the story's ",
-                react.createElement("code", null, "docs"),
-                " parameter. If you think this is an error:"
+                "Please check the story definition."
               ),
               react.createElement(
-                "ul",
+                "li",
                 null,
-                react.createElement(
-                  "li",
-                  null,
-                  "Please check the story definition."
-                ),
-                react.createElement(
-                  "li",
-                  null,
-                  "Please check the Storybook config."
-                ),
-                react.createElement("li", null, "Try reloading the page.")
+                "Please check the Storybook config."
               ),
-              react.createElement(
-                "p",
-                null,
-                "If the problem persists, check the browser console, or the terminal you've run Storybook from."
-              )
+              react.createElement("li", null, "Try reloading the page.")
+            ),
+            react.createElement(
+              "p",
+              null,
+              "If the problem persists, check the browser console, or the terminal you've run Storybook from."
             )
-          );
-        };
+          )
+        );
+      };
       function asyncGeneratorStep(
         gen,
         resolve,
@@ -79,8 +80,8 @@
         arg
       ) {
         try {
-          var info = gen[key](arg),
-            value = info.value;
+          var info = gen[key](arg);
+          var { value } = info;
         } catch (error) {
           return void reject(error);
         }
@@ -88,10 +89,10 @@
       }
       function _asyncToGenerator(fn) {
         return function () {
-          var self = this,
-            args = arguments;
-          return new Promise(function (resolve, reject) {
-            var gen = fn.apply(self, args);
+          const self = this;
+          const args = arguments;
+          return new Promise((resolve, reject) => {
+            const gen = fn.apply(self, args);
             function _next(value) {
               asyncGeneratorStep(
                 gen,
@@ -130,24 +131,24 @@
             docsContext,
             element
           ) {
-            var _docs$getContainer,
-              _docs$getPage,
-              docs,
-              DocsContainer,
-              Page,
-              docsElement;
-            return regeneratorRuntime.wrap(function _callee$(_context) {
-              for (;;)
+            let DocsContainer;
+            let Page;
+            let _docs$getContainer;
+            let _docs$getPage;
+            let docs;
+            let docsElement;
+            return regeneratorRuntime.wrap((_context) => {
+              for (;;) {
                 switch ((_context.prev = _context.next)) {
                   case 0:
                     if (
                       !(
-                        (null != (docs = story.parameters.docs) &&
+                        ((docs = story.parameters.docs) != null &&
                           docs.getPage) ||
-                        (null != docs && docs.page)
+                        (docs != null && docs.page)
                       ) ||
-                      (null != docs && docs.getContainer) ||
-                      (null != docs && docs.container)
+                      (docs != null && docs.getContainer) ||
+                      (docs != null && docs.container)
                     ) {
                       _context.next = 3;
                       break;
@@ -162,7 +163,7 @@
                     }
                     return (
                       (_context.next = 7),
-                      null === (_docs$getContainer = docs.getContainer) ||
+                      (_docs$getContainer = docs.getContainer) === null ||
                       void 0 === _docs$getContainer
                         ? void 0
                         : _docs$getContainer.call(docs)
@@ -175,7 +176,7 @@
                       break;
                     }
                     _context.t0 = function (_ref) {
-                      var children = _ref.children;
+                      const { children } = _ref;
                       return react.createElement(
                         react.Fragment,
                         null,
@@ -193,7 +194,7 @@
                     }
                     return (
                       (_context.next = 16),
-                      null === (_docs$getPage = docs.getPage) ||
+                      (_docs$getPage = docs.getPage) === null ||
                       void 0 === _docs$getPage
                         ? void 0
                         : _docs$getPage.call(docs)
@@ -215,7 +216,7 @@
                         react.createElement(Page, null)
                       )),
                       (_context.next = 24),
-                      new Promise(function (resolve) {
+                      new Promise((resolve) => {
                         react_dom.render(docsElement, element, resolve);
                       })
                     );
@@ -223,6 +224,7 @@
                   case "end":
                     return _context.stop();
                 }
+              }
             }, _callee);
           })
         )).apply(this, arguments);

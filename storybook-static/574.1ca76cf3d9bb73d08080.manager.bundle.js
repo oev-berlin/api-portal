@@ -1,4 +1,3 @@
-"use strict";
 (self.webpackChunkfrontend = self.webpackChunkfrontend || []).push([
   [574],
   {
@@ -27,28 +26,30 @@
         __webpack_require__(91038),
         __webpack_require__(78783),
         __webpack_require__(54747);
-      var react = __webpack_require__(67294),
-        esm = __webpack_require__(36305),
-        global_window = __webpack_require__(58908),
-        window_default = __webpack_require__.n(global_window),
-        objectWithoutPropertiesLoose = __webpack_require__(63366),
-        esm_extends = __webpack_require__(87462),
-        inheritsLoose = __webpack_require__(94578),
-        react_dom = __webpack_require__(73935),
-        ManagerReferenceNodeContext = react.createContext(),
-        ManagerReferenceNodeSetterContext = react.createContext();
+      const react = __webpack_require__(67294);
+      const esm = __webpack_require__(36305);
+      const global_window = __webpack_require__(58908);
+      const window_default = __webpack_require__.n(global_window);
+      const objectWithoutPropertiesLoose = __webpack_require__(63366);
+      const esm_extends = __webpack_require__(87462);
+      const inheritsLoose = __webpack_require__(94578);
+      const react_dom = __webpack_require__(73935);
+      const ManagerReferenceNodeContext = react.createContext();
+      const ManagerReferenceNodeSetterContext = react.createContext();
       function Manager(_ref) {
-        var children = _ref.children,
-          _React$useState = react.useState(null),
-          referenceNode = _React$useState[0],
-          setReferenceNode = _React$useState[1],
-          hasUnmounted = react.useRef(!1);
-        react.useEffect(function () {
-          return function () {
-            hasUnmounted.current = !0;
-          };
-        }, []);
-        var handleSetReferenceNode = react.useCallback(function (node) {
+        const { children } = _ref;
+        const _React$useState = react.useState(null);
+        const referenceNode = _React$useState[0];
+        const setReferenceNode = _React$useState[1];
+        const hasUnmounted = react.useRef(!1);
+        react.useEffect(
+          () =>
+            function () {
+              hasUnmounted.current = !0;
+            },
+          []
+        );
+        const handleSetReferenceNode = react.useCallback((node) => {
           hasUnmounted.current || setReferenceNode(node);
         }, []);
         return react.createElement(
@@ -61,43 +62,43 @@
           )
         );
       }
-      var unwrapArray = function unwrapArray(arg) {
-          return Array.isArray(arg) ? arg[0] : arg;
-        },
-        safeInvoke = function safeInvoke(fn) {
-          if ("function" == typeof fn) {
-            for (
-              var _len = arguments.length,
-                args = new Array(_len > 1 ? _len - 1 : 0),
-                _key = 1;
-              _key < _len;
-              _key++
-            )
-              args[_key - 1] = arguments[_key];
-            return fn.apply(void 0, args);
-          }
-        },
-        setRef = function setRef(ref, node) {
-          if ("function" == typeof ref) return safeInvoke(ref, node);
-          null != ref && (ref.current = node);
-        },
-        fromEntries = function fromEntries(entries) {
-          return entries.reduce(function (acc, _ref) {
-            var key = _ref[0],
-              value = _ref[1];
-            return (acc[key] = value), acc;
-          }, {});
-        },
-        useIsomorphicLayoutEffect =
-          "undefined" != typeof window &&
-          window.document &&
-          window.document.createElement
-            ? react.useLayoutEffect
-            : react.useEffect;
+      const unwrapArray = function unwrapArray(arg) {
+        return Array.isArray(arg) ? arg[0] : arg;
+      };
+      const safeInvoke = function safeInvoke(fn) {
+        if (typeof fn === "function") {
+          for (
+            var _len = arguments.length,
+              args = new Array(_len > 1 ? _len - 1 : 0),
+              _key = 1;
+            _key < _len;
+            _key++
+          )
+            args[_key - 1] = arguments[_key];
+          return fn.apply(void 0, args);
+        }
+      };
+      const setRef = function setRef(ref, node) {
+        if (typeof ref === "function") return safeInvoke(ref, node);
+        ref != null && (ref.current = node);
+      };
+      const fromEntries = function fromEntries(entries) {
+        return entries.reduce((acc, _ref) => {
+          const key = _ref[0];
+          const value = _ref[1];
+          return (acc[key] = value), acc;
+        }, {});
+      };
+      const useIsomorphicLayoutEffect =
+        typeof window !== "undefined" &&
+        window.document &&
+        window.document.createElement
+          ? react.useLayoutEffect
+          : react.useEffect;
       function getWindow(node) {
-        if (null == node) return window;
-        if ("[object Window]" !== node.toString()) {
-          var ownerDocument = node.ownerDocument;
+        if (node == null) return window;
+        if (node.toString() !== "[object Window]") {
+          const { ownerDocument } = node;
           return (ownerDocument && ownerDocument.defaultView) || window;
         }
         return node;
@@ -115,22 +116,22 @@
       }
       function isShadowRoot(node) {
         return (
-          "undefined" != typeof ShadowRoot &&
+          typeof ShadowRoot !== "undefined" &&
           (node instanceof getWindow(node).ShadowRoot ||
             node instanceof ShadowRoot)
         );
       }
-      var math_max = Math.max,
-        math_min = Math.min,
-        round = Math.round;
+      const math_max = Math.max;
+      const math_min = Math.min;
+      const { round } = Math;
       function getBoundingClientRect(element, includeScale) {
         void 0 === includeScale && (includeScale = !1);
-        var rect = element.getBoundingClientRect(),
-          scaleX = 1,
-          scaleY = 1;
+        const rect = element.getBoundingClientRect();
+        let scaleX = 1;
+        let scaleY = 1;
         if (isHTMLElement(element) && includeScale) {
-          var offsetHeight = element.offsetHeight,
-            offsetWidth = element.offsetWidth;
+          const { offsetHeight } = element;
+          const { offsetWidth } = element;
           offsetWidth > 0 && (scaleX = round(rect.width) / offsetWidth || 1),
             offsetHeight > 0 &&
               (scaleY = round(rect.height) / offsetHeight || 1);
@@ -147,7 +148,7 @@
         };
       }
       function getWindowScroll(node) {
-        var win = getWindow(node);
+        const win = getWindow(node);
         return { scrollLeft: win.pageXOffset, scrollTop: win.pageYOffset };
       }
       function getNodeName(element) {
@@ -169,10 +170,10 @@
         return getWindow(element).getComputedStyle(element);
       }
       function isScrollParent(element) {
-        var _getComputedStyle = getComputedStyle(element),
-          overflow = _getComputedStyle.overflow,
-          overflowX = _getComputedStyle.overflowX,
-          overflowY = _getComputedStyle.overflowY;
+        const _getComputedStyle = getComputedStyle(element);
+        const { overflow } = _getComputedStyle;
+        const { overflowX } = _getComputedStyle;
+        const { overflowY } = _getComputedStyle;
         return /auto|scroll|overlay|hidden/.test(
           overflow + overflowY + overflowX
         );
@@ -183,25 +184,25 @@
         isFixed
       ) {
         void 0 === isFixed && (isFixed = !1);
-        var isOffsetParentAnElement = isHTMLElement(offsetParent),
-          offsetParentIsScaled =
-            isHTMLElement(offsetParent) &&
-            (function isElementScaled(element) {
-              var rect = element.getBoundingClientRect(),
-                scaleX = round(rect.width) / element.offsetWidth || 1,
-                scaleY = round(rect.height) / element.offsetHeight || 1;
-              return 1 !== scaleX || 1 !== scaleY;
-            })(offsetParent),
-          documentElement = getDocumentElement(offsetParent),
-          rect = getBoundingClientRect(
-            elementOrVirtualElement,
-            offsetParentIsScaled
-          ),
-          scroll = { scrollLeft: 0, scrollTop: 0 },
-          offsets = { x: 0, y: 0 };
+        const isOffsetParentAnElement = isHTMLElement(offsetParent);
+        const offsetParentIsScaled =
+          isHTMLElement(offsetParent) &&
+          (function isElementScaled(element) {
+            const rect = element.getBoundingClientRect();
+            const scaleX = round(rect.width) / element.offsetWidth || 1;
+            const scaleY = round(rect.height) / element.offsetHeight || 1;
+            return scaleX !== 1 || scaleY !== 1;
+          })(offsetParent);
+        const documentElement = getDocumentElement(offsetParent);
+        const rect = getBoundingClientRect(
+          elementOrVirtualElement,
+          offsetParentIsScaled
+        );
+        let scroll = { scrollLeft: 0, scrollTop: 0 };
+        let offsets = { x: 0, y: 0 };
         return (
           (isOffsetParentAnElement || (!isOffsetParentAnElement && !isFixed)) &&
-            (("body" !== getNodeName(offsetParent) ||
+            ((getNodeName(offsetParent) !== "body" ||
               isScrollParent(documentElement)) &&
               (scroll = (function getNodeScroll(node) {
                 return node !== getWindow(node) && isHTMLElement(node)
@@ -228,18 +229,23 @@
         );
       }
       function getLayoutRect(element) {
-        var clientRect = getBoundingClientRect(element),
-          width = element.offsetWidth,
-          height = element.offsetHeight;
+        const clientRect = getBoundingClientRect(element);
+        let width = element.offsetWidth;
+        let height = element.offsetHeight;
         return (
           Math.abs(clientRect.width - width) <= 1 && (width = clientRect.width),
           Math.abs(clientRect.height - height) <= 1 &&
             (height = clientRect.height),
-          { x: element.offsetLeft, y: element.offsetTop, width, height }
+          {
+            x: element.offsetLeft,
+            y: element.offsetTop,
+            width,
+            height,
+          }
         );
       }
       function getParentNode(element) {
-        return "html" === getNodeName(element)
+        return getNodeName(element) === "html"
           ? element
           : element.assignedSlot ||
               element.parentNode ||
@@ -254,22 +260,22 @@
           : getScrollParent(getParentNode(node));
       }
       function listScrollParents(element, list) {
-        var _element$ownerDocumen;
+        let _element$ownerDocumen;
         void 0 === list && (list = []);
-        var scrollParent = getScrollParent(element),
-          isBody =
-            scrollParent ===
-            (null == (_element$ownerDocumen = element.ownerDocument)
-              ? void 0
-              : _element$ownerDocumen.body),
-          win = getWindow(scrollParent),
-          target = isBody
-            ? [win].concat(
-                win.visualViewport || [],
-                isScrollParent(scrollParent) ? scrollParent : []
-              )
-            : scrollParent,
-          updatedList = list.concat(target);
+        const scrollParent = getScrollParent(element);
+        const isBody =
+          scrollParent ===
+          ((_element$ownerDocumen = element.ownerDocument) == null
+            ? void 0
+            : _element$ownerDocumen.body);
+        const win = getWindow(scrollParent);
+        const target = isBody
+          ? [win].concat(
+              win.visualViewport || [],
+              isScrollParent(scrollParent) ? scrollParent : []
+            )
+          : scrollParent;
+        const updatedList = list.concat(target);
         return isBody
           ? updatedList
           : updatedList.concat(listScrollParents(getParentNode(target)));
@@ -279,7 +285,7 @@
       }
       function getTrueOffsetParent(element) {
         return isHTMLElement(element) &&
-          "fixed" !== getComputedStyle(element).position
+          getComputedStyle(element).position !== "fixed"
           ? element.offsetParent
           : null;
       }
@@ -289,40 +295,40 @@
             offsetParent = getTrueOffsetParent(element);
           offsetParent &&
           isTableElement(offsetParent) &&
-          "static" === getComputedStyle(offsetParent).position;
+          getComputedStyle(offsetParent).position === "static";
 
         )
           offsetParent = getTrueOffsetParent(offsetParent);
         return offsetParent &&
-          ("html" === getNodeName(offsetParent) ||
-            ("body" === getNodeName(offsetParent) &&
-              "static" === getComputedStyle(offsetParent).position))
+          (getNodeName(offsetParent) === "html" ||
+            (getNodeName(offsetParent) === "body" &&
+              getComputedStyle(offsetParent).position === "static"))
           ? window
           : offsetParent ||
               (function getContainingBlock(element) {
-                var isFirefox =
-                  -1 !== navigator.userAgent.toLowerCase().indexOf("firefox");
+                const isFirefox =
+                  navigator.userAgent.toLowerCase().indexOf("firefox") !== -1;
                 if (
-                  -1 !== navigator.userAgent.indexOf("Trident") &&
+                  navigator.userAgent.indexOf("Trident") !== -1 &&
                   isHTMLElement(element) &&
-                  "fixed" === getComputedStyle(element).position
+                  getComputedStyle(element).position === "fixed"
                 )
                   return null;
                 for (
-                  var currentNode = getParentNode(element);
+                  let currentNode = getParentNode(element);
                   isHTMLElement(currentNode) &&
                   ["html", "body"].indexOf(getNodeName(currentNode)) < 0;
 
                 ) {
-                  var css = getComputedStyle(currentNode);
+                  const css = getComputedStyle(currentNode);
                   if (
-                    "none" !== css.transform ||
-                    "none" !== css.perspective ||
-                    "paint" === css.contain ||
-                    -1 !==
-                      ["transform", "perspective"].indexOf(css.willChange) ||
-                    (isFirefox && "filter" === css.willChange) ||
-                    (isFirefox && css.filter && "none" !== css.filter)
+                    css.transform !== "none" ||
+                    css.perspective !== "none" ||
+                    css.contain === "paint" ||
+                    ["transform", "perspective"].indexOf(css.willChange) !==
+                      -1 ||
+                    (isFirefox && css.willChange === "filter") ||
+                    (isFirefox && css.filter && css.filter !== "none")
                   )
                     return currentNode;
                   currentNode = currentNode.parentNode;
@@ -331,34 +337,34 @@
               })(element) ||
               window;
       }
-      var enums = __webpack_require__(87701);
+      const enums = __webpack_require__(87701);
       function order(modifiers) {
-        var map = new Map(),
-          visited = new Set(),
-          result = [];
+        const map = new Map();
+        const visited = new Set();
+        const result = [];
         function sort(modifier) {
           visited.add(modifier.name),
             []
               .concat(modifier.requires || [], modifier.requiresIfExists || [])
-              .forEach(function (dep) {
+              .forEach((dep) => {
                 if (!visited.has(dep)) {
-                  var depModifier = map.get(dep);
+                  const depModifier = map.get(dep);
                   depModifier && sort(depModifier);
                 }
               }),
             result.push(modifier);
         }
         return (
-          modifiers.forEach(function (modifier) {
+          modifiers.forEach((modifier) => {
             map.set(modifier.name, modifier);
           }),
-          modifiers.forEach(function (modifier) {
+          modifiers.forEach((modifier) => {
             visited.has(modifier.name) || sort(modifier);
           }),
           result
         );
       }
-      var DEFAULT_OPTIONS = {
+      const DEFAULT_OPTIONS = {
         placement: "bottom",
         modifiers: [],
         strategy: "absolute",
@@ -370,197 +376,198 @@
           _key++
         )
           args[_key] = arguments[_key];
-        return !args.some(function (element) {
-          return !(
-            element && "function" == typeof element.getBoundingClientRect
-          );
-        });
+        return !args.some(
+          (element) =>
+            !(element && typeof element.getBoundingClientRect === "function")
+        );
       }
       function popperGenerator(generatorOptions) {
         void 0 === generatorOptions && (generatorOptions = {});
-        var _generatorOptions = generatorOptions,
-          _generatorOptions$def = _generatorOptions.defaultModifiers,
-          defaultModifiers =
-            void 0 === _generatorOptions$def ? [] : _generatorOptions$def,
-          _generatorOptions$def2 = _generatorOptions.defaultOptions,
-          defaultOptions =
-            void 0 === _generatorOptions$def2
-              ? DEFAULT_OPTIONS
-              : _generatorOptions$def2;
+        const _generatorOptions = generatorOptions;
+        const _generatorOptions$def = _generatorOptions.defaultModifiers;
+        const defaultModifiers =
+          void 0 === _generatorOptions$def ? [] : _generatorOptions$def;
+        const _generatorOptions$def2 = _generatorOptions.defaultOptions;
+        const defaultOptions =
+          void 0 === _generatorOptions$def2
+            ? DEFAULT_OPTIONS
+            : _generatorOptions$def2;
         return function createPopper(reference, popper, options) {
           void 0 === options && (options = defaultOptions);
-          var fn,
-            pending,
-            state = {
-              placement: "bottom",
-              orderedModifiers: [],
-              options: Object.assign({}, DEFAULT_OPTIONS, defaultOptions),
-              modifiersData: {},
-              elements: { reference, popper },
-              attributes: {},
-              styles: {},
-            },
-            effectCleanupFns = [],
-            isDestroyed = !1,
-            instance = {
-              state,
-              setOptions: function setOptions(setOptionsAction) {
-                var options =
-                  "function" == typeof setOptionsAction
-                    ? setOptionsAction(state.options)
-                    : setOptionsAction;
-                cleanupModifierEffects(),
-                  (state.options = Object.assign(
-                    {},
-                    defaultOptions,
-                    state.options,
-                    options
-                  )),
-                  (state.scrollParents = {
-                    reference: isElement(reference)
-                      ? listScrollParents(reference)
-                      : reference.contextElement
-                      ? listScrollParents(reference.contextElement)
-                      : [],
-                    popper: listScrollParents(popper),
-                  });
-                var orderedModifiers = (function orderModifiers(modifiers) {
-                  var orderedModifiers = order(modifiers);
-                  return enums.xs.reduce(function (acc, phase) {
-                    return acc.concat(
-                      orderedModifiers.filter(function (modifier) {
-                        return modifier.phase === phase;
-                      })
-                    );
-                  }, []);
-                })(
-                  (function mergeByName(modifiers) {
-                    var merged = modifiers.reduce(function (merged, current) {
-                      var existing = merged[current.name];
-                      return (
-                        (merged[current.name] = existing
-                          ? Object.assign({}, existing, current, {
-                              options: Object.assign(
-                                {},
-                                existing.options,
-                                current.options
-                              ),
-                              data: Object.assign(
-                                {},
-                                existing.data,
-                                current.data
-                              ),
-                            })
-                          : current),
-                        merged
-                      );
-                    }, {});
-                    return Object.keys(merged).map(function (key) {
-                      return merged[key];
-                    });
-                  })([].concat(defaultModifiers, state.options.modifiers))
+          let fn;
+          let pending;
+          let state = {
+            placement: "bottom",
+            orderedModifiers: [],
+            options: { ...DEFAULT_OPTIONS, ...defaultOptions },
+            modifiersData: {},
+            elements: { reference, popper },
+            attributes: {},
+            styles: {},
+          };
+          let effectCleanupFns = [];
+          let isDestroyed = !1;
+          var instance = {
+            state,
+            setOptions: function setOptions(setOptionsAction) {
+              const options =
+                typeof setOptionsAction === "function"
+                  ? setOptionsAction(state.options)
+                  : setOptionsAction;
+              cleanupModifierEffects(),
+                (state.options = {
+                  ...defaultOptions,
+                  ...state.options,
+                  ...options,
+                }),
+                (state.scrollParents = {
+                  reference: isElement(reference)
+                    ? listScrollParents(reference)
+                    : reference.contextElement
+                    ? listScrollParents(reference.contextElement)
+                    : [],
+                  popper: listScrollParents(popper),
+                });
+              const orderedModifiers = (function orderModifiers(modifiers) {
+                const orderedModifiers = order(modifiers);
+                return enums.xs.reduce(
+                  (acc, phase) =>
+                    acc.concat(
+                      orderedModifiers.filter(
+                        (modifier) => modifier.phase === phase
+                      )
+                    ),
+                  []
                 );
-                return (
-                  (state.orderedModifiers = orderedModifiers.filter(function (
-                    m
+              })(
+                (function mergeByName(modifiers) {
+                  const merged = modifiers.reduce((merged, current) => {
+                    const existing = merged[current.name];
+                    return (
+                      (merged[current.name] = existing
+                        ? {
+                            ...existing,
+                            ...current,
+                            options: {
+                              ...existing.options,
+                              ...current.options,
+                            },
+                            data: {
+                              ...existing.data,
+                              ...current.data,
+                            },
+                          }
+                        : current),
+                      merged
+                    );
+                  }, {});
+                  return Object.keys(merged).map((key) => merged[key]);
+                })([].concat(defaultModifiers, state.options.modifiers))
+              );
+              return (
+                (state.orderedModifiers = orderedModifiers.filter(
+                  (m) => m.enabled
+                )),
+                (function runModifierEffects() {
+                  state.orderedModifiers.forEach((_ref3) => {
+                    const { name } = _ref3;
+                    const _ref3$options = _ref3.options;
+                    const options =
+                      void 0 === _ref3$options ? {} : _ref3$options;
+                    const { effect } = _ref3;
+                    if (typeof effect === "function") {
+                      const cleanupFn = effect({
+                        state,
+                        name,
+                        instance,
+                        options,
+                      });
+                      const noopFn = function noopFn() {};
+                      effectCleanupFns.push(cleanupFn || noopFn);
+                    }
+                  });
+                })(),
+                instance.update()
+              );
+            },
+            forceUpdate: function forceUpdate() {
+              if (!isDestroyed) {
+                const _state$elements = state.elements;
+                const { reference } = _state$elements;
+                const { popper } = _state$elements;
+                if (areValidElements(reference, popper)) {
+                  (state.rects = {
+                    reference: getCompositeRect(
+                      reference,
+                      getOffsetParent(popper),
+                      state.options.strategy === "fixed"
+                    ),
+                    popper: getLayoutRect(popper),
+                  }),
+                    (state.reset = !1),
+                    (state.placement = state.options.placement),
+                    state.orderedModifiers.forEach(
+                      (modifier) =>
+                        (state.modifiersData[modifier.name] = {
+                          ...modifier.data,
+                        })
+                    );
+                  for (
+                    let index = 0;
+                    index < state.orderedModifiers.length;
+                    index++
                   ) {
-                    return m.enabled;
-                  })),
-                  (function runModifierEffects() {
-                    state.orderedModifiers.forEach(function (_ref3) {
-                      var name = _ref3.name,
-                        _ref3$options = _ref3.options,
-                        options = void 0 === _ref3$options ? {} : _ref3$options,
-                        effect = _ref3.effect;
-                      if ("function" == typeof effect) {
-                        var cleanupFn = effect({
+                    if (!0 !== state.reset) {
+                      const _state$orderedModifie =
+                        state.orderedModifiers[index];
+                      const { fn } = _state$orderedModifie;
+                      const _state$orderedModifie2 =
+                        _state$orderedModifie.options;
+                      const _options =
+                        void 0 === _state$orderedModifie2
+                          ? {}
+                          : _state$orderedModifie2;
+                      const { name } = _state$orderedModifie;
+                      typeof fn === "function" &&
+                        (state =
+                          fn({
                             state,
+                            options: _options,
                             name,
                             instance,
-                            options,
-                          }),
-                          noopFn = function noopFn() {};
-                        effectCleanupFns.push(cleanupFn || noopFn);
-                      }
-                    });
-                  })(),
-                  instance.update()
-                );
-              },
-              forceUpdate: function forceUpdate() {
-                if (!isDestroyed) {
-                  var _state$elements = state.elements,
-                    reference = _state$elements.reference,
-                    popper = _state$elements.popper;
-                  if (areValidElements(reference, popper)) {
-                    (state.rects = {
-                      reference: getCompositeRect(
-                        reference,
-                        getOffsetParent(popper),
-                        "fixed" === state.options.strategy
-                      ),
-                      popper: getLayoutRect(popper),
-                    }),
-                      (state.reset = !1),
-                      (state.placement = state.options.placement),
-                      state.orderedModifiers.forEach(function (modifier) {
-                        return (state.modifiersData[modifier.name] =
-                          Object.assign({}, modifier.data));
-                      });
-                    for (
-                      var index = 0;
-                      index < state.orderedModifiers.length;
-                      index++
-                    )
-                      if (!0 !== state.reset) {
-                        var _state$orderedModifie =
-                            state.orderedModifiers[index],
-                          fn = _state$orderedModifie.fn,
-                          _state$orderedModifie2 =
-                            _state$orderedModifie.options,
-                          _options =
-                            void 0 === _state$orderedModifie2
-                              ? {}
-                              : _state$orderedModifie2,
-                          name = _state$orderedModifie.name;
-                        "function" == typeof fn &&
-                          (state =
-                            fn({ state, options: _options, name, instance }) ||
-                            state);
-                      } else (state.reset = !1), (index = -1);
+                          }) || state);
+                    } else (state.reset = !1), (index = -1);
                   }
                 }
-              },
-              update:
-                ((fn = function () {
-                  return new Promise(function (resolve) {
-                    instance.forceUpdate(), resolve(state);
-                  });
-                }),
-                function () {
-                  return (
-                    pending ||
-                      (pending = new Promise(function (resolve) {
-                        Promise.resolve().then(function () {
-                          (pending = void 0), resolve(fn());
-                        });
-                      })),
-                    pending
-                  );
-                }),
-              destroy: function destroy() {
-                cleanupModifierEffects(), (isDestroyed = !0);
-              },
-            };
+              }
+            },
+            update:
+              ((fn = function () {
+                return new Promise((resolve) => {
+                  instance.forceUpdate(), resolve(state);
+                });
+              }),
+              function () {
+                return (
+                  pending ||
+                    (pending = new Promise((resolve) => {
+                      Promise.resolve().then(() => {
+                        (pending = void 0), resolve(fn());
+                      });
+                    })),
+                  pending
+                );
+              }),
+            destroy: function destroy() {
+              cleanupModifierEffects(), (isDestroyed = !0);
+            },
+          };
           if (!areValidElements(reference, popper)) return instance;
           function cleanupModifierEffects() {
-            effectCleanupFns.forEach(function (fn) {
-              return fn();
-            }),
-              (effectCleanupFns = []);
+            effectCleanupFns.forEach((fn) => fn()), (effectCleanupFns = []);
           }
           return (
-            instance.setOptions(options).then(function (state) {
+            instance.setOptions(options).then((state) => {
               !isDestroyed &&
                 options.onFirstUpdate &&
                 options.onFirstUpdate(state);
@@ -569,7 +576,7 @@
           );
         };
       }
-      var passive = { passive: !0 };
+      const passive = { passive: !0 };
       function getBasePlacement(placement) {
         return placement.split("-")[0];
       }
@@ -580,14 +587,14 @@
         return ["top", "bottom"].indexOf(placement) >= 0 ? "x" : "y";
       }
       function computeOffsets(_ref) {
-        var offsets,
-          reference = _ref.reference,
-          element = _ref.element,
-          placement = _ref.placement,
-          basePlacement = placement ? getBasePlacement(placement) : null,
-          variation = placement ? getVariation(placement) : null,
-          commonX = reference.x + reference.width / 2 - element.width / 2,
-          commonY = reference.y + reference.height / 2 - element.height / 2;
+        let offsets;
+        const { reference } = _ref;
+        const { element } = _ref;
+        const { placement } = _ref;
+        const basePlacement = placement ? getBasePlacement(placement) : null;
+        const variation = placement ? getVariation(placement) : null;
+        const commonX = reference.x + reference.width / 2 - element.width / 2;
+        const commonY = reference.y + reference.height / 2 - element.height / 2;
         switch (basePlacement) {
           case enums.we:
             offsets = { x: commonX, y: reference.y - element.height };
@@ -604,11 +611,11 @@
           default:
             offsets = { x: reference.x, y: reference.y };
         }
-        var mainAxis = basePlacement
+        const mainAxis = basePlacement
           ? getMainAxisFromPlacement(basePlacement)
           : null;
-        if (null != mainAxis) {
-          var len = "y" === mainAxis ? "height" : "width";
+        if (mainAxis != null) {
+          const len = mainAxis === "y" ? "height" : "width";
           switch (variation) {
             case enums.BL:
               offsets[mainAxis] =
@@ -621,109 +628,108 @@
         }
         return offsets;
       }
-      var unsetSides = {
+      const unsetSides = {
         top: "auto",
         right: "auto",
         bottom: "auto",
         left: "auto",
       };
       function mapToStyles(_ref2) {
-        var _Object$assign2,
-          popper = _ref2.popper,
-          popperRect = _ref2.popperRect,
-          placement = _ref2.placement,
-          variation = _ref2.variation,
-          offsets = _ref2.offsets,
-          position = _ref2.position,
-          gpuAcceleration = _ref2.gpuAcceleration,
-          adaptive = _ref2.adaptive,
-          roundOffsets = _ref2.roundOffsets,
-          isFixed = _ref2.isFixed,
-          _offsets$x = offsets.x,
-          x = void 0 === _offsets$x ? 0 : _offsets$x,
-          _offsets$y = offsets.y,
-          y = void 0 === _offsets$y ? 0 : _offsets$y,
-          _ref3 =
-            "function" == typeof roundOffsets
-              ? roundOffsets({ x, y })
-              : { x, y };
+        let _Object$assign2;
+        const { popper } = _ref2;
+        const { popperRect } = _ref2;
+        const { placement } = _ref2;
+        const { variation } = _ref2;
+        const { offsets } = _ref2;
+        const { position } = _ref2;
+        const { gpuAcceleration } = _ref2;
+        const { adaptive } = _ref2;
+        const { roundOffsets } = _ref2;
+        const { isFixed } = _ref2;
+        const _offsets$x = offsets.x;
+        let x = void 0 === _offsets$x ? 0 : _offsets$x;
+        const _offsets$y = offsets.y;
+        let y = void 0 === _offsets$y ? 0 : _offsets$y;
+        const _ref3 =
+          typeof roundOffsets === "function"
+            ? roundOffsets({ x, y })
+            : { x, y };
         (x = _ref3.x), (y = _ref3.y);
-        var hasX = offsets.hasOwnProperty("x"),
-          hasY = offsets.hasOwnProperty("y"),
-          sideX = enums.t$,
-          sideY = enums.we,
-          win = window;
+        const hasX = offsets.hasOwnProperty("x");
+        const hasY = offsets.hasOwnProperty("y");
+        let sideX = enums.t$;
+        let sideY = enums.we;
+        const win = window;
         if (adaptive) {
-          var offsetParent = getOffsetParent(popper),
-            heightProp = "clientHeight",
-            widthProp = "clientWidth";
+          let offsetParent = getOffsetParent(popper);
+          let heightProp = "clientHeight";
+          let widthProp = "clientWidth";
           if (
             (offsetParent === getWindow(popper) &&
-              "static" !==
-                getComputedStyle((offsetParent = getDocumentElement(popper)))
-                  .position &&
-              "absolute" === position &&
+              getComputedStyle((offsetParent = getDocumentElement(popper)))
+                .position !== "static" &&
+              position === "absolute" &&
               ((heightProp = "scrollHeight"), (widthProp = "scrollWidth")),
             (offsetParent = offsetParent),
             placement === enums.we ||
               ((placement === enums.t$ || placement === enums.F2) &&
                 variation === enums.ut))
-          )
+          ) {
             (sideY = enums.I),
               (y -=
                 (isFixed && win.visualViewport
                   ? win.visualViewport.height
                   : offsetParent[heightProp]) - popperRect.height),
               (y *= gpuAcceleration ? 1 : -1);
+          }
           if (
             placement === enums.t$ ||
             ((placement === enums.we || placement === enums.I) &&
               variation === enums.ut)
-          )
+          ) {
             (sideX = enums.F2),
               (x -=
                 (isFixed && win.visualViewport
                   ? win.visualViewport.width
                   : offsetParent[widthProp]) - popperRect.width),
               (x *= gpuAcceleration ? 1 : -1);
+          }
         }
-        var _Object$assign,
-          commonStyles = Object.assign({ position }, adaptive && unsetSides),
-          _ref4 =
-            !0 === roundOffsets
-              ? (function roundOffsetsByDPR(_ref) {
-                  var x = _ref.x,
-                    y = _ref.y,
-                    dpr = window.devicePixelRatio || 1;
-                  return {
-                    x: round(x * dpr) / dpr || 0,
-                    y: round(y * dpr) / dpr || 0,
-                  };
-                })({ x, y })
-              : { x, y };
+        let _Object$assign;
+        const commonStyles = { position, ...(adaptive && unsetSides) };
+        const _ref4 =
+          !0 === roundOffsets
+            ? (function roundOffsetsByDPR(_ref) {
+                const { x } = _ref;
+                const { y } = _ref;
+                const dpr = window.devicePixelRatio || 1;
+                return {
+                  x: round(x * dpr) / dpr || 0,
+                  y: round(y * dpr) / dpr || 0,
+                };
+              })({ x, y })
+            : { x, y };
         return (
           (x = _ref4.x),
           (y = _ref4.y),
           gpuAcceleration
-            ? Object.assign(
-                {},
-                commonStyles,
-                (((_Object$assign = {})[sideY] = hasY ? "0" : ""),
+            ? {
+                ...commonStyles,
+                ...(((_Object$assign = {})[sideY] = hasY ? "0" : ""),
                 (_Object$assign[sideX] = hasX ? "0" : ""),
                 (_Object$assign.transform =
                   (win.devicePixelRatio || 1) <= 1
-                    ? "translate(" + x + "px, " + y + "px)"
-                    : "translate3d(" + x + "px, " + y + "px, 0)"),
-                _Object$assign)
-              )
-            : Object.assign(
-                {},
-                commonStyles,
-                (((_Object$assign2 = {})[sideY] = hasY ? y + "px" : ""),
-                (_Object$assign2[sideX] = hasX ? x + "px" : ""),
+                    ? `translate(${x}px, ${y}px)`
+                    : `translate3d(${x}px, ${y}px, 0)`),
+                _Object$assign),
+              }
+            : {
+                ...commonStyles,
+                ...(((_Object$assign2 = {})[sideY] = hasY ? `${y}px` : ""),
+                (_Object$assign2[sideX] = hasX ? `${x}px` : ""),
                 (_Object$assign2.transform = ""),
-                _Object$assign2)
-              )
+                _Object$assign2),
+              }
         );
       }
       const modifiers_offset = {
@@ -732,64 +738,72 @@
         phase: "main",
         requires: ["popperOffsets"],
         fn: function offset(_ref2) {
-          var state = _ref2.state,
-            options = _ref2.options,
-            name = _ref2.name,
-            _options$offset = options.offset,
-            offset = void 0 === _options$offset ? [0, 0] : _options$offset,
-            data = enums.Ct.reduce(function (acc, placement) {
-              return (
-                (acc[placement] = (function distanceAndSkiddingToXY(
-                  placement,
-                  rects,
-                  offset
-                ) {
-                  var basePlacement = getBasePlacement(placement),
-                    invertDistance =
-                      [enums.t$, enums.we].indexOf(basePlacement) >= 0 ? -1 : 1,
-                    _ref =
-                      "function" == typeof offset
-                        ? offset(Object.assign({}, rects, { placement }))
-                        : offset,
-                    skidding = _ref[0],
-                    distance = _ref[1];
-                  return (
-                    (skidding = skidding || 0),
-                    (distance = (distance || 0) * invertDistance),
-                    [enums.t$, enums.F2].indexOf(basePlacement) >= 0
-                      ? { x: distance, y: skidding }
-                      : { x: skidding, y: distance }
-                  );
-                })(placement, state.rects, offset)),
-                acc
-              );
-            }, {}),
-            _data$state$placement = data[state.placement],
-            x = _data$state$placement.x,
-            y = _data$state$placement.y;
-          null != state.modifiersData.popperOffsets &&
+          const { state } = _ref2;
+          const { options } = _ref2;
+          const { name } = _ref2;
+          const _options$offset = options.offset;
+          const offset = void 0 === _options$offset ? [0, 0] : _options$offset;
+          const data = enums.Ct.reduce(
+            (acc, placement) => (
+              (acc[placement] = (function distanceAndSkiddingToXY(
+                placement,
+                rects,
+                offset
+              ) {
+                const basePlacement = getBasePlacement(placement);
+                const invertDistance =
+                  [enums.t$, enums.we].indexOf(basePlacement) >= 0 ? -1 : 1;
+                const _ref =
+                  typeof offset === "function"
+                    ? offset({ ...rects, placement })
+                    : offset;
+                let skidding = _ref[0];
+                let distance = _ref[1];
+                return (
+                  (skidding = skidding || 0),
+                  (distance = (distance || 0) * invertDistance),
+                  [enums.t$, enums.F2].indexOf(basePlacement) >= 0
+                    ? { x: distance, y: skidding }
+                    : { x: skidding, y: distance }
+                );
+              })(placement, state.rects, offset)),
+              acc
+            ),
+            {}
+          );
+          const _data$state$placement = data[state.placement];
+          const { x } = _data$state$placement;
+          const { y } = _data$state$placement;
+          state.modifiersData.popperOffsets != null &&
             ((state.modifiersData.popperOffsets.x += x),
             (state.modifiersData.popperOffsets.y += y)),
             (state.modifiersData[name] = data);
         },
       };
-      var hash = { left: "right", right: "left", bottom: "top", top: "bottom" };
+      const hash = {
+        left: "right",
+        right: "left",
+        bottom: "top",
+        top: "bottom",
+      };
       function getOppositePlacement(placement) {
-        return placement.replace(/left|right|bottom|top/g, function (matched) {
-          return hash[matched];
-        });
+        return placement.replace(
+          /left|right|bottom|top/g,
+          (matched) => hash[matched]
+        );
       }
-      var getOppositeVariationPlacement_hash = { start: "end", end: "start" };
+      const getOppositeVariationPlacement_hash = { start: "end", end: "start" };
       function getOppositeVariationPlacement(placement) {
-        return placement.replace(/start|end/g, function (matched) {
-          return getOppositeVariationPlacement_hash[matched];
-        });
+        return placement.replace(
+          /start|end/g,
+          (matched) => getOppositeVariationPlacement_hash[matched]
+        );
       }
       function contains(parent, child) {
-        var rootNode = child.getRootNode && child.getRootNode();
+        const rootNode = child.getRootNode && child.getRootNode();
         if (parent.contains(child)) return !0;
         if (rootNode && isShadowRoot(rootNode)) {
-          var next = child;
+          let next = child;
           do {
             if (next && parent.isSameNode(next)) return !0;
             next = next.parentNode || next.host;
@@ -798,24 +812,25 @@
         return !1;
       }
       function rectToClientRect(rect) {
-        return Object.assign({}, rect, {
+        return {
+          ...rect,
           left: rect.x,
           top: rect.y,
           right: rect.x + rect.width,
           bottom: rect.y + rect.height,
-        });
+        };
       }
       function getClientRectFromMixedType(element, clippingParent) {
         return clippingParent === enums.Pj
           ? rectToClientRect(
               (function getViewportRect(element) {
-                var win = getWindow(element),
-                  html = getDocumentElement(element),
-                  visualViewport = win.visualViewport,
-                  width = html.clientWidth,
-                  height = html.clientHeight,
-                  x = 0,
-                  y = 0;
+                const win = getWindow(element);
+                const html = getDocumentElement(element);
+                const { visualViewport } = win;
+                let width = html.clientWidth;
+                let height = html.clientHeight;
+                let x = 0;
+                let y = 0;
                 return (
                   visualViewport &&
                     ((width = visualViewport.width),
@@ -825,16 +840,21 @@
                     ) ||
                       ((x = visualViewport.offsetLeft),
                       (y = visualViewport.offsetTop))),
-                  { width, height, x: x + getWindowScrollBarX(element), y }
+                  {
+                    width,
+                    height,
+                    x: x + getWindowScrollBarX(element),
+                    y,
+                  }
                 );
               })(element)
             )
           : isElement(clippingParent)
           ? (function getInnerBoundingClientRect(element) {
-              var rect = getBoundingClientRect(element);
+              const rect = getBoundingClientRect(element);
               return (
-                (rect.top = rect.top + element.clientTop),
-                (rect.left = rect.left + element.clientLeft),
+                (rect.top += element.clientTop),
+                (rect.left += element.clientLeft),
                 (rect.bottom = rect.top + element.clientHeight),
                 (rect.right = rect.left + element.clientWidth),
                 (rect.width = element.clientWidth),
@@ -846,68 +866,70 @@
             })(clippingParent)
           : rectToClientRect(
               (function getDocumentRect(element) {
-                var _element$ownerDocumen,
-                  html = getDocumentElement(element),
-                  winScroll = getWindowScroll(element),
-                  body =
-                    null == (_element$ownerDocumen = element.ownerDocument)
-                      ? void 0
-                      : _element$ownerDocumen.body,
-                  width = math_max(
-                    html.scrollWidth,
-                    html.clientWidth,
-                    body ? body.scrollWidth : 0,
-                    body ? body.clientWidth : 0
-                  ),
-                  height = math_max(
-                    html.scrollHeight,
-                    html.clientHeight,
-                    body ? body.scrollHeight : 0,
-                    body ? body.clientHeight : 0
-                  ),
-                  x = -winScroll.scrollLeft + getWindowScrollBarX(element),
-                  y = -winScroll.scrollTop;
+                let _element$ownerDocumen;
+                const html = getDocumentElement(element);
+                const winScroll = getWindowScroll(element);
+                const body =
+                  (_element$ownerDocumen = element.ownerDocument) == null
+                    ? void 0
+                    : _element$ownerDocumen.body;
+                const width = math_max(
+                  html.scrollWidth,
+                  html.clientWidth,
+                  body ? body.scrollWidth : 0,
+                  body ? body.clientWidth : 0
+                );
+                const height = math_max(
+                  html.scrollHeight,
+                  html.clientHeight,
+                  body ? body.scrollHeight : 0,
+                  body ? body.clientHeight : 0
+                );
+                let x = -winScroll.scrollLeft + getWindowScrollBarX(element);
+                const y = -winScroll.scrollTop;
                 return (
-                  "rtl" === getComputedStyle(body || html).direction &&
+                  getComputedStyle(body || html).direction === "rtl" &&
                     (x +=
                       math_max(html.clientWidth, body ? body.clientWidth : 0) -
                       width),
-                  { width, height, x, y }
+                  {
+                    width,
+                    height,
+                    x,
+                    y,
+                  }
                 );
               })(getDocumentElement(element))
             );
       }
       function getClippingRect(element, boundary, rootBoundary) {
-        var mainClippingParents =
-            "clippingParents" === boundary
-              ? (function getClippingParents(element) {
-                  var clippingParents = listScrollParents(
-                      getParentNode(element)
-                    ),
-                    clipperElement =
-                      ["absolute", "fixed"].indexOf(
-                        getComputedStyle(element).position
-                      ) >= 0 && isHTMLElement(element)
-                        ? getOffsetParent(element)
-                        : element;
-                  return isElement(clipperElement)
-                    ? clippingParents.filter(function (clippingParent) {
-                        return (
-                          isElement(clippingParent) &&
-                          contains(clippingParent, clipperElement) &&
-                          "body" !== getNodeName(clippingParent)
-                        );
-                      })
-                    : [];
-                })(element)
-              : [].concat(boundary),
-          clippingParents = [].concat(mainClippingParents, [rootBoundary]),
-          firstClippingParent = clippingParents[0],
-          clippingRect = clippingParents.reduce(function (
-            accRect,
-            clippingParent
-          ) {
-            var rect = getClientRectFromMixedType(element, clippingParent);
+        const mainClippingParents =
+          boundary === "clippingParents"
+            ? (function getClippingParents(element) {
+                const clippingParents = listScrollParents(
+                  getParentNode(element)
+                );
+                const clipperElement =
+                  ["absolute", "fixed"].indexOf(
+                    getComputedStyle(element).position
+                  ) >= 0 && isHTMLElement(element)
+                    ? getOffsetParent(element)
+                    : element;
+                return isElement(clipperElement)
+                  ? clippingParents.filter(
+                      (clippingParent) =>
+                        isElement(clippingParent) &&
+                        contains(clippingParent, clipperElement) &&
+                        getNodeName(clippingParent) !== "body"
+                    )
+                  : [];
+              })(element)
+            : [].concat(boundary);
+        const clippingParents = [].concat(mainClippingParents, [rootBoundary]);
+        const firstClippingParent = clippingParents[0];
+        const clippingRect = clippingParents.reduce(
+          (accRect, clippingParent) => {
+            const rect = getClientRectFromMixedType(element, clippingParent);
             return (
               (accRect.top = math_max(rect.top, accRect.top)),
               (accRect.right = math_min(rect.right, accRect.right)),
@@ -916,7 +938,8 @@
               accRect
             );
           },
-          getClientRectFromMixedType(element, firstClippingParent));
+          getClientRectFromMixedType(element, firstClippingParent)
+        );
         return (
           (clippingRect.width = clippingRect.right - clippingRect.left),
           (clippingRect.height = clippingRect.bottom - clippingRect.top),
@@ -926,92 +949,94 @@
         );
       }
       function mergePaddingObject(paddingObject) {
-        return Object.assign(
-          {},
-          { top: 0, right: 0, bottom: 0, left: 0 },
-          paddingObject
-        );
+        return {
+          top: 0,
+          right: 0,
+          bottom: 0,
+          left: 0,
+          ...paddingObject,
+        };
       }
       function expandToHashMap(value, keys) {
-        return keys.reduce(function (hashMap, key) {
-          return (hashMap[key] = value), hashMap;
-        }, {});
+        return keys.reduce(
+          (hashMap, key) => ((hashMap[key] = value), hashMap),
+          {}
+        );
       }
       function detectOverflow(state, options) {
         void 0 === options && (options = {});
-        var _options = options,
-          _options$placement = _options.placement,
-          placement =
-            void 0 === _options$placement
-              ? state.placement
-              : _options$placement,
-          _options$boundary = _options.boundary,
-          boundary =
-            void 0 === _options$boundary ? enums.zV : _options$boundary,
-          _options$rootBoundary = _options.rootBoundary,
-          rootBoundary =
-            void 0 === _options$rootBoundary ? enums.Pj : _options$rootBoundary,
-          _options$elementConte = _options.elementContext,
-          elementContext =
-            void 0 === _options$elementConte ? enums.k5 : _options$elementConte,
-          _options$altBoundary = _options.altBoundary,
-          altBoundary = void 0 !== _options$altBoundary && _options$altBoundary,
-          _options$padding = _options.padding,
-          padding = void 0 === _options$padding ? 0 : _options$padding,
-          paddingObject = mergePaddingObject(
-            "number" != typeof padding
-              ? padding
-              : expandToHashMap(padding, enums.mv)
-          ),
-          altContext = elementContext === enums.k5 ? enums.YP : enums.k5,
-          popperRect = state.rects.popper,
-          element = state.elements[altBoundary ? altContext : elementContext],
-          clippingClientRect = getClippingRect(
-            isElement(element)
-              ? element
-              : element.contextElement ||
-                  getDocumentElement(state.elements.popper),
-            boundary,
-            rootBoundary
-          ),
-          referenceClientRect = getBoundingClientRect(state.elements.reference),
-          popperOffsets = computeOffsets({
-            reference: referenceClientRect,
-            element: popperRect,
-            strategy: "absolute",
-            placement,
-          }),
-          popperClientRect = rectToClientRect(
-            Object.assign({}, popperRect, popperOffsets)
-          ),
-          elementClientRect =
-            elementContext === enums.k5
-              ? popperClientRect
-              : referenceClientRect,
-          overflowOffsets = {
-            top:
-              clippingClientRect.top -
-              elementClientRect.top +
-              paddingObject.top,
-            bottom:
-              elementClientRect.bottom -
-              clippingClientRect.bottom +
-              paddingObject.bottom,
-            left:
-              clippingClientRect.left -
-              elementClientRect.left +
-              paddingObject.left,
-            right:
-              elementClientRect.right -
-              clippingClientRect.right +
-              paddingObject.right,
-          },
-          offsetData = state.modifiersData.offset;
+        const _options = options;
+        const _options$placement = _options.placement;
+        const placement =
+          void 0 === _options$placement ? state.placement : _options$placement;
+        const _options$boundary = _options.boundary;
+        const boundary =
+          void 0 === _options$boundary ? enums.zV : _options$boundary;
+        const _options$rootBoundary = _options.rootBoundary;
+        const rootBoundary =
+          void 0 === _options$rootBoundary ? enums.Pj : _options$rootBoundary;
+        const _options$elementConte = _options.elementContext;
+        const elementContext =
+          void 0 === _options$elementConte ? enums.k5 : _options$elementConte;
+        const _options$altBoundary = _options.altBoundary;
+        const altBoundary =
+          void 0 !== _options$altBoundary && _options$altBoundary;
+        const _options$padding = _options.padding;
+        const padding = void 0 === _options$padding ? 0 : _options$padding;
+        const paddingObject = mergePaddingObject(
+          typeof padding !== "number"
+            ? padding
+            : expandToHashMap(padding, enums.mv)
+        );
+        const altContext = elementContext === enums.k5 ? enums.YP : enums.k5;
+        const popperRect = state.rects.popper;
+        const element =
+          state.elements[altBoundary ? altContext : elementContext];
+        const clippingClientRect = getClippingRect(
+          isElement(element)
+            ? element
+            : element.contextElement ||
+                getDocumentElement(state.elements.popper),
+          boundary,
+          rootBoundary
+        );
+        const referenceClientRect = getBoundingClientRect(
+          state.elements.reference
+        );
+        const popperOffsets = computeOffsets({
+          reference: referenceClientRect,
+          element: popperRect,
+          strategy: "absolute",
+          placement,
+        });
+        const popperClientRect = rectToClientRect({
+          ...popperRect,
+          ...popperOffsets,
+        });
+        const elementClientRect =
+          elementContext === enums.k5 ? popperClientRect : referenceClientRect;
+        const overflowOffsets = {
+          top:
+            clippingClientRect.top - elementClientRect.top + paddingObject.top,
+          bottom:
+            elementClientRect.bottom -
+            clippingClientRect.bottom +
+            paddingObject.bottom,
+          left:
+            clippingClientRect.left -
+            elementClientRect.left +
+            paddingObject.left,
+          right:
+            elementClientRect.right -
+            clippingClientRect.right +
+            paddingObject.right,
+        };
+        const offsetData = state.modifiersData.offset;
         if (elementContext === enums.k5 && offsetData) {
-          var offset = offsetData[placement];
-          Object.keys(overflowOffsets).forEach(function (key) {
-            var multiply = [enums.F2, enums.I].indexOf(key) >= 0 ? 1 : -1,
-              axis = [enums.we, enums.I].indexOf(key) >= 0 ? "y" : "x";
+          const offset = offsetData[placement];
+          Object.keys(overflowOffsets).forEach((key) => {
+            const multiply = [enums.F2, enums.I].indexOf(key) >= 0 ? 1 : -1;
+            const axis = [enums.we, enums.I].indexOf(key) >= 0 ? "y" : "x";
             overflowOffsets[key] += offset[axis] * multiply;
           });
         }
@@ -1025,173 +1050,171 @@
         enabled: !0,
         phase: "main",
         fn: function preventOverflow(_ref) {
-          var state = _ref.state,
-            options = _ref.options,
-            name = _ref.name,
-            _options$mainAxis = options.mainAxis,
-            checkMainAxis = void 0 === _options$mainAxis || _options$mainAxis,
-            _options$altAxis = options.altAxis,
-            checkAltAxis = void 0 !== _options$altAxis && _options$altAxis,
-            boundary = options.boundary,
-            rootBoundary = options.rootBoundary,
-            altBoundary = options.altBoundary,
-            padding = options.padding,
-            _options$tether = options.tether,
-            tether = void 0 === _options$tether || _options$tether,
-            _options$tetherOffset = options.tetherOffset,
-            tetherOffset =
-              void 0 === _options$tetherOffset ? 0 : _options$tetherOffset,
-            overflow = detectOverflow(state, {
-              boundary,
-              rootBoundary,
-              padding,
-              altBoundary,
-            }),
-            basePlacement = getBasePlacement(state.placement),
-            variation = getVariation(state.placement),
-            isBasePlacement = !variation,
-            mainAxis = getMainAxisFromPlacement(basePlacement),
-            altAxis = (function getAltAxis(axis) {
-              return "x" === axis ? "y" : "x";
-            })(mainAxis),
-            popperOffsets = state.modifiersData.popperOffsets,
-            referenceRect = state.rects.reference,
-            popperRect = state.rects.popper,
-            tetherOffsetValue =
-              "function" == typeof tetherOffset
-                ? tetherOffset(
-                    Object.assign({}, state.rects, {
-                      placement: state.placement,
-                    })
-                  )
-                : tetherOffset,
-            normalizedTetherOffsetValue =
-              "number" == typeof tetherOffsetValue
-                ? { mainAxis: tetherOffsetValue, altAxis: tetherOffsetValue }
-                : Object.assign({ mainAxis: 0, altAxis: 0 }, tetherOffsetValue),
-            offsetModifierState = state.modifiersData.offset
-              ? state.modifiersData.offset[state.placement]
-              : null,
-            data = { x: 0, y: 0 };
+          const { state } = _ref;
+          const { options } = _ref;
+          const { name } = _ref;
+          const _options$mainAxis = options.mainAxis;
+          const checkMainAxis =
+            void 0 === _options$mainAxis || _options$mainAxis;
+          const _options$altAxis = options.altAxis;
+          const checkAltAxis = void 0 !== _options$altAxis && _options$altAxis;
+          const { boundary } = options;
+          const { rootBoundary } = options;
+          const { altBoundary } = options;
+          const { padding } = options;
+          const _options$tether = options.tether;
+          const tether = void 0 === _options$tether || _options$tether;
+          const _options$tetherOffset = options.tetherOffset;
+          const tetherOffset =
+            void 0 === _options$tetherOffset ? 0 : _options$tetherOffset;
+          const overflow = detectOverflow(state, {
+            boundary,
+            rootBoundary,
+            padding,
+            altBoundary,
+          });
+          const basePlacement = getBasePlacement(state.placement);
+          const variation = getVariation(state.placement);
+          const isBasePlacement = !variation;
+          const mainAxis = getMainAxisFromPlacement(basePlacement);
+          const altAxis = (function getAltAxis(axis) {
+            return axis === "x" ? "y" : "x";
+          })(mainAxis);
+          const { popperOffsets } = state.modifiersData;
+          const referenceRect = state.rects.reference;
+          const popperRect = state.rects.popper;
+          const tetherOffsetValue =
+            typeof tetherOffset === "function"
+              ? tetherOffset({ ...state.rects, placement: state.placement })
+              : tetherOffset;
+          const normalizedTetherOffsetValue =
+            typeof tetherOffsetValue === "number"
+              ? { mainAxis: tetherOffsetValue, altAxis: tetherOffsetValue }
+              : { mainAxis: 0, altAxis: 0, ...tetherOffsetValue };
+          const offsetModifierState = state.modifiersData.offset
+            ? state.modifiersData.offset[state.placement]
+            : null;
+          const data = { x: 0, y: 0 };
           if (popperOffsets) {
             if (checkMainAxis) {
-              var _offsetModifierState$,
-                mainSide = "y" === mainAxis ? enums.we : enums.t$,
-                altSide = "y" === mainAxis ? enums.I : enums.F2,
-                len = "y" === mainAxis ? "height" : "width",
-                offset = popperOffsets[mainAxis],
-                min = offset + overflow[mainSide],
-                max = offset - overflow[altSide],
-                additive = tether ? -popperRect[len] / 2 : 0,
-                minLen =
-                  variation === enums.BL ? referenceRect[len] : popperRect[len],
-                maxLen =
-                  variation === enums.BL
-                    ? -popperRect[len]
-                    : -referenceRect[len],
-                arrowElement = state.elements.arrow,
-                arrowRect =
-                  tether && arrowElement
-                    ? getLayoutRect(arrowElement)
-                    : { width: 0, height: 0 },
-                arrowPaddingObject = state.modifiersData["arrow#persistent"]
-                  ? state.modifiersData["arrow#persistent"].padding
-                  : { top: 0, right: 0, bottom: 0, left: 0 },
-                arrowPaddingMin = arrowPaddingObject[mainSide],
-                arrowPaddingMax = arrowPaddingObject[altSide],
-                arrowLen = within(0, referenceRect[len], arrowRect[len]),
-                minOffset = isBasePlacement
-                  ? referenceRect[len] / 2 -
-                    additive -
-                    arrowLen -
-                    arrowPaddingMin -
-                    normalizedTetherOffsetValue.mainAxis
-                  : minLen -
-                    arrowLen -
-                    arrowPaddingMin -
-                    normalizedTetherOffsetValue.mainAxis,
-                maxOffset = isBasePlacement
-                  ? -referenceRect[len] / 2 +
-                    additive +
-                    arrowLen +
-                    arrowPaddingMax +
-                    normalizedTetherOffsetValue.mainAxis
-                  : maxLen +
-                    arrowLen +
-                    arrowPaddingMax +
-                    normalizedTetherOffsetValue.mainAxis,
-                arrowOffsetParent =
-                  state.elements.arrow && getOffsetParent(state.elements.arrow),
-                clientOffset = arrowOffsetParent
-                  ? "y" === mainAxis
-                    ? arrowOffsetParent.clientTop || 0
-                    : arrowOffsetParent.clientLeft || 0
-                  : 0,
-                offsetModifierValue =
-                  null !=
-                  (_offsetModifierState$ =
-                    null == offsetModifierState
-                      ? void 0
-                      : offsetModifierState[mainAxis])
-                    ? _offsetModifierState$
-                    : 0,
-                tetherMax = offset + maxOffset - offsetModifierValue,
-                preventedOffset = within(
-                  tether
-                    ? math_min(
-                        min,
-                        offset + minOffset - offsetModifierValue - clientOffset
-                      )
-                    : min,
-                  offset,
-                  tether ? math_max(max, tetherMax) : max
-                );
+              let _offsetModifierState$;
+              const mainSide = mainAxis === "y" ? enums.we : enums.t$;
+              const altSide = mainAxis === "y" ? enums.I : enums.F2;
+              const len = mainAxis === "y" ? "height" : "width";
+              const offset = popperOffsets[mainAxis];
+              const min = offset + overflow[mainSide];
+              const max = offset - overflow[altSide];
+              const additive = tether ? -popperRect[len] / 2 : 0;
+              const minLen =
+                variation === enums.BL ? referenceRect[len] : popperRect[len];
+              const maxLen =
+                variation === enums.BL ? -popperRect[len] : -referenceRect[len];
+              const arrowElement = state.elements.arrow;
+              const arrowRect =
+                tether && arrowElement
+                  ? getLayoutRect(arrowElement)
+                  : { width: 0, height: 0 };
+              const arrowPaddingObject = state.modifiersData["arrow#persistent"]
+                ? state.modifiersData["arrow#persistent"].padding
+                : {
+                    top: 0,
+                    right: 0,
+                    bottom: 0,
+                    left: 0,
+                  };
+              const arrowPaddingMin = arrowPaddingObject[mainSide];
+              const arrowPaddingMax = arrowPaddingObject[altSide];
+              const arrowLen = within(0, referenceRect[len], arrowRect[len]);
+              const minOffset = isBasePlacement
+                ? referenceRect[len] / 2 -
+                  additive -
+                  arrowLen -
+                  arrowPaddingMin -
+                  normalizedTetherOffsetValue.mainAxis
+                : minLen -
+                  arrowLen -
+                  arrowPaddingMin -
+                  normalizedTetherOffsetValue.mainAxis;
+              const maxOffset = isBasePlacement
+                ? -referenceRect[len] / 2 +
+                  additive +
+                  arrowLen +
+                  arrowPaddingMax +
+                  normalizedTetherOffsetValue.mainAxis
+                : maxLen +
+                  arrowLen +
+                  arrowPaddingMax +
+                  normalizedTetherOffsetValue.mainAxis;
+              const arrowOffsetParent =
+                state.elements.arrow && getOffsetParent(state.elements.arrow);
+              const clientOffset = arrowOffsetParent
+                ? mainAxis === "y"
+                  ? arrowOffsetParent.clientTop || 0
+                  : arrowOffsetParent.clientLeft || 0
+                : 0;
+              const offsetModifierValue =
+                (_offsetModifierState$ =
+                  offsetModifierState == null
+                    ? void 0
+                    : offsetModifierState[mainAxis]) != null
+                  ? _offsetModifierState$
+                  : 0;
+              const tetherMax = offset + maxOffset - offsetModifierValue;
+              const preventedOffset = within(
+                tether
+                  ? math_min(
+                      min,
+                      offset + minOffset - offsetModifierValue - clientOffset
+                    )
+                  : min,
+                offset,
+                tether ? math_max(max, tetherMax) : max
+              );
               (popperOffsets[mainAxis] = preventedOffset),
                 (data[mainAxis] = preventedOffset - offset);
             }
             if (checkAltAxis) {
-              var _offsetModifierState$2,
-                _mainSide = "x" === mainAxis ? enums.we : enums.t$,
-                _altSide = "x" === mainAxis ? enums.I : enums.F2,
-                _offset = popperOffsets[altAxis],
-                _len = "y" === altAxis ? "height" : "width",
-                _min = _offset + overflow[_mainSide],
-                _max = _offset - overflow[_altSide],
-                isOriginSide =
-                  -1 !== [enums.we, enums.t$].indexOf(basePlacement),
-                _offsetModifierValue =
-                  null !=
-                  (_offsetModifierState$2 =
-                    null == offsetModifierState
-                      ? void 0
-                      : offsetModifierState[altAxis])
-                    ? _offsetModifierState$2
-                    : 0,
-                _tetherMin = isOriginSide
-                  ? _min
-                  : _offset -
-                    referenceRect[_len] -
-                    popperRect[_len] -
-                    _offsetModifierValue +
-                    normalizedTetherOffsetValue.altAxis,
-                _tetherMax = isOriginSide
-                  ? _offset +
-                    referenceRect[_len] +
-                    popperRect[_len] -
-                    _offsetModifierValue -
-                    normalizedTetherOffsetValue.altAxis
-                  : _max,
-                _preventedOffset =
-                  tether && isOriginSide
-                    ? (function withinMaxClamp(min, value, max) {
-                        var v = within(min, value, max);
-                        return v > max ? max : v;
-                      })(_tetherMin, _offset, _tetherMax)
-                    : within(
-                        tether ? _tetherMin : _min,
-                        _offset,
-                        tether ? _tetherMax : _max
-                      );
+              let _offsetModifierState$2;
+              const _mainSide = mainAxis === "x" ? enums.we : enums.t$;
+              const _altSide = mainAxis === "x" ? enums.I : enums.F2;
+              const _offset = popperOffsets[altAxis];
+              const _len = altAxis === "y" ? "height" : "width";
+              const _min = _offset + overflow[_mainSide];
+              const _max = _offset - overflow[_altSide];
+              const isOriginSide =
+                [enums.we, enums.t$].indexOf(basePlacement) !== -1;
+              const _offsetModifierValue =
+                (_offsetModifierState$2 =
+                  offsetModifierState == null
+                    ? void 0
+                    : offsetModifierState[altAxis]) != null
+                  ? _offsetModifierState$2
+                  : 0;
+              const _tetherMin = isOriginSide
+                ? _min
+                : _offset -
+                  referenceRect[_len] -
+                  popperRect[_len] -
+                  _offsetModifierValue +
+                  normalizedTetherOffsetValue.altAxis;
+              const _tetherMax = isOriginSide
+                ? _offset +
+                  referenceRect[_len] +
+                  popperRect[_len] -
+                  _offsetModifierValue -
+                  normalizedTetherOffsetValue.altAxis
+                : _max;
+              const _preventedOffset =
+                tether && isOriginSide
+                  ? (function withinMaxClamp(min, value, max) {
+                      const v = within(min, value, max);
+                      return v > max ? max : v;
+                    })(_tetherMin, _offset, _tetherMax)
+                  : within(
+                      tether ? _tetherMin : _min,
+                      _offset,
+                      tether ? _tetherMax : _max
+                    );
               (popperOffsets[altAxis] = _preventedOffset),
                 (data[altAxis] = _preventedOffset - _offset);
             }
@@ -1205,55 +1228,51 @@
         enabled: !0,
         phase: "main",
         fn: function arrow(_ref) {
-          var _state$modifiersData$,
-            state = _ref.state,
-            name = _ref.name,
-            options = _ref.options,
-            arrowElement = state.elements.arrow,
-            popperOffsets = state.modifiersData.popperOffsets,
-            basePlacement = getBasePlacement(state.placement),
-            axis = getMainAxisFromPlacement(basePlacement),
-            len =
-              [enums.t$, enums.F2].indexOf(basePlacement) >= 0
-                ? "height"
-                : "width";
+          let _state$modifiersData$;
+          const { state } = _ref;
+          const { name } = _ref;
+          const { options } = _ref;
+          const arrowElement = state.elements.arrow;
+          const { popperOffsets } = state.modifiersData;
+          const basePlacement = getBasePlacement(state.placement);
+          const axis = getMainAxisFromPlacement(basePlacement);
+          const len =
+            [enums.t$, enums.F2].indexOf(basePlacement) >= 0
+              ? "height"
+              : "width";
           if (arrowElement && popperOffsets) {
-            var paddingObject = (function toPaddingObject(padding, state) {
-                return mergePaddingObject(
-                  "number" !=
-                    typeof (padding =
-                      "function" == typeof padding
-                        ? padding(
-                            Object.assign({}, state.rects, {
-                              placement: state.placement,
-                            })
-                          )
-                        : padding)
-                    ? padding
-                    : expandToHashMap(padding, enums.mv)
-                );
-              })(options.padding, state),
-              arrowRect = getLayoutRect(arrowElement),
-              minProp = "y" === axis ? enums.we : enums.t$,
-              maxProp = "y" === axis ? enums.I : enums.F2,
-              endDiff =
-                state.rects.reference[len] +
-                state.rects.reference[axis] -
-                popperOffsets[axis] -
-                state.rects.popper[len],
-              startDiff = popperOffsets[axis] - state.rects.reference[axis],
-              arrowOffsetParent = getOffsetParent(arrowElement),
-              clientSize = arrowOffsetParent
-                ? "y" === axis
-                  ? arrowOffsetParent.clientHeight || 0
-                  : arrowOffsetParent.clientWidth || 0
-                : 0,
-              centerToReference = endDiff / 2 - startDiff / 2,
-              min = paddingObject[minProp],
-              max = clientSize - arrowRect[len] - paddingObject[maxProp],
-              center = clientSize / 2 - arrowRect[len] / 2 + centerToReference,
-              offset = within(min, center, max),
-              axisProp = axis;
+            const paddingObject = (function toPaddingObject(padding, state) {
+              return mergePaddingObject(
+                typeof (padding =
+                  typeof padding === "function"
+                    ? padding({ ...state.rects, placement: state.placement })
+                    : padding) !== "number"
+                  ? padding
+                  : expandToHashMap(padding, enums.mv)
+              );
+            })(options.padding, state);
+            const arrowRect = getLayoutRect(arrowElement);
+            const minProp = axis === "y" ? enums.we : enums.t$;
+            const maxProp = axis === "y" ? enums.I : enums.F2;
+            const endDiff =
+              state.rects.reference[len] +
+              state.rects.reference[axis] -
+              popperOffsets[axis] -
+              state.rects.popper[len];
+            const startDiff = popperOffsets[axis] - state.rects.reference[axis];
+            const arrowOffsetParent = getOffsetParent(arrowElement);
+            const clientSize = arrowOffsetParent
+              ? axis === "y"
+                ? arrowOffsetParent.clientHeight || 0
+                : arrowOffsetParent.clientWidth || 0
+              : 0;
+            const centerToReference = endDiff / 2 - startDiff / 2;
+            const min = paddingObject[minProp];
+            const max = clientSize - arrowRect[len] - paddingObject[maxProp];
+            const center =
+              clientSize / 2 - arrowRect[len] / 2 + centerToReference;
+            const offset = within(min, center, max);
+            const axisProp = axis;
             state.modifiersData[name] =
               (((_state$modifiersData$ = {})[axisProp] = offset),
               (_state$modifiersData$.centerOffset = offset - center),
@@ -1261,14 +1280,14 @@
           }
         },
         effect: function arrow_effect(_ref2) {
-          var state = _ref2.state,
-            _options$element = _ref2.options.element,
-            arrowElement =
-              void 0 === _options$element
-                ? "[data-popper-arrow]"
-                : _options$element;
-          null != arrowElement &&
-            ("string" != typeof arrowElement ||
+          const { state } = _ref2;
+          const _options$element = _ref2.options.element;
+          let arrowElement =
+            void 0 === _options$element
+              ? "[data-popper-arrow]"
+              : _options$element;
+          arrowElement != null &&
+            (typeof arrowElement !== "string" ||
               (arrowElement =
                 state.elements.popper.querySelector(arrowElement))) &&
             contains(state.elements.popper, arrowElement) &&
@@ -1289,311 +1308,294 @@
         );
       }
       function isAnySideFullyClipped(overflow) {
-        return [enums.we, enums.F2, enums.I, enums.t$].some(function (side) {
-          return overflow[side] >= 0;
-        });
+        return [enums.we, enums.F2, enums.I, enums.t$].some(
+          (side) => overflow[side] >= 0
+        );
       }
-      var popper_createPopper = popperGenerator({
-          defaultModifiers: [
-            {
-              name: "eventListeners",
-              enabled: !0,
-              phase: "write",
-              fn: function fn() {},
-              effect: function effect(_ref) {
-                var state = _ref.state,
-                  instance = _ref.instance,
-                  options = _ref.options,
-                  _options$scroll = options.scroll,
-                  scroll = void 0 === _options$scroll || _options$scroll,
-                  _options$resize = options.resize,
-                  resize = void 0 === _options$resize || _options$resize,
-                  window = getWindow(state.elements.popper),
-                  scrollParents = [].concat(
-                    state.scrollParents.reference,
-                    state.scrollParents.popper
-                  );
-                return (
+      const popper_createPopper = popperGenerator({
+        defaultModifiers: [
+          {
+            name: "eventListeners",
+            enabled: !0,
+            phase: "write",
+            fn: function fn() {},
+            effect: function effect(_ref) {
+              const { state } = _ref;
+              const { instance } = _ref;
+              const { options } = _ref;
+              const _options$scroll = options.scroll;
+              const scroll = void 0 === _options$scroll || _options$scroll;
+              const _options$resize = options.resize;
+              const resize = void 0 === _options$resize || _options$resize;
+              const window = getWindow(state.elements.popper);
+              const scrollParents = [].concat(
+                state.scrollParents.reference,
+                state.scrollParents.popper
+              );
+              return (
+                scroll &&
+                  scrollParents.forEach((scrollParent) => {
+                    scrollParent.addEventListener(
+                      "scroll",
+                      instance.update,
+                      passive
+                    );
+                  }),
+                resize &&
+                  window.addEventListener("resize", instance.update, passive),
+                function () {
                   scroll &&
-                    scrollParents.forEach(function (scrollParent) {
-                      scrollParent.addEventListener(
+                    scrollParents.forEach((scrollParent) => {
+                      scrollParent.removeEventListener(
                         "scroll",
                         instance.update,
                         passive
                       );
                     }),
-                  resize &&
-                    window.addEventListener("resize", instance.update, passive),
-                  function () {
-                    scroll &&
-                      scrollParents.forEach(function (scrollParent) {
-                        scrollParent.removeEventListener(
-                          "scroll",
-                          instance.update,
-                          passive
-                        );
-                      }),
-                      resize &&
-                        window.removeEventListener(
-                          "resize",
-                          instance.update,
-                          passive
-                        );
-                  }
-                );
-              },
-              data: {},
+                    resize &&
+                      window.removeEventListener(
+                        "resize",
+                        instance.update,
+                        passive
+                      );
+                }
+              );
             },
-            {
-              name: "popperOffsets",
-              enabled: !0,
-              phase: "read",
-              fn: function popperOffsets(_ref) {
-                var state = _ref.state,
-                  name = _ref.name;
-                state.modifiersData[name] = computeOffsets({
-                  reference: state.rects.reference,
-                  element: state.rects.popper,
-                  strategy: "absolute",
-                  placement: state.placement,
+            data: {},
+          },
+          {
+            name: "popperOffsets",
+            enabled: !0,
+            phase: "read",
+            fn: function popperOffsets(_ref) {
+              const { state } = _ref;
+              const { name } = _ref;
+              state.modifiersData[name] = computeOffsets({
+                reference: state.rects.reference,
+                element: state.rects.popper,
+                strategy: "absolute",
+                placement: state.placement,
+              });
+            },
+            data: {},
+          },
+          {
+            name: "computeStyles",
+            enabled: !0,
+            phase: "beforeWrite",
+            fn: function computeStyles(_ref5) {
+              const { state } = _ref5;
+              const { options } = _ref5;
+              const _options$gpuAccelerat = options.gpuAcceleration;
+              const gpuAcceleration =
+                void 0 === _options$gpuAccelerat || _options$gpuAccelerat;
+              const _options$adaptive = options.adaptive;
+              const adaptive =
+                void 0 === _options$adaptive || _options$adaptive;
+              const _options$roundOffsets = options.roundOffsets;
+              const roundOffsets =
+                void 0 === _options$roundOffsets || _options$roundOffsets;
+              const commonStyles = {
+                placement: getBasePlacement(state.placement),
+                variation: getVariation(state.placement),
+                popper: state.elements.popper,
+                popperRect: state.rects.popper,
+                gpuAcceleration,
+                isFixed: state.options.strategy === "fixed",
+              };
+              state.modifiersData.popperOffsets != null &&
+                (state.styles.popper = {
+                  ...state.styles.popper,
+                  ...mapToStyles({
+                    ...commonStyles,
+                    offsets: state.modifiersData.popperOffsets,
+                    position: state.options.strategy,
+                    adaptive,
+                    roundOffsets,
+                  }),
+                }),
+                state.modifiersData.arrow != null &&
+                  (state.styles.arrow = {
+                    ...state.styles.arrow,
+                    ...mapToStyles({
+                      ...commonStyles,
+                      offsets: state.modifiersData.arrow,
+                      position: "absolute",
+                      adaptive: !1,
+                      roundOffsets,
+                    }),
+                  }),
+                (state.attributes.popper = {
+                  ...state.attributes.popper,
+                  "data-popper-placement": state.placement,
                 });
-              },
-              data: {},
             },
-            {
-              name: "computeStyles",
-              enabled: !0,
-              phase: "beforeWrite",
-              fn: function computeStyles(_ref5) {
-                var state = _ref5.state,
-                  options = _ref5.options,
-                  _options$gpuAccelerat = options.gpuAcceleration,
-                  gpuAcceleration =
-                    void 0 === _options$gpuAccelerat || _options$gpuAccelerat,
-                  _options$adaptive = options.adaptive,
-                  adaptive = void 0 === _options$adaptive || _options$adaptive,
-                  _options$roundOffsets = options.roundOffsets,
-                  roundOffsets =
-                    void 0 === _options$roundOffsets || _options$roundOffsets,
-                  commonStyles = {
-                    placement: getBasePlacement(state.placement),
-                    variation: getVariation(state.placement),
-                    popper: state.elements.popper,
-                    popperRect: state.rects.popper,
-                    gpuAcceleration,
-                    isFixed: "fixed" === state.options.strategy,
-                  };
-                null != state.modifiersData.popperOffsets &&
-                  (state.styles.popper = Object.assign(
-                    {},
-                    state.styles.popper,
-                    mapToStyles(
-                      Object.assign({}, commonStyles, {
-                        offsets: state.modifiersData.popperOffsets,
-                        position: state.options.strategy,
-                        adaptive,
-                        roundOffsets,
-                      })
-                    )
-                  )),
-                  null != state.modifiersData.arrow &&
-                    (state.styles.arrow = Object.assign(
-                      {},
-                      state.styles.arrow,
-                      mapToStyles(
-                        Object.assign({}, commonStyles, {
-                          offsets: state.modifiersData.arrow,
-                          position: "absolute",
-                          adaptive: !1,
-                          roundOffsets,
-                        })
-                      )
-                    )),
-                  (state.attributes.popper = Object.assign(
-                    {},
-                    state.attributes.popper,
-                    { "data-popper-placement": state.placement }
-                  ));
-              },
-              data: {},
+            data: {},
+          },
+          {
+            name: "applyStyles",
+            enabled: !0,
+            phase: "write",
+            fn: function applyStyles(_ref) {
+              const { state } = _ref;
+              Object.keys(state.elements).forEach((name) => {
+                const style = state.styles[name] || {};
+                const attributes = state.attributes[name] || {};
+                const element = state.elements[name];
+                isHTMLElement(element) &&
+                  getNodeName(element) &&
+                  (Object.assign(element.style, style),
+                  Object.keys(attributes).forEach((name) => {
+                    const value = attributes[name];
+                    !1 === value
+                      ? element.removeAttribute(name)
+                      : element.setAttribute(name, !0 === value ? "" : value);
+                  }));
+              });
             },
-            {
-              name: "applyStyles",
-              enabled: !0,
-              phase: "write",
-              fn: function applyStyles(_ref) {
-                var state = _ref.state;
-                Object.keys(state.elements).forEach(function (name) {
-                  var style = state.styles[name] || {},
-                    attributes = state.attributes[name] || {},
-                    element = state.elements[name];
-                  isHTMLElement(element) &&
-                    getNodeName(element) &&
-                    (Object.assign(element.style, style),
-                    Object.keys(attributes).forEach(function (name) {
-                      var value = attributes[name];
-                      !1 === value
-                        ? element.removeAttribute(name)
-                        : element.setAttribute(name, !0 === value ? "" : value);
-                    }));
-                });
-              },
-              effect: function applyStyles_effect(_ref2) {
-                var state = _ref2.state,
-                  initialStyles = {
-                    popper: {
-                      position: state.options.strategy,
-                      left: "0",
-                      top: "0",
-                      margin: "0",
-                    },
-                    arrow: { position: "absolute" },
-                    reference: {},
-                  };
-                return (
+            effect: function applyStyles_effect(_ref2) {
+              const { state } = _ref2;
+              const initialStyles = {
+                popper: {
+                  position: state.options.strategy,
+                  left: "0",
+                  top: "0",
+                  margin: "0",
+                },
+                arrow: { position: "absolute" },
+                reference: {},
+              };
+              return (
+                Object.assign(
+                  state.elements.popper.style,
+                  initialStyles.popper
+                ),
+                (state.styles = initialStyles),
+                state.elements.arrow &&
                   Object.assign(
-                    state.elements.popper.style,
-                    initialStyles.popper
+                    state.elements.arrow.style,
+                    initialStyles.arrow
                   ),
-                  (state.styles = initialStyles),
-                  state.elements.arrow &&
-                    Object.assign(
-                      state.elements.arrow.style,
-                      initialStyles.arrow
-                    ),
-                  function () {
-                    Object.keys(state.elements).forEach(function (name) {
-                      var element = state.elements[name],
-                        attributes = state.attributes[name] || {},
-                        style = Object.keys(
-                          state.styles.hasOwnProperty(name)
-                            ? state.styles[name]
-                            : initialStyles[name]
-                        ).reduce(function (style, property) {
-                          return (style[property] = ""), style;
-                        }, {});
-                      isHTMLElement(element) &&
-                        getNodeName(element) &&
-                        (Object.assign(element.style, style),
-                        Object.keys(attributes).forEach(function (attribute) {
-                          element.removeAttribute(attribute);
-                        }));
-                    });
-                  }
-                );
-              },
-              requires: ["computeStyles"],
+                function () {
+                  Object.keys(state.elements).forEach((name) => {
+                    const element = state.elements[name];
+                    const attributes = state.attributes[name] || {};
+                    const style = Object.keys(
+                      state.styles.hasOwnProperty(name)
+                        ? state.styles[name]
+                        : initialStyles[name]
+                    ).reduce(
+                      (style, property) => ((style[property] = ""), style),
+                      {}
+                    );
+                    isHTMLElement(element) &&
+                      getNodeName(element) &&
+                      (Object.assign(element.style, style),
+                      Object.keys(attributes).forEach((attribute) => {
+                        element.removeAttribute(attribute);
+                      }));
+                  });
+                }
+              );
             },
-            modifiers_offset,
-            {
-              name: "flip",
-              enabled: !0,
-              phase: "main",
-              fn: function flip(_ref) {
-                var state = _ref.state,
-                  options = _ref.options,
-                  name = _ref.name;
-                if (!state.modifiersData[name]._skip) {
-                  for (
-                    var _options$mainAxis = options.mainAxis,
-                      checkMainAxis =
-                        void 0 === _options$mainAxis || _options$mainAxis,
-                      _options$altAxis = options.altAxis,
-                      checkAltAxis =
-                        void 0 === _options$altAxis || _options$altAxis,
-                      specifiedFallbackPlacements = options.fallbackPlacements,
-                      padding = options.padding,
-                      boundary = options.boundary,
-                      rootBoundary = options.rootBoundary,
-                      altBoundary = options.altBoundary,
-                      _options$flipVariatio = options.flipVariations,
-                      flipVariations =
-                        void 0 === _options$flipVariatio ||
-                        _options$flipVariatio,
-                      allowedAutoPlacements = options.allowedAutoPlacements,
-                      preferredPlacement = state.options.placement,
-                      basePlacement = getBasePlacement(preferredPlacement),
-                      fallbackPlacements =
-                        specifiedFallbackPlacements ||
-                        (basePlacement === preferredPlacement || !flipVariations
-                          ? [getOppositePlacement(preferredPlacement)]
-                          : (function getExpandedFallbackPlacements(placement) {
-                              if (getBasePlacement(placement) === enums.d7)
-                                return [];
-                              var oppositePlacement =
-                                getOppositePlacement(placement);
-                              return [
-                                getOppositeVariationPlacement(placement),
-                                oppositePlacement,
-                                getOppositeVariationPlacement(
-                                  oppositePlacement
-                                ),
-                              ];
-                            })(preferredPlacement)),
-                      placements = [preferredPlacement]
-                        .concat(fallbackPlacements)
-                        .reduce(function (acc, placement) {
-                          return acc.concat(
+            requires: ["computeStyles"],
+          },
+          modifiers_offset,
+          {
+            name: "flip",
+            enabled: !0,
+            phase: "main",
+            fn: function flip(_ref) {
+              const { state } = _ref;
+              const { options } = _ref;
+              const { name } = _ref;
+              if (!state.modifiersData[name]._skip) {
+                for (
+                  var _options$mainAxis = options.mainAxis,
+                    checkMainAxis =
+                      void 0 === _options$mainAxis || _options$mainAxis,
+                    _options$altAxis = options.altAxis,
+                    checkAltAxis =
+                      void 0 === _options$altAxis || _options$altAxis,
+                    specifiedFallbackPlacements = options.fallbackPlacements,
+                    { padding } = options,
+                    { boundary } = options,
+                    { rootBoundary } = options,
+                    { altBoundary } = options,
+                    _options$flipVariatio = options.flipVariations,
+                    flipVariations =
+                      void 0 === _options$flipVariatio || _options$flipVariatio,
+                    { allowedAutoPlacements } = options,
+                    preferredPlacement = state.options.placement,
+                    basePlacement = getBasePlacement(preferredPlacement),
+                    fallbackPlacements =
+                      specifiedFallbackPlacements ||
+                      (basePlacement === preferredPlacement || !flipVariations
+                        ? [getOppositePlacement(preferredPlacement)]
+                        : (function getExpandedFallbackPlacements(placement) {
+                            if (getBasePlacement(placement) === enums.d7)
+                              return [];
+                            const oppositePlacement =
+                              getOppositePlacement(placement);
+                            return [
+                              getOppositeVariationPlacement(placement),
+                              oppositePlacement,
+                              getOppositeVariationPlacement(oppositePlacement),
+                            ];
+                          })(preferredPlacement)),
+                    placements = [preferredPlacement]
+                      .concat(fallbackPlacements)
+                      .reduce(
+                        (acc, placement) =>
+                          acc.concat(
                             getBasePlacement(placement) === enums.d7
                               ? (function computeAutoPlacement(state, options) {
                                   void 0 === options && (options = {});
-                                  var _options = options,
-                                    placement = _options.placement,
-                                    boundary = _options.boundary,
-                                    rootBoundary = _options.rootBoundary,
-                                    padding = _options.padding,
-                                    flipVariations = _options.flipVariations,
-                                    _options$allowedAutoP =
-                                      _options.allowedAutoPlacements,
-                                    allowedAutoPlacements =
-                                      void 0 === _options$allowedAutoP
-                                        ? enums.Ct
-                                        : _options$allowedAutoP,
-                                    variation = getVariation(placement),
-                                    placements = variation
-                                      ? flipVariations
-                                        ? enums.bw
-                                        : enums.bw.filter(function (placement) {
-                                            return (
-                                              getVariation(placement) ===
-                                              variation
-                                            );
-                                          })
-                                      : enums.mv,
-                                    allowedPlacements = placements.filter(
-                                      function (placement) {
-                                        return (
-                                          allowedAutoPlacements.indexOf(
-                                            placement
-                                          ) >= 0
-                                        );
-                                      }
-                                    );
-                                  0 === allowedPlacements.length &&
+                                  const _options = options;
+                                  const { placement } = _options;
+                                  const { boundary } = _options;
+                                  const { rootBoundary } = _options;
+                                  const { padding } = _options;
+                                  const { flipVariations } = _options;
+                                  const _options$allowedAutoP =
+                                    _options.allowedAutoPlacements;
+                                  const allowedAutoPlacements =
+                                    void 0 === _options$allowedAutoP
+                                      ? enums.Ct
+                                      : _options$allowedAutoP;
+                                  const variation = getVariation(placement);
+                                  const placements = variation
+                                    ? flipVariations
+                                      ? enums.bw
+                                      : enums.bw.filter(
+                                          (placement) =>
+                                            getVariation(placement) ===
+                                            variation
+                                        )
+                                    : enums.mv;
+                                  let allowedPlacements = placements.filter(
+                                    (placement) =>
+                                      allowedAutoPlacements.indexOf(
+                                        placement
+                                      ) >= 0
+                                  );
+                                  allowedPlacements.length === 0 &&
                                     (allowedPlacements = placements);
-                                  var overflows = allowedPlacements.reduce(
-                                    function (acc, placement) {
-                                      return (
-                                        (acc[placement] = detectOverflow(
-                                          state,
-                                          {
-                                            placement,
-                                            boundary,
-                                            rootBoundary,
-                                            padding,
-                                          }
-                                        )[getBasePlacement(placement)]),
-                                        acc
-                                      );
-                                    },
+                                  const overflows = allowedPlacements.reduce(
+                                    (acc, placement) => (
+                                      (acc[placement] = detectOverflow(state, {
+                                        placement,
+                                        boundary,
+                                        rootBoundary,
+                                        padding,
+                                      })[getBasePlacement(placement)]),
+                                      acc
+                                    ),
                                     {}
                                   );
-                                  return Object.keys(overflows).sort(function (
-                                    a,
-                                    b
-                                  ) {
-                                    return overflows[a] - overflows[b];
-                                  });
+                                  return Object.keys(overflows).sort(
+                                    (a, b) => overflows[a] - overflows[b]
+                                  );
                                 })(state, {
                                   placement,
                                   boundary,
@@ -1603,634 +1605,601 @@
                                   allowedAutoPlacements,
                                 })
                               : placement
-                          );
-                        }, []),
-                      referenceRect = state.rects.reference,
-                      popperRect = state.rects.popper,
-                      checksMap = new Map(),
-                      makeFallbackChecks = !0,
-                      firstFittingPlacement = placements[0],
-                      i = 0;
-                    i < placements.length;
-                    i++
+                          ),
+                        []
+                      ),
+                    referenceRect = state.rects.reference,
+                    popperRect = state.rects.popper,
+                    checksMap = new Map(),
+                    makeFallbackChecks = !0,
+                    firstFittingPlacement = placements[0],
+                    i = 0;
+                  i < placements.length;
+                  i++
+                ) {
+                  const placement = placements[i];
+                  const _basePlacement = getBasePlacement(placement);
+                  const isStartVariation = getVariation(placement) === enums.BL;
+                  const isVertical =
+                    [enums.we, enums.I].indexOf(_basePlacement) >= 0;
+                  const len = isVertical ? "width" : "height";
+                  const overflow = detectOverflow(state, {
+                    placement,
+                    boundary,
+                    rootBoundary,
+                    altBoundary,
+                    padding,
+                  });
+                  let mainVariationSide = isVertical
+                    ? isStartVariation
+                      ? enums.F2
+                      : enums.t$
+                    : isStartVariation
+                    ? enums.I
+                    : enums.we;
+                  referenceRect[len] > popperRect[len] &&
+                    (mainVariationSide =
+                      getOppositePlacement(mainVariationSide));
+                  const altVariationSide =
+                    getOppositePlacement(mainVariationSide);
+                  const checks = [];
+                  if (
+                    (checkMainAxis &&
+                      checks.push(overflow[_basePlacement] <= 0),
+                    checkAltAxis &&
+                      checks.push(
+                        overflow[mainVariationSide] <= 0,
+                        overflow[altVariationSide] <= 0
+                      ),
+                    checks.every((check) => check))
                   ) {
-                    var placement = placements[i],
-                      _basePlacement = getBasePlacement(placement),
-                      isStartVariation = getVariation(placement) === enums.BL,
-                      isVertical =
-                        [enums.we, enums.I].indexOf(_basePlacement) >= 0,
-                      len = isVertical ? "width" : "height",
-                      overflow = detectOverflow(state, {
-                        placement,
-                        boundary,
-                        rootBoundary,
-                        altBoundary,
-                        padding,
-                      }),
-                      mainVariationSide = isVertical
-                        ? isStartVariation
-                          ? enums.F2
-                          : enums.t$
-                        : isStartVariation
-                        ? enums.I
-                        : enums.we;
-                    referenceRect[len] > popperRect[len] &&
-                      (mainVariationSide =
-                        getOppositePlacement(mainVariationSide));
-                    var altVariationSide =
-                        getOppositePlacement(mainVariationSide),
-                      checks = [];
-                    if (
-                      (checkMainAxis &&
-                        checks.push(overflow[_basePlacement] <= 0),
-                      checkAltAxis &&
-                        checks.push(
-                          overflow[mainVariationSide] <= 0,
-                          overflow[altVariationSide] <= 0
-                        ),
-                      checks.every(function (check) {
-                        return check;
-                      }))
-                    ) {
-                      (firstFittingPlacement = placement),
-                        (makeFallbackChecks = !1);
-                      break;
-                    }
-                    checksMap.set(placement, checks);
+                    (firstFittingPlacement = placement),
+                      (makeFallbackChecks = !1);
+                    break;
                   }
-                  if (makeFallbackChecks)
-                    for (
-                      var _loop = function _loop(_i) {
-                          var fittingPlacement = placements.find(function (
-                            placement
-                          ) {
-                            var checks = checksMap.get(placement);
-                            if (checks)
+                  checksMap.set(placement, checks);
+                }
+                if (makeFallbackChecks) {
+                  for (
+                    let _loop = function _loop(_i) {
+                        const fittingPlacement = placements.find(
+                          (placement) => {
+                            const checks = checksMap.get(placement);
+                            if (checks) {
                               return checks
                                 .slice(0, _i)
-                                .every(function (check) {
-                                  return check;
-                                });
-                          });
-                          if (fittingPlacement)
-                            return (
-                              (firstFittingPlacement = fittingPlacement),
-                              "break"
-                            );
-                        },
-                        _i = flipVariations ? 3 : 1;
-                      _i > 0;
-                      _i--
-                    ) {
-                      if ("break" === _loop(_i)) break;
-                    }
-                  state.placement !== firstFittingPlacement &&
-                    ((state.modifiersData[name]._skip = !0),
-                    (state.placement = firstFittingPlacement),
-                    (state.reset = !0));
-                }
-              },
-              requiresIfExists: ["offset"],
-              data: { _skip: !1 },
-            },
-            modifiers_preventOverflow,
-            modifiers_arrow,
-            {
-              name: "hide",
-              enabled: !0,
-              phase: "main",
-              requiresIfExists: ["preventOverflow"],
-              fn: function hide(_ref) {
-                var state = _ref.state,
-                  name = _ref.name,
-                  referenceRect = state.rects.reference,
-                  popperRect = state.rects.popper,
-                  preventedOffsets = state.modifiersData.preventOverflow,
-                  referenceOverflow = detectOverflow(state, {
-                    elementContext: "reference",
-                  }),
-                  popperAltOverflow = detectOverflow(state, {
-                    altBoundary: !0,
-                  }),
-                  referenceClippingOffsets = getSideOffsets(
-                    referenceOverflow,
-                    referenceRect
-                  ),
-                  popperEscapeOffsets = getSideOffsets(
-                    popperAltOverflow,
-                    popperRect,
-                    preventedOffsets
-                  ),
-                  isReferenceHidden = isAnySideFullyClipped(
-                    referenceClippingOffsets
-                  ),
-                  hasPopperEscaped = isAnySideFullyClipped(popperEscapeOffsets);
-                (state.modifiersData[name] = {
-                  referenceClippingOffsets,
-                  popperEscapeOffsets,
-                  isReferenceHidden,
-                  hasPopperEscaped,
-                }),
-                  (state.attributes.popper = Object.assign(
-                    {},
-                    state.attributes.popper,
-                    {
-                      "data-popper-reference-hidden": isReferenceHidden,
-                      "data-popper-escaped": hasPopperEscaped,
-                    }
-                  ));
-              },
-            },
-          ],
-        }),
-        react_fast_compare = __webpack_require__(69590),
-        react_fast_compare_default = __webpack_require__.n(react_fast_compare),
-        EMPTY_MODIFIERS = [],
-        NOOP = function NOOP() {},
-        NOOP_PROMISE = function NOOP_PROMISE() {
-          return Promise.resolve(null);
-        },
-        Popper_EMPTY_MODIFIERS = [];
-      function Popper(_ref) {
-        var _ref$placement = _ref.placement,
-          placement = void 0 === _ref$placement ? "bottom" : _ref$placement,
-          _ref$strategy = _ref.strategy,
-          strategy = void 0 === _ref$strategy ? "absolute" : _ref$strategy,
-          _ref$modifiers = _ref.modifiers,
-          modifiers =
-            void 0 === _ref$modifiers ? Popper_EMPTY_MODIFIERS : _ref$modifiers,
-          referenceElement = _ref.referenceElement,
-          onFirstUpdate = _ref.onFirstUpdate,
-          innerRef = _ref.innerRef,
-          children = _ref.children,
-          referenceNode = react.useContext(ManagerReferenceNodeContext),
-          _React$useState = react.useState(null),
-          popperElement = _React$useState[0],
-          setPopperElement = _React$useState[1],
-          _React$useState2 = react.useState(null),
-          arrowElement = _React$useState2[0],
-          setArrowElement = _React$useState2[1];
-        react.useEffect(
-          function () {
-            setRef(innerRef, popperElement);
-          },
-          [innerRef, popperElement]
-        );
-        var options = react.useMemo(
-            function () {
-              return {
-                placement,
-                strategy,
-                onFirstUpdate,
-                modifiers: [].concat(modifiers, [
-                  {
-                    name: "arrow",
-                    enabled: null != arrowElement,
-                    options: { element: arrowElement },
-                  },
-                ]),
-              };
-            },
-            [placement, strategy, onFirstUpdate, modifiers, arrowElement]
-          ),
-          _usePopper = (function usePopper(
-            referenceElement,
-            popperElement,
-            options
-          ) {
-            void 0 === options && (options = {});
-            var prevOptions = react.useRef(null),
-              optionsWithDefaults = {
-                onFirstUpdate: options.onFirstUpdate,
-                placement: options.placement || "bottom",
-                strategy: options.strategy || "absolute",
-                modifiers: options.modifiers || EMPTY_MODIFIERS,
-              },
-              _React$useState = react.useState({
-                styles: {
-                  popper: {
-                    position: optionsWithDefaults.strategy,
-                    left: "0",
-                    top: "0",
-                  },
-                  arrow: { position: "absolute" },
-                },
-                attributes: {},
-              }),
-              state = _React$useState[0],
-              setState = _React$useState[1],
-              updateStateModifier = react.useMemo(function () {
-                return {
-                  name: "updateState",
-                  enabled: !0,
-                  phase: "write",
-                  fn: function fn(_ref) {
-                    var state = _ref.state,
-                      elements = Object.keys(state.elements);
-                    setState({
-                      styles: fromEntries(
-                        elements.map(function (element) {
-                          return [element, state.styles[element] || {}];
-                        })
-                      ),
-                      attributes: fromEntries(
-                        elements.map(function (element) {
-                          return [element, state.attributes[element]];
-                        })
-                      ),
-                    });
-                  },
-                  requires: ["computeStyles"],
-                };
-              }, []),
-              popperOptions = react.useMemo(
-                function () {
-                  var newOptions = {
-                    onFirstUpdate: optionsWithDefaults.onFirstUpdate,
-                    placement: optionsWithDefaults.placement,
-                    strategy: optionsWithDefaults.strategy,
-                    modifiers: [].concat(optionsWithDefaults.modifiers, [
-                      updateStateModifier,
-                      { name: "applyStyles", enabled: !1 },
-                    ]),
-                  };
-                  return react_fast_compare_default()(
-                    prevOptions.current,
-                    newOptions
-                  )
-                    ? prevOptions.current || newOptions
-                    : ((prevOptions.current = newOptions), newOptions);
-                },
-                [
-                  optionsWithDefaults.onFirstUpdate,
-                  optionsWithDefaults.placement,
-                  optionsWithDefaults.strategy,
-                  optionsWithDefaults.modifiers,
-                  updateStateModifier,
-                ]
-              ),
-              popperInstanceRef = react.useRef();
-            return (
-              useIsomorphicLayoutEffect(
-                function () {
-                  popperInstanceRef.current &&
-                    popperInstanceRef.current.setOptions(popperOptions);
-                },
-                [popperOptions]
-              ),
-              useIsomorphicLayoutEffect(
-                function () {
-                  if (null != referenceElement && null != popperElement) {
-                    var popperInstance = (
-                      options.createPopper || popper_createPopper
-                    )(referenceElement, popperElement, popperOptions);
-                    return (
-                      (popperInstanceRef.current = popperInstance),
-                      function () {
-                        popperInstance.destroy(),
-                          (popperInstanceRef.current = null);
-                      }
-                    );
+                                .every((check) => check);
+                            }
+                          }
+                        );
+                        if (fittingPlacement) {
+                          return (
+                            (firstFittingPlacement = fittingPlacement), "break"
+                          );
+                        }
+                      },
+                      _i = flipVariations ? 3 : 1;
+                    _i > 0;
+                    _i--
+                  ) {
+                    if (_loop(_i) === "break") break;
                   }
-                },
-                [referenceElement, popperElement, options.createPopper]
-              ),
-              {
-                state: popperInstanceRef.current
-                  ? popperInstanceRef.current.state
-                  : null,
-                styles: state.styles,
-                attributes: state.attributes,
-                update: popperInstanceRef.current
-                  ? popperInstanceRef.current.update
-                  : null,
-                forceUpdate: popperInstanceRef.current
-                  ? popperInstanceRef.current.forceUpdate
-                  : null,
+                }
+                state.placement !== firstFittingPlacement &&
+                  ((state.modifiersData[name]._skip = !0),
+                  (state.placement = firstFittingPlacement),
+                  (state.reset = !0));
               }
-            );
-          })(referenceElement || referenceNode, popperElement, options),
-          state = _usePopper.state,
-          styles = _usePopper.styles,
-          forceUpdate = _usePopper.forceUpdate,
-          update = _usePopper.update,
-          childrenProps = react.useMemo(
-            function () {
-              return {
-                ref: setPopperElement,
-                style: styles.popper,
-                placement: state ? state.placement : placement,
-                hasPopperEscaped:
-                  state && state.modifiersData.hide
-                    ? state.modifiersData.hide.hasPopperEscaped
-                    : null,
-                isReferenceHidden:
-                  state && state.modifiersData.hide
-                    ? state.modifiersData.hide.isReferenceHidden
-                    : null,
-                arrowProps: { style: styles.arrow, ref: setArrowElement },
-                forceUpdate: forceUpdate || NOOP,
-                update: update || NOOP_PROMISE,
-              };
             },
-            [
-              setPopperElement,
-              setArrowElement,
-              placement,
-              state,
-              styles,
-              update,
-              forceUpdate,
-            ]
+            requiresIfExists: ["offset"],
+            data: { _skip: !1 },
+          },
+          modifiers_preventOverflow,
+          modifiers_arrow,
+          {
+            name: "hide",
+            enabled: !0,
+            phase: "main",
+            requiresIfExists: ["preventOverflow"],
+            fn: function hide(_ref) {
+              const { state } = _ref;
+              const { name } = _ref;
+              const referenceRect = state.rects.reference;
+              const popperRect = state.rects.popper;
+              const preventedOffsets = state.modifiersData.preventOverflow;
+              const referenceOverflow = detectOverflow(state, {
+                elementContext: "reference",
+              });
+              const popperAltOverflow = detectOverflow(state, {
+                altBoundary: !0,
+              });
+              const referenceClippingOffsets = getSideOffsets(
+                referenceOverflow,
+                referenceRect
+              );
+              const popperEscapeOffsets = getSideOffsets(
+                popperAltOverflow,
+                popperRect,
+                preventedOffsets
+              );
+              const isReferenceHidden = isAnySideFullyClipped(
+                referenceClippingOffsets
+              );
+              const hasPopperEscaped =
+                isAnySideFullyClipped(popperEscapeOffsets);
+              (state.modifiersData[name] = {
+                referenceClippingOffsets,
+                popperEscapeOffsets,
+                isReferenceHidden,
+                hasPopperEscaped,
+              }),
+                (state.attributes.popper = {
+                  ...state.attributes.popper,
+                  "data-popper-reference-hidden": isReferenceHidden,
+                  "data-popper-escaped": hasPopperEscaped,
+                });
+            },
+          },
+        ],
+      });
+      const react_fast_compare = __webpack_require__(69590);
+      const react_fast_compare_default =
+        __webpack_require__.n(react_fast_compare);
+      const EMPTY_MODIFIERS = [];
+      const NOOP = function NOOP() {};
+      const NOOP_PROMISE = function NOOP_PROMISE() {
+        return Promise.resolve(null);
+      };
+      const Popper_EMPTY_MODIFIERS = [];
+      function Popper(_ref) {
+        const _ref$placement = _ref.placement;
+        const placement = void 0 === _ref$placement ? "bottom" : _ref$placement;
+        const _ref$strategy = _ref.strategy;
+        const strategy = void 0 === _ref$strategy ? "absolute" : _ref$strategy;
+        const _ref$modifiers = _ref.modifiers;
+        const modifiers =
+          void 0 === _ref$modifiers ? Popper_EMPTY_MODIFIERS : _ref$modifiers;
+        const { referenceElement } = _ref;
+        const { onFirstUpdate } = _ref;
+        const { innerRef } = _ref;
+        const { children } = _ref;
+        const referenceNode = react.useContext(ManagerReferenceNodeContext);
+        const _React$useState = react.useState(null);
+        const popperElement = _React$useState[0];
+        const setPopperElement = _React$useState[1];
+        const _React$useState2 = react.useState(null);
+        const arrowElement = _React$useState2[0];
+        const setArrowElement = _React$useState2[1];
+        react.useEffect(() => {
+          setRef(innerRef, popperElement);
+        }, [innerRef, popperElement]);
+        const options = react.useMemo(
+          () => ({
+            placement,
+            strategy,
+            onFirstUpdate,
+            modifiers: [].concat(modifiers, [
+              {
+                name: "arrow",
+                enabled: arrowElement != null,
+                options: { element: arrowElement },
+              },
+            ]),
+          }),
+          [placement, strategy, onFirstUpdate, modifiers, arrowElement]
+        );
+        const _usePopper = (function usePopper(
+          referenceElement,
+          popperElement,
+          options
+        ) {
+          void 0 === options && (options = {});
+          const prevOptions = react.useRef(null);
+          const optionsWithDefaults = {
+            onFirstUpdate: options.onFirstUpdate,
+            placement: options.placement || "bottom",
+            strategy: options.strategy || "absolute",
+            modifiers: options.modifiers || EMPTY_MODIFIERS,
+          };
+          const _React$useState = react.useState({
+            styles: {
+              popper: {
+                position: optionsWithDefaults.strategy,
+                left: "0",
+                top: "0",
+              },
+              arrow: { position: "absolute" },
+            },
+            attributes: {},
+          });
+          const state = _React$useState[0];
+          const setState = _React$useState[1];
+          const updateStateModifier = react.useMemo(
+            () => ({
+              name: "updateState",
+              enabled: !0,
+              phase: "write",
+              fn: function fn(_ref) {
+                const { state } = _ref;
+                const elements = Object.keys(state.elements);
+                setState({
+                  styles: fromEntries(
+                    elements.map((element) => [
+                      element,
+                      state.styles[element] || {},
+                    ])
+                  ),
+                  attributes: fromEntries(
+                    elements.map((element) => [
+                      element,
+                      state.attributes[element],
+                    ])
+                  ),
+                });
+              },
+              requires: ["computeStyles"],
+            }),
+            []
           );
+          const popperOptions = react.useMemo(() => {
+            const newOptions = {
+              onFirstUpdate: optionsWithDefaults.onFirstUpdate,
+              placement: optionsWithDefaults.placement,
+              strategy: optionsWithDefaults.strategy,
+              modifiers: [].concat(optionsWithDefaults.modifiers, [
+                updateStateModifier,
+                { name: "applyStyles", enabled: !1 },
+              ]),
+            };
+            return react_fast_compare_default()(prevOptions.current, newOptions)
+              ? prevOptions.current || newOptions
+              : ((prevOptions.current = newOptions), newOptions);
+          }, [
+            optionsWithDefaults.onFirstUpdate,
+            optionsWithDefaults.placement,
+            optionsWithDefaults.strategy,
+            optionsWithDefaults.modifiers,
+            updateStateModifier,
+          ]);
+          const popperInstanceRef = react.useRef();
+          return (
+            useIsomorphicLayoutEffect(() => {
+              popperInstanceRef.current &&
+                popperInstanceRef.current.setOptions(popperOptions);
+            }, [popperOptions]),
+            useIsomorphicLayoutEffect(() => {
+              if (referenceElement != null && popperElement != null) {
+                const popperInstance = (
+                  options.createPopper || popper_createPopper
+                )(referenceElement, popperElement, popperOptions);
+                return (
+                  (popperInstanceRef.current = popperInstance),
+                  function () {
+                    popperInstance.destroy(),
+                      (popperInstanceRef.current = null);
+                  }
+                );
+              }
+            }, [referenceElement, popperElement, options.createPopper]),
+            {
+              state: popperInstanceRef.current
+                ? popperInstanceRef.current.state
+                : null,
+              styles: state.styles,
+              attributes: state.attributes,
+              update: popperInstanceRef.current
+                ? popperInstanceRef.current.update
+                : null,
+              forceUpdate: popperInstanceRef.current
+                ? popperInstanceRef.current.forceUpdate
+                : null,
+            }
+          );
+        })(referenceElement || referenceNode, popperElement, options);
+        const { state } = _usePopper;
+        const { styles } = _usePopper;
+        const { forceUpdate } = _usePopper;
+        const { update } = _usePopper;
+        const childrenProps = react.useMemo(
+          () => ({
+            ref: setPopperElement,
+            style: styles.popper,
+            placement: state ? state.placement : placement,
+            hasPopperEscaped:
+              state && state.modifiersData.hide
+                ? state.modifiersData.hide.hasPopperEscaped
+                : null,
+            isReferenceHidden:
+              state && state.modifiersData.hide
+                ? state.modifiersData.hide.isReferenceHidden
+                : null,
+            arrowProps: { style: styles.arrow, ref: setArrowElement },
+            forceUpdate: forceUpdate || NOOP,
+            update: update || NOOP_PROMISE,
+          }),
+          [
+            setPopperElement,
+            setArrowElement,
+            placement,
+            state,
+            styles,
+            update,
+            forceUpdate,
+          ]
+        );
         return unwrapArray(children)(childrenProps);
       }
-      var warning = __webpack_require__(42473),
-        warning_default = __webpack_require__.n(warning);
+      const warning = __webpack_require__(42473);
+      const warning_default = __webpack_require__.n(warning);
       function Reference(_ref) {
-        var children = _ref.children,
-          innerRef = _ref.innerRef,
-          setReferenceNode = react.useContext(
-            ManagerReferenceNodeSetterContext
-          ),
-          refHandler = react.useCallback(
-            function (node) {
-              setRef(innerRef, node), safeInvoke(setReferenceNode, node);
-            },
-            [innerRef, setReferenceNode]
-          );
+        const { children } = _ref;
+        const { innerRef } = _ref;
+        const setReferenceNode = react.useContext(
+          ManagerReferenceNodeSetterContext
+        );
+        const refHandler = react.useCallback(
+          (node) => {
+            setRef(innerRef, node), safeInvoke(setReferenceNode, node);
+          },
+          [innerRef, setReferenceNode]
+        );
         return (
-          react.useEffect(function () {
-            return function () {
-              return setRef(innerRef, null);
-            };
-          }),
           react.useEffect(
-            function () {
-              warning_default()(
-                Boolean(setReferenceNode),
-                "`Reference` should not be used outside of a `Manager` component."
-              );
-            },
-            [setReferenceNode]
+            () =>
+              function () {
+                return setRef(innerRef, null);
+              }
           ),
+          react.useEffect(() => {
+            warning_default()(
+              Boolean(setReferenceNode),
+              "`Reference` should not be used outside of a `Manager` component."
+            );
+          }, [setReferenceNode]),
           unwrapArray(children)({ ref: refHandler })
         );
       }
-      var TooltipContext = react.createContext({}),
-        callAll = function callAll() {
+      const TooltipContext = react.createContext({});
+      const callAll = function callAll() {
+        for (
+          var _len = arguments.length, fns = new Array(_len), _key = 0;
+          _key < _len;
+          _key++
+        )
+          fns[_key] = arguments[_key];
+        return function () {
           for (
-            var _len = arguments.length, fns = new Array(_len), _key = 0;
+            var _len2 = arguments.length, args = new Array(_len2), _key2 = 0;
+            _key2 < _len2;
+            _key2++
+          )
+            args[_key2] = arguments[_key2];
+          return fns.forEach((fn) => fn && fn.apply(void 0, args));
+        };
+      };
+      const canUseDOM = function canUseDOM() {
+        return !(
+          typeof window === "undefined" ||
+          !window.document ||
+          !window.document.createElement
+        );
+      };
+      const react_popper_tooltip_setRef = function setRef(ref, node) {
+        if (typeof ref === "function") return ref(node);
+        ref != null && (ref.current = node);
+      };
+      const Tooltip = (function (_Component) {
+        function Tooltip() {
+          for (
+            var _this,
+              _len = arguments.length,
+              args = new Array(_len),
+              _key = 0;
             _key < _len;
             _key++
           )
-            fns[_key] = arguments[_key];
-          return function () {
-            for (
-              var _len2 = arguments.length, args = new Array(_len2), _key2 = 0;
-              _key2 < _len2;
-              _key2++
-            )
-              args[_key2] = arguments[_key2];
-            return fns.forEach(function (fn) {
-              return fn && fn.apply(void 0, args);
-            });
-          };
-        },
-        canUseDOM = function canUseDOM() {
-          return !(
-            "undefined" == typeof window ||
-            !window.document ||
-            !window.document.createElement
-          );
-        },
-        react_popper_tooltip_setRef = function setRef(ref, node) {
-          if ("function" == typeof ref) return ref(node);
-          null != ref && (ref.current = node);
-        },
-        Tooltip = (function (_Component) {
-          function Tooltip() {
-            for (
-              var _this,
-                _len = arguments.length,
-                args = new Array(_len),
-                _key = 0;
-              _key < _len;
-              _key++
-            )
-              args[_key] = arguments[_key];
-            return (
-              ((_this =
-                _Component.call.apply(_Component, [this].concat(args)) ||
-                this).observer = void 0),
-              (_this.tooltipRef = void 0),
-              (_this.handleOutsideClick = function (event) {
-                if (
-                  _this.tooltipRef &&
-                  !_this.tooltipRef.contains(event.target)
-                ) {
-                  var parentOutsideClickHandler =
-                      _this.context.parentOutsideClickHandler,
-                    _this$props = _this.props,
-                    hideTooltip = _this$props.hideTooltip;
-                  (0, _this$props.clearScheduled)(),
-                    hideTooltip(),
-                    parentOutsideClickHandler &&
-                      parentOutsideClickHandler(event);
-                }
-              }),
-              (_this.handleOutsideRightClick = function (event) {
-                if (
-                  _this.tooltipRef &&
-                  !_this.tooltipRef.contains(event.target)
-                ) {
-                  var parentOutsideRightClickHandler =
-                      _this.context.parentOutsideRightClickHandler,
-                    _this$props2 = _this.props,
-                    hideTooltip = _this$props2.hideTooltip;
-                  (0, _this$props2.clearScheduled)(),
-                    hideTooltip(),
-                    parentOutsideRightClickHandler &&
-                      parentOutsideRightClickHandler(event);
-                }
-              }),
-              (_this.addOutsideClickHandler = function () {
-                document.body.addEventListener(
-                  "touchend",
-                  _this.handleOutsideClick
-                ),
-                  document.body.addEventListener(
-                    "click",
-                    _this.handleOutsideClick
-                  );
-              }),
-              (_this.removeOutsideClickHandler = function () {
-                document.body.removeEventListener(
-                  "touchend",
-                  _this.handleOutsideClick
-                ),
-                  document.body.removeEventListener(
-                    "click",
-                    _this.handleOutsideClick
-                  );
-              }),
-              (_this.addOutsideRightClickHandler = function () {
-                return document.body.addEventListener(
-                  "contextmenu",
-                  _this.handleOutsideRightClick
-                );
-              }),
-              (_this.removeOutsideRightClickHandler = function () {
-                return document.body.removeEventListener(
-                  "contextmenu",
-                  _this.handleOutsideRightClick
-                );
-              }),
-              (_this.getTooltipRef = function (node) {
-                (_this.tooltipRef = node),
-                  react_popper_tooltip_setRef(_this.props.innerRef, node);
-              }),
-              (_this.getArrowProps = function (props) {
-                return (
-                  void 0 === props && (props = {}),
-                  (0, esm_extends.Z)({}, props, {
-                    style: (0, esm_extends.Z)(
-                      {},
-                      props.style,
-                      _this.props.arrowProps.style
-                    ),
-                  })
-                );
-              }),
-              (_this.getTooltipProps = function (props) {
-                return (
-                  void 0 === props && (props = {}),
-                  (0, esm_extends.Z)(
-                    {},
-                    props,
-                    _this.isTriggeredBy("hover") && {
-                      onMouseEnter: callAll(
-                        _this.props.clearScheduled,
-                        props.onMouseEnter
-                      ),
-                      onMouseLeave: callAll(
-                        _this.props.hideTooltip,
-                        props.onMouseLeave
-                      ),
-                    },
-                    {
-                      style: (0, esm_extends.Z)(
-                        {},
-                        props.style,
-                        _this.props.style
-                      ),
-                    }
-                  )
-                );
-              }),
-              (_this.contextValue = {
-                isParentNoneTriggered: "none" === _this.props.trigger,
-                addParentOutsideClickHandler: _this.addOutsideClickHandler,
-                addParentOutsideRightClickHandler:
-                  _this.addOutsideRightClickHandler,
-                parentOutsideClickHandler: _this.handleOutsideClick,
-                parentOutsideRightClickHandler: _this.handleOutsideRightClick,
-                removeParentOutsideClickHandler:
-                  _this.removeOutsideClickHandler,
-                removeParentOutsideRightClickHandler:
-                  _this.removeOutsideRightClickHandler,
-              }),
-              _this
-            );
-          }
-          (0, inheritsLoose.Z)(Tooltip, _Component);
-          var _proto = Tooltip.prototype;
+            args[_key] = arguments[_key];
           return (
-            (_proto.componentDidMount = function componentDidMount() {
-              var _this2 = this;
+            ((_this =
+              _Component.call.apply(_Component, [this].concat(args)) ||
+              this).observer = void 0),
+            (_this.tooltipRef = void 0),
+            (_this.handleOutsideClick = function (event) {
               if (
-                ((this.observer = new MutationObserver(function () {
-                  _this2.props.update();
-                })).observe(
-                  this.tooltipRef,
-                  this.props.mutationObserverOptions
-                ),
-                this.isTriggeredBy("hover") ||
-                  this.isTriggeredBy("click") ||
-                  this.isTriggeredBy("right-click"))
+                _this.tooltipRef &&
+                !_this.tooltipRef.contains(event.target)
               ) {
-                var _this$context = this.context,
-                  removeParentOutsideClickHandler =
-                    _this$context.removeParentOutsideClickHandler,
-                  removeParentOutsideRightClickHandler =
-                    _this$context.removeParentOutsideRightClickHandler;
-                this.addOutsideClickHandler(),
-                  this.addOutsideRightClickHandler(),
-                  removeParentOutsideClickHandler &&
-                    removeParentOutsideClickHandler(),
-                  removeParentOutsideRightClickHandler &&
-                    removeParentOutsideRightClickHandler();
+                const { parentOutsideClickHandler } = _this.context;
+                const _this$props = _this.props;
+                const { hideTooltip } = _this$props;
+                (0, _this$props.clearScheduled)(),
+                  hideTooltip(),
+                  parentOutsideClickHandler && parentOutsideClickHandler(event);
               }
             }),
-            (_proto.componentDidUpdate = function componentDidUpdate() {
-              this.props.closeOnReferenceHidden &&
-                this.props.isReferenceHidden &&
-                this.props.hideTooltip();
-            }),
-            (_proto.componentWillUnmount = function componentWillUnmount() {
+            (_this.handleOutsideRightClick = function (event) {
               if (
-                (this.observer && this.observer.disconnect(),
-                this.isTriggeredBy("hover") ||
-                  this.isTriggeredBy("click") ||
-                  this.isTriggeredBy("right-click"))
+                _this.tooltipRef &&
+                !_this.tooltipRef.contains(event.target)
               ) {
-                var _this$context2 = this.context,
-                  isParentNoneTriggered = _this$context2.isParentNoneTriggered,
-                  addParentOutsideClickHandler =
-                    _this$context2.addParentOutsideClickHandler,
-                  addParentOutsideRightClickHandler =
-                    _this$context2.addParentOutsideRightClickHandler;
-                this.removeOutsideClickHandler(),
-                  this.removeOutsideRightClickHandler(),
-                  (this.handleOutsideClick = void 0),
-                  (this.handleOutsideRightClick = void 0),
-                  !isParentNoneTriggered &&
-                    addParentOutsideClickHandler &&
-                    addParentOutsideClickHandler(),
-                  !isParentNoneTriggered &&
-                    addParentOutsideRightClickHandler &&
-                    addParentOutsideRightClickHandler();
+                const { parentOutsideRightClickHandler } = _this.context;
+                const _this$props2 = _this.props;
+                const { hideTooltip } = _this$props2;
+                (0, _this$props2.clearScheduled)(),
+                  hideTooltip(),
+                  parentOutsideRightClickHandler &&
+                    parentOutsideRightClickHandler(event);
               }
             }),
-            (_proto.render = function render() {
-              var _this$props3 = this.props,
-                arrowProps = _this$props3.arrowProps,
-                placement = _this$props3.placement,
-                tooltip = _this$props3.tooltip;
-              return react.createElement(
-                TooltipContext.Provider,
-                { value: this.contextValue },
-                tooltip({
-                  arrowRef: arrowProps.ref,
-                  getArrowProps: this.getArrowProps,
-                  getTooltipProps: this.getTooltipProps,
-                  placement,
-                  tooltipRef: this.getTooltipRef,
+            (_this.addOutsideClickHandler = function () {
+              document.body.addEventListener(
+                "touchend",
+                _this.handleOutsideClick
+              ),
+                document.body.addEventListener(
+                  "click",
+                  _this.handleOutsideClick
+                );
+            }),
+            (_this.removeOutsideClickHandler = function () {
+              document.body.removeEventListener(
+                "touchend",
+                _this.handleOutsideClick
+              ),
+                document.body.removeEventListener(
+                  "click",
+                  _this.handleOutsideClick
+                );
+            }),
+            (_this.addOutsideRightClickHandler = function () {
+              return document.body.addEventListener(
+                "contextmenu",
+                _this.handleOutsideRightClick
+              );
+            }),
+            (_this.removeOutsideRightClickHandler = function () {
+              return document.body.removeEventListener(
+                "contextmenu",
+                _this.handleOutsideRightClick
+              );
+            }),
+            (_this.getTooltipRef = function (node) {
+              (_this.tooltipRef = node),
+                react_popper_tooltip_setRef(_this.props.innerRef, node);
+            }),
+            (_this.getArrowProps = function (props) {
+              return (
+                void 0 === props && (props = {}),
+                (0, esm_extends.Z)({}, props, {
+                  style: (0, esm_extends.Z)(
+                    {},
+                    props.style,
+                    _this.props.arrowProps.style
+                  ),
                 })
               );
             }),
-            (_proto.isTriggeredBy = function isTriggeredBy(event) {
-              var trigger = this.props.trigger;
+            (_this.getTooltipProps = function (props) {
               return (
-                trigger === event ||
-                (Array.isArray(trigger) && trigger.includes(event))
+                void 0 === props && (props = {}),
+                (0, esm_extends.Z)(
+                  {},
+                  props,
+                  _this.isTriggeredBy("hover") && {
+                    onMouseEnter: callAll(
+                      _this.props.clearScheduled,
+                      props.onMouseEnter
+                    ),
+                    onMouseLeave: callAll(
+                      _this.props.hideTooltip,
+                      props.onMouseLeave
+                    ),
+                  },
+                  {
+                    style: (0, esm_extends.Z)(
+                      {},
+                      props.style,
+                      _this.props.style
+                    ),
+                  }
+                )
               );
             }),
-            Tooltip
+            (_this.contextValue = {
+              isParentNoneTriggered: _this.props.trigger === "none",
+              addParentOutsideClickHandler: _this.addOutsideClickHandler,
+              addParentOutsideRightClickHandler:
+                _this.addOutsideRightClickHandler,
+              parentOutsideClickHandler: _this.handleOutsideClick,
+              parentOutsideRightClickHandler: _this.handleOutsideRightClick,
+              removeParentOutsideClickHandler: _this.removeOutsideClickHandler,
+              removeParentOutsideRightClickHandler:
+                _this.removeOutsideRightClickHandler,
+            }),
+            _this
           );
-        })(react.Component);
+        }
+        (0, inheritsLoose.Z)(Tooltip, _Component);
+        const _proto = Tooltip.prototype;
+        return (
+          (_proto.componentDidMount = function componentDidMount() {
+            const _this2 = this;
+            if (
+              ((this.observer = new MutationObserver(() => {
+                _this2.props.update();
+              })).observe(this.tooltipRef, this.props.mutationObserverOptions),
+              this.isTriggeredBy("hover") ||
+                this.isTriggeredBy("click") ||
+                this.isTriggeredBy("right-click"))
+            ) {
+              const _this$context = this.context;
+              const { removeParentOutsideClickHandler } = _this$context;
+              const { removeParentOutsideRightClickHandler } = _this$context;
+              this.addOutsideClickHandler(),
+                this.addOutsideRightClickHandler(),
+                removeParentOutsideClickHandler &&
+                  removeParentOutsideClickHandler(),
+                removeParentOutsideRightClickHandler &&
+                  removeParentOutsideRightClickHandler();
+            }
+          }),
+          (_proto.componentDidUpdate = function componentDidUpdate() {
+            this.props.closeOnReferenceHidden &&
+              this.props.isReferenceHidden &&
+              this.props.hideTooltip();
+          }),
+          (_proto.componentWillUnmount = function componentWillUnmount() {
+            if (
+              (this.observer && this.observer.disconnect(),
+              this.isTriggeredBy("hover") ||
+                this.isTriggeredBy("click") ||
+                this.isTriggeredBy("right-click"))
+            ) {
+              const _this$context2 = this.context;
+              const { isParentNoneTriggered } = _this$context2;
+              const { addParentOutsideClickHandler } = _this$context2;
+              const { addParentOutsideRightClickHandler } = _this$context2;
+              this.removeOutsideClickHandler(),
+                this.removeOutsideRightClickHandler(),
+                (this.handleOutsideClick = void 0),
+                (this.handleOutsideRightClick = void 0),
+                !isParentNoneTriggered &&
+                  addParentOutsideClickHandler &&
+                  addParentOutsideClickHandler(),
+                !isParentNoneTriggered &&
+                  addParentOutsideRightClickHandler &&
+                  addParentOutsideRightClickHandler();
+            }
+          }),
+          (_proto.render = function render() {
+            const _this$props3 = this.props;
+            const { arrowProps } = _this$props3;
+            const { placement } = _this$props3;
+            const { tooltip } = _this$props3;
+            return react.createElement(
+              TooltipContext.Provider,
+              { value: this.contextValue },
+              tooltip({
+                arrowRef: arrowProps.ref,
+                getArrowProps: this.getArrowProps,
+                getTooltipProps: this.getTooltipProps,
+                placement,
+                tooltipRef: this.getTooltipRef,
+              })
+            );
+          }),
+          (_proto.isTriggeredBy = function isTriggeredBy(event) {
+            const { trigger } = this.props;
+            return (
+              trigger === event ||
+              (Array.isArray(trigger) && trigger.includes(event))
+            );
+          }),
+          Tooltip
+        );
+      })(react.Component);
       Tooltip.contextType = TooltipContext;
-      var TooltipTrigger = (function (_Component) {
+      const TooltipTrigger = (function (_Component) {
         function TooltipTrigger() {
           for (
             var _this,
@@ -2249,7 +2218,7 @@
             (_this.showTimeout = void 0),
             (_this.popperOffset = void 0),
             (_this.setTooltipState = function (state) {
-              var cb = function cb() {
+              const cb = function cb() {
                 return _this.props.onVisibilityChange(state.tooltipShown);
               };
               _this.isControlled() ? cb() : _this.setState(state, cb);
@@ -2258,44 +2227,46 @@
               clearTimeout(_this.hideTimeout), clearTimeout(_this.showTimeout);
             }),
             (_this.showTooltip = function (_ref) {
-              var pageX = _ref.pageX,
-                pageY = _ref.pageY;
+              const { pageX } = _ref;
+              const { pageY } = _ref;
               _this.clearScheduled();
-              var state = { tooltipShown: !0 };
+              let state = { tooltipShown: !0 };
               _this.props.followCursor &&
                 (state = (0, esm_extends.Z)({}, state, { pageX, pageY })),
-                (_this.showTimeout = window.setTimeout(function () {
-                  return _this.setTooltipState(state);
-                }, _this.props.delayShow));
+                (_this.showTimeout = window.setTimeout(
+                  () => _this.setTooltipState(state),
+                  _this.props.delayShow
+                ));
             }),
             (_this.hideTooltip = function () {
               _this.clearScheduled(),
-                (_this.hideTimeout = window.setTimeout(function () {
-                  return _this.setTooltipState({ tooltipShown: !1 });
-                }, _this.props.delayHide));
+                (_this.hideTimeout = window.setTimeout(
+                  () => _this.setTooltipState({ tooltipShown: !1 }),
+                  _this.props.delayHide
+                ));
             }),
             (_this.toggleTooltip = function (_ref2) {
-              var pageX = _ref2.pageX,
-                pageY = _ref2.pageY,
-                action = _this.getState() ? "hideTooltip" : "showTooltip";
+              const { pageX } = _ref2;
+              const { pageY } = _ref2;
+              const action = _this.getState() ? "hideTooltip" : "showTooltip";
               _this[action]({ pageX, pageY });
             }),
             (_this.clickToggle = function (event) {
               event.preventDefault();
-              var pageX = event.pageX,
-                pageY = event.pageY,
-                action = _this.props.followCursor
-                  ? "showTooltip"
-                  : "toggleTooltip";
+              const { pageX } = event;
+              const { pageY } = event;
+              const action = _this.props.followCursor
+                ? "showTooltip"
+                : "toggleTooltip";
               _this[action]({ pageX, pageY });
             }),
             (_this.contextMenuToggle = function (event) {
               event.preventDefault();
-              var pageX = event.pageX,
-                pageY = event.pageY,
-                action = _this.props.followCursor
-                  ? "showTooltip"
-                  : "toggleTooltip";
+              const { pageX } = event;
+              const { pageY } = event;
+              const action = _this.props.followCursor
+                ? "showTooltip"
+                : "toggleTooltip";
               _this[action]({ pageX, pageY });
             }),
             (_this.getTriggerProps = function (props) {
@@ -2344,116 +2315,116 @@
           );
         }
         (0, inheritsLoose.Z)(TooltipTrigger, _Component);
-        var _proto = TooltipTrigger.prototype;
+        const _proto = TooltipTrigger.prototype;
         return (
           (_proto.componentWillUnmount = function componentWillUnmount() {
             this.clearScheduled();
           }),
           (_proto.render = function render() {
-            var _this2 = this,
-              _this$props = this.props,
-              children = _this$props.children,
-              tooltip = _this$props.tooltip,
-              placement = _this$props.placement,
-              trigger = _this$props.trigger,
-              getTriggerRef = _this$props.getTriggerRef,
-              modifiers = _this$props.modifiers,
-              closeOnReferenceHidden = _this$props.closeOnReferenceHidden,
-              usePortal = _this$props.usePortal,
-              portalContainer = _this$props.portalContainer,
-              followCursor = _this$props.followCursor,
-              getTooltipRef = _this$props.getTooltipRef,
-              mutationObserverOptions = _this$props.mutationObserverOptions,
-              restProps = (0, objectWithoutPropertiesLoose.Z)(_this$props, [
-                "children",
-                "tooltip",
-                "placement",
-                "trigger",
-                "getTriggerRef",
-                "modifiers",
-                "closeOnReferenceHidden",
-                "usePortal",
-                "portalContainer",
-                "followCursor",
-                "getTooltipRef",
-                "mutationObserverOptions",
-              ]),
-              popper = react.createElement(
-                Popper,
-                (0, esm_extends.Z)(
-                  {
-                    innerRef: getTooltipRef,
-                    placement,
-                    modifiers: [
-                      {
-                        name: "followCursor",
-                        enabled: followCursor,
-                        phase: "main",
-                        fn: function fn(data) {
-                          _this2.popperOffset = data.state.rects.popper;
-                        },
+            const _this2 = this;
+            const _this$props = this.props;
+            const { children } = _this$props;
+            const { tooltip } = _this$props;
+            const { placement } = _this$props;
+            const { trigger } = _this$props;
+            const { getTriggerRef } = _this$props;
+            const { modifiers } = _this$props;
+            const { closeOnReferenceHidden } = _this$props;
+            const { usePortal } = _this$props;
+            const { portalContainer } = _this$props;
+            const { followCursor } = _this$props;
+            const { getTooltipRef } = _this$props;
+            const { mutationObserverOptions } = _this$props;
+            const restProps = (0, objectWithoutPropertiesLoose.Z)(_this$props, [
+              "children",
+              "tooltip",
+              "placement",
+              "trigger",
+              "getTriggerRef",
+              "modifiers",
+              "closeOnReferenceHidden",
+              "usePortal",
+              "portalContainer",
+              "followCursor",
+              "getTooltipRef",
+              "mutationObserverOptions",
+            ]);
+            const popper = react.createElement(
+              Popper,
+              (0, esm_extends.Z)(
+                {
+                  innerRef: getTooltipRef,
+                  placement,
+                  modifiers: [
+                    {
+                      name: "followCursor",
+                      enabled: followCursor,
+                      phase: "main",
+                      fn: function fn(data) {
+                        _this2.popperOffset = data.state.rects.popper;
                       },
-                    ].concat(modifiers),
-                  },
-                  restProps
-                ),
-                function (_ref3) {
-                  var ref = _ref3.ref,
-                    style = _ref3.style,
-                    placement = _ref3.placement,
-                    arrowProps = _ref3.arrowProps,
-                    isReferenceHidden = _ref3.isReferenceHidden,
-                    update = _ref3.update;
-                  if (followCursor && _this2.popperOffset) {
-                    var _this2$state = _this2.state,
-                      pageX = _this2$state.pageX,
-                      pageY = _this2$state.pageY,
-                      _this2$popperOffset = _this2.popperOffset,
-                      width = _this2$popperOffset.width,
-                      height = _this2$popperOffset.height,
-                      x =
-                        pageX + width >
-                        window.pageXOffset + document.body.offsetWidth
-                          ? pageX - width
-                          : pageX,
-                      y =
-                        pageY + height >
-                        window.pageYOffset + document.body.offsetHeight
-                          ? pageY - height
-                          : pageY;
-                    style.transform = "translate3d(" + x + "px, " + y + "px, 0";
-                  }
-                  return react.createElement(
-                    Tooltip,
-                    (0, esm_extends.Z)(
-                      {
-                        arrowProps,
-                        closeOnReferenceHidden,
-                        isReferenceHidden,
-                        placement,
-                        update,
-                        style,
-                        tooltip,
-                        trigger,
-                        mutationObserverOptions,
-                      },
-                      {
-                        clearScheduled: _this2.clearScheduled,
-                        hideTooltip: _this2.hideTooltip,
-                        innerRef: ref,
-                      }
-                    )
-                  );
+                    },
+                  ].concat(modifiers),
+                },
+                restProps
+              ),
+              (_ref3) => {
+                const { ref } = _ref3;
+                const { style } = _ref3;
+                const { placement } = _ref3;
+                const { arrowProps } = _ref3;
+                const { isReferenceHidden } = _ref3;
+                const { update } = _ref3;
+                if (followCursor && _this2.popperOffset) {
+                  const _this2$state = _this2.state;
+                  const { pageX } = _this2$state;
+                  const { pageY } = _this2$state;
+                  const _this2$popperOffset = _this2.popperOffset;
+                  const { width } = _this2$popperOffset;
+                  const { height } = _this2$popperOffset;
+                  const x =
+                    pageX + width >
+                    window.pageXOffset + document.body.offsetWidth
+                      ? pageX - width
+                      : pageX;
+                  const y =
+                    pageY + height >
+                    window.pageYOffset + document.body.offsetHeight
+                      ? pageY - height
+                      : pageY;
+                  style.transform = `translate3d(${x}px, ${y}px, 0`;
                 }
-              );
+                return react.createElement(
+                  Tooltip,
+                  (0, esm_extends.Z)(
+                    {
+                      arrowProps,
+                      closeOnReferenceHidden,
+                      isReferenceHidden,
+                      placement,
+                      update,
+                      style,
+                      tooltip,
+                      trigger,
+                      mutationObserverOptions,
+                    },
+                    {
+                      clearScheduled: _this2.clearScheduled,
+                      hideTooltip: _this2.hideTooltip,
+                      innerRef: ref,
+                    }
+                  )
+                );
+              }
+            );
             return react.createElement(
               Manager,
               null,
               react.createElement(
                 Reference,
                 { innerRef: getTriggerRef },
-                function (_ref4) {
-                  var ref = _ref4.ref;
+                (_ref4) => {
+                  const { ref } = _ref4;
                   return children({
                     getTriggerProps: _this2.getTriggerProps,
                     triggerRef: ref,
@@ -2475,7 +2446,7 @@
               : this.state.tooltipShown;
           }),
           (_proto.isTriggeredBy = function isTriggeredBy(event) {
-            var trigger = this.props.trigger;
+            const { trigger } = this.props;
             return (
               trigger === event ||
               (Array.isArray(trigger) && trigger.includes(event))
@@ -2503,19 +2474,20 @@
         __webpack_require__(74916),
         __webpack_require__(23157),
         __webpack_require__(92222);
-      var memoizerific = __webpack_require__(52326),
-        memoizerific_default = __webpack_require__.n(memoizerific),
-        utils = __webpack_require__(37976);
+      const memoizerific = __webpack_require__(52326);
+      const memoizerific_default = __webpack_require__.n(memoizerific);
+      const utils = __webpack_require__(37976);
       function _extends() {
         return (
           (_extends =
             Object.assign ||
             function (target) {
-              for (var i = 1; i < arguments.length; i++) {
-                var source = arguments[i];
-                for (var key in source)
+              for (let i = 1; i < arguments.length; i++) {
+                const source = arguments[i];
+                for (const key in source) {
                   Object.prototype.hasOwnProperty.call(source, key) &&
                     (target[key] = source[key]);
+                }
               }
               return target;
             }),
@@ -2523,170 +2495,169 @@
         );
       }
       function _objectWithoutProperties(source, excluded) {
-        if (null == source) return {};
-        var key,
-          i,
-          target = (function _objectWithoutPropertiesLoose(source, excluded) {
-            if (null == source) return {};
-            var key,
-              i,
-              target = {},
-              sourceKeys = Object.keys(source);
-            for (i = 0; i < sourceKeys.length; i++)
-              (key = sourceKeys[i]),
-                excluded.indexOf(key) >= 0 || (target[key] = source[key]);
-            return target;
-          })(source, excluded);
+        if (source == null) return {};
+        let key;
+        let i;
+        const target = (function _objectWithoutPropertiesLoose(
+          source,
+          excluded
+        ) {
+          if (source == null) return {};
+          let key;
+          let i;
+          const target = {};
+          const sourceKeys = Object.keys(source);
+          for (i = 0; i < sourceKeys.length; i++) {
+            (key = sourceKeys[i]),
+              excluded.indexOf(key) >= 0 || (target[key] = source[key]);
+          }
+          return target;
+        })(source, excluded);
         if (Object.getOwnPropertySymbols) {
-          var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
-          for (i = 0; i < sourceSymbolKeys.length; i++)
+          const sourceSymbolKeys = Object.getOwnPropertySymbols(source);
+          for (i = 0; i < sourceSymbolKeys.length; i++) {
             (key = sourceSymbolKeys[i]),
               excluded.indexOf(key) >= 0 ||
                 (Object.prototype.propertyIsEnumerable.call(source, key) &&
                   (target[key] = source[key]));
+          }
         }
         return target;
       }
-      var _templateObject,
-        _templateObject2,
-        match = memoizerific_default()(1e3)(function (requests, actual, value) {
-          var fallback =
-            arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-          return actual.split("-")[0] === requests ? value : fallback;
+      let _templateObject;
+      let _templateObject2;
+      const match = memoizerific_default()(1e3)(function (
+        requests,
+        actual,
+        value
+      ) {
+        const fallback =
+          arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        return actual.split("-")[0] === requests ? value : fallback;
+      });
+      const Arrow = esm.styled.div(
+        { position: "absolute", borderStyle: "solid" },
+        (_ref) => {
+          const { placement } = _ref;
+          let x = 0;
+          let y = 0;
+          switch (!0) {
+            case placement.startsWith("left") || placement.startsWith("right"):
+              y = 8;
+              break;
+            case placement.startsWith("top") || placement.startsWith("bottom"):
+              x = 8;
+          }
+          return {
+            transform: "translate3d(".concat(x, "px, ").concat(y, "px, 0px)"),
+          };
+        },
+        (_ref2) => {
+          const { theme } = _ref2;
+          const { color } = _ref2;
+          const { placement } = _ref2;
+          return {
+            bottom: "".concat(match("top", placement, -8, "auto"), "px"),
+            top: "".concat(match("bottom", placement, -8, "auto"), "px"),
+            right: "".concat(match("left", placement, -8, "auto"), "px"),
+            left: "".concat(match("right", placement, -8, "auto"), "px"),
+            borderBottomWidth: "".concat(match("top", placement, "0", 8), "px"),
+            borderTopWidth: "".concat(match("bottom", placement, "0", 8), "px"),
+            borderRightWidth: "".concat(match("left", placement, "0", 8), "px"),
+            borderLeftWidth: "".concat(match("right", placement, "0", 8), "px"),
+            borderTopColor: match(
+              "top",
+              placement,
+              theme.color[color] || color || theme.base === "light"
+                ? (0, utils.tG)(theme.background.app)
+                : (0, utils.r5)(theme.background.app),
+              "transparent"
+            ),
+            borderBottomColor: match(
+              "bottom",
+              placement,
+              theme.color[color] || color || theme.base === "light"
+                ? (0, utils.tG)(theme.background.app)
+                : (0, utils.r5)(theme.background.app),
+              "transparent"
+            ),
+            borderLeftColor: match(
+              "left",
+              placement,
+              theme.color[color] || color || theme.base === "light"
+                ? (0, utils.tG)(theme.background.app)
+                : (0, utils.r5)(theme.background.app),
+              "transparent"
+            ),
+            borderRightColor: match(
+              "right",
+              placement,
+              theme.color[color] || color || theme.base === "light"
+                ? (0, utils.tG)(theme.background.app)
+                : (0, utils.r5)(theme.background.app),
+              "transparent"
+            ),
+          };
+        }
+      );
+      const Wrapper = esm.styled.div(
+        (_ref3) => ({
+          display: _ref3.hidden ? "none" : "inline-block",
+          zIndex: 2147483647,
         }),
-        Arrow = esm.styled.div(
-          { position: "absolute", borderStyle: "solid" },
-          function (_ref) {
-            var placement = _ref.placement,
-              x = 0,
-              y = 0;
-            switch (!0) {
-              case placement.startsWith("left") ||
-                placement.startsWith("right"):
-                y = 8;
-                break;
-              case placement.startsWith("top") ||
-                placement.startsWith("bottom"):
-                x = 8;
-            }
-            return {
-              transform: "translate3d(".concat(x, "px, ").concat(y, "px, 0px)"),
-            };
+        (_ref4) => {
+          const { theme } = _ref4;
+          const { color } = _ref4;
+          return _ref4.hasChrome
+            ? {
+                background:
+                  theme.color[color] || color || theme.base === "light"
+                    ? (0, utils.tG)(theme.background.app)
+                    : (0, utils.r5)(theme.background.app),
+                filter:
+                  "\n            drop-shadow(0px 5px 5px rgba(0,0,0,0.05))\n            drop-shadow(0 1px 3px rgba(0,0,0,0.1))\n          ",
+                borderRadius: 2 * theme.appBorderRadius,
+                fontSize: theme.typography.size.s1,
+              }
+            : {};
+        }
+      );
+      const Tooltip_Tooltip = function Tooltip(_ref5) {
+        const { placement } = _ref5;
+        const { hasChrome } = _ref5;
+        const { children } = _ref5;
+        const { arrowProps } = _ref5;
+        const { tooltipRef } = _ref5;
+        const { arrowRef } = _ref5;
+        const { color } = _ref5;
+        const props = _objectWithoutProperties(_ref5, [
+          "placement",
+          "hasChrome",
+          "children",
+          "arrowProps",
+          "tooltipRef",
+          "arrowRef",
+          "color",
+        ]);
+        return react.createElement(
+          Wrapper,
+          {
+            hasChrome,
+            placement,
+            ref: tooltipRef,
+            ...props,
+            color,
           },
-          function (_ref2) {
-            var theme = _ref2.theme,
-              color = _ref2.color,
-              placement = _ref2.placement;
-            return {
-              bottom: "".concat(match("top", placement, -8, "auto"), "px"),
-              top: "".concat(match("bottom", placement, -8, "auto"), "px"),
-              right: "".concat(match("left", placement, -8, "auto"), "px"),
-              left: "".concat(match("right", placement, -8, "auto"), "px"),
-              borderBottomWidth: "".concat(
-                match("top", placement, "0", 8),
-                "px"
-              ),
-              borderTopWidth: "".concat(
-                match("bottom", placement, "0", 8),
-                "px"
-              ),
-              borderRightWidth: "".concat(
-                match("left", placement, "0", 8),
-                "px"
-              ),
-              borderLeftWidth: "".concat(
-                match("right", placement, "0", 8),
-                "px"
-              ),
-              borderTopColor: match(
-                "top",
-                placement,
-                theme.color[color] || color || "light" === theme.base
-                  ? (0, utils.tG)(theme.background.app)
-                  : (0, utils.r5)(theme.background.app),
-                "transparent"
-              ),
-              borderBottomColor: match(
-                "bottom",
-                placement,
-                theme.color[color] || color || "light" === theme.base
-                  ? (0, utils.tG)(theme.background.app)
-                  : (0, utils.r5)(theme.background.app),
-                "transparent"
-              ),
-              borderLeftColor: match(
-                "left",
-                placement,
-                theme.color[color] || color || "light" === theme.base
-                  ? (0, utils.tG)(theme.background.app)
-                  : (0, utils.r5)(theme.background.app),
-                "transparent"
-              ),
-              borderRightColor: match(
-                "right",
-                placement,
-                theme.color[color] || color || "light" === theme.base
-                  ? (0, utils.tG)(theme.background.app)
-                  : (0, utils.r5)(theme.background.app),
-                "transparent"
-              ),
-            };
-          }
-        ),
-        Wrapper = esm.styled.div(
-          function (_ref3) {
-            return {
-              display: _ref3.hidden ? "none" : "inline-block",
-              zIndex: 2147483647,
-            };
-          },
-          function (_ref4) {
-            var theme = _ref4.theme,
-              color = _ref4.color;
-            return _ref4.hasChrome
-              ? {
-                  background:
-                    theme.color[color] || color || "light" === theme.base
-                      ? (0, utils.tG)(theme.background.app)
-                      : (0, utils.r5)(theme.background.app),
-                  filter:
-                    "\n            drop-shadow(0px 5px 5px rgba(0,0,0,0.05))\n            drop-shadow(0 1px 3px rgba(0,0,0,0.1))\n          ",
-                  borderRadius: 2 * theme.appBorderRadius,
-                  fontSize: theme.typography.size.s1,
-                }
-              : {};
-          }
-        ),
-        Tooltip_Tooltip = function Tooltip(_ref5) {
-          var placement = _ref5.placement,
-            hasChrome = _ref5.hasChrome,
-            children = _ref5.children,
-            arrowProps = _ref5.arrowProps,
-            tooltipRef = _ref5.tooltipRef,
-            arrowRef = _ref5.arrowRef,
-            color = _ref5.color,
-            props = _objectWithoutProperties(_ref5, [
-              "placement",
-              "hasChrome",
-              "children",
-              "arrowProps",
-              "tooltipRef",
-              "arrowRef",
-              "color",
-            ]);
-          return react.createElement(
-            Wrapper,
-            _extends({ hasChrome, placement, ref: tooltipRef }, props, {
+          hasChrome &&
+            react.createElement(Arrow, {
+              placement,
+              ref: arrowRef,
+              ...arrowProps,
               color,
             }),
-            hasChrome &&
-              react.createElement(
-                Arrow,
-                _extends({ placement, ref: arrowRef }, arrowProps, { color })
-              ),
-            children
-          );
-        };
+          children
+        );
+      };
       function _slicedToArray(arr, i) {
         return (
           (function _arrayWithHoles(arr) {
@@ -2694,14 +2665,14 @@
           })(arr) ||
           (function _iterableToArrayLimit(arr, i) {
             if (
-              "undefined" == typeof Symbol ||
+              typeof Symbol === "undefined" ||
               !(Symbol.iterator in Object(arr))
             )
               return;
-            var _arr = [],
-              _n = !0,
-              _d = !1,
-              _e = void 0;
+            const _arr = [];
+            let _n = !0;
+            let _d = !1;
+            let _e = void 0;
             try {
               for (
                 var _s, _i = arr[Symbol.iterator]();
@@ -2713,7 +2684,7 @@
               (_d = !0), (_e = err);
             } finally {
               try {
-                _n || null == _i.return || _i.return();
+                _n || _i.return == null || _i.return();
               } finally {
                 if (_d) throw _e;
               }
@@ -2722,12 +2693,12 @@
           })(arr, i) ||
           (function _unsupportedIterableToArray(o, minLen) {
             if (!o) return;
-            if ("string" == typeof o) return _arrayLikeToArray(o, minLen);
-            var n = Object.prototype.toString.call(o).slice(8, -1);
-            "Object" === n && o.constructor && (n = o.constructor.name);
-            if ("Map" === n || "Set" === n) return Array.from(o);
+            if (typeof o === "string") return _arrayLikeToArray(o, minLen);
+            let n = Object.prototype.toString.call(o).slice(8, -1);
+            n === "Object" && o.constructor && (n = o.constructor.name);
+            if (n === "Map" || n === "Set") return Array.from(o);
             if (
-              "Arguments" === n ||
+              n === "Arguments" ||
               /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)
             )
               return _arrayLikeToArray(o, minLen);
@@ -2740,7 +2711,7 @@
         );
       }
       function _arrayLikeToArray(arr, len) {
-        (null == len || len > arr.length) && (len = arr.length);
+        (len == null || len > arr.length) && (len = arr.length);
         for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i];
         return arr2;
       }
@@ -2749,11 +2720,12 @@
           (WithTooltip_extends =
             Object.assign ||
             function (target) {
-              for (var i = 1; i < arguments.length; i++) {
-                var source = arguments[i];
-                for (var key in source)
+              for (let i = 1; i < arguments.length; i++) {
+                const source = arguments[i];
+                for (const key in source) {
                   Object.prototype.hasOwnProperty.call(source, key) &&
                     (target[key] = source[key]);
+                }
               }
               return target;
             }),
@@ -2761,30 +2733,32 @@
         );
       }
       function WithTooltip_objectWithoutProperties(source, excluded) {
-        if (null == source) return {};
-        var key,
-          i,
-          target = (function WithTooltip_objectWithoutPropertiesLoose(
-            source,
-            excluded
-          ) {
-            if (null == source) return {};
-            var key,
-              i,
-              target = {},
-              sourceKeys = Object.keys(source);
-            for (i = 0; i < sourceKeys.length; i++)
-              (key = sourceKeys[i]),
-                excluded.indexOf(key) >= 0 || (target[key] = source[key]);
-            return target;
-          })(source, excluded);
+        if (source == null) return {};
+        let key;
+        let i;
+        const target = (function WithTooltip_objectWithoutPropertiesLoose(
+          source,
+          excluded
+        ) {
+          if (source == null) return {};
+          let key;
+          let i;
+          const target = {};
+          const sourceKeys = Object.keys(source);
+          for (i = 0; i < sourceKeys.length; i++) {
+            (key = sourceKeys[i]),
+              excluded.indexOf(key) >= 0 || (target[key] = source[key]);
+          }
+          return target;
+        })(source, excluded);
         if (Object.getOwnPropertySymbols) {
-          var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
-          for (i = 0; i < sourceSymbolKeys.length; i++)
+          const sourceSymbolKeys = Object.getOwnPropertySymbols(source);
+          for (i = 0; i < sourceSymbolKeys.length; i++) {
             (key = sourceSymbolKeys[i]),
               excluded.indexOf(key) >= 0 ||
                 (Object.prototype.propertyIsEnumerable.call(source, key) &&
                   (target[key] = source[key]));
+          }
         }
         return target;
       }
@@ -2807,101 +2781,92 @@
           placement: "top",
           arrowProps: {},
         });
-      var WithTooltip_document = window_default().document,
-        TargetContainer = esm.styled.div(
-          _templateObject ||
-            (_templateObject = _taggedTemplateLiteral([
-              "\n  display: inline-block;\n  cursor: ",
-              ";\n",
-            ])),
-          function (props) {
-            return "hover" === props.mode ? "default" : "pointer";
-          }
-        ),
-        TargetSvgContainer = esm.styled.g(
-          _templateObject2 ||
-            (_templateObject2 = _taggedTemplateLiteral([
-              "\n  cursor: ",
-              ";\n",
-            ])),
-          function (props) {
-            return "hover" === props.mode ? "default" : "pointer";
-          }
-        ),
-        WithTooltipPure = function WithTooltipPure(_ref) {
-          var svg = _ref.svg,
-            trigger = _ref.trigger,
-            placement = (_ref.closeOnClick, _ref.placement),
-            modifiers = _ref.modifiers,
-            hasChrome = _ref.hasChrome,
-            _tooltip = _ref.tooltip,
-            children = _ref.children,
-            tooltipShown = _ref.tooltipShown,
-            onVisibilityChange = _ref.onVisibilityChange,
-            props = WithTooltip_objectWithoutProperties(_ref, [
-              "svg",
-              "trigger",
-              "closeOnClick",
-              "placement",
-              "modifiers",
-              "hasChrome",
-              "tooltip",
-              "children",
-              "tooltipShown",
-              "onVisibilityChange",
-            ]),
-            Container = svg ? TargetSvgContainer : TargetContainer;
-          return react.createElement(
-            react_popper_tooltip,
-            {
-              placement,
-              trigger,
-              modifiers,
-              tooltipShown,
-              onVisibilityChange,
-              tooltip: function tooltip(_ref2) {
-                var getTooltipProps = _ref2.getTooltipProps,
-                  getArrowProps = _ref2.getArrowProps,
-                  tooltipRef = _ref2.tooltipRef,
-                  arrowRef = _ref2.arrowRef,
-                  tooltipPlacement = _ref2.placement;
-                return react.createElement(
-                  Tooltip_Tooltip,
-                  WithTooltip_extends(
-                    {
-                      hasChrome,
-                      placement: tooltipPlacement,
-                      tooltipRef,
-                      arrowRef,
-                      arrowProps: getArrowProps(),
-                    },
-                    getTooltipProps()
-                  ),
-                  "function" == typeof _tooltip
-                    ? _tooltip({
-                        onHide: function onHide() {
-                          return onVisibilityChange(!1);
-                        },
-                      })
-                    : _tooltip
-                );
-              },
-            },
-            function (_ref3) {
-              var getTriggerProps = _ref3.getTriggerProps,
-                triggerRef = _ref3.triggerRef;
+      const WithTooltip_document = window_default().document;
+      const TargetContainer = esm.styled.div(
+        _templateObject ||
+          (_templateObject = _taggedTemplateLiteral([
+            "\n  display: inline-block;\n  cursor: ",
+            ";\n",
+          ])),
+        (props) => (props.mode === "hover" ? "default" : "pointer")
+      );
+      const TargetSvgContainer = esm.styled.g(
+        _templateObject2 ||
+          (_templateObject2 = _taggedTemplateLiteral(["\n  cursor: ", ";\n"])),
+        (props) => (props.mode === "hover" ? "default" : "pointer")
+      );
+      var WithTooltipPure = function WithTooltipPure(_ref) {
+        const { svg } = _ref;
+        const { trigger } = _ref;
+        const placement = (_ref.closeOnClick, _ref.placement);
+        const { modifiers } = _ref;
+        const { hasChrome } = _ref;
+        const _tooltip = _ref.tooltip;
+        const { children } = _ref;
+        const { tooltipShown } = _ref;
+        const { onVisibilityChange } = _ref;
+        const props = WithTooltip_objectWithoutProperties(_ref, [
+          "svg",
+          "trigger",
+          "closeOnClick",
+          "placement",
+          "modifiers",
+          "hasChrome",
+          "tooltip",
+          "children",
+          "tooltipShown",
+          "onVisibilityChange",
+        ]);
+        const Container = svg ? TargetSvgContainer : TargetContainer;
+        return react.createElement(
+          react_popper_tooltip,
+          {
+            placement,
+            trigger,
+            modifiers,
+            tooltipShown,
+            onVisibilityChange,
+            tooltip: function tooltip(_ref2) {
+              const { getTooltipProps } = _ref2;
+              const { getArrowProps } = _ref2;
+              const { tooltipRef } = _ref2;
+              const { arrowRef } = _ref2;
+              const tooltipPlacement = _ref2.placement;
               return react.createElement(
-                Container,
-                WithTooltip_extends(
-                  { ref: triggerRef },
-                  getTriggerProps(),
-                  props
-                ),
-                children
+                Tooltip_Tooltip,
+                {
+                  hasChrome,
+                  placement: tooltipPlacement,
+                  tooltipRef,
+                  arrowRef,
+                  arrowProps: getArrowProps(),
+                  ...getTooltipProps(),
+                },
+                typeof _tooltip === "function"
+                  ? _tooltip({
+                      onHide: function onHide() {
+                        return onVisibilityChange(!1);
+                      },
+                    })
+                  : _tooltip
               );
-            }
-          );
-        };
+            },
+          },
+          (_ref3) => {
+            const { getTriggerProps } = _ref3;
+            const { triggerRef } = _ref3;
+            return react.createElement(
+              Container,
+              {
+                ref: triggerRef,
+                ...getTriggerProps(),
+                ...props,
+              },
+              children
+            );
+          }
+        );
+      };
       (WithTooltipPure.displayName = "WithTooltipPure"),
         (WithTooltipPure.defaultProps = {
           svg: !1,
@@ -2917,42 +2882,45 @@
           tooltipShown: !1,
         });
       var WithToolTipState = function WithToolTipState(_ref4) {
-        var startOpen = _ref4.startOpen,
-          onChange = _ref4.onVisibilityChange,
-          rest = WithTooltip_objectWithoutProperties(_ref4, [
-            "startOpen",
-            "onVisibilityChange",
-          ]),
-          _useState2 = _slicedToArray((0, react.useState)(startOpen || !1), 2),
-          tooltipShown = _useState2[0],
-          setTooltipShown = _useState2[1],
-          onVisibilityChange = (0, react.useCallback)(
-            function (visibility) {
-              (onChange && !1 === onChange(visibility)) ||
-                setTooltipShown(visibility);
-            },
-            [onChange]
-          );
+        const { startOpen } = _ref4;
+        const onChange = _ref4.onVisibilityChange;
+        const rest = WithTooltip_objectWithoutProperties(_ref4, [
+          "startOpen",
+          "onVisibilityChange",
+        ]);
+        const _useState2 = _slicedToArray(
+          (0, react.useState)(startOpen || !1),
+          2
+        );
+        const tooltipShown = _useState2[0];
+        const setTooltipShown = _useState2[1];
+        const onVisibilityChange = (0, react.useCallback)(
+          (visibility) => {
+            (onChange && !1 === onChange(visibility)) ||
+              setTooltipShown(visibility);
+          },
+          [onChange]
+        );
         return (
-          (0, react.useEffect)(function () {
-            var hide = function hide() {
+          (0, react.useEffect)(() => {
+            const hide = function hide() {
               return onVisibilityChange(!1);
             };
             WithTooltip_document.addEventListener("keydown", hide, !1);
-            var iframes = Array.from(
-                WithTooltip_document.getElementsByTagName("iframe")
-              ),
-              unbinders = [];
+            const iframes = Array.from(
+              WithTooltip_document.getElementsByTagName("iframe")
+            );
+            const unbinders = [];
             return (
-              iframes.forEach(function (iframe) {
-                var bind = function bind() {
+              iframes.forEach((iframe) => {
+                const bind = function bind() {
                   try {
                     iframe.contentWindow.document &&
                       (iframe.contentWindow.document.addEventListener(
                         "click",
                         hide
                       ),
-                      unbinders.push(function () {
+                      unbinders.push(() => {
                         try {
                           iframe.contentWindow.document.removeEventListener(
                             "click",
@@ -2964,28 +2932,29 @@
                 };
                 bind(),
                   iframe.addEventListener("load", bind),
-                  unbinders.push(function () {
+                  unbinders.push(() => {
                     iframe.removeEventListener("load", bind);
                   });
               }),
               function () {
                 WithTooltip_document.removeEventListener("keydown", hide),
-                  unbinders.forEach(function (unbind) {
+                  unbinders.forEach((unbind) => {
                     unbind();
                   });
               }
             );
           }),
-          react.createElement(
-            WithTooltipPure,
-            WithTooltip_extends({}, rest, { tooltipShown, onVisibilityChange })
-          )
+          react.createElement(WithTooltipPure, {
+            ...rest,
+            tooltipShown,
+            onVisibilityChange,
+          })
         );
       };
       WithToolTipState.displayName = "WithToolTipState";
     },
     42473: (module) => {
-      var warning = function () {};
+      const warning = function () {};
       module.exports = warning;
     },
   },

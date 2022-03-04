@@ -4,7 +4,6 @@
   {
     "./node_modules/@storybook/components/dist/esm/syntaxhighlighter/syntaxhighlighter.js":
       (__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-        "use strict";
         __webpack_require__.r(__webpack_exports__),
           __webpack_require__.d(__webpack_exports__, {
             SyntaxHighlighter: () => syntaxhighlighter_SyntaxHighlighter,
@@ -56,158 +55,158 @@
           __webpack_require__(
             "./node_modules/core-js/modules/es.object.keys.js"
           );
-        var react = __webpack_require__("./node_modules/react/index.js"),
-          esm = __webpack_require__(
-            "./node_modules/@storybook/client-logger/dist/esm/index.js"
-          ),
-          dist_esm = __webpack_require__(
-            "./node_modules/@storybook/theming/dist/esm/index.js"
-          ),
-          global_window = __webpack_require__(
-            "./node_modules/global/window.js"
-          ),
-          window_default = __webpack_require__.n(global_window),
-          memoizerific = __webpack_require__(
-            "./node_modules/memoizerific/memoizerific.js"
-          ),
-          memoizerific_default = __webpack_require__.n(memoizerific),
-          jsx = __webpack_require__("./node_modules/refractor/lang/jsx.js");
+        const react = __webpack_require__("./node_modules/react/index.js");
+        const esm = __webpack_require__(
+          "./node_modules/@storybook/client-logger/dist/esm/index.js"
+        );
+        const dist_esm = __webpack_require__(
+          "./node_modules/@storybook/theming/dist/esm/index.js"
+        );
+        const global_window = __webpack_require__(
+          "./node_modules/global/window.js"
+        );
+        const window_default = __webpack_require__.n(global_window);
+        const memoizerific = __webpack_require__(
+          "./node_modules/memoizerific/memoizerific.js"
+        );
+        const memoizerific_default = __webpack_require__.n(memoizerific);
+        const jsx = __webpack_require__("./node_modules/refractor/lang/jsx.js");
         const prism_jsx = __webpack_require__.n(jsx)();
-        var bash = __webpack_require__("./node_modules/refractor/lang/bash.js");
+        const bash = __webpack_require__(
+          "./node_modules/refractor/lang/bash.js"
+        );
         const prism_bash = __webpack_require__.n(bash)();
-        var css = __webpack_require__("./node_modules/refractor/lang/css.js");
+        const css = __webpack_require__("./node_modules/refractor/lang/css.js");
         const prism_css = __webpack_require__.n(css)();
-        var js_extras = __webpack_require__(
+        const js_extras = __webpack_require__(
           "./node_modules/refractor/lang/js-extras.js"
         );
         const prism_js_extras = __webpack_require__.n(js_extras)();
-        var json = __webpack_require__("./node_modules/refractor/lang/json.js");
+        const json = __webpack_require__(
+          "./node_modules/refractor/lang/json.js"
+        );
         const prism_json = __webpack_require__.n(json)();
-        var graphql = __webpack_require__(
+        const graphql = __webpack_require__(
           "./node_modules/refractor/lang/graphql.js"
         );
         const prism_graphql = __webpack_require__.n(graphql)();
-        var markup = __webpack_require__(
+        const markup = __webpack_require__(
           "./node_modules/refractor/lang/markup.js"
         );
         const prism_markup = __webpack_require__.n(markup)();
-        var markdown = __webpack_require__(
+        const markdown = __webpack_require__(
           "./node_modules/refractor/lang/markdown.js"
         );
         const prism_markdown = __webpack_require__.n(markdown)();
-        var yaml = __webpack_require__("./node_modules/refractor/lang/yaml.js");
+        const yaml = __webpack_require__(
+          "./node_modules/refractor/lang/yaml.js"
+        );
         const prism_yaml = __webpack_require__.n(yaml)();
-        var tsx = __webpack_require__("./node_modules/refractor/lang/tsx.js");
+        const tsx = __webpack_require__("./node_modules/refractor/lang/tsx.js");
         const prism_tsx = __webpack_require__.n(tsx)();
-        var typescript = __webpack_require__(
+        const typescript = __webpack_require__(
           "./node_modules/refractor/lang/typescript.js"
         );
         const prism_typescript = __webpack_require__.n(typescript)();
-        var objectWithoutPropertiesLoose = __webpack_require__(
+        const objectWithoutPropertiesLoose = __webpack_require__(
           "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js"
         );
-        var defineProperty = __webpack_require__(
+        const defineProperty = __webpack_require__(
           "./node_modules/@babel/runtime/helpers/esm/defineProperty.js"
         );
         function _objectSpread(target) {
-          for (var i = 1; i < arguments.length; i++) {
-            var source = null != arguments[i] ? Object(arguments[i]) : {},
-              ownKeys = Object.keys(source);
-            "function" == typeof Object.getOwnPropertySymbols &&
+          for (let i = 1; i < arguments.length; i++) {
+            var source = arguments[i] != null ? Object(arguments[i]) : {};
+            const ownKeys = Object.keys(source);
+            typeof Object.getOwnPropertySymbols === "function" &&
               ownKeys.push.apply(
                 ownKeys,
-                Object.getOwnPropertySymbols(source).filter(function (sym) {
-                  return Object.getOwnPropertyDescriptor(
-                    source,
-                    sym
-                  ).enumerable;
-                })
+                Object.getOwnPropertySymbols(source).filter(
+                  (sym) =>
+                    Object.getOwnPropertyDescriptor(source, sym).enumerable
+                )
               ),
-              ownKeys.forEach(function (key) {
+              ownKeys.forEach((key) => {
                 (0, defineProperty.Z)(target, key, source[key]);
               });
           }
           return target;
         }
-        var esm_extends = __webpack_require__(
+        const esm_extends = __webpack_require__(
           "./node_modules/@babel/runtime/helpers/esm/extends.js"
         );
         function createStyleObject(classNames) {
-          var elementStyle =
-              arguments.length > 1 && void 0 !== arguments[1]
-                ? arguments[1]
-                : {},
-            stylesheet = arguments.length > 2 ? arguments[2] : void 0;
-          return classNames.reduce(function (styleObject, className) {
-            return _objectSpread({}, styleObject, stylesheet[className]);
-          }, elementStyle);
+          const elementStyle =
+            arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+          const stylesheet = arguments.length > 2 ? arguments[2] : void 0;
+          return classNames.reduce(
+            (styleObject, className) =>
+              _objectSpread({}, styleObject, stylesheet[className]),
+            elementStyle
+          );
         }
         function createClassNameString(classNames) {
           return classNames.join(" ");
         }
         function createElement(_ref) {
-          var node = _ref.node,
-            stylesheet = _ref.stylesheet,
-            _ref$style = _ref.style,
-            style = void 0 === _ref$style ? {} : _ref$style,
-            useInlineStyles = _ref.useInlineStyles,
-            key = _ref.key,
-            properties = node.properties,
-            type = node.type,
-            TagName = node.tagName,
-            value = node.value;
-          if ("text" === type) return value;
+          const { node } = _ref;
+          const { stylesheet } = _ref;
+          const _ref$style = _ref.style;
+          const style = void 0 === _ref$style ? {} : _ref$style;
+          const { useInlineStyles } = _ref;
+          const { key } = _ref;
+          const { properties } = node;
+          const { type } = node;
+          const TagName = node.tagName;
+          const { value } = node;
+          if (type === "text") return value;
           if (TagName) {
-            var childrenCreator = (function createChildren(
-                stylesheet,
-                useInlineStyles
-              ) {
-                var childrenCount = 0;
-                return function (children) {
-                  return (
-                    (childrenCount += 1),
-                    children.map(function (child, i) {
-                      return createElement({
-                        node: child,
-                        stylesheet,
-                        useInlineStyles,
-                        key: "code-segment-"
-                          .concat(childrenCount, "-")
-                          .concat(i),
-                      });
+            const childrenCreator = (function createChildren(
+              stylesheet,
+              useInlineStyles
+            ) {
+              let childrenCount = 0;
+              return function (children) {
+                return (
+                  (childrenCount += 1),
+                  children.map((child, i) =>
+                    createElement({
+                      node: child,
+                      stylesheet,
+                      useInlineStyles,
+                      key: "code-segment-".concat(childrenCount, "-").concat(i),
                     })
-                  );
-                };
-              })(stylesheet, useInlineStyles),
-              nonStylesheetClassNames =
-                useInlineStyles &&
-                properties.className &&
-                properties.className.filter(function (className) {
-                  return !stylesheet[className];
-                }),
-              className =
-                nonStylesheetClassNames && nonStylesheetClassNames.length
-                  ? nonStylesheetClassNames
-                  : void 0,
-              props = useInlineStyles
-                ? _objectSpread(
-                    {},
-                    properties,
-                    {
-                      className: className && createClassNameString(className),
-                    },
-                    {
-                      style: createStyleObject(
-                        properties.className,
-                        Object.assign({}, properties.style, style),
-                        stylesheet
-                      ),
-                    }
                   )
-                : _objectSpread({}, properties, {
-                    className: createClassNameString(properties.className),
-                  }),
-              children = childrenCreator(node.children);
+                );
+              };
+            })(stylesheet, useInlineStyles);
+            const nonStylesheetClassNames =
+              useInlineStyles &&
+              properties.className &&
+              properties.className.filter(
+                (className) => !stylesheet[className]
+              );
+            const className =
+              nonStylesheetClassNames && nonStylesheetClassNames.length
+                ? nonStylesheetClassNames
+                : void 0;
+            const props = useInlineStyles
+              ? _objectSpread(
+                  {},
+                  properties,
+                  { className: className && createClassNameString(className) },
+                  {
+                    style: createStyleObject(
+                      properties.className,
+                      { ...properties.style, ...style },
+                      stylesheet
+                    ),
+                  }
+                )
+              : _objectSpread({}, properties, {
+                  className: createClassNameString(properties.className),
+                });
+            const children = childrenCreator(node.children);
             return react.createElement(
               TagName,
               (0, esm_extends.Z)({ key }, props),
@@ -215,33 +214,34 @@
             );
           }
         }
-        var newLineRegex = /\n/g;
+        const newLineRegex = /\n/g;
         function AllLineNumbers(_ref2) {
-          var codeString = _ref2.codeString,
-            codeStyle = _ref2.codeStyle,
-            _ref2$containerStyle = _ref2.containerStyle,
-            containerStyle =
-              void 0 === _ref2$containerStyle
-                ? { float: "left", paddingRight: "10px" }
-                : _ref2$containerStyle,
-            _ref2$numberStyle = _ref2.numberStyle,
-            numberStyle = void 0 === _ref2$numberStyle ? {} : _ref2$numberStyle,
-            startingLineNumber = _ref2.startingLineNumber;
+          const { codeString } = _ref2;
+          const { codeStyle } = _ref2;
+          const _ref2$containerStyle = _ref2.containerStyle;
+          const containerStyle =
+            void 0 === _ref2$containerStyle
+              ? { float: "left", paddingRight: "10px" }
+              : _ref2$containerStyle;
+          const _ref2$numberStyle = _ref2.numberStyle;
+          const numberStyle =
+            void 0 === _ref2$numberStyle ? {} : _ref2$numberStyle;
+          const { startingLineNumber } = _ref2;
           return react.createElement(
             "code",
-            { style: Object.assign({}, codeStyle, containerStyle) },
+            { style: { ...codeStyle, ...containerStyle } },
             (function getAllLineNumbers(_ref) {
-              var lines = _ref.lines,
-                startingLineNumber = _ref.startingLineNumber,
-                style = _ref.style;
-              return lines.map(function (_, i) {
-                var number = i + startingLineNumber;
+              const { lines } = _ref;
+              const { startingLineNumber } = _ref;
+              const { style } = _ref;
+              return lines.map((_, i) => {
+                const number = i + startingLineNumber;
                 return react.createElement(
                   "span",
                   {
                     key: "line-".concat(i),
                     className: "react-syntax-highlighter-line-number",
-                    style: "function" == typeof style ? style(number) : style,
+                    style: typeof style === "function" ? style(number) : style,
                   },
                   "".concat(number, "\n")
                 );
@@ -274,7 +274,8 @@
           lineNumber,
           largestLineNumber
         ) {
-          var num, len;
+          let len;
+          let num;
           return _objectSpread(
             {},
             {
@@ -287,30 +288,28 @@
               textAlign: "right",
               userSelect: "none",
             },
-            "function" == typeof lineNumberStyle
+            typeof lineNumberStyle === "function"
               ? lineNumberStyle(lineNumber)
               : lineNumberStyle
           );
         }
         function createLineElement(_ref3) {
-          var children = _ref3.children,
-            lineNumber = _ref3.lineNumber,
-            lineNumberStyle = _ref3.lineNumberStyle,
-            largestLineNumber = _ref3.largestLineNumber,
-            showInlineLineNumbers = _ref3.showInlineLineNumbers,
-            _ref3$lineProps = _ref3.lineProps,
-            lineProps = void 0 === _ref3$lineProps ? {} : _ref3$lineProps,
-            _ref3$className = _ref3.className,
-            className = void 0 === _ref3$className ? [] : _ref3$className,
-            properties =
-              "function" == typeof lineProps
-                ? lineProps(lineNumber)
-                : lineProps;
+          const { children } = _ref3;
+          const { lineNumber } = _ref3;
+          const { lineNumberStyle } = _ref3;
+          const { largestLineNumber } = _ref3;
+          const { showInlineLineNumbers } = _ref3;
+          const _ref3$lineProps = _ref3.lineProps;
+          const lineProps = void 0 === _ref3$lineProps ? {} : _ref3$lineProps;
+          const _ref3$className = _ref3.className;
+          const className = void 0 === _ref3$className ? [] : _ref3$className;
+          const properties =
+            typeof lineProps === "function" ? lineProps(lineNumber) : lineProps;
           if (
             ((properties.className = className),
             lineNumber && showInlineLineNumbers)
           ) {
-            var inlineLineNumberStyle = assembleLineNumberStyles(
+            const inlineLineNumberStyle = assembleLineNumberStyles(
               lineNumberStyle,
               lineNumber,
               largestLineNumber
@@ -319,7 +318,12 @@
               getInlineLineNumber(lineNumber, inlineLineNumberStyle)
             );
           }
-          return { type: "element", tagName: "span", properties, children };
+          return {
+            type: "element",
+            tagName: "span",
+            properties,
+            children,
+          };
         }
         function flattenCodeTree(tree) {
           for (
@@ -335,11 +339,11 @@
             i < tree.length;
             i++
           ) {
-            var node = tree[i];
-            if ("text" === node.type)
+            const node = tree[i];
+            if (node.type === "text")
               newTree.push(createLineElement({ children: [node], className }));
             else if (node.children) {
-              var classNames = className.concat(node.properties.className);
+              const classNames = className.concat(node.properties.className);
               newTree = newTree.concat(
                 flattenCodeTree(node.children, classNames)
               );
@@ -357,13 +361,13 @@
           largestLineNumber,
           lineNumberStyle
         ) {
-          var _ref4,
-            tree = flattenCodeTree(codeTree.value),
-            newTree = [],
-            lastLineBreakIndex = -1,
-            index = 0;
+          let _ref4;
+          const tree = flattenCodeTree(codeTree.value);
+          const newTree = [];
+          let lastLineBreakIndex = -1;
+          let index = 0;
           function createWrappedLine(children, lineNumber) {
-            var className =
+            const className =
               arguments.length > 2 && void 0 !== arguments[2]
                 ? arguments[2]
                 : [];
@@ -379,7 +383,7 @@
           }
           function createUnwrappedLine(children, lineNumber) {
             if (lineNumber && showInlineLineNumbers) {
-              var inlineLineNumberStyle = assembleLineNumberStyles(
+              const inlineLineNumberStyle = assembleLineNumberStyles(
                 lineNumberStyle,
                 lineNumber,
                 largestLineNumber
@@ -391,7 +395,7 @@
             return children;
           }
           function createLine(children, lineNumber) {
-            var className =
+            const className =
               arguments.length > 2 && void 0 !== arguments[2]
                 ? arguments[2]
                 : [];
@@ -400,21 +404,24 @@
               : createUnwrappedLine(children, lineNumber);
           }
           for (
-            var _loop = function _loop() {
-              var node = tree[index],
-                value = node.children[0].value;
+            let _loop = function _loop() {
+              const node = tree[index];
+              const { value } = node.children[0];
               if (
                 (function getNewLines(str) {
                   return str.match(newLineRegex);
                 })(value)
               ) {
-                var splitValue = value.split("\n");
-                splitValue.forEach(function (text, i) {
-                  var lineNumber =
-                      showLineNumbers && newTree.length + startingLineNumber,
-                    newChild = { type: "text", value: "".concat(text, "\n") };
-                  if (0 === i) {
-                    var _line = createLine(
+                const splitValue = value.split("\n");
+                splitValue.forEach((text, i) => {
+                  const lineNumber =
+                    showLineNumbers && newTree.length + startingLineNumber;
+                  const newChild = {
+                    type: "text",
+                    value: "".concat(text, "\n"),
+                  };
+                  if (i === 0) {
+                    const _line = createLine(
                       tree
                         .slice(lastLineBreakIndex + 1, index)
                         .concat(
@@ -432,13 +439,13 @@
                       tree[index + 1].children &&
                       tree[index + 1].children[0]
                     ) {
-                      var newElem = createLineElement({
+                      const newElem = createLineElement({
                         children: [{ type: "text", value: "".concat(text) }],
                         className: node.properties.className,
                       });
                       tree.splice(index + 1, 0, newElem);
                     } else {
-                      var _line2 = createLine(
+                      const _line2 = createLine(
                         [newChild],
                         lineNumber,
                         node.properties.className
@@ -446,7 +453,7 @@
                       newTree.push(_line2);
                     }
                   } else {
-                    var _line3 = createLine(
+                    const _line3 = createLine(
                       [newChild],
                       lineNumber,
                       node.properties.className
@@ -463,9 +470,9 @@
           )
             _loop();
           if (lastLineBreakIndex !== tree.length - 1) {
-            var children = tree.slice(lastLineBreakIndex + 1, tree.length);
+            const children = tree.slice(lastLineBreakIndex + 1, tree.length);
             if (children && children.length) {
-              var line = createLine(
+              const line = createLine(
                 children,
                 newTree.length + startingLineNumber
               );
@@ -477,228 +484,224 @@
             : (_ref4 = []).concat.apply(_ref4, newTree);
         }
         function defaultRenderer(_ref5) {
-          var rows = _ref5.rows,
-            stylesheet = _ref5.stylesheet,
-            useInlineStyles = _ref5.useInlineStyles;
-          return rows.map(function (node, i) {
-            return createElement({
+          const { rows } = _ref5;
+          const { stylesheet } = _ref5;
+          const { useInlineStyles } = _ref5;
+          return rows.map((node, i) =>
+            createElement({
               node,
               stylesheet,
               useInlineStyles,
               key: "code-segement".concat(i),
-            });
-          });
+            })
+          );
         }
         function isHighlightJs(astGenerator) {
           return astGenerator && void 0 !== astGenerator.highlightAuto;
         }
-        var core = __webpack_require__("./node_modules/refractor/core.js"),
-          core_default = __webpack_require__.n(core),
-          SyntaxHighlighter = (function highlight(
-            defaultAstGenerator,
-            defaultStyle
-          ) {
-            return function SyntaxHighlighter(_ref7) {
-              var language = _ref7.language,
-                children = _ref7.children,
-                _ref7$style = _ref7.style,
-                style = void 0 === _ref7$style ? defaultStyle : _ref7$style,
-                _ref7$customStyle = _ref7.customStyle,
-                customStyle =
-                  void 0 === _ref7$customStyle ? {} : _ref7$customStyle,
-                _ref7$codeTagProps = _ref7.codeTagProps,
-                codeTagProps =
-                  void 0 === _ref7$codeTagProps
-                    ? {
-                        className: language
-                          ? "language-".concat(language)
-                          : void 0,
-                        style: style['code[class*="language-"]'],
-                      }
-                    : _ref7$codeTagProps,
-                _ref7$useInlineStyles = _ref7.useInlineStyles,
-                useInlineStyles =
-                  void 0 === _ref7$useInlineStyles || _ref7$useInlineStyles,
-                _ref7$showLineNumbers = _ref7.showLineNumbers,
-                showLineNumbers =
-                  void 0 !== _ref7$showLineNumbers && _ref7$showLineNumbers,
-                _ref7$showInlineLineN = _ref7.showInlineLineNumbers,
-                showInlineLineNumbers =
-                  void 0 !== _ref7$showInlineLineN && _ref7$showInlineLineN,
-                _ref7$startingLineNum = _ref7.startingLineNumber,
-                startingLineNumber =
-                  void 0 === _ref7$startingLineNum ? 1 : _ref7$startingLineNum,
-                lineNumberContainerStyle = _ref7.lineNumberContainerStyle,
-                _ref7$lineNumberStyle = _ref7.lineNumberStyle,
-                lineNumberStyle =
-                  void 0 === _ref7$lineNumberStyle ? {} : _ref7$lineNumberStyle,
-                wrapLines = _ref7.wrapLines,
-                _ref7$lineProps = _ref7.lineProps,
-                lineProps = void 0 === _ref7$lineProps ? {} : _ref7$lineProps,
-                renderer = _ref7.renderer,
-                _ref7$PreTag = _ref7.PreTag,
-                PreTag = void 0 === _ref7$PreTag ? "pre" : _ref7$PreTag,
-                _ref7$CodeTag = _ref7.CodeTag,
-                CodeTag = void 0 === _ref7$CodeTag ? "code" : _ref7$CodeTag,
-                _ref7$code = _ref7.code,
-                code =
-                  void 0 === _ref7$code
-                    ? Array.isArray(children)
-                      ? children[0]
-                      : children
-                    : _ref7$code,
-                astGenerator = _ref7.astGenerator,
-                rest = (function _objectWithoutProperties(source, excluded) {
-                  if (null == source) return {};
-                  var key,
-                    i,
-                    target = (0, objectWithoutPropertiesLoose.Z)(
-                      source,
-                      excluded
-                    );
-                  if (Object.getOwnPropertySymbols) {
-                    var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
-                    for (i = 0; i < sourceSymbolKeys.length; i++)
-                      (key = sourceSymbolKeys[i]),
-                        excluded.indexOf(key) >= 0 ||
-                          (Object.prototype.propertyIsEnumerable.call(
-                            source,
-                            key
-                          ) &&
-                            (target[key] = source[key]));
+        const core = __webpack_require__("./node_modules/refractor/core.js");
+        const core_default = __webpack_require__.n(core);
+        const SyntaxHighlighter = (function highlight(
+          defaultAstGenerator,
+          defaultStyle
+        ) {
+          return function SyntaxHighlighter(_ref7) {
+            const { language } = _ref7;
+            const { children } = _ref7;
+            const _ref7$style = _ref7.style;
+            const style = void 0 === _ref7$style ? defaultStyle : _ref7$style;
+            const _ref7$customStyle = _ref7.customStyle;
+            const customStyle =
+              void 0 === _ref7$customStyle ? {} : _ref7$customStyle;
+            const _ref7$codeTagProps = _ref7.codeTagProps;
+            const codeTagProps =
+              void 0 === _ref7$codeTagProps
+                ? {
+                    className: language ? "language-".concat(language) : void 0,
+                    style: style['code[class*="language-"]'],
                   }
-                  return target;
-                })(_ref7, [
-                  "language",
-                  "children",
-                  "style",
-                  "customStyle",
-                  "codeTagProps",
-                  "useInlineStyles",
-                  "showLineNumbers",
-                  "showInlineLineNumbers",
-                  "startingLineNumber",
-                  "lineNumberContainerStyle",
-                  "lineNumberStyle",
-                  "wrapLines",
-                  "lineProps",
-                  "renderer",
-                  "PreTag",
-                  "CodeTag",
-                  "code",
-                  "astGenerator",
-                ]);
-              astGenerator = astGenerator || defaultAstGenerator;
-              var allLineNumbers = showLineNumbers
-                  ? react.createElement(AllLineNumbers, {
-                      containerStyle: lineNumberContainerStyle,
-                      codeStyle: codeTagProps.style || {},
-                      numberStyle: lineNumberStyle,
-                      startingLineNumber,
-                      codeString: code,
-                    })
-                  : null,
-                defaultPreStyle = style.hljs ||
-                  style['pre[class*="language-"]'] || {
-                    backgroundColor: "#fff",
-                  },
-                generatorClassName = isHighlightJs(astGenerator)
-                  ? "hljs"
-                  : "prismjs",
-                preProps = useInlineStyles
-                  ? Object.assign({}, rest, {
-                      style: Object.assign({}, defaultPreStyle, customStyle),
-                    })
-                  : Object.assign({}, rest, {
-                      className: rest.className
-                        ? ""
-                            .concat(generatorClassName, " ")
-                            .concat(rest.className)
-                        : generatorClassName,
-                      style: Object.assign({}, customStyle),
-                    });
-              if (!astGenerator)
-                return react.createElement(
-                  PreTag,
-                  preProps,
-                  allLineNumbers,
-                  react.createElement(CodeTag, codeTagProps, code)
-                );
-              (wrapLines = !(!renderer || void 0 !== wrapLines) || wrapLines),
-                (renderer = renderer || defaultRenderer);
-              var defaultCodeValue = [{ type: "text", value: code }],
-                codeTree = (function getCodeTree(_ref6) {
-                  var astGenerator = _ref6.astGenerator,
-                    language = _ref6.language,
-                    code = _ref6.code,
-                    defaultCodeValue = _ref6.defaultCodeValue;
-                  if (isHighlightJs(astGenerator)) {
-                    var hasLanguage = (function (astGenerator, language) {
-                      return (
-                        -1 !== astGenerator.listLanguages().indexOf(language)
-                      );
-                    })(astGenerator, language);
-                    return "text" === language
-                      ? { value: defaultCodeValue, language: "text" }
-                      : hasLanguage
-                      ? astGenerator.highlight(language, code)
-                      : astGenerator.highlightAuto(code);
-                  }
-                  try {
-                    return language && "text" !== language
-                      ? { value: astGenerator.highlight(code, language) }
-                      : { value: defaultCodeValue };
-                  } catch (e) {
-                    return { value: defaultCodeValue };
-                  }
-                })({ astGenerator, language, code, defaultCodeValue });
-              null === codeTree.language && (codeTree.value = defaultCodeValue);
-              var rows = processLines(
-                codeTree,
-                wrapLines,
-                lineProps,
-                showLineNumbers,
-                showInlineLineNumbers,
-                startingLineNumber,
-                codeTree.value.length + startingLineNumber,
-                lineNumberStyle
+                : _ref7$codeTagProps;
+            const _ref7$useInlineStyles = _ref7.useInlineStyles;
+            const useInlineStyles =
+              void 0 === _ref7$useInlineStyles || _ref7$useInlineStyles;
+            const _ref7$showLineNumbers = _ref7.showLineNumbers;
+            const showLineNumbers =
+              void 0 !== _ref7$showLineNumbers && _ref7$showLineNumbers;
+            const _ref7$showInlineLineN = _ref7.showInlineLineNumbers;
+            const showInlineLineNumbers =
+              void 0 !== _ref7$showInlineLineN && _ref7$showInlineLineN;
+            const _ref7$startingLineNum = _ref7.startingLineNumber;
+            const startingLineNumber =
+              void 0 === _ref7$startingLineNum ? 1 : _ref7$startingLineNum;
+            const { lineNumberContainerStyle } = _ref7;
+            const _ref7$lineNumberStyle = _ref7.lineNumberStyle;
+            const lineNumberStyle =
+              void 0 === _ref7$lineNumberStyle ? {} : _ref7$lineNumberStyle;
+            let { wrapLines } = _ref7;
+            const _ref7$lineProps = _ref7.lineProps;
+            const lineProps = void 0 === _ref7$lineProps ? {} : _ref7$lineProps;
+            let { renderer } = _ref7;
+            const _ref7$PreTag = _ref7.PreTag;
+            const PreTag = void 0 === _ref7$PreTag ? "pre" : _ref7$PreTag;
+            const _ref7$CodeTag = _ref7.CodeTag;
+            const CodeTag = void 0 === _ref7$CodeTag ? "code" : _ref7$CodeTag;
+            const _ref7$code = _ref7.code;
+            const code =
+              void 0 === _ref7$code
+                ? Array.isArray(children)
+                  ? children[0]
+                  : children
+                : _ref7$code;
+            let { astGenerator } = _ref7;
+            const rest = (function _objectWithoutProperties(source, excluded) {
+              if (source == null) return {};
+              let key;
+              let i;
+              const target = (0, objectWithoutPropertiesLoose.Z)(
+                source,
+                excluded
               );
+              if (Object.getOwnPropertySymbols) {
+                const sourceSymbolKeys = Object.getOwnPropertySymbols(source);
+                for (i = 0; i < sourceSymbolKeys.length; i++)
+                  (key = sourceSymbolKeys[i]),
+                    excluded.indexOf(key) >= 0 ||
+                      (Object.prototype.propertyIsEnumerable.call(
+                        source,
+                        key
+                      ) &&
+                        (target[key] = source[key]));
+              }
+              return target;
+            })(_ref7, [
+              "language",
+              "children",
+              "style",
+              "customStyle",
+              "codeTagProps",
+              "useInlineStyles",
+              "showLineNumbers",
+              "showInlineLineNumbers",
+              "startingLineNumber",
+              "lineNumberContainerStyle",
+              "lineNumberStyle",
+              "wrapLines",
+              "lineProps",
+              "renderer",
+              "PreTag",
+              "CodeTag",
+              "code",
+              "astGenerator",
+            ]);
+            astGenerator = astGenerator || defaultAstGenerator;
+            const allLineNumbers = showLineNumbers
+              ? react.createElement(AllLineNumbers, {
+                  containerStyle: lineNumberContainerStyle,
+                  codeStyle: codeTagProps.style || {},
+                  numberStyle: lineNumberStyle,
+                  startingLineNumber,
+                  codeString: code,
+                })
+              : null;
+            const defaultPreStyle = style.hljs ||
+              style['pre[class*="language-"]'] || { backgroundColor: "#fff" };
+            const generatorClassName = isHighlightJs(astGenerator)
+              ? "hljs"
+              : "prismjs";
+            const preProps = useInlineStyles
+              ? { ...rest, style: { ...defaultPreStyle, ...customStyle } }
+              : {
+                  ...rest,
+                  className: rest.className
+                    ? "".concat(generatorClassName, " ").concat(rest.className)
+                    : generatorClassName,
+                  style: { ...customStyle },
+                };
+            if (!astGenerator)
               return react.createElement(
                 PreTag,
                 preProps,
-                react.createElement(
-                  CodeTag,
-                  codeTagProps,
-                  !showInlineLineNumbers && allLineNumbers,
-                  renderer({ rows, stylesheet: style, useInlineStyles })
-                )
+                allLineNumbers,
+                react.createElement(CodeTag, codeTagProps, code)
               );
-            };
-          })(core_default(), {});
+            (wrapLines = !(!renderer || void 0 !== wrapLines) || wrapLines),
+              (renderer = renderer || defaultRenderer);
+            const defaultCodeValue = [{ type: "text", value: code }];
+            const codeTree = (function getCodeTree(_ref6) {
+              const { astGenerator } = _ref6;
+              const { language } = _ref6;
+              const { code } = _ref6;
+              const { defaultCodeValue } = _ref6;
+              if (isHighlightJs(astGenerator)) {
+                const hasLanguage = (function (astGenerator, language) {
+                  return astGenerator.listLanguages().indexOf(language) !== -1;
+                })(astGenerator, language);
+                return language === "text"
+                  ? { value: defaultCodeValue, language: "text" }
+                  : hasLanguage
+                  ? astGenerator.highlight(language, code)
+                  : astGenerator.highlightAuto(code);
+              }
+              try {
+                return language && language !== "text"
+                  ? { value: astGenerator.highlight(code, language) }
+                  : { value: defaultCodeValue };
+              } catch (e) {
+                return { value: defaultCodeValue };
+              }
+            })({
+              astGenerator,
+              language,
+              code,
+              defaultCodeValue,
+            });
+            codeTree.language === null && (codeTree.value = defaultCodeValue);
+            const rows = processLines(
+              codeTree,
+              wrapLines,
+              lineProps,
+              showLineNumbers,
+              showInlineLineNumbers,
+              startingLineNumber,
+              codeTree.value.length + startingLineNumber,
+              lineNumberStyle
+            );
+            return react.createElement(
+              PreTag,
+              preProps,
+              react.createElement(
+                CodeTag,
+                codeTagProps,
+                !showInlineLineNumbers && allLineNumbers,
+                renderer({ rows, stylesheet: style, useInlineStyles })
+              )
+            );
+          };
+        })(core_default(), {});
         SyntaxHighlighter.registerLanguage = function (_, language) {
           return core_default().register(language);
         };
         const prism_light = SyntaxHighlighter;
-        var ActionBar = __webpack_require__(
-            "./node_modules/@storybook/components/dist/esm/ActionBar/ActionBar.js"
-          ),
-          ScrollArea = __webpack_require__(
-            "./node_modules/@storybook/components/dist/esm/ScrollArea/ScrollArea.js"
-          ),
-          ts_dedent_esm = __webpack_require__(
-            "./node_modules/ts-dedent/esm/index.js"
-          ),
-          formatter = memoizerific_default()(2)(function (code) {
-            return (0, ts_dedent_esm.C)(code);
-          });
+        const ActionBar = __webpack_require__(
+          "./node_modules/@storybook/components/dist/esm/ActionBar/ActionBar.js"
+        );
+        const ScrollArea = __webpack_require__(
+          "./node_modules/@storybook/components/dist/esm/ScrollArea/ScrollArea.js"
+        );
+        const ts_dedent_esm = __webpack_require__(
+          "./node_modules/ts-dedent/esm/index.js"
+        );
+        const formatter = memoizerific_default()(2)((code) =>
+          (0, ts_dedent_esm.C)(code)
+        );
         function _extends() {
           return (
             (_extends =
               Object.assign ||
               function (target) {
-                for (var i = 1; i < arguments.length; i++) {
-                  var source = arguments[i];
-                  for (var key in source)
+                for (let i = 1; i < arguments.length; i++) {
+                  const source = arguments[i];
+                  for (const key in source)
                     Object.prototype.hasOwnProperty.call(source, key) &&
                       (target[key] = source[key]);
                 }
@@ -708,22 +711,25 @@
           );
         }
         function syntaxhighlighter_objectWithoutProperties(source, excluded) {
-          if (null == source) return {};
-          var key,
-            i,
-            target = (function _objectWithoutPropertiesLoose(source, excluded) {
-              if (null == source) return {};
-              var key,
-                i,
-                target = {},
-                sourceKeys = Object.keys(source);
-              for (i = 0; i < sourceKeys.length; i++)
-                (key = sourceKeys[i]),
-                  excluded.indexOf(key) >= 0 || (target[key] = source[key]);
-              return target;
-            })(source, excluded);
+          if (source == null) return {};
+          let key;
+          let i;
+          const target = (function _objectWithoutPropertiesLoose(
+            source,
+            excluded
+          ) {
+            if (source == null) return {};
+            let key;
+            let i;
+            const target = {};
+            const sourceKeys = Object.keys(source);
+            for (i = 0; i < sourceKeys.length; i++)
+              (key = sourceKeys[i]),
+                excluded.indexOf(key) >= 0 || (target[key] = source[key]);
+            return target;
+          })(source, excluded);
           if (Object.getOwnPropertySymbols) {
-            var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
+            const sourceSymbolKeys = Object.getOwnPropertySymbols(source);
             for (i = 0; i < sourceSymbolKeys.length; i++)
               (key = sourceSymbolKeys[i]),
                 excluded.indexOf(key) >= 0 ||
@@ -742,8 +748,8 @@
           arg
         ) {
           try {
-            var info = gen[key](arg),
-              value = info.value;
+            var info = gen[key](arg);
+            var { value } = info;
           } catch (error) {
             return void reject(error);
           }
@@ -758,14 +764,14 @@
             })(arr) ||
             (function _iterableToArrayLimit(arr, i) {
               if (
-                "undefined" == typeof Symbol ||
+                typeof Symbol === "undefined" ||
                 !(Symbol.iterator in Object(arr))
               )
                 return;
-              var _arr = [],
-                _n = !0,
-                _d = !1,
-                _e = void 0;
+              const _arr = [];
+              let _n = !0;
+              let _d = !1;
+              let _e = void 0;
               try {
                 for (
                   var _s, _i = arr[Symbol.iterator]();
@@ -777,7 +783,7 @@
                 (_d = !0), (_e = err);
               } finally {
                 try {
-                  _n || null == _i.return || _i.return();
+                  _n || _i.return == null || _i.return();
                 } finally {
                   if (_d) throw _e;
                 }
@@ -786,12 +792,12 @@
             })(arr, i) ||
             (function _unsupportedIterableToArray(o, minLen) {
               if (!o) return;
-              if ("string" == typeof o) return _arrayLikeToArray(o, minLen);
-              var n = Object.prototype.toString.call(o).slice(8, -1);
-              "Object" === n && o.constructor && (n = o.constructor.name);
-              if ("Map" === n || "Set" === n) return Array.from(o);
+              if (typeof o === "string") return _arrayLikeToArray(o, minLen);
+              let n = Object.prototype.toString.call(o).slice(8, -1);
+              n === "Object" && o.constructor && (n = o.constructor.name);
+              if (n === "Map" || n === "Set") return Array.from(o);
               if (
-                "Arguments" === n ||
+                n === "Arguments" ||
                 /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)
               )
                 return _arrayLikeToArray(o, minLen);
@@ -804,13 +810,13 @@
           );
         }
         function _arrayLikeToArray(arr, len) {
-          (null == len || len > arr.length) && (len = arr.length);
+          (len == null || len > arr.length) && (len = arr.length);
           for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i];
           return arr2;
         }
-        var syntaxhighlighter_navigator = window_default().navigator,
-          syntaxhighlighter_document = window_default().document,
-          globalWindow = window_default().window;
+        const syntaxhighlighter_navigator = window_default().navigator;
+        const syntaxhighlighter_document = window_default().document;
+        const globalWindow = window_default().window;
         prism_light.registerLanguage("jsextra", prism_js_extras),
           prism_light.registerLanguage("jsx", prism_jsx),
           prism_light.registerLanguage("json", prism_json),
@@ -822,48 +828,43 @@
           prism_light.registerLanguage("tsx", prism_tsx),
           prism_light.registerLanguage("typescript", prism_typescript),
           prism_light.registerLanguage("graphql", prism_graphql);
-        var themedSyntax = memoizerific_default()(2)(function (theme) {
-            return Object.entries(theme.code || {}).reduce(function (
-              acc,
-              _ref
-            ) {
-              var _ref2 = _slicedToArray(_ref, 2),
-                key = _ref2[0],
-                val = _ref2[1];
-              return Object.assign(
-                {},
-                acc,
-                (function _defineProperty(obj, key, value) {
-                  return (
-                    key in obj
-                      ? Object.defineProperty(obj, key, {
-                          value,
-                          enumerable: !0,
-                          configurable: !0,
-                          writable: !0,
-                        })
-                      : (obj[key] = value),
-                    obj
-                  );
-                })({}, "* .".concat(key), val)
-              );
-            },
-            {});
-          }),
-          copyToClipboard = createCopyToClipboardFunction();
+        const themedSyntax = memoizerific_default()(2)((theme) =>
+          Object.entries(theme.code || {}).reduce((acc, _ref) => {
+            const _ref2 = _slicedToArray(_ref, 2);
+            const key = _ref2[0];
+            const val = _ref2[1];
+            return {
+              ...acc,
+              ...(function _defineProperty(obj, key, value) {
+                return (
+                  key in obj
+                    ? Object.defineProperty(obj, key, {
+                        value,
+                        enumerable: !0,
+                        configurable: !0,
+                        writable: !0,
+                      })
+                    : (obj[key] = value),
+                  obj
+                );
+              })({}, "* .".concat(key), val),
+            };
+          }, {})
+        );
+        const copyToClipboard = createCopyToClipboardFunction();
         function createCopyToClipboardFunction() {
-          return null != syntaxhighlighter_navigator &&
+          return syntaxhighlighter_navigator != null &&
             syntaxhighlighter_navigator.clipboard
             ? function (text) {
                 return syntaxhighlighter_navigator.clipboard.writeText(text);
               }
             : (function () {
-                var _ref3 = (function _asyncToGenerator(fn) {
+                const _ref3 = (function _asyncToGenerator(fn) {
                   return function () {
-                    var self = this,
-                      args = arguments;
-                    return new Promise(function (resolve, reject) {
-                      var gen = fn.apply(self, args);
+                    const self = this;
+                    const args = arguments;
+                    return new Promise((resolve, reject) => {
+                      const gen = fn.apply(self, args);
                       function _next(value) {
                         asyncGeneratorStep(
                           gen,
@@ -891,8 +892,9 @@
                   };
                 })(
                   regeneratorRuntime.mark(function _callee(text) {
-                    var tmp, focus;
-                    return regeneratorRuntime.wrap(function _callee$(_context) {
+                    let focus;
+                    let tmp;
+                    return regeneratorRuntime.wrap((_context) => {
                       for (;;)
                         switch ((_context.prev = _context.next)) {
                           case 0:
@@ -920,138 +922,138 @@
                 };
               })();
         }
-        var Wrapper = dist_esm.styled.div(
-            function (_ref4) {
-              return {
-                position: "relative",
-                overflow: "hidden",
-                color: _ref4.theme.color.defaultText,
-              };
-            },
-            function (_ref5) {
-              var theme = _ref5.theme;
-              return _ref5.bordered
-                ? {
-                    border: "1px solid ".concat(theme.appBorderColor),
-                    borderRadius: theme.borderRadius,
-                    background: theme.background.content,
-                  }
-                : {};
-            }
-          ),
-          Scroller = (0, dist_esm.styled)(function (_ref6) {
-            var children = _ref6.children,
-              className = _ref6.className;
-            return react.createElement(
-              ScrollArea.x,
-              { horizontal: !0, vertical: !0, className },
-              children
-            );
-          })(
-            { position: "relative" },
-            function (_ref7) {
-              return { "& code": { paddingRight: _ref7.theme.layoutMargin } };
-            },
-            function (_ref8) {
-              var theme = _ref8.theme;
-              return themedSyntax(theme);
-            }
-          ),
-          Pre = dist_esm.styled.pre(function (_ref9) {
-            var theme = _ref9.theme;
-            return {
-              display: "flex",
-              justifyContent: "flex-start",
-              margin: 0,
-              padding: _ref9.padded ? theme.layoutMargin : 0,
-            };
+        const Wrapper = dist_esm.styled.div(
+          (_ref4) => ({
+            position: "relative",
+            overflow: "hidden",
+            color: _ref4.theme.color.defaultText,
           }),
-          Code = dist_esm.styled.code({ flex: 1, paddingRight: 0, opacity: 1 }),
-          syntaxhighlighter_SyntaxHighlighter = function SyntaxHighlighter(
-            _ref10
-          ) {
-            var children = _ref10.children,
-              _ref10$language = _ref10.language,
-              language = void 0 === _ref10$language ? "jsx" : _ref10$language,
-              _ref10$copyable = _ref10.copyable,
-              copyable = void 0 !== _ref10$copyable && _ref10$copyable,
-              _ref10$bordered = _ref10.bordered,
-              bordered = void 0 !== _ref10$bordered && _ref10$bordered,
-              _ref10$padded = _ref10.padded,
-              padded = void 0 !== _ref10$padded && _ref10$padded,
-              _ref10$format = _ref10.format,
-              format = void 0 === _ref10$format || _ref10$format,
-              _ref10$className = _ref10.className,
-              className = void 0 === _ref10$className ? null : _ref10$className,
-              _ref10$showLineNumber = _ref10.showLineNumbers,
-              showLineNumbers =
-                void 0 !== _ref10$showLineNumber && _ref10$showLineNumber,
-              rest = syntaxhighlighter_objectWithoutProperties(_ref10, [
-                "children",
-                "language",
-                "copyable",
-                "bordered",
-                "padded",
-                "format",
-                "className",
-                "showLineNumbers",
-              ]);
-            if ("string" != typeof children || !children.trim()) return null;
-            var highlightableCode = format
-                ? formatter(children)
-                : children.trim(),
-              _useState2 = _slicedToArray((0, react.useState)(!1), 2),
-              copied = _useState2[0],
-              setCopied = _useState2[1],
-              onClick = function onClick(e) {
-                e.preventDefault();
-                var selectedText = globalWindow.getSelection().toString(),
-                  textToCopy =
-                    "click" !== e.type && selectedText
-                      ? selectedText
-                      : highlightableCode;
-                copyToClipboard(textToCopy)
-                  .then(function () {
-                    setCopied(!0),
-                      globalWindow.setTimeout(function () {
-                        return setCopied(!1);
-                      }, 1500);
-                  })
-                  .catch(esm.kg.error);
-              };
-            return react.createElement(
-              Wrapper,
-              { bordered, padded, className, onCopyCapture: onClick },
-              react.createElement(
-                Scroller,
-                null,
-                react.createElement(
-                  prism_light,
-                  _extends(
-                    {
-                      padded: padded || bordered,
-                      language,
-                      showLineNumbers,
-                      showInlineLineNumbers: showLineNumbers,
-                      useInlineStyles: !1,
-                      PreTag: Pre,
-                      CodeTag: Code,
-                      lineNumberContainerStyle: {},
-                    },
-                    rest
-                  ),
-                  highlightableCode
-                )
-              ),
-              copyable
-                ? react.createElement(ActionBar.o, {
-                    actionItems: [
-                      { title: copied ? "Copied" : "Copy", onClick },
-                    ],
-                  })
-                : null
-            );
+          (_ref5) => {
+            const { theme } = _ref5;
+            return _ref5.bordered
+              ? {
+                  border: "1px solid ".concat(theme.appBorderColor),
+                  borderRadius: theme.borderRadius,
+                  background: theme.background.content,
+                }
+              : {};
+          }
+        );
+        const Scroller = (0, dist_esm.styled)((_ref6) => {
+          const { children } = _ref6;
+          const { className } = _ref6;
+          return react.createElement(
+            ScrollArea.x,
+            { horizontal: !0, vertical: !0, className },
+            children
+          );
+        })(
+          { position: "relative" },
+          (_ref7) => ({ "& code": { paddingRight: _ref7.theme.layoutMargin } }),
+          (_ref8) => {
+            const { theme } = _ref8;
+            return themedSyntax(theme);
+          }
+        );
+        const Pre = dist_esm.styled.pre((_ref9) => {
+          const { theme } = _ref9;
+          return {
+            display: "flex",
+            justifyContent: "flex-start",
+            margin: 0,
+            padding: _ref9.padded ? theme.layoutMargin : 0,
           };
+        });
+        const Code = dist_esm.styled.code({
+          flex: 1,
+          paddingRight: 0,
+          opacity: 1,
+        });
+        var syntaxhighlighter_SyntaxHighlighter = function SyntaxHighlighter(
+          _ref10
+        ) {
+          const { children } = _ref10;
+          const _ref10$language = _ref10.language;
+          const language = void 0 === _ref10$language ? "jsx" : _ref10$language;
+          const _ref10$copyable = _ref10.copyable;
+          const copyable = void 0 !== _ref10$copyable && _ref10$copyable;
+          const _ref10$bordered = _ref10.bordered;
+          const bordered = void 0 !== _ref10$bordered && _ref10$bordered;
+          const _ref10$padded = _ref10.padded;
+          const padded = void 0 !== _ref10$padded && _ref10$padded;
+          const _ref10$format = _ref10.format;
+          const format = void 0 === _ref10$format || _ref10$format;
+          const _ref10$className = _ref10.className;
+          const className =
+            void 0 === _ref10$className ? null : _ref10$className;
+          const _ref10$showLineNumber = _ref10.showLineNumbers;
+          const showLineNumbers =
+            void 0 !== _ref10$showLineNumber && _ref10$showLineNumber;
+          const rest = syntaxhighlighter_objectWithoutProperties(_ref10, [
+            "children",
+            "language",
+            "copyable",
+            "bordered",
+            "padded",
+            "format",
+            "className",
+            "showLineNumbers",
+          ]);
+          if (typeof children !== "string" || !children.trim()) return null;
+          const highlightableCode = format
+            ? formatter(children)
+            : children.trim();
+          const _useState2 = _slicedToArray((0, react.useState)(!1), 2);
+          const copied = _useState2[0];
+          const setCopied = _useState2[1];
+          const onClick = function onClick(e) {
+            e.preventDefault();
+            const selectedText = globalWindow.getSelection().toString();
+            const textToCopy =
+              e.type !== "click" && selectedText
+                ? selectedText
+                : highlightableCode;
+            copyToClipboard(textToCopy)
+              .then(() => {
+                setCopied(!0),
+                  globalWindow.setTimeout(() => setCopied(!1), 1500);
+              })
+              .catch(esm.kg.error);
+          };
+          return react.createElement(
+            Wrapper,
+            {
+              bordered,
+              padded,
+              className,
+              onCopyCapture: onClick,
+            },
+            react.createElement(
+              Scroller,
+              null,
+              react.createElement(
+                prism_light,
+                {
+                  padded: padded || bordered,
+                  language,
+                  showLineNumbers,
+                  showInlineLineNumbers: showLineNumbers,
+                  useInlineStyles: !1,
+                  PreTag: Pre,
+                  CodeTag: Code,
+                  lineNumberContainerStyle: {},
+                  ...rest,
+                },
+                highlightableCode
+              )
+            ),
+            copyable
+              ? react.createElement(ActionBar.o, {
+                  actionItems: [{ title: copied ? "Copied" : "Copy", onClick }],
+                })
+              : null
+          );
+        };
         syntaxhighlighter_SyntaxHighlighter.displayName = "SyntaxHighlighter";
         const syntaxhighlighter = syntaxhighlighter_SyntaxHighlighter;
       },
@@ -1059,16 +1061,15 @@
       __unused_webpack_module,
       exports
     ) => {
-      "use strict";
       exports.Q = function parse(value) {
-        var val,
-          values = [],
-          input = String(value || ""),
-          index = input.indexOf(","),
-          lastIndex = 0,
-          end = !1;
+        let val;
+        const values = [];
+        const input = String(value || "");
+        let index = input.indexOf(",");
+        let lastIndex = 0;
+        let end = !1;
         for (; !end; )
-          -1 === index && ((index = input.length), (end = !0)),
+          index === -1 && ((index = input.length), (end = !0)),
             (!(val = input.slice(lastIndex, index).trim()) && end) ||
               values.push(val),
             (lastIndex = index + 1),
@@ -1077,15 +1078,14 @@
       };
     },
     "./node_modules/hast-util-parse-selector/index.js": (module) => {
-      "use strict";
       module.exports = function parse(selector, defaultTagName) {
-        var subvalue,
-          previous,
-          match,
-          value = selector || "",
-          name = defaultTagName || "div",
-          props = {},
-          start = 0;
+        let subvalue;
+        let previous;
+        let match;
+        const value = selector || "";
+        let name = defaultTagName || "div";
+        const props = {};
+        let start = 0;
         for (; start < value.length; )
           (search.lastIndex = start),
             (match = search.exec(value)),
@@ -1094,7 +1094,7 @@
               match ? match.index : value.length
             )) &&
               (previous
-                ? "#" === previous
+                ? previous === "#"
                   ? (props.id = subvalue)
                   : props.className
                   ? props.className.push(subvalue)
@@ -1116,39 +1116,38 @@
       __unused_webpack_exports,
       __webpack_require__
     ) => {
-      "use strict";
-      var find = __webpack_require__(
-          "./node_modules/property-information/find.js"
-        ),
-        normalize = __webpack_require__(
-          "./node_modules/property-information/normalize.js"
-        ),
-        parseSelector = __webpack_require__(
-          "./node_modules/hast-util-parse-selector/index.js"
-        ),
-        spaces = __webpack_require__(
-          "./node_modules/space-separated-tokens/index.js"
-        ).Q,
-        commas = __webpack_require__(
-          "./node_modules/comma-separated-tokens/index.js"
-        ).Q;
+      const find = __webpack_require__(
+        "./node_modules/property-information/find.js"
+      );
+      const normalize = __webpack_require__(
+        "./node_modules/property-information/normalize.js"
+      );
+      const parseSelector = __webpack_require__(
+        "./node_modules/hast-util-parse-selector/index.js"
+      );
+      const spaces = __webpack_require__(
+        "./node_modules/space-separated-tokens/index.js"
+      ).Q;
+      const commas = __webpack_require__(
+        "./node_modules/comma-separated-tokens/index.js"
+      ).Q;
       module.exports = function factory(schema, defaultTagName, caseSensitive) {
-        var adjust = caseSensitive
+        const adjust = caseSensitive
           ? (function createAdjustMap(values) {
-              var value,
-                length = values.length,
-                index = -1,
-                result = {};
+              let value;
+              const { length } = values;
+              let index = -1;
+              const result = {};
               for (; ++index < length; )
                 result[(value = values[index]).toLowerCase()] = value;
               return result;
             })(caseSensitive)
           : null;
         return function h(selector, properties) {
-          var property,
-            node = parseSelector(selector, defaultTagName),
-            children = Array.prototype.slice.call(arguments, 2),
-            name = node.tagName.toLowerCase();
+          let property;
+          const node = parseSelector(selector, defaultTagName);
+          const children = Array.prototype.slice.call(arguments, 2);
+          const name = node.tagName.toLowerCase();
           (node.tagName =
             adjust && own.call(adjust, name) ? adjust[name] : name),
             properties &&
@@ -1158,32 +1157,34 @@
             for (property in properties)
               addProperty(node.properties, property, properties[property]);
           addChild(node.children, children),
-            "template" === node.tagName &&
+            node.tagName === "template" &&
               ((node.content = { type: "root", children: node.children }),
               (node.children = []));
           return node;
         };
         function addProperty(properties, key, value) {
-          var info, property, result;
-          null != value &&
+          let info;
+          let property;
+          let result;
+          value != null &&
             value == value &&
             ((property = (info = find(schema, key)).property),
-            "string" == typeof (result = value) &&
+            typeof (result = value) === "string" &&
               (info.spaceSeparated
                 ? (result = spaces(result))
                 : info.commaSeparated
                 ? (result = commas(result))
                 : info.commaOrSpaceSeparated &&
                   (result = spaces(commas(result).join(" ")))),
-            "style" === property &&
-              "string" != typeof value &&
+            property === "style" &&
+              typeof value !== "string" &&
               (result = (function style(value) {
-                var key,
-                  result = [];
+                let key;
+                const result = [];
                 for (key in value) result.push([key, value[key]].join(": "));
                 return result.join("; ");
               })(result)),
-            "className" === property &&
+            property === "className" &&
               properties.className &&
               (result = properties.className.concat(result)),
             (properties[property] = (function parsePrimitives(
@@ -1191,8 +1192,10 @@
               name,
               value
             ) {
-              var index, length, result;
-              if ("object" != typeof value || !("length" in value))
+              let index;
+              let length;
+              let result;
+              if (typeof value !== "object" || !("length" in value))
                 return parsePrimitive(info, name, value);
               (length = value.length), (index = -1), (result = []);
               for (; ++index < length; )
@@ -1204,48 +1207,52 @@
       var own = {}.hasOwnProperty;
       function isChildren(value, node) {
         return (
-          "string" == typeof value ||
+          typeof value === "string" ||
           "length" in value ||
           (function isNode(tagName, value) {
-            var type = value.type;
-            if ("input" === tagName || !type || "string" != typeof type)
+            let { type } = value;
+            if (tagName === "input" || !type || typeof type !== "string")
               return !1;
-            if ("object" == typeof value.children && "length" in value.children)
+            if (
+              typeof value.children === "object" &&
+              "length" in value.children
+            )
               return !0;
-            if (((type = type.toLowerCase()), "button" === tagName))
+            if (((type = type.toLowerCase()), tagName === "button"))
               return (
-                "menu" !== type &&
-                "submit" !== type &&
-                "reset" !== type &&
-                "button" !== type
+                type !== "menu" &&
+                type !== "submit" &&
+                type !== "reset" &&
+                type !== "button"
               );
             return "value" in value;
           })(node.tagName, value)
         );
       }
       function addChild(nodes, value) {
-        var index, length;
-        if ("string" != typeof value && "number" != typeof value)
-          if ("object" == typeof value && "length" in value)
+        let index;
+        let length;
+        if (typeof value !== "string" && typeof value !== "number")
+          if (typeof value === "object" && "length" in value)
             for (index = -1, length = value.length; ++index < length; )
               addChild(nodes, value[index]);
           else {
-            if ("object" != typeof value || !("type" in value))
+            if (typeof value !== "object" || !("type" in value))
               throw new Error(
-                "Expected node, nodes, or string, got `" + value + "`"
+                `Expected node, nodes, or string, got \`${value}\``
               );
             nodes.push(value);
           }
         else nodes.push({ type: "text", value: String(value) });
       }
       function parsePrimitive(info, name, value) {
-        var result = value;
+        let result = value;
         return (
           info.number || info.positiveNumber
-            ? isNaN(result) || "" === result || (result = Number(result))
+            ? isNaN(result) || result === "" || (result = Number(result))
             : (info.boolean || info.overloadedBoolean) &&
-              ("string" != typeof result ||
-                ("" !== result && normalize(value) !== normalize(name)) ||
+              (typeof result !== "string" ||
+                (result !== "" && normalize(value) !== normalize(name)) ||
                 (result = !0)),
           result
         );
@@ -1256,14 +1263,13 @@
       __unused_webpack_exports,
       __webpack_require__
     ) => {
-      "use strict";
-      var schema = __webpack_require__(
-          "./node_modules/property-information/html.js"
-        ),
-        html = __webpack_require__("./node_modules/hastscript/factory.js")(
-          schema,
-          "div"
-        );
+      const schema = __webpack_require__(
+        "./node_modules/property-information/html.js"
+      );
+      const html = __webpack_require__("./node_modules/hastscript/factory.js")(
+        schema,
+        "div"
+      );
       (html.displayName = "html"), (module.exports = html);
     },
     "./node_modules/hastscript/index.js": (
@@ -1271,14 +1277,12 @@
       __unused_webpack_exports,
       __webpack_require__
     ) => {
-      "use strict";
       module.exports = __webpack_require__("./node_modules/hastscript/html.js");
     },
     "./node_modules/is-alphabetical/index.js": (module) => {
-      "use strict";
       module.exports = function alphabetical(character) {
-        var code =
-          "string" == typeof character ? character.charCodeAt(0) : character;
+        const code =
+          typeof character === "string" ? character.charCodeAt(0) : character;
         return (code >= 97 && code <= 122) || (code >= 65 && code <= 90);
       };
     },
@@ -1287,28 +1291,25 @@
       __unused_webpack_exports,
       __webpack_require__
     ) => {
-      "use strict";
-      var alphabetical = __webpack_require__(
-          "./node_modules/is-alphabetical/index.js"
-        ),
-        decimal = __webpack_require__("./node_modules/is-decimal/index.js");
+      const alphabetical = __webpack_require__(
+        "./node_modules/is-alphabetical/index.js"
+      );
+      const decimal = __webpack_require__("./node_modules/is-decimal/index.js");
       module.exports = function alphanumerical(character) {
         return alphabetical(character) || decimal(character);
       };
     },
     "./node_modules/is-decimal/index.js": (module) => {
-      "use strict";
       module.exports = function decimal(character) {
-        var code =
-          "string" == typeof character ? character.charCodeAt(0) : character;
+        const code =
+          typeof character === "string" ? character.charCodeAt(0) : character;
         return code >= 48 && code <= 57;
       };
     },
     "./node_modules/is-hexadecimal/index.js": (module) => {
-      "use strict";
       module.exports = function hexadecimal(character) {
-        var code =
-          "string" == typeof character ? character.charCodeAt(0) : character;
+        const code =
+          typeof character === "string" ? character.charCodeAt(0) : character;
         return (
           (code >= 97 && code <= 102) ||
           (code >= 65 && code <= 70) ||
@@ -1317,15 +1318,14 @@
       };
     },
     "./node_modules/parse-entities/decode-entity.browser.js": (module) => {
-      "use strict";
-      var el;
+      let el;
       module.exports = function decodeEntity(characters) {
-        var char,
-          entity = "&" + characters + ";";
+        let char;
+        const entity = `&${characters};`;
         if (
           (((el = el || document.createElement("i")).innerHTML = entity),
-          59 === (char = el.textContent).charCodeAt(char.length - 1) &&
-            "semi" !== characters)
+          (char = el.textContent).charCodeAt(char.length - 1) === 59 &&
+            characters !== "semi")
         )
           return !1;
         return char !== entity && char;
@@ -1336,72 +1336,71 @@
       __unused_webpack_exports,
       __webpack_require__
     ) => {
-      "use strict";
-      var legacy = __webpack_require__(
-          "./node_modules/character-entities-legacy/index.json"
-        ),
-        invalid = __webpack_require__(
-          "./node_modules/character-reference-invalid/index.json"
-        ),
-        decimal = __webpack_require__("./node_modules/is-decimal/index.js"),
-        hexadecimal = __webpack_require__(
-          "./node_modules/is-hexadecimal/index.js"
-        ),
-        alphanumerical = __webpack_require__(
-          "./node_modules/is-alphanumerical/index.js"
-        ),
-        decodeEntity = __webpack_require__(
-          "./node_modules/parse-entities/decode-entity.browser.js"
-        );
+      const legacy = __webpack_require__(
+        "./node_modules/character-entities-legacy/index.json"
+      );
+      const invalid = __webpack_require__(
+        "./node_modules/character-reference-invalid/index.json"
+      );
+      const decimal = __webpack_require__("./node_modules/is-decimal/index.js");
+      const hexadecimal = __webpack_require__(
+        "./node_modules/is-hexadecimal/index.js"
+      );
+      const alphanumerical = __webpack_require__(
+        "./node_modules/is-alphanumerical/index.js"
+      );
+      const decodeEntity = __webpack_require__(
+        "./node_modules/parse-entities/decode-entity.browser.js"
+      );
       module.exports = function parseEntities(value, options) {
-        var option,
-          key,
-          settings = {};
+        let option;
+        let key;
+        const settings = {};
         options || (options = {});
         for (key in defaults)
           (option = options[key]),
-            (settings[key] = null == option ? defaults[key] : option);
+            (settings[key] = option == null ? defaults[key] : option);
         (settings.position.indent || settings.position.start) &&
           ((settings.indent = settings.position.indent || []),
           (settings.position = settings.position.start));
         return (function parse(value, settings) {
-          var entityCharacters,
-            namedEntity,
-            terminated,
-            characters,
-            character,
-            reference,
-            following,
-            warning,
-            reason,
-            output,
-            entity,
-            begin,
-            start,
-            type,
-            test,
-            prev,
-            next,
-            diff,
-            end,
-            additional = settings.additional,
-            nonTerminated = settings.nonTerminated,
-            handleText = settings.text,
-            handleReference = settings.reference,
-            handleWarning = settings.warning,
-            textContext = settings.textContext,
-            referenceContext = settings.referenceContext,
-            warningContext = settings.warningContext,
-            pos = settings.position,
-            indent = settings.indent || [],
-            length = value.length,
-            index = 0,
-            lines = -1,
-            column = pos.column || 1,
-            line = pos.line || 1,
-            queue = "",
-            result = [];
-          "string" == typeof additional &&
+          let entityCharacters;
+          let namedEntity;
+          let terminated;
+          let characters;
+          let character;
+          let reference;
+          let following;
+          let warning;
+          let reason;
+          let output;
+          let entity;
+          let begin;
+          let start;
+          let type;
+          let test;
+          let prev;
+          let next;
+          let diff;
+          let end;
+          let { additional } = settings;
+          const { nonTerminated } = settings;
+          const handleText = settings.text;
+          const handleReference = settings.reference;
+          const handleWarning = settings.warning;
+          const { textContext } = settings;
+          const { referenceContext } = settings;
+          const { warningContext } = settings;
+          const pos = settings.position;
+          const indent = settings.indent || [];
+          let { length } = value;
+          let index = 0;
+          let lines = -1;
+          let column = pos.column || 1;
+          let line = pos.line || 1;
+          let queue = "";
+          const result = [];
+          typeof additional === "string" &&
             (additional = additional.charCodeAt(0));
           (prev = now()),
             (warning = handleWarning ? parseError : noop),
@@ -1409,16 +1408,16 @@
             length++;
           for (; ++index < length; )
             if (
-              (10 === character && (column = indent[lines] || 1),
-              38 === (character = value.charCodeAt(index)))
+              (character === 10 && (column = indent[lines] || 1),
+              (character = value.charCodeAt(index)) === 38)
             ) {
               if (
-                9 === (following = value.charCodeAt(index + 1)) ||
-                10 === following ||
-                12 === following ||
-                32 === following ||
-                38 === following ||
-                60 === following ||
+                (following = value.charCodeAt(index + 1)) === 9 ||
+                following === 10 ||
+                following === 12 ||
+                following === 32 ||
+                following === 38 ||
+                following === 60 ||
                 following != following ||
                 (additional && following === additional)
               ) {
@@ -1428,10 +1427,10 @@
               for (
                 begin = start = index + 1,
                   end = start,
-                  35 === following
+                  following === 35
                     ? ((end = ++begin),
-                      88 === (following = value.charCodeAt(end)) ||
-                      120 === following
+                      (following = value.charCodeAt(end)) === 88 ||
+                      following === 120
                         ? ((type = hexa), (end = ++begin))
                         : (type = deci))
                     : (type = name),
@@ -1448,7 +1447,7 @@
                     own.call(legacy, characters) &&
                     ((entityCharacters = characters),
                     (entity = legacy[characters]));
-              (terminated = 59 === value.charCodeAt(end)) &&
+              (terminated = value.charCodeAt(end) === 59) &&
                 (end++,
                 (namedEntity = type === name && decodeEntity(characters)) &&
                   ((entityCharacters = characters), (entity = namedEntity))),
@@ -1467,7 +1466,7 @@
                             terminated ||
                               ((reason = entityCharacters ? 1 : 3),
                               settings.attribute
-                                ? 61 === (following = value.charCodeAt(end))
+                                ? (following = value.charCodeAt(end)) === 61
                                   ? (warning(reason, diff), (entity = null))
                                   : alphanumerical(following)
                                   ? (entity = null)
@@ -1511,7 +1510,7 @@
                     (column += characters.length),
                     (index = end - 1));
             } else
-              10 === character && (line++, lines++, (column = 0)),
+              character === 10 && (line++, lines++, (column = 0)),
                 character == character
                   ? ((queue += fromCharCode(character)), column++)
                   : flush();
@@ -1520,7 +1519,7 @@
             return { line, column, offset: index + (pos.offset || 0) };
           }
           function parseError(code, offset) {
-            var position = now();
+            const position = now();
             (position.column += offset),
               (position.offset += offset),
               handleWarning.call(
@@ -1542,26 +1541,26 @@
           }
         })(value, settings);
       };
-      var own = {}.hasOwnProperty,
-        fromCharCode = String.fromCharCode,
-        noop = Function.prototype,
-        defaults = {
-          warning: null,
-          reference: null,
-          text: null,
-          warningContext: null,
-          referenceContext: null,
-          textContext: null,
-          position: {},
-          additional: null,
-          attribute: !1,
-          nonTerminated: !0,
-        },
-        name = "named",
-        hexa = "hexadecimal",
-        deci = "decimal",
-        bases = { hexadecimal: 16, decimal: 10 },
-        tests = {};
+      var own = {}.hasOwnProperty;
+      var { fromCharCode } = String;
+      var noop = Function.prototype;
+      var defaults = {
+        warning: null,
+        reference: null,
+        text: null,
+        warningContext: null,
+        referenceContext: null,
+        textContext: null,
+        position: {},
+        additional: null,
+        attribute: !1,
+        nonTerminated: !0,
+      };
+      var name = "named";
+      var hexa = "hexadecimal";
+      var deci = "decimal";
+      var bases = { hexadecimal: 16, decimal: 10 };
+      var tests = {};
       (tests.named = alphanumerical),
         (tests[deci] = decimal),
         (tests[hexa] = hexadecimal);
@@ -1572,12 +1571,12 @@
       function disallowed(code) {
         return (
           (code >= 1 && code <= 8) ||
-          11 === code ||
+          code === 11 ||
           (code >= 13 && code <= 31) ||
           (code >= 127 && code <= 159) ||
           (code >= 64976 && code <= 65007) ||
-          65535 == (65535 & code) ||
-          65534 == (65535 & code)
+          (65535 & code) == 65535 ||
+          (65535 & code) == 65534
         );
       }
       (messages[1] =
@@ -1596,270 +1595,267 @@
       __unused_webpack_exports,
       __webpack_require__
     ) => {
-      var Prism = (function (_self) {
-        var lang = /(?:^|\s)lang(?:uage)?-([\w-]+)(?=\s|$)/i,
-          uniqueId = 0,
-          plainTextGrammar = {},
-          _ = {
-            manual: _self.Prism && _self.Prism.manual,
-            disableWorkerMessageHandler:
-              _self.Prism && _self.Prism.disableWorkerMessageHandler,
-            util: {
-              encode: function encode(tokens) {
-                return tokens instanceof Token
-                  ? new Token(tokens.type, encode(tokens.content), tokens.alias)
-                  : Array.isArray(tokens)
-                  ? tokens.map(encode)
-                  : tokens
-                      .replace(/&/g, "&amp;")
-                      .replace(/</g, "&lt;")
-                      .replace(/\u00a0/g, " ");
-              },
-              type: function (o) {
-                return Object.prototype.toString.call(o).slice(8, -1);
-              },
-              objId: function (obj) {
-                return (
-                  obj.__id ||
-                    Object.defineProperty(obj, "__id", { value: ++uniqueId }),
-                  obj.__id
-                );
-              },
-              clone: function deepClone(o, visited) {
-                var clone, id;
-                switch (((visited = visited || {}), _.util.type(o))) {
-                  case "Object":
-                    if (((id = _.util.objId(o)), visited[id]))
-                      return visited[id];
-                    for (var key in ((clone = {}), (visited[id] = clone), o))
-                      o.hasOwnProperty(key) &&
-                        (clone[key] = deepClone(o[key], visited));
-                    return clone;
-                  case "Array":
-                    return (
-                      (id = _.util.objId(o)),
-                      visited[id]
-                        ? visited[id]
-                        : ((clone = []),
-                          (visited[id] = clone),
-                          o.forEach(function (v, i) {
-                            clone[i] = deepClone(v, visited);
-                          }),
-                          clone)
-                    );
-                  default:
-                    return o;
-                }
-              },
-              getLanguage: function (element) {
-                for (; element; ) {
-                  var m = lang.exec(element.className);
-                  if (m) return m[1].toLowerCase();
-                  element = element.parentElement;
-                }
-                return "none";
-              },
-              setLanguage: function (element, language) {
-                (element.className = element.className.replace(
-                  RegExp(lang, "gi"),
-                  ""
-                )),
-                  element.classList.add("language-" + language);
-              },
-              currentScript: function () {
-                if ("undefined" == typeof document) return null;
-                if ("currentScript" in document) return document.currentScript;
-                try {
-                  throw new Error();
-                } catch (err) {
-                  var src = (/at [^(\r\n]*\((.*):[^:]+:[^:]+\)$/i.exec(
-                    err.stack
-                  ) || [])[1];
-                  if (src) {
-                    var scripts = document.getElementsByTagName("script");
-                    for (var i in scripts)
-                      if (scripts[i].src == src) return scripts[i];
-                  }
-                  return null;
-                }
-              },
-              isActive: function (element, className, defaultActivation) {
-                for (var no = "no-" + className; element; ) {
-                  var classList = element.classList;
-                  if (classList.contains(className)) return !0;
-                  if (classList.contains(no)) return !1;
-                  element = element.parentElement;
-                }
-                return !!defaultActivation;
-              },
+      const Prism = (function (_self) {
+        const lang = /(?:^|\s)lang(?:uage)?-([\w-]+)(?=\s|$)/i;
+        let uniqueId = 0;
+        const plainTextGrammar = {};
+        var _ = {
+          manual: _self.Prism && _self.Prism.manual,
+          disableWorkerMessageHandler:
+            _self.Prism && _self.Prism.disableWorkerMessageHandler,
+          util: {
+            encode: function encode(tokens) {
+              return tokens instanceof Token
+                ? new Token(tokens.type, encode(tokens.content), tokens.alias)
+                : Array.isArray(tokens)
+                ? tokens.map(encode)
+                : tokens
+                    .replace(/&/g, "&amp;")
+                    .replace(/</g, "&lt;")
+                    .replace(/\u00a0/g, " ");
             },
-            languages: {
-              plain: plainTextGrammar,
-              plaintext: plainTextGrammar,
-              text: plainTextGrammar,
-              txt: plainTextGrammar,
-              extend: function (id, redef) {
-                var lang = _.util.clone(_.languages[id]);
-                for (var key in redef) lang[key] = redef[key];
-                return lang;
-              },
-              insertBefore: function (inside, before, insert, root) {
-                var grammar = (root = root || _.languages)[inside],
-                  ret = {};
-                for (var token in grammar)
-                  if (grammar.hasOwnProperty(token)) {
-                    if (token == before)
-                      for (var newToken in insert)
-                        insert.hasOwnProperty(newToken) &&
-                          (ret[newToken] = insert[newToken]);
-                    insert.hasOwnProperty(token) ||
-                      (ret[token] = grammar[token]);
-                  }
-                var old = root[inside];
-                return (
-                  (root[inside] = ret),
-                  _.languages.DFS(_.languages, function (key, value) {
-                    value === old && key != inside && (this[key] = ret);
-                  }),
-                  ret
-                );
-              },
-              DFS: function DFS(o, callback, type, visited) {
-                visited = visited || {};
-                var objId = _.util.objId;
-                for (var i in o)
-                  if (o.hasOwnProperty(i)) {
-                    callback.call(o, i, o[i], type || i);
-                    var property = o[i],
-                      propertyType = _.util.type(property);
-                    "Object" !== propertyType || visited[objId(property)]
-                      ? "Array" !== propertyType ||
-                        visited[objId(property)] ||
-                        ((visited[objId(property)] = !0),
-                        DFS(property, callback, i, visited))
-                      : ((visited[objId(property)] = !0),
-                        DFS(property, callback, null, visited));
-                  }
-              },
+            type(o) {
+              return Object.prototype.toString.call(o).slice(8, -1);
             },
-            plugins: {},
-            highlightAll: function (async, callback) {
-              _.highlightAllUnder(document, async, callback);
+            objId(obj) {
+              return (
+                obj.__id ||
+                  Object.defineProperty(obj, "__id", { value: ++uniqueId }),
+                obj.__id
+              );
             },
-            highlightAllUnder: function (container, async, callback) {
-              var env = {
-                callback,
-                container,
-                selector:
-                  'code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code',
-              };
-              _.hooks.run("before-highlightall", env),
-                (env.elements = Array.prototype.slice.apply(
-                  env.container.querySelectorAll(env.selector)
-                )),
-                _.hooks.run("before-all-elements-highlight", env);
-              for (var element, i = 0; (element = env.elements[i++]); )
-                _.highlightElement(element, !0 === async, env.callback);
-            },
-            highlightElement: function (element, async, callback) {
-              var language = _.util.getLanguage(element),
-                grammar = _.languages[language];
-              _.util.setLanguage(element, language);
-              var parent = element.parentElement;
-              parent &&
-                "pre" === parent.nodeName.toLowerCase() &&
-                _.util.setLanguage(parent, language);
-              var env = {
-                element,
-                language,
-                grammar,
-                code: element.textContent,
-              };
-              function insertHighlightedCode(highlightedCode) {
-                (env.highlightedCode = highlightedCode),
-                  _.hooks.run("before-insert", env),
-                  (env.element.innerHTML = env.highlightedCode),
-                  _.hooks.run("after-highlight", env),
-                  _.hooks.run("complete", env),
-                  callback && callback.call(env.element);
-              }
-              if (
-                (_.hooks.run("before-sanity-check", env),
-                (parent = env.element.parentElement) &&
-                  "pre" === parent.nodeName.toLowerCase() &&
-                  !parent.hasAttribute("tabindex") &&
-                  parent.setAttribute("tabindex", "0"),
-                !env.code)
-              )
-                return (
-                  _.hooks.run("complete", env),
-                  void (callback && callback.call(env.element))
-                );
-              if ((_.hooks.run("before-highlight", env), env.grammar))
-                if (async && _self.Worker) {
-                  var worker = new Worker(_.filename);
-                  (worker.onmessage = function (evt) {
-                    insertHighlightedCode(evt.data);
-                  }),
-                    worker.postMessage(
-                      JSON.stringify({
-                        language: env.language,
-                        code: env.code,
-                        immediateClose: !0,
-                      })
-                    );
-                } else
-                  insertHighlightedCode(
-                    _.highlight(env.code, env.grammar, env.language)
+            clone: function deepClone(o, visited) {
+              let clone;
+              let id;
+              switch (((visited = visited || {}), _.util.type(o))) {
+                case "Object":
+                  if (((id = _.util.objId(o)), visited[id])) return visited[id];
+                  for (const key in ((clone = {}), (visited[id] = clone), o))
+                    o.hasOwnProperty(key) &&
+                      (clone[key] = deepClone(o[key], visited));
+                  return clone;
+                case "Array":
+                  return (
+                    (id = _.util.objId(o)),
+                    visited[id]
+                      ? visited[id]
+                      : ((clone = []),
+                        (visited[id] = clone),
+                        o.forEach((v, i) => {
+                          clone[i] = deepClone(v, visited);
+                        }),
+                        clone)
                   );
-              else insertHighlightedCode(_.util.encode(env.code));
-            },
-            highlight: function (text, grammar, language) {
-              var env = { code: text, grammar, language };
-              if ((_.hooks.run("before-tokenize", env), !env.grammar))
-                throw new Error(
-                  'The language "' + env.language + '" has no grammar.'
-                );
-              return (
-                (env.tokens = _.tokenize(env.code, env.grammar)),
-                _.hooks.run("after-tokenize", env),
-                Token.stringify(_.util.encode(env.tokens), env.language)
-              );
-            },
-            tokenize: function (text, grammar) {
-              var rest = grammar.rest;
-              if (rest) {
-                for (var token in rest) grammar[token] = rest[token];
-                delete grammar.rest;
+                default:
+                  return o;
               }
-              var tokenList = new LinkedList();
+            },
+            getLanguage(element) {
+              for (; element; ) {
+                const m = lang.exec(element.className);
+                if (m) return m[1].toLowerCase();
+                element = element.parentElement;
+              }
+              return "none";
+            },
+            setLanguage(element, language) {
+              (element.className = element.className.replace(
+                RegExp(lang, "gi"),
+                ""
+              )),
+                element.classList.add(`language-${language}`);
+            },
+            currentScript() {
+              if (typeof document === "undefined") return null;
+              if ("currentScript" in document) return document.currentScript;
+              try {
+                throw new Error();
+              } catch (err) {
+                const src = (/at [^(\r\n]*\((.*):[^:]+:[^:]+\)$/i.exec(
+                  err.stack
+                ) || [])[1];
+                if (src) {
+                  const scripts = document.getElementsByTagName("script");
+                  for (const i in scripts)
+                    if (scripts[i].src == src) return scripts[i];
+                }
+                return null;
+              }
+            },
+            isActive(element, className, defaultActivation) {
+              for (let no = `no-${className}`; element; ) {
+                const { classList } = element;
+                if (classList.contains(className)) return !0;
+                if (classList.contains(no)) return !1;
+                element = element.parentElement;
+              }
+              return !!defaultActivation;
+            },
+          },
+          languages: {
+            plain: plainTextGrammar,
+            plaintext: plainTextGrammar,
+            text: plainTextGrammar,
+            txt: plainTextGrammar,
+            extend(id, redef) {
+              const lang = _.util.clone(_.languages[id]);
+              for (const key in redef) lang[key] = redef[key];
+              return lang;
+            },
+            insertBefore(inside, before, insert, root) {
+              const grammar = (root = root || _.languages)[inside];
+              const ret = {};
+              for (const token in grammar)
+                if (grammar.hasOwnProperty(token)) {
+                  if (token == before)
+                    for (const newToken in insert)
+                      insert.hasOwnProperty(newToken) &&
+                        (ret[newToken] = insert[newToken]);
+                  insert.hasOwnProperty(token) || (ret[token] = grammar[token]);
+                }
+              const old = root[inside];
               return (
-                addAfter(tokenList, tokenList.head, text),
-                matchGrammar(text, tokenList, grammar, tokenList.head, 0),
-                (function toArray(list) {
-                  var array = [],
-                    node = list.head.next;
-                  for (; node !== list.tail; )
-                    array.push(node.value), (node = node.next);
-                  return array;
-                })(tokenList)
+                (root[inside] = ret),
+                _.languages.DFS(_.languages, function (key, value) {
+                  value === old && key != inside && (this[key] = ret);
+                }),
+                ret
               );
             },
-            hooks: {
-              all: {},
-              add: function (name, callback) {
-                var hooks = _.hooks.all;
-                (hooks[name] = hooks[name] || []), hooks[name].push(callback);
-              },
-              run: function (name, env) {
-                var callbacks = _.hooks.all[name];
-                if (callbacks && callbacks.length)
-                  for (var callback, i = 0; (callback = callbacks[i++]); )
-                    callback(env);
-              },
+            DFS: function DFS(o, callback, type, visited) {
+              visited = visited || {};
+              const { objId } = _.util;
+              for (const i in o)
+                if (o.hasOwnProperty(i)) {
+                  callback.call(o, i, o[i], type || i);
+                  const property = o[i];
+                  const propertyType = _.util.type(property);
+                  propertyType !== "Object" || visited[objId(property)]
+                    ? propertyType !== "Array" ||
+                      visited[objId(property)] ||
+                      ((visited[objId(property)] = !0),
+                      DFS(property, callback, i, visited))
+                    : ((visited[objId(property)] = !0),
+                      DFS(property, callback, null, visited));
+                }
             },
-            Token,
-          };
+          },
+          plugins: {},
+          highlightAll(async, callback) {
+            _.highlightAllUnder(document, async, callback);
+          },
+          highlightAllUnder(container, async, callback) {
+            const env = {
+              callback,
+              container,
+              selector:
+                'code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code',
+            };
+            _.hooks.run("before-highlightall", env),
+              (env.elements = Array.prototype.slice.apply(
+                env.container.querySelectorAll(env.selector)
+              )),
+              _.hooks.run("before-all-elements-highlight", env);
+            for (var element, i = 0; (element = env.elements[i++]); )
+              _.highlightElement(element, !0 === async, env.callback);
+          },
+          highlightElement(element, async, callback) {
+            const language = _.util.getLanguage(element);
+            const grammar = _.languages[language];
+            _.util.setLanguage(element, language);
+            let parent = element.parentElement;
+            parent &&
+              parent.nodeName.toLowerCase() === "pre" &&
+              _.util.setLanguage(parent, language);
+            const env = {
+              element,
+              language,
+              grammar,
+              code: element.textContent,
+            };
+            function insertHighlightedCode(highlightedCode) {
+              (env.highlightedCode = highlightedCode),
+                _.hooks.run("before-insert", env),
+                (env.element.innerHTML = env.highlightedCode),
+                _.hooks.run("after-highlight", env),
+                _.hooks.run("complete", env),
+                callback && callback.call(env.element);
+            }
+            if (
+              (_.hooks.run("before-sanity-check", env),
+              (parent = env.element.parentElement) &&
+                parent.nodeName.toLowerCase() === "pre" &&
+                !parent.hasAttribute("tabindex") &&
+                parent.setAttribute("tabindex", "0"),
+              !env.code)
+            )
+              return (
+                _.hooks.run("complete", env),
+                void (callback && callback.call(env.element))
+              );
+            if ((_.hooks.run("before-highlight", env), env.grammar))
+              if (async && _self.Worker) {
+                const worker = new Worker(_.filename);
+                (worker.onmessage = function (evt) {
+                  insertHighlightedCode(evt.data);
+                }),
+                  worker.postMessage(
+                    JSON.stringify({
+                      language: env.language,
+                      code: env.code,
+                      immediateClose: !0,
+                    })
+                  );
+              } else
+                insertHighlightedCode(
+                  _.highlight(env.code, env.grammar, env.language)
+                );
+            else insertHighlightedCode(_.util.encode(env.code));
+          },
+          highlight(text, grammar, language) {
+            const env = { code: text, grammar, language };
+            if ((_.hooks.run("before-tokenize", env), !env.grammar))
+              throw new Error(`The language "${env.language}" has no grammar.`);
+            return (
+              (env.tokens = _.tokenize(env.code, env.grammar)),
+              _.hooks.run("after-tokenize", env),
+              Token.stringify(_.util.encode(env.tokens), env.language)
+            );
+          },
+          tokenize(text, grammar) {
+            const { rest } = grammar;
+            if (rest) {
+              for (const token in rest) grammar[token] = rest[token];
+              delete grammar.rest;
+            }
+            const tokenList = new LinkedList();
+            return (
+              addAfter(tokenList, tokenList.head, text),
+              matchGrammar(text, tokenList, grammar, tokenList.head, 0),
+              (function toArray(list) {
+                const array = [];
+                let node = list.head.next;
+                for (; node !== list.tail; )
+                  array.push(node.value), (node = node.next);
+                return array;
+              })(tokenList)
+            );
+          },
+          hooks: {
+            all: {},
+            add(name, callback) {
+              const hooks = _.hooks.all;
+              (hooks[name] = hooks[name] || []), hooks[name].push(callback);
+            },
+            run(name, env) {
+              const callbacks = _.hooks.all[name];
+              if (callbacks && callbacks.length)
+                for (var callback, i = 0; (callback = callbacks[i++]); )
+                  callback(env);
+            },
+          },
+          Token,
+        };
         function Token(type, content, alias, matchedStr) {
           (this.type = type),
             (this.content = content),
@@ -1868,9 +1864,9 @@
         }
         function matchPattern(pattern, pos, text, lookbehind) {
           pattern.lastIndex = pos;
-          var match = pattern.exec(text);
+          const match = pattern.exec(text);
           if (match && lookbehind && match[1]) {
-            var lookbehindLength = match[1].length;
+            const lookbehindLength = match[1].length;
             (match.index += lookbehindLength),
               (match[0] = match[0].slice(lookbehindLength));
           }
@@ -1884,28 +1880,28 @@
           startPos,
           rematch
         ) {
-          for (var token in grammar)
+          for (const token in grammar)
             if (grammar.hasOwnProperty(token) && grammar[token]) {
-              var patterns = grammar[token];
+              let patterns = grammar[token];
               patterns = Array.isArray(patterns) ? patterns : [patterns];
-              for (var j = 0; j < patterns.length; ++j) {
-                if (rematch && rematch.cause == token + "," + j) return;
-                var patternObj = patterns[j],
-                  inside = patternObj.inside,
-                  lookbehind = !!patternObj.lookbehind,
-                  greedy = !!patternObj.greedy,
-                  alias = patternObj.alias;
+              for (let j = 0; j < patterns.length; ++j) {
+                if (rematch && rematch.cause == `${token},${j}`) return;
+                const patternObj = patterns[j];
+                const { inside } = patternObj;
+                const lookbehind = !!patternObj.lookbehind;
+                const greedy = !!patternObj.greedy;
+                const { alias } = patternObj;
                 if (greedy && !patternObj.pattern.global) {
-                  var flags = patternObj.pattern
+                  const flags = patternObj.pattern
                     .toString()
                     .match(/[imsuy]*$/)[0];
                   patternObj.pattern = RegExp(
                     patternObj.pattern.source,
-                    flags + "g"
+                    `${flags}g`
                   );
                 }
                 for (
-                  var pattern = patternObj.pattern || patternObj,
+                  let pattern = patternObj.pattern || patternObj,
                     currentNode = startNode.next,
                     pos = startPos;
                   currentNode !== tokenList.tail &&
@@ -1913,11 +1909,11 @@
                   pos += currentNode.value.length,
                     currentNode = currentNode.next
                 ) {
-                  var str = currentNode.value;
+                  let str = currentNode.value;
                   if (tokenList.length > text.length) return;
                   if (!(str instanceof Token)) {
-                    var match,
-                      removeCount = 1;
+                    var match;
+                    let removeCount = 1;
                     if (greedy) {
                       if (
                         !(match = matchPattern(
@@ -1929,9 +1925,9 @@
                         match.index >= text.length
                       )
                         break;
-                      var from = match.index,
-                        to = match.index + match[0].length,
-                        p = pos;
+                      var from = match.index;
+                      const to = match.index + match[0].length;
+                      let p = pos;
                       for (p += currentNode.value.length; from >= p; )
                         p += (currentNode = currentNode.next).value.length;
                       if (
@@ -1940,9 +1936,9 @@
                       )
                         continue;
                       for (
-                        var k = currentNode;
+                        let k = currentNode;
                         k !== tokenList.tail &&
-                        (p < to || "string" == typeof k.value);
+                        (p < to || typeof k.value === "string");
                         k = k.next
                       )
                         removeCount++, (p += k.value.length);
@@ -1954,12 +1950,12 @@
                     )
                       continue;
                     from = match.index;
-                    var matchStr = match[0],
-                      before = str.slice(0, from),
-                      after = str.slice(from + matchStr.length),
-                      reach = pos + str.length;
+                    const matchStr = match[0];
+                    const before = str.slice(0, from);
+                    const after = str.slice(from + matchStr.length);
+                    const reach = pos + str.length;
                     rematch && reach > rematch.reach && (rematch.reach = reach);
-                    var removeFrom = currentNode.prev;
+                    let removeFrom = currentNode.prev;
                     if (
                       (before &&
                         ((removeFrom = addAfter(tokenList, removeFrom, before)),
@@ -1978,7 +1974,7 @@
                       after && addAfter(tokenList, currentNode, after),
                       removeCount > 1)
                     ) {
-                      var nestedRematch = { cause: token + "," + j, reach };
+                      const nestedRematch = { cause: `${token},${j}`, reach };
                       matchGrammar(
                         text,
                         tokenList,
@@ -1997,77 +1993,61 @@
             }
         }
         function LinkedList() {
-          var head = { value: null, prev: null, next: null },
-            tail = { value: null, prev: head, next: null };
+          const head = { value: null, prev: null, next: null };
+          const tail = { value: null, prev: head, next: null };
           (head.next = tail),
             (this.head = head),
             (this.tail = tail),
             (this.length = 0);
         }
         function addAfter(list, node, value) {
-          var next = node.next,
-            newNode = { value, prev: node, next };
+          const { next } = node;
+          const newNode = { value, prev: node, next };
           return (
             (node.next = newNode), (next.prev = newNode), list.length++, newNode
           );
         }
         function removeRange(list, node, count) {
-          for (
-            var next = node.next, i = 0;
-            i < count && next !== list.tail;
-            i++
-          )
+          for (var { next } = node, i = 0; i < count && next !== list.tail; i++)
             next = next.next;
           (node.next = next), (next.prev = node), (list.length -= i);
         }
         if (
           ((_self.Prism = _),
           (Token.stringify = function stringify(o, language) {
-            if ("string" == typeof o) return o;
+            if (typeof o === "string") return o;
             if (Array.isArray(o)) {
-              var s = "";
+              let s = "";
               return (
-                o.forEach(function (e) {
+                o.forEach((e) => {
                   s += stringify(e, language);
                 }),
                 s
               );
             }
-            var env = {
-                type: o.type,
-                content: stringify(o.content, language),
-                tag: "span",
-                classes: ["token", o.type],
-                attributes: {},
-                language,
-              },
-              aliases = o.alias;
+            const env = {
+              type: o.type,
+              content: stringify(o.content, language),
+              tag: "span",
+              classes: ["token", o.type],
+              attributes: {},
+              language,
+            };
+            const aliases = o.alias;
             aliases &&
               (Array.isArray(aliases)
                 ? Array.prototype.push.apply(env.classes, aliases)
                 : env.classes.push(aliases)),
               _.hooks.run("wrap", env);
-            var attributes = "";
-            for (var name in env.attributes)
-              attributes +=
-                " " +
-                name +
-                '="' +
-                (env.attributes[name] || "").replace(/"/g, "&quot;") +
-                '"';
-            return (
-              "<" +
-              env.tag +
-              ' class="' +
-              env.classes.join(" ") +
-              '"' +
-              attributes +
-              ">" +
-              env.content +
-              "</" +
-              env.tag +
-              ">"
-            );
+            let attributes = "";
+            for (const name in env.attributes)
+              attributes += ` ${name}="${(env.attributes[name] || "").replace(
+                /"/g,
+                "&quot;"
+              )}"`;
+            return `<${env.tag} class="${env.classes.join(" ")}"${attributes}>${
+              env.content
+            }</${env.tag}>`;
           }),
           !_self.document)
         )
@@ -2075,11 +2055,11 @@
             ? (_.disableWorkerMessageHandler ||
                 _self.addEventListener(
                   "message",
-                  function (evt) {
-                    var message = JSON.parse(evt.data),
-                      lang = message.language,
-                      code = message.code,
-                      immediateClose = message.immediateClose;
+                  (evt) => {
+                    const message = JSON.parse(evt.data);
+                    const lang = message.language;
+                    const { code } = message;
+                    const { immediateClose } = message;
                     _self.postMessage(
                       _.highlight(code, _.languages[lang], lang)
                     ),
@@ -2089,7 +2069,7 @@
                 ),
               _)
             : _;
-        var script = _.util.currentScript();
+        const script = _.util.currentScript();
         function highlightAutomaticallyCallback() {
           _.manual || _.highlightAll();
         }
@@ -2099,9 +2079,9 @@
             script.hasAttribute("data-manual") && (_.manual = !0)),
           !_.manual)
         ) {
-          var readyState = document.readyState;
-          "loading" === readyState ||
-          ("interactive" === readyState && script && script.defer)
+          const { readyState } = document;
+          readyState === "loading" ||
+          (readyState === "interactive" && script && script.defer)
             ? document.addEventListener(
                 "DOMContentLoaded",
                 highlightAutomaticallyCallback
@@ -2112,9 +2092,9 @@
         }
         return _;
       })(
-        "undefined" != typeof window
+        typeof window !== "undefined"
           ? window
-          : "undefined" != typeof WorkerGlobalScope &&
+          : typeof WorkerGlobalScope !== "undefined" &&
             self instanceof WorkerGlobalScope
           ? self
           : {}
@@ -2128,45 +2108,44 @@
       __unused_webpack_exports,
       __webpack_require__
     ) => {
-      "use strict";
-      var normalize = __webpack_require__(
-          "./node_modules/property-information/normalize.js"
-        ),
-        DefinedInfo = __webpack_require__(
-          "./node_modules/property-information/lib/util/defined-info.js"
-        ),
-        Info = __webpack_require__(
-          "./node_modules/property-information/lib/util/info.js"
-        );
+      const normalize = __webpack_require__(
+        "./node_modules/property-information/normalize.js"
+      );
+      const DefinedInfo = __webpack_require__(
+        "./node_modules/property-information/lib/util/defined-info.js"
+      );
+      const Info = __webpack_require__(
+        "./node_modules/property-information/lib/util/info.js"
+      );
       module.exports = function find(schema, value) {
-        var normal = normalize(value),
-          prop = value,
-          Type = Info;
+        const normal = normalize(value);
+        let prop = value;
+        let Type = Info;
         if (normal in schema.normal)
           return schema.property[schema.normal[normal]];
         normal.length > 4 &&
-          "data" === normal.slice(0, 4) &&
+          normal.slice(0, 4) === "data" &&
           valid.test(value) &&
-          ("-" === value.charAt(4)
+          (value.charAt(4) === "-"
             ? (prop = (function datasetToProperty(attribute) {
-                var value = attribute.slice(5).replace(dash, camelcase);
-                return "data" + value.charAt(0).toUpperCase() + value.slice(1);
+                const value = attribute.slice(5).replace(dash, camelcase);
+                return `data${value.charAt(0).toUpperCase()}${value.slice(1)}`;
               })(value))
             : (value = (function datasetToAttribute(property) {
-                var value = property.slice(4);
+                let value = property.slice(4);
                 if (dash.test(value)) return property;
-                "-" !== (value = value.replace(cap, kebab)).charAt(0) &&
-                  (value = "-" + value);
-                return "data" + value;
+                (value = value.replace(cap, kebab)).charAt(0) !== "-" &&
+                  (value = `-${value}`);
+                return `data${value}`;
               })(value)),
           (Type = DefinedInfo));
         return new Type(prop, value);
       };
-      var valid = /^data[-\w.:]+$/i,
-        dash = /-[a-z]/g,
-        cap = /[A-Z]/g;
+      var cap = /[A-Z]/g;
+      var dash = /-[a-z]/g;
+      var valid = /^data[-\w.:]+$/i;
       function kebab($0) {
-        return "-" + $0.toLowerCase();
+        return `-${$0.toLowerCase()}`;
       }
       function camelcase($0) {
         return $0.charAt(1).toUpperCase();
@@ -2177,25 +2156,24 @@
       __unused_webpack_exports,
       __webpack_require__
     ) => {
-      "use strict";
-      var merge = __webpack_require__(
-          "./node_modules/property-information/lib/util/merge.js"
-        ),
-        xlink = __webpack_require__(
-          "./node_modules/property-information/lib/xlink.js"
-        ),
-        xml = __webpack_require__(
-          "./node_modules/property-information/lib/xml.js"
-        ),
-        xmlns = __webpack_require__(
-          "./node_modules/property-information/lib/xmlns.js"
-        ),
-        aria = __webpack_require__(
-          "./node_modules/property-information/lib/aria.js"
-        ),
-        html = __webpack_require__(
-          "./node_modules/property-information/lib/html.js"
-        );
+      const merge = __webpack_require__(
+        "./node_modules/property-information/lib/util/merge.js"
+      );
+      const xlink = __webpack_require__(
+        "./node_modules/property-information/lib/xlink.js"
+      );
+      const xml = __webpack_require__(
+        "./node_modules/property-information/lib/xml.js"
+      );
+      const xmlns = __webpack_require__(
+        "./node_modules/property-information/lib/xmlns.js"
+      );
+      const aria = __webpack_require__(
+        "./node_modules/property-information/lib/aria.js"
+      );
+      const html = __webpack_require__(
+        "./node_modules/property-information/lib/html.js"
+      );
       module.exports = merge([xml, xlink, xmlns, aria, html]);
     },
     "./node_modules/property-information/lib/aria.js": (
@@ -2203,19 +2181,18 @@
       __unused_webpack_exports,
       __webpack_require__
     ) => {
-      "use strict";
-      var types = __webpack_require__(
-          "./node_modules/property-information/lib/util/types.js"
-        ),
-        create = __webpack_require__(
-          "./node_modules/property-information/lib/util/create.js"
-        ),
-        booleanish = types.booleanish,
-        number = types.number,
-        spaceSeparated = types.spaceSeparated;
+      const types = __webpack_require__(
+        "./node_modules/property-information/lib/util/types.js"
+      );
+      const create = __webpack_require__(
+        "./node_modules/property-information/lib/util/create.js"
+      );
+      const { booleanish } = types;
+      const { number } = types;
+      const { spaceSeparated } = types;
       module.exports = create({
         transform: function ariaTransform(_, prop) {
-          return "role" === prop ? prop : "aria-" + prop.slice(4).toLowerCase();
+          return prop === "role" ? prop : `aria-${prop.slice(4).toLowerCase()}`;
         },
         properties: {
           ariaActiveDescendant: null,
@@ -2275,22 +2252,21 @@
       __unused_webpack_exports,
       __webpack_require__
     ) => {
-      "use strict";
-      var types = __webpack_require__(
-          "./node_modules/property-information/lib/util/types.js"
-        ),
-        create = __webpack_require__(
-          "./node_modules/property-information/lib/util/create.js"
-        ),
-        caseInsensitiveTransform = __webpack_require__(
-          "./node_modules/property-information/lib/util/case-insensitive-transform.js"
-        ),
-        boolean = types.boolean,
-        overloadedBoolean = types.overloadedBoolean,
-        booleanish = types.booleanish,
-        number = types.number,
-        spaceSeparated = types.spaceSeparated,
-        commaSeparated = types.commaSeparated;
+      const types = __webpack_require__(
+        "./node_modules/property-information/lib/util/types.js"
+      );
+      const create = __webpack_require__(
+        "./node_modules/property-information/lib/util/create.js"
+      );
+      const caseInsensitiveTransform = __webpack_require__(
+        "./node_modules/property-information/lib/util/case-insensitive-transform.js"
+      );
+      const { boolean } = types;
+      const { overloadedBoolean } = types;
+      const { booleanish } = types;
+      const { number } = types;
+      const { spaceSeparated } = types;
+      const { commaSeparated } = types;
       module.exports = create({
         space: "html",
         attributes: {
@@ -2584,8 +2560,7 @@
     },
     "./node_modules/property-information/lib/util/case-insensitive-transform.js":
       (module, __unused_webpack_exports, __webpack_require__) => {
-        "use strict";
-        var caseSensitiveTransform = __webpack_require__(
+        const caseSensitiveTransform = __webpack_require__(
           "./node_modules/property-information/lib/util/case-sensitive-transform.js"
         );
         module.exports = function caseInsensitiveTransform(
@@ -2597,7 +2572,6 @@
       },
     "./node_modules/property-information/lib/util/case-sensitive-transform.js":
       (module) => {
-        "use strict";
         module.exports = function caseSensitiveTransform(
           attributes,
           attribute
@@ -2610,26 +2584,25 @@
       __unused_webpack_exports,
       __webpack_require__
     ) => {
-      "use strict";
-      var normalize = __webpack_require__(
-          "./node_modules/property-information/normalize.js"
-        ),
-        Schema = __webpack_require__(
-          "./node_modules/property-information/lib/util/schema.js"
-        ),
-        DefinedInfo = __webpack_require__(
-          "./node_modules/property-information/lib/util/defined-info.js"
-        );
+      const normalize = __webpack_require__(
+        "./node_modules/property-information/normalize.js"
+      );
+      const Schema = __webpack_require__(
+        "./node_modules/property-information/lib/util/schema.js"
+      );
+      const DefinedInfo = __webpack_require__(
+        "./node_modules/property-information/lib/util/defined-info.js"
+      );
       module.exports = function create(definition) {
-        var prop,
-          info,
-          space = definition.space,
-          mustUseProperty = definition.mustUseProperty || [],
-          attributes = definition.attributes || {},
-          props = definition.properties,
-          transform = definition.transform,
-          property = {},
-          normal = {};
+        let prop;
+        let info;
+        const { space } = definition;
+        const mustUseProperty = definition.mustUseProperty || [];
+        const attributes = definition.attributes || {};
+        const props = definition.properties;
+        const { transform } = definition;
+        const property = {};
+        const normal = {};
         for (prop in props)
           (info = new DefinedInfo(
             prop,
@@ -2637,7 +2610,7 @@
             props[prop],
             space
           )),
-            -1 !== mustUseProperty.indexOf(prop) && (info.mustUseProperty = !0),
+            mustUseProperty.indexOf(prop) !== -1 && (info.mustUseProperty = !0),
             (property[prop] = info),
             (normal[normalize(prop)] = prop),
             (normal[normalize(info.attribute)] = prop);
@@ -2649,29 +2622,28 @@
       __unused_webpack_exports,
       __webpack_require__
     ) => {
-      "use strict";
-      var Info = __webpack_require__(
-          "./node_modules/property-information/lib/util/info.js"
-        ),
-        types = __webpack_require__(
-          "./node_modules/property-information/lib/util/types.js"
-        );
+      const Info = __webpack_require__(
+        "./node_modules/property-information/lib/util/info.js"
+      );
+      const types = __webpack_require__(
+        "./node_modules/property-information/lib/util/types.js"
+      );
       (module.exports = DefinedInfo),
         (DefinedInfo.prototype = new Info()),
         (DefinedInfo.prototype.defined = !0);
-      var checks = [
-          "boolean",
-          "booleanish",
-          "overloadedBoolean",
-          "number",
-          "commaSeparated",
-          "spaceSeparated",
-          "commaOrSpaceSeparated",
-        ],
-        checksLength = checks.length;
+      const checks = [
+        "boolean",
+        "booleanish",
+        "overloadedBoolean",
+        "number",
+        "commaSeparated",
+        "spaceSeparated",
+        "commaOrSpaceSeparated",
+      ];
+      const checksLength = checks.length;
       function DefinedInfo(property, attribute, mask, space) {
-        var check,
-          index = -1;
+        let check;
+        let index = -1;
         for (
           mark(this, "space", space), Info.call(this, property, attribute);
           ++index < checksLength;
@@ -2688,9 +2660,8 @@
       }
     },
     "./node_modules/property-information/lib/util/info.js": (module) => {
-      "use strict";
       module.exports = Info;
-      var proto = Info.prototype;
+      const proto = Info.prototype;
       function Info(property, attribute) {
         (this.property = property), (this.attribute = attribute);
       }
@@ -2712,18 +2683,17 @@
       __unused_webpack_exports,
       __webpack_require__
     ) => {
-      "use strict";
-      var xtend = __webpack_require__("./node_modules/xtend/immutable.js"),
-        Schema = __webpack_require__(
-          "./node_modules/property-information/lib/util/schema.js"
-        );
+      const xtend = __webpack_require__("./node_modules/xtend/immutable.js");
+      const Schema = __webpack_require__(
+        "./node_modules/property-information/lib/util/schema.js"
+      );
       module.exports = function merge(definitions) {
-        var info,
-          space,
-          length = definitions.length,
-          property = [],
-          normal = [],
-          index = -1;
+        let info;
+        let space;
+        const { length } = definitions;
+        const property = [];
+        const normal = [];
+        let index = -1;
         for (; ++index < length; )
           (info = definitions[index]),
             property.push(info.property),
@@ -2737,9 +2707,8 @@
       };
     },
     "./node_modules/property-information/lib/util/schema.js": (module) => {
-      "use strict";
       module.exports = Schema;
-      var proto = Schema.prototype;
+      const proto = Schema.prototype;
       function Schema(property, normal, space) {
         (this.property = property),
           (this.normal = normal),
@@ -2751,10 +2720,9 @@
       __unused_webpack_module,
       exports
     ) => {
-      "use strict";
-      var powers = 0;
+      let powers = 0;
       function increment() {
-        return Math.pow(2, ++powers);
+        return 2 ** ++powers;
       }
       (exports.boolean = increment()),
         (exports.booleanish = increment()),
@@ -2769,14 +2737,13 @@
       __unused_webpack_exports,
       __webpack_require__
     ) => {
-      "use strict";
-      var create = __webpack_require__(
+      const create = __webpack_require__(
         "./node_modules/property-information/lib/util/create.js"
       );
       module.exports = create({
         space: "xlink",
         transform: function xlinkTransform(_, prop) {
-          return "xlink:" + prop.slice(5).toLowerCase();
+          return `xlink:${prop.slice(5).toLowerCase()}`;
         },
         properties: {
           xLinkActuate: null,
@@ -2794,14 +2761,13 @@
       __unused_webpack_exports,
       __webpack_require__
     ) => {
-      "use strict";
-      var create = __webpack_require__(
+      const create = __webpack_require__(
         "./node_modules/property-information/lib/util/create.js"
       );
       module.exports = create({
         space: "xml",
         transform: function xmlTransform(_, prop) {
-          return "xml:" + prop.slice(3).toLowerCase();
+          return `xml:${prop.slice(3).toLowerCase()}`;
         },
         properties: { xmlLang: null, xmlBase: null, xmlSpace: null },
       });
@@ -2811,13 +2777,12 @@
       __unused_webpack_exports,
       __webpack_require__
     ) => {
-      "use strict";
-      var create = __webpack_require__(
-          "./node_modules/property-information/lib/util/create.js"
-        ),
-        caseInsensitiveTransform = __webpack_require__(
-          "./node_modules/property-information/lib/util/case-insensitive-transform.js"
-        );
+      const create = __webpack_require__(
+        "./node_modules/property-information/lib/util/create.js"
+      );
+      const caseInsensitiveTransform = __webpack_require__(
+        "./node_modules/property-information/lib/util/case-insensitive-transform.js"
+      );
       module.exports = create({
         space: "xmlns",
         attributes: { xmlnsxlink: "xmlns:xlink" },
@@ -2826,7 +2791,6 @@
       });
     },
     "./node_modules/property-information/normalize.js": (module) => {
-      "use strict";
       module.exports = function normalize(value) {
         return value.toLowerCase();
       };
@@ -2836,65 +2800,72 @@
       __unused_webpack_exports,
       __webpack_require__
     ) => {
-      "use strict";
-      var ctx =
-          "object" == typeof globalThis
-            ? globalThis
-            : "object" == typeof self
-            ? self
-            : "object" == typeof window
-            ? window
-            : "object" == typeof __webpack_require__.g
-            ? __webpack_require__.g
-            : {},
-        restore = (function capture() {
-          var defined = "Prism" in ctx,
-            current = defined ? ctx.Prism : void 0;
-          return function restore() {
-            defined ? (ctx.Prism = current) : delete ctx.Prism;
-            (defined = void 0), (current = void 0);
-          };
-        })();
+      const ctx =
+        typeof globalThis === "object"
+          ? globalThis
+          : typeof self === "object"
+          ? self
+          : typeof window === "object"
+          ? window
+          : typeof __webpack_require__.g === "object"
+          ? __webpack_require__.g
+          : {};
+      const restore = (function capture() {
+        let defined = "Prism" in ctx;
+        let current = defined ? ctx.Prism : void 0;
+        return function restore() {
+          defined ? (ctx.Prism = current) : delete ctx.Prism;
+          (defined = void 0), (current = void 0);
+        };
+      })();
       ctx.Prism = { manual: !0, disableWorkerMessageHandler: !0 };
-      var h = __webpack_require__("./node_modules/hastscript/index.js"),
-        decode = __webpack_require__("./node_modules/parse-entities/index.js"),
-        Prism = __webpack_require__(
-          "./node_modules/prismjs/components/prism-core.js"
-        ),
-        markup = __webpack_require__("./node_modules/refractor/lang/markup.js"),
-        css = __webpack_require__("./node_modules/refractor/lang/css.js"),
-        clike = __webpack_require__("./node_modules/refractor/lang/clike.js"),
-        js = __webpack_require__("./node_modules/refractor/lang/javascript.js");
+      const h = __webpack_require__("./node_modules/hastscript/index.js");
+      const decode = __webpack_require__(
+        "./node_modules/parse-entities/index.js"
+      );
+      const Prism = __webpack_require__(
+        "./node_modules/prismjs/components/prism-core.js"
+      );
+      const markup = __webpack_require__(
+        "./node_modules/refractor/lang/markup.js"
+      );
+      const css = __webpack_require__("./node_modules/refractor/lang/css.js");
+      const clike = __webpack_require__(
+        "./node_modules/refractor/lang/clike.js"
+      );
+      const js = __webpack_require__(
+        "./node_modules/refractor/lang/javascript.js"
+      );
       restore();
-      var own = {}.hasOwnProperty;
+      const own = {}.hasOwnProperty;
       function Refractor() {}
       Refractor.prototype = Prism;
-      var refract = new Refractor();
+      const refract = new Refractor();
       function register(grammar) {
-        if ("function" != typeof grammar || !grammar.displayName)
+        if (typeof grammar !== "function" || !grammar.displayName)
           throw new Error(
-            "Expected `function` for `grammar`, got `" + grammar + "`"
+            `Expected \`function\` for \`grammar\`, got \`${grammar}\``
           );
         void 0 === refract.languages[grammar.displayName] && grammar(refract);
       }
       (module.exports = refract),
         (refract.highlight = function highlight(value, name) {
-          var grammar,
-            sup = Prism.highlight;
-          if ("string" != typeof value)
+          let grammar;
+          const sup = Prism.highlight;
+          if (typeof value !== "string")
             throw new Error(
-              "Expected `string` for `value`, got `" + value + "`"
+              `Expected \`string\` for \`value\`, got \`${value}\``
             );
-          if ("Object" === refract.util.type(name))
+          if (refract.util.type(name) === "Object")
             (grammar = name), (name = null);
           else {
-            if ("string" != typeof name)
+            if (typeof name !== "string")
               throw new Error(
-                "Expected `string` for `name`, got `" + name + "`"
+                `Expected \`string\` for \`name\`, got \`${name}\``
               );
             if (!own.call(refract.languages, name))
               throw new Error(
-                "Unknown language: `" + name + "` is not registered"
+                `Unknown language: \`${name}\` is not registered`
               );
             grammar = refract.languages[name];
           }
@@ -2902,17 +2873,17 @@
         }),
         (refract.register = register),
         (refract.alias = function alias(name, alias) {
-          var key,
-            list,
-            length,
-            index,
-            languages = refract.languages,
-            map = name;
+          let key;
+          let list;
+          let length;
+          let index;
+          const { languages } = refract;
+          let map = name;
           alias && ((map = {})[name] = alias);
           for (key in map)
             for (
               list = map[key],
-                length = (list = "string" == typeof list ? [list] : list)
+                length = (list = typeof list === "string" ? [list] : list)
                   .length,
                 index = -1;
               ++index < length;
@@ -2921,19 +2892,19 @@
               languages[list[index]] = languages[key];
         }),
         (refract.registered = function registered(language) {
-          if ("string" != typeof language)
+          if (typeof language !== "string")
             throw new Error(
-              "Expected `string` for `language`, got `" + language + "`"
+              `Expected \`string\` for \`language\`, got \`${language}\``
             );
           return own.call(refract.languages, language);
         }),
         (refract.listLanguages = function listLanguages() {
-          var language,
-            languages = refract.languages,
-            list = [];
+          let language;
+          const { languages } = refract;
+          const list = [];
           for (language in languages)
             own.call(languages, language) &&
-              "object" == typeof languages[language] &&
+              typeof languages[language] === "object" &&
               list.push(language);
           return list;
         }),
@@ -2945,17 +2916,17 @@
           return tokens;
         }),
         (refract.Token.stringify = function stringify(value, language, parent) {
-          var env;
-          if ("string" == typeof value) return { type: "text", value };
-          if ("Array" === refract.util.type(value))
+          let env;
+          if (typeof value === "string") return { type: "text", value };
+          if (refract.util.type(value) === "Array")
             return (function stringifyAll(values, language) {
-              var value,
-                result = [],
-                length = values.length,
-                index = -1;
+              let value;
+              const result = [];
+              let { length } = values;
+              let index = -1;
               for (; ++index < length; )
-                "" !== (value = values[index]) &&
-                  null != value &&
+                (value = values[index]) !== "" &&
+                  value != null &&
                   result.push(value);
               (index = -1), (length = result.length);
               for (; ++index < length; )
@@ -2980,9 +2951,9 @@
           return (
             refract.hooks.run("wrap", env),
             h(
-              env.tag + "." + env.classes.join("."),
+              `${env.tag}.${env.classes.join(".")}`,
               (function attributes(attrs) {
-                var key;
+                let key;
                 for (key in attrs) attrs[key] = decode(attrs[key]);
                 return attrs;
               })(env.attributes),
@@ -2992,62 +2963,61 @@
         });
     },
     "./node_modules/refractor/lang/bash.js": (module) => {
-      "use strict";
       function bash(Prism) {
         !(function (Prism) {
-          var envVars =
-              "\\b(?:BASH|BASHOPTS|BASH_ALIASES|BASH_ARGC|BASH_ARGV|BASH_CMDS|BASH_COMPLETION_COMPAT_DIR|BASH_LINENO|BASH_REMATCH|BASH_SOURCE|BASH_VERSINFO|BASH_VERSION|COLORTERM|COLUMNS|COMP_WORDBREAKS|DBUS_SESSION_BUS_ADDRESS|DEFAULTS_PATH|DESKTOP_SESSION|DIRSTACK|DISPLAY|EUID|GDMSESSION|GDM_LANG|GNOME_KEYRING_CONTROL|GNOME_KEYRING_PID|GPG_AGENT_INFO|GROUPS|HISTCONTROL|HISTFILE|HISTFILESIZE|HISTSIZE|HOME|HOSTNAME|HOSTTYPE|IFS|INSTANCE|JOB|LANG|LANGUAGE|LC_ADDRESS|LC_ALL|LC_IDENTIFICATION|LC_MEASUREMENT|LC_MONETARY|LC_NAME|LC_NUMERIC|LC_PAPER|LC_TELEPHONE|LC_TIME|LESSCLOSE|LESSOPEN|LINES|LOGNAME|LS_COLORS|MACHTYPE|MAILCHECK|MANDATORY_PATH|NO_AT_BRIDGE|OLDPWD|OPTERR|OPTIND|ORBIT_SOCKETDIR|OSTYPE|PAPERSIZE|PATH|PIPESTATUS|PPID|PS1|PS2|PS3|PS4|PWD|RANDOM|REPLY|SECONDS|SELINUX_INIT|SESSION|SESSIONTYPE|SESSION_MANAGER|SHELL|SHELLOPTS|SHLVL|SSH_AUTH_SOCK|TERM|UID|UPSTART_EVENTS|UPSTART_INSTANCE|UPSTART_JOB|UPSTART_SESSION|USER|WINDOWID|XAUTHORITY|XDG_CONFIG_DIRS|XDG_CURRENT_DESKTOP|XDG_DATA_DIRS|XDG_GREETER_DATA_DIR|XDG_MENU_PREFIX|XDG_RUNTIME_DIR|XDG_SEAT|XDG_SEAT_PATH|XDG_SESSION_DESKTOP|XDG_SESSION_ID|XDG_SESSION_PATH|XDG_SESSION_TYPE|XDG_VTNR|XMODIFIERS)\\b",
-            commandAfterHeredoc = {
-              pattern: /(^(["']?)\w+\2)[ \t]+\S.*/,
-              lookbehind: !0,
-              alias: "punctuation",
-              inside: null,
+          const envVars =
+            "\\b(?:BASH|BASHOPTS|BASH_ALIASES|BASH_ARGC|BASH_ARGV|BASH_CMDS|BASH_COMPLETION_COMPAT_DIR|BASH_LINENO|BASH_REMATCH|BASH_SOURCE|BASH_VERSINFO|BASH_VERSION|COLORTERM|COLUMNS|COMP_WORDBREAKS|DBUS_SESSION_BUS_ADDRESS|DEFAULTS_PATH|DESKTOP_SESSION|DIRSTACK|DISPLAY|EUID|GDMSESSION|GDM_LANG|GNOME_KEYRING_CONTROL|GNOME_KEYRING_PID|GPG_AGENT_INFO|GROUPS|HISTCONTROL|HISTFILE|HISTFILESIZE|HISTSIZE|HOME|HOSTNAME|HOSTTYPE|IFS|INSTANCE|JOB|LANG|LANGUAGE|LC_ADDRESS|LC_ALL|LC_IDENTIFICATION|LC_MEASUREMENT|LC_MONETARY|LC_NAME|LC_NUMERIC|LC_PAPER|LC_TELEPHONE|LC_TIME|LESSCLOSE|LESSOPEN|LINES|LOGNAME|LS_COLORS|MACHTYPE|MAILCHECK|MANDATORY_PATH|NO_AT_BRIDGE|OLDPWD|OPTERR|OPTIND|ORBIT_SOCKETDIR|OSTYPE|PAPERSIZE|PATH|PIPESTATUS|PPID|PS1|PS2|PS3|PS4|PWD|RANDOM|REPLY|SECONDS|SELINUX_INIT|SESSION|SESSIONTYPE|SESSION_MANAGER|SHELL|SHELLOPTS|SHLVL|SSH_AUTH_SOCK|TERM|UID|UPSTART_EVENTS|UPSTART_INSTANCE|UPSTART_JOB|UPSTART_SESSION|USER|WINDOWID|XAUTHORITY|XDG_CONFIG_DIRS|XDG_CURRENT_DESKTOP|XDG_DATA_DIRS|XDG_GREETER_DATA_DIR|XDG_MENU_PREFIX|XDG_RUNTIME_DIR|XDG_SEAT|XDG_SEAT_PATH|XDG_SESSION_DESKTOP|XDG_SESSION_ID|XDG_SESSION_PATH|XDG_SESSION_TYPE|XDG_VTNR|XMODIFIERS)\\b";
+          const commandAfterHeredoc = {
+            pattern: /(^(["']?)\w+\2)[ \t]+\S.*/,
+            lookbehind: !0,
+            alias: "punctuation",
+            inside: null,
+          };
+          const insideString = {
+            bash: commandAfterHeredoc,
+            environment: {
+              pattern: RegExp(`\\$${envVars}`),
+              alias: "constant",
             },
-            insideString = {
-              bash: commandAfterHeredoc,
-              environment: {
-                pattern: RegExp("\\$" + envVars),
-                alias: "constant",
+            variable: [
+              {
+                pattern: /\$?\(\([\s\S]+?\)\)/,
+                greedy: !0,
+                inside: {
+                  variable: [
+                    { pattern: /(^\$\(\([\s\S]+)\)\)/, lookbehind: !0 },
+                    /^\$\(\(/,
+                  ],
+                  number:
+                    /\b0x[\dA-Fa-f]+\b|(?:\b\d+(?:\.\d*)?|\B\.\d+)(?:[Ee]-?\d+)?/,
+                  operator:
+                    /--|\+\+|\*\*=?|<<=?|>>=?|&&|\|\||[=!+\-*/%<>^&|]=?|[?~:]/,
+                  punctuation: /\(\(?|\)\)?|,|;/,
+                },
               },
-              variable: [
-                {
-                  pattern: /\$?\(\([\s\S]+?\)\)/,
-                  greedy: !0,
-                  inside: {
-                    variable: [
-                      { pattern: /(^\$\(\([\s\S]+)\)\)/, lookbehind: !0 },
-                      /^\$\(\(/,
-                    ],
-                    number:
-                      /\b0x[\dA-Fa-f]+\b|(?:\b\d+(?:\.\d*)?|\B\.\d+)(?:[Ee]-?\d+)?/,
-                    operator:
-                      /--|\+\+|\*\*=?|<<=?|>>=?|&&|\|\||[=!+\-*/%<>^&|]=?|[?~:]/,
-                    punctuation: /\(\(?|\)\)?|,|;/,
+              {
+                pattern: /\$\((?:\([^)]+\)|[^()])+\)|`[^`]+`/,
+                greedy: !0,
+                inside: { variable: /^\$\(|^`|\)$|`$/ },
+              },
+              {
+                pattern: /\$\{[^}]+\}/,
+                greedy: !0,
+                inside: {
+                  operator: /:[-=?+]?|[!\/]|##?|%%?|\^\^?|,,?/,
+                  punctuation: /[\[\]]/,
+                  environment: {
+                    pattern: RegExp(`(\\{)${envVars}`),
+                    lookbehind: !0,
+                    alias: "constant",
                   },
                 },
-                {
-                  pattern: /\$\((?:\([^)]+\)|[^()])+\)|`[^`]+`/,
-                  greedy: !0,
-                  inside: { variable: /^\$\(|^`|\)$|`$/ },
-                },
-                {
-                  pattern: /\$\{[^}]+\}/,
-                  greedy: !0,
-                  inside: {
-                    operator: /:[-=?+]?|[!\/]|##?|%%?|\^\^?|,,?/,
-                    punctuation: /[\[\]]/,
-                    environment: {
-                      pattern: RegExp("(\\{)" + envVars),
-                      lookbehind: !0,
-                      alias: "constant",
-                    },
-                  },
-                },
-                /\$(?:\w+|[#?*!@$])/,
-              ],
-              entity:
-                /\\(?:[abceEfnrtv\\"]|O?[0-7]{1,3}|U[0-9a-fA-F]{8}|u[0-9a-fA-F]{4}|x[0-9a-fA-F]{1,2})/,
-            };
+              },
+              /\$(?:\w+|[#?*!@$])/,
+            ],
+            entity:
+              /\\(?:[abceEfnrtv\\"]|O?[0-7]{1,3}|U[0-9a-fA-F]{8}|u[0-9a-fA-F]{4}|x[0-9a-fA-F]{1,2})/,
+          };
           (Prism.languages.bash = {
             shebang: { pattern: /^#!\s*\/.*/, alias: "important" },
             comment: { pattern: /(^|[^"{\\$])#.*/, lookbehind: !0 },
@@ -3068,7 +3038,7 @@
               pattern: /(^|[\s;|&]|[<>]\()\w+(?=\+?=)/,
               inside: {
                 environment: {
-                  pattern: RegExp("(^|[\\s;|&]|[<>]\\()" + envVars),
+                  pattern: RegExp(`(^|[\\s;|&]|[<>]\\()${envVars}`),
                   lookbehind: !0,
                   alias: "constant",
                 },
@@ -3105,7 +3075,7 @@
               },
             ],
             environment: {
-              pattern: RegExp("\\$?" + envVars),
+              pattern: RegExp(`\\$?${envVars}`),
               alias: "constant",
             },
             variable: insideString.variable,
@@ -3145,7 +3115,7 @@
           }),
             (commandAfterHeredoc.inside = Prism.languages.bash);
           for (
-            var toBeCopied = [
+            let toBeCopied = [
                 "comment",
                 "function-name",
                 "for-or-select",
@@ -3161,7 +3131,7 @@
                 "punctuation",
                 "number",
               ],
-              inside = insideString.variable[1].inside,
+              { inside } = insideString.variable[1],
               i = 0;
             i < toBeCopied.length;
             i++
@@ -3175,7 +3145,6 @@
         (bash.aliases = ["shell"]);
     },
     "./node_modules/refractor/lang/clike.js": (module) => {
-      "use strict";
       function clike(Prism) {
         Prism.languages.clike = {
           comment: [
@@ -3210,10 +3179,9 @@
         (clike.aliases = []);
     },
     "./node_modules/refractor/lang/css.js": (module) => {
-      "use strict";
       function css(Prism) {
         !(function (Prism) {
-          var string =
+          const string =
             /(?:"(?:\\(?:\r\n|[\s\S])|[^"\\\r\n])*"|'(?:\\(?:\r\n|[\s\S])|[^'\\\r\n])*')/;
           (Prism.languages.css = {
             comment: /\/\*[\s\S]*?\*\//,
@@ -3235,28 +3203,21 @@
             },
             url: {
               pattern: RegExp(
-                "\\burl\\((?:" +
-                  string.source +
-                  "|" +
-                  /(?:[^\\\r\n()"']|\\[\s\S])*/.source +
-                  ")\\)",
+                `\\burl\\((?:${string.source}|${
+                  /(?:[^\\\r\n()"']|\\[\s\S])*/.source
+                })\\)`,
                 "i"
               ),
               greedy: !0,
               inside: {
                 function: /^url/i,
                 punctuation: /^\(|\)$/,
-                string: {
-                  pattern: RegExp("^" + string.source + "$"),
-                  alias: "url",
-                },
+                string: { pattern: RegExp(`^${string.source}$`), alias: "url" },
               },
             },
             selector: {
               pattern: RegExp(
-                "(^|[{}\\s])[^{}\\s](?:[^{};\"'\\s]|\\s+(?![\\s{])|" +
-                  string.source +
-                  ")*(?=\\s*\\{)"
+                `(^|[{}\\s])[^{}\\s](?:[^{};"'\\s]|\\s+(?![\\s{])|${string.source})*(?=\\s*\\{)`
               ),
               lookbehind: !0,
             },
@@ -3274,7 +3235,7 @@
             punctuation: /[(){};:,]/,
           }),
             (Prism.languages.css.atrule.inside.rest = Prism.languages.css);
-          var markup = Prism.languages.markup;
+          const { markup } = Prism.languages;
           markup &&
             (markup.tag.addInlined("style", "css"),
             markup.tag.addAttribute("style", "css"));
@@ -3283,7 +3244,6 @@
       (module.exports = css), (css.displayName = "css"), (css.aliases = []);
     },
     "./node_modules/refractor/lang/graphql.js": (module) => {
-      "use strict";
       function graphql(Prism) {
         (Prism.languages.graphql = {
           comment: /#.*/,
@@ -3344,36 +3304,35 @@
           punctuation: /[!(){}\[\]:=,]/,
           property: /\w+/,
         }),
-          Prism.hooks.add("after-tokenize", function afterTokenizeGraphql(env) {
-            if ("graphql" === env.language)
+          Prism.hooks.add("after-tokenize", (env) => {
+            if (env.language === "graphql")
               for (
-                var validTokens = env.tokens.filter(function (token) {
-                    return (
-                      "string" != typeof token &&
-                      "comment" !== token.type &&
-                      "scalar" !== token.type
-                    );
-                  }),
+                var validTokens = env.tokens.filter(
+                    (token) =>
+                      typeof token !== "string" &&
+                      token.type !== "comment" &&
+                      token.type !== "scalar"
+                  ),
                   currentIndex = 0;
                 currentIndex < validTokens.length;
 
               ) {
-                var startToken = validTokens[currentIndex++];
+                const startToken = validTokens[currentIndex++];
                 if (
-                  "keyword" === startToken.type &&
-                  "mutation" === startToken.content
+                  startToken.type === "keyword" &&
+                  startToken.content === "mutation"
                 ) {
-                  var inputVariables = [];
+                  const inputVariables = [];
                   if (
                     isTokenType(["definition-mutation", "punctuation"]) &&
-                    "(" === getToken(1).content
+                    getToken(1).content === "("
                   ) {
                     currentIndex += 2;
-                    var definitionEnd = findClosingBracket(/^\($/, /^\)$/);
-                    if (-1 === definitionEnd) continue;
+                    const definitionEnd = findClosingBracket(/^\($/, /^\)$/);
+                    if (definitionEnd === -1) continue;
                     for (; currentIndex < definitionEnd; currentIndex++) {
-                      var t = getToken(0);
-                      "variable" === t.type &&
+                      const t = getToken(0);
+                      t.type === "variable" &&
                         (addAlias(t, "variable-input"),
                         inputVariables.push(t.content));
                     }
@@ -3381,16 +3340,16 @@
                   }
                   if (
                     isTokenType(["punctuation", "property-query"]) &&
-                    "{" === getToken(0).content &&
+                    getToken(0).content === "{" &&
                     (currentIndex++,
                     addAlias(getToken(0), "property-mutation"),
                     inputVariables.length > 0)
                   ) {
-                    var mutationEnd = findClosingBracket(/^\{$/, /^\}$/);
-                    if (-1 === mutationEnd) continue;
-                    for (var i = currentIndex; i < mutationEnd; i++) {
-                      var varToken = validTokens[i];
-                      "variable" === varToken.type &&
+                    const mutationEnd = findClosingBracket(/^\{$/, /^\}$/);
+                    if (mutationEnd === -1) continue;
+                    for (let i = currentIndex; i < mutationEnd; i++) {
+                      const varToken = validTokens[i];
+                      varToken.type === "variable" &&
                         inputVariables.indexOf(varToken.content) >= 0 &&
                         addAlias(varToken, "variable-input");
                     }
@@ -3402,28 +3361,28 @@
             }
             function isTokenType(types, offset) {
               offset = offset || 0;
-              for (var i = 0; i < types.length; i++) {
-                var token = getToken(i + offset);
+              for (let i = 0; i < types.length; i++) {
+                const token = getToken(i + offset);
                 if (!token || token.type !== types[i]) return !1;
               }
               return !0;
             }
             function findClosingBracket(open, close) {
               for (
-                var stackHeight = 1, i = currentIndex;
+                let stackHeight = 1, i = currentIndex;
                 i < validTokens.length;
                 i++
               ) {
-                var token = validTokens[i],
-                  content = token.content;
-                if ("punctuation" === token.type && "string" == typeof content)
+                const token = validTokens[i];
+                const { content } = token;
+                if (token.type === "punctuation" && typeof content === "string")
                   if (open.test(content)) stackHeight++;
-                  else if (close.test(content) && 0 === --stackHeight) return i;
+                  else if (close.test(content) && --stackHeight === 0) return i;
               }
               return -1;
             }
             function addAlias(token, alias) {
-              var aliases = token.alias;
+              let aliases = token.alias;
               aliases
                 ? Array.isArray(aliases) || (token.alias = aliases = [aliases])
                 : (token.alias = aliases = []),
@@ -3436,7 +3395,6 @@
         (graphql.aliases = []);
     },
     "./node_modules/refractor/lang/javascript.js": (module) => {
-      "use strict";
       function javascript(Prism) {
         (Prism.languages.javascript = Prism.languages.extend("clike", {
           "class-name": [
@@ -3459,22 +3417,14 @@
             /#?(?!\s)[_$a-zA-Z\xA0-\uFFFF](?:(?!\s)[$\w\xA0-\uFFFF])*(?=\s*(?:\.\s*(?:apply|bind|call)\s*)?\()/,
           number: {
             pattern: RegExp(
-              /(^|[^\w$])/.source +
-                "(?:" +
-                /NaN|Infinity/.source +
-                "|" +
-                /0[bB][01]+(?:_[01]+)*n?/.source +
-                "|" +
-                /0[oO][0-7]+(?:_[0-7]+)*n?/.source +
-                "|" +
-                /0[xX][\dA-Fa-f]+(?:_[\dA-Fa-f]+)*n?/.source +
-                "|" +
-                /\d+(?:_\d+)*n/.source +
-                "|" +
+              `${/(^|[^\w$])/.source}(?:${/NaN|Infinity/.source}|${
+                /0[bB][01]+(?:_[01]+)*n?/.source
+              }|${/0[oO][0-7]+(?:_[0-7]+)*n?/.source}|${
+                /0[xX][\dA-Fa-f]+(?:_[\dA-Fa-f]+)*n?/.source
+              }|${/\d+(?:_\d+)*n/.source}|${
                 /(?:\d+(?:_\d+)*(?:\.(?:\d+(?:_\d+)*)?)?|\.\d+(?:_\d+)*)(?:[Ee][+-]?\d+(?:_\d+)*)?/
-                  .source +
-                ")" +
-                /(?![\w$])/.source
+                  .source
+              })${/(?![\w$])/.source}`
             ),
             lookbehind: !0,
           },
@@ -3586,23 +3536,23 @@
         (javascript.aliases = ["js"]);
     },
     "./node_modules/refractor/lang/js-extras.js": (module) => {
-      "use strict";
       function jsExtras(Prism) {
         !(function (Prism) {
           function withId(source, flags) {
             return RegExp(
-              source.replace(/<ID>/g, function () {
-                return /(?!\s)[_$a-zA-Z\xA0-\uFFFF](?:(?!\s)[$\w\xA0-\uFFFF])*/
-                  .source;
-              }),
+              source.replace(
+                /<ID>/g,
+                () =>
+                  /(?!\s)[_$a-zA-Z\xA0-\uFFFF](?:(?!\s)[$\w\xA0-\uFFFF])*/
+                    .source
+              ),
               flags
             );
           }
           Prism.languages.insertBefore("javascript", "function-variable", {
             "method-variable": {
               pattern: RegExp(
-                "(\\.\\s*)" +
-                  Prism.languages.javascript["function-variable"].pattern.source
+                `(\\.\\s*)${Prism.languages.javascript["function-variable"].pattern.source}`
               ),
               lookbehind: !0,
               alias: [
@@ -3616,7 +3566,7 @@
             Prism.languages.insertBefore("javascript", "function", {
               method: {
                 pattern: RegExp(
-                  "(\\.\\s*)" + Prism.languages.javascript.function.source
+                  `(\\.\\s*)${Prism.languages.javascript.function.source}`
                 ),
                 lookbehind: !0,
                 alias: ["function", "property-access"],
@@ -3684,7 +3634,7 @@
               console: { pattern: /\bconsole(?=\s*\.)/, alias: "class-name" },
             });
           for (
-            var maybeClassNameTokens = [
+            let maybeClassNameTokens = [
                 "function",
                 "function-variable",
                 "method",
@@ -3695,11 +3645,11 @@
             i < maybeClassNameTokens.length;
             i++
           ) {
-            var token = maybeClassNameTokens[i],
-              value = Prism.languages.javascript[token];
-            "RegExp" === Prism.util.type(value) &&
+            const token = maybeClassNameTokens[i];
+            let value = Prism.languages.javascript[token];
+            Prism.util.type(value) === "RegExp" &&
               (value = Prism.languages.javascript[token] = { pattern: value });
-            var inside = value.inside || {};
+            const inside = value.inside || {};
             (value.inside = inside),
               (inside["maybe-class-name"] = /^[A-Z][\s\S]*/);
           }
@@ -3710,7 +3660,6 @@
         (jsExtras.aliases = []);
     },
     "./node_modules/refractor/lang/json.js": (module) => {
-      "use strict";
       function json(Prism) {
         (Prism.languages.json = {
           property: {
@@ -3737,25 +3686,18 @@
         (json.aliases = ["webmanifest"]);
     },
     "./node_modules/refractor/lang/jsx.js": (module) => {
-      "use strict";
       function jsx(Prism) {
         !(function (Prism) {
-          var javascript = Prism.util.clone(Prism.languages.javascript),
-            space = /(?:\s|\/\/.*(?!.)|\/\*(?:[^*]|\*(?!\/))\*\/)/.source,
-            braces = /(?:\{(?:\{(?:\{[^{}]*\}|[^{}])*\}|[^{}])*\})/.source,
-            spread = /(?:\{<S>*\.{3}(?:[^{}]|<BRACES>)*\})/.source;
+          const javascript = Prism.util.clone(Prism.languages.javascript);
+          const space = /(?:\s|\/\/.*(?!.)|\/\*(?:[^*]|\*(?!\/))\*\/)/.source;
+          const braces = /(?:\{(?:\{(?:\{[^{}]*\}|[^{}])*\}|[^{}])*\})/.source;
+          let spread = /(?:\{<S>*\.{3}(?:[^{}]|<BRACES>)*\})/.source;
           function re(source, flags) {
             return (
               (source = source
-                .replace(/<S>/g, function () {
-                  return space;
-                })
-                .replace(/<BRACES>/g, function () {
-                  return braces;
-                })
-                .replace(/<SPREAD>/g, function () {
-                  return spread;
-                })),
+                .replace(/<S>/g, () => space)
+                .replace(/<BRACES>/g, () => braces)
+                .replace(/<SPREAD>/g, () => spread)),
               RegExp(source, flags)
             );
           }
@@ -3804,76 +3746,74 @@
               Prism.languages.jsx.tag
             );
           var stringifyToken = function (token) {
-              return token
-                ? "string" == typeof token
-                  ? token
-                  : "string" == typeof token.content
-                  ? token.content
-                  : token.content.map(stringifyToken).join("")
-                : "";
-            },
-            walkTokens = function (tokens) {
-              for (var openedTags = [], i = 0; i < tokens.length; i++) {
-                var token = tokens[i],
-                  notTagNorBrace = !1;
-                if (
-                  ("string" != typeof token &&
-                    ("tag" === token.type &&
-                    token.content[0] &&
-                    "tag" === token.content[0].type
-                      ? "</" === token.content[0].content[0].content
-                        ? openedTags.length > 0 &&
-                          openedTags[openedTags.length - 1].tagName ===
-                            stringifyToken(token.content[0].content[1]) &&
-                          openedTags.pop()
-                        : "/>" ===
-                            token.content[token.content.length - 1].content ||
-                          openedTags.push({
-                            tagName: stringifyToken(
-                              token.content[0].content[1]
-                            ),
-                            openedBraces: 0,
-                          })
-                      : openedTags.length > 0 &&
-                        "punctuation" === token.type &&
-                        "{" === token.content
-                      ? openedTags[openedTags.length - 1].openedBraces++
-                      : openedTags.length > 0 &&
-                        openedTags[openedTags.length - 1].openedBraces > 0 &&
-                        "punctuation" === token.type &&
-                        "}" === token.content
-                      ? openedTags[openedTags.length - 1].openedBraces--
-                      : (notTagNorBrace = !0)),
-                  (notTagNorBrace || "string" == typeof token) &&
-                    openedTags.length > 0 &&
-                    0 === openedTags[openedTags.length - 1].openedBraces)
-                ) {
-                  var plainText = stringifyToken(token);
-                  i < tokens.length - 1 &&
-                    ("string" == typeof tokens[i + 1] ||
-                      "plain-text" === tokens[i + 1].type) &&
-                    ((plainText += stringifyToken(tokens[i + 1])),
-                    tokens.splice(i + 1, 1)),
-                    i > 0 &&
-                      ("string" == typeof tokens[i - 1] ||
-                        "plain-text" === tokens[i - 1].type) &&
-                      ((plainText = stringifyToken(tokens[i - 1]) + plainText),
-                      tokens.splice(i - 1, 1),
-                      i--),
-                    (tokens[i] = new Prism.Token(
-                      "plain-text",
-                      plainText,
-                      null,
-                      plainText
-                    ));
-                }
-                token.content &&
-                  "string" != typeof token.content &&
-                  walkTokens(token.content);
+            return token
+              ? typeof token === "string"
+                ? token
+                : typeof token.content === "string"
+                ? token.content
+                : token.content.map(stringifyToken).join("")
+              : "";
+          };
+          var walkTokens = function (tokens) {
+            for (let openedTags = [], i = 0; i < tokens.length; i++) {
+              const token = tokens[i];
+              let notTagNorBrace = !1;
+              if (
+                (typeof token !== "string" &&
+                  (token.type === "tag" &&
+                  token.content[0] &&
+                  token.content[0].type === "tag"
+                    ? token.content[0].content[0].content === "</"
+                      ? openedTags.length > 0 &&
+                        openedTags[openedTags.length - 1].tagName ===
+                          stringifyToken(token.content[0].content[1]) &&
+                        openedTags.pop()
+                      : token.content[token.content.length - 1].content ===
+                          "/>" ||
+                        openedTags.push({
+                          tagName: stringifyToken(token.content[0].content[1]),
+                          openedBraces: 0,
+                        })
+                    : openedTags.length > 0 &&
+                      token.type === "punctuation" &&
+                      token.content === "{"
+                    ? openedTags[openedTags.length - 1].openedBraces++
+                    : openedTags.length > 0 &&
+                      openedTags[openedTags.length - 1].openedBraces > 0 &&
+                      token.type === "punctuation" &&
+                      token.content === "}"
+                    ? openedTags[openedTags.length - 1].openedBraces--
+                    : (notTagNorBrace = !0)),
+                (notTagNorBrace || typeof token === "string") &&
+                  openedTags.length > 0 &&
+                  openedTags[openedTags.length - 1].openedBraces === 0)
+              ) {
+                let plainText = stringifyToken(token);
+                i < tokens.length - 1 &&
+                  (typeof tokens[i + 1] === "string" ||
+                    tokens[i + 1].type === "plain-text") &&
+                  ((plainText += stringifyToken(tokens[i + 1])),
+                  tokens.splice(i + 1, 1)),
+                  i > 0 &&
+                    (typeof tokens[i - 1] === "string" ||
+                      tokens[i - 1].type === "plain-text") &&
+                    ((plainText = stringifyToken(tokens[i - 1]) + plainText),
+                    tokens.splice(i - 1, 1),
+                    i--),
+                  (tokens[i] = new Prism.Token(
+                    "plain-text",
+                    plainText,
+                    null,
+                    plainText
+                  ));
               }
-            };
-          Prism.hooks.add("after-tokenize", function (env) {
-            ("jsx" !== env.language && "tsx" !== env.language) ||
+              token.content &&
+                typeof token.content !== "string" &&
+                walkTokens(token.content);
+            }
+          };
+          Prism.hooks.add("after-tokenize", (env) => {
+            (env.language !== "jsx" && env.language !== "tsx") ||
               walkTokens(env.tokens);
           });
         })(Prism);
@@ -3881,31 +3821,25 @@
       (module.exports = jsx), (jsx.displayName = "jsx"), (jsx.aliases = []);
     },
     "./node_modules/refractor/lang/markdown.js": (module) => {
-      "use strict";
       function markdown(Prism) {
         !(function (Prism) {
-          var inner = /(?:\\.|[^\\\n\r]|(?:\n|\r\n?)(?![\r\n]))/.source;
+          const inner = /(?:\\.|[^\\\n\r]|(?:\n|\r\n?)(?![\r\n]))/.source;
           function createInline(pattern) {
             return (
-              (pattern = pattern.replace(/<inner>/g, function () {
-                return inner;
-              })),
-              RegExp(/((?:^|[^\\])(?:\\{2})*)/.source + "(?:" + pattern + ")")
+              (pattern = pattern.replace(/<inner>/g, () => inner)),
+              RegExp(`${/((?:^|[^\\])(?:\\{2})*)/.source}(?:${pattern})`)
             );
           }
-          var tableCell =
-              /(?:\\.|``(?:[^`\r\n]|`(?!`))+``|`[^`\r\n]+`|[^\\|\r\n`])+/
-                .source,
-            tableRow =
-              /\|?__(?:\|__)+\|?(?:(?:\n|\r\n?)|(?![\s\S]))/.source.replace(
-                /__/g,
-                function () {
-                  return tableCell;
-                }
-              ),
-            tableLine =
-              /\|?[ \t]*:?-{3,}:?[ \t]*(?:\|[ \t]*:?-{3,}:?[ \t]*)+\|?(?:\n|\r\n?)/
-                .source;
+          const tableCell =
+            /(?:\\.|``(?:[^`\r\n]|`(?!`))+``|`[^`\r\n]+`|[^\\|\r\n`])+/.source;
+          const tableRow =
+            /\|?__(?:\|__)+\|?(?:(?:\n|\r\n?)|(?![\s\S]))/.source.replace(
+              /__/g,
+              () => tableCell
+            );
+          const tableLine =
+            /\|?[ \t]*:?-{3,}:?[ \t]*(?:\|[ \t]*:?-{3,}:?[ \t]*)+\|?(?:\n|\r\n?)/
+              .source;
           (Prism.languages.markdown = Prism.languages.extend("markup", {})),
             Prism.languages.insertBefore("markdown", "prolog", {
               "front-matter-block": {
@@ -3924,13 +3858,13 @@
               blockquote: { pattern: /^>(?:[\t ]*>)*/m, alias: "punctuation" },
               table: {
                 pattern: RegExp(
-                  "^" + tableRow + tableLine + "(?:" + tableRow + ")*",
+                  `^${tableRow}${tableLine}(?:${tableRow})*`,
                   "m"
                 ),
                 inside: {
                   "table-data-rows": {
                     pattern: RegExp(
-                      "^(" + tableRow + tableLine + ")(?:" + tableRow + ")*$"
+                      `^(${tableRow}${tableLine})(?:${tableRow})*$`
                     ),
                     lookbehind: !0,
                     inside: {
@@ -3942,12 +3876,12 @@
                     },
                   },
                   "table-line": {
-                    pattern: RegExp("^(" + tableRow + ")" + tableLine + "$"),
+                    pattern: RegExp(`^(${tableRow})${tableLine}$`),
                     lookbehind: !0,
                     inside: { punctuation: /\||:?-{3,}:?/ },
                   },
                   "table-header-row": {
-                    pattern: RegExp("^" + tableRow + "$"),
+                    pattern: RegExp(`^${tableRow}$`),
                     inside: {
                       "table-header": {
                         pattern: RegExp(tableCell),
@@ -4092,9 +4026,9 @@
                 },
               },
             }),
-            ["url", "bold", "italic", "strike"].forEach(function (token) {
+            ["url", "bold", "italic", "strike"].forEach((token) => {
               ["url", "bold", "italic", "strike", "code-snippet"].forEach(
-                function (inside) {
+                (inside) => {
                   token !== inside &&
                     (Prism.languages.markdown[token].inside.content.inside[
                       inside
@@ -4102,32 +4036,31 @@
                 }
               );
             }),
-            Prism.hooks.add("after-tokenize", function (env) {
-              ("markdown" !== env.language && "md" !== env.language) ||
+            Prism.hooks.add("after-tokenize", (env) => {
+              (env.language !== "markdown" && env.language !== "md") ||
                 (function walkTokens(tokens) {
-                  if (tokens && "string" != typeof tokens)
-                    for (var i = 0, l = tokens.length; i < l; i++) {
-                      var token = tokens[i];
-                      if ("code" === token.type) {
-                        var codeLang = token.content[1],
-                          codeBlock = token.content[3];
+                  if (tokens && typeof tokens !== "string")
+                    for (let i = 0, l = tokens.length; i < l; i++) {
+                      const token = tokens[i];
+                      if (token.type === "code") {
+                        const codeLang = token.content[1];
+                        const codeBlock = token.content[3];
                         if (
                           codeLang &&
                           codeBlock &&
-                          "code-language" === codeLang.type &&
-                          "code-block" === codeBlock.type &&
-                          "string" == typeof codeLang.content
+                          codeLang.type === "code-language" &&
+                          codeBlock.type === "code-block" &&
+                          typeof codeLang.content === "string"
                         ) {
-                          var lang = codeLang.content
-                              .replace(/\b#/g, "sharp")
-                              .replace(/\b\+\+/g, "pp"),
-                            alias =
-                              "language-" +
-                              (lang = (/[a-z][\w-]*/i.exec(lang) || [
-                                "",
-                              ])[0].toLowerCase());
+                          let lang = codeLang.content
+                            .replace(/\b#/g, "sharp")
+                            .replace(/\b\+\+/g, "pp");
+                          const alias = `language-${(lang =
+                            (/[a-z][\w-]*/i.exec(lang) || [
+                              "",
+                            ])[0].toLowerCase())}`;
                           codeBlock.alias
-                            ? "string" == typeof codeBlock.alias
+                            ? typeof codeBlock.alias === "string"
                               ? (codeBlock.alias = [codeBlock.alias, alias])
                               : codeBlock.alias.push(alias)
                             : (codeBlock.alias = [alias]);
@@ -4136,38 +4069,38 @@
                     }
                 })(env.tokens);
             }),
-            Prism.hooks.add("wrap", function (env) {
-              if ("code-block" === env.type) {
+            Prism.hooks.add("wrap", (env) => {
+              if (env.type === "code-block") {
                 for (
                   var codeLang = "", i = 0, l = env.classes.length;
                   i < l;
                   i++
                 ) {
-                  var cls = env.classes[i],
-                    match = /language-(.+)/.exec(cls);
+                  const cls = env.classes[i];
+                  const match = /language-(.+)/.exec(cls);
                   if (match) {
                     codeLang = match[1];
                     break;
                   }
                 }
-                var grammar = Prism.languages[codeLang];
+                const grammar = Prism.languages[codeLang];
                 if (grammar)
                   env.content = Prism.highlight(
                     (function textContent(html) {
-                      var text = html.replace(tagPattern, "");
+                      let text = html.replace(tagPattern, "");
                       return (text = text.replace(
                         /&(\w{1,8}|#x?[\da-f]{1,8});/gi,
-                        function (m, code) {
-                          var value;
-                          if ("#" === (code = code.toLowerCase())[0])
+                        (m, code) => {
+                          let value;
+                          if ((code = code.toLowerCase())[0] === "#")
                             return (
                               (value =
-                                "x" === code[1]
+                                code[1] === "x"
                                   ? parseInt(code.slice(2), 16)
                                   : Number(code.slice(1))),
                               fromCodePoint(value)
                             );
-                          var known = KNOWN_ENTITY_NAMES[code];
+                          const known = KNOWN_ENTITY_NAMES[code];
                           return known || m;
                         }
                       ));
@@ -4177,36 +4110,36 @@
                   );
                 else if (
                   codeLang &&
-                  "none" !== codeLang &&
+                  codeLang !== "none" &&
                   Prism.plugins.autoloader
                 ) {
-                  var id =
-                    "md-" +
-                    new Date().valueOf() +
-                    "-" +
-                    Math.floor(1e16 * Math.random());
+                  const id = `md-${new Date().valueOf()}-${Math.floor(
+                    1e16 * Math.random()
+                  )}`;
                   (env.attributes.id = id),
-                    Prism.plugins.autoloader.loadLanguages(
-                      codeLang,
-                      function () {
-                        var ele = document.getElementById(id);
-                        ele &&
-                          (ele.innerHTML = Prism.highlight(
-                            ele.textContent,
-                            Prism.languages[codeLang],
-                            codeLang
-                          ));
-                      }
-                    );
+                    Prism.plugins.autoloader.loadLanguages(codeLang, () => {
+                      const ele = document.getElementById(id);
+                      ele &&
+                        (ele.innerHTML = Prism.highlight(
+                          ele.textContent,
+                          Prism.languages[codeLang],
+                          codeLang
+                        ));
+                    });
                 }
               }
             });
           var tagPattern = RegExp(
-              Prism.languages.markup.tag.pattern.source,
-              "gi"
-            ),
-            KNOWN_ENTITY_NAMES = { amp: "&", lt: "<", gt: ">", quot: '"' },
-            fromCodePoint = String.fromCodePoint || String.fromCharCode;
+            Prism.languages.markup.tag.pattern.source,
+            "gi"
+          );
+          var KNOWN_ENTITY_NAMES = {
+            amp: "&",
+            lt: "<",
+            gt: ">",
+            quot: '"',
+          };
+          var fromCodePoint = String.fromCodePoint || String.fromCharCode;
           Prism.languages.md = Prism.languages.markdown;
         })(Prism);
       }
@@ -4215,7 +4148,6 @@
         (markdown.aliases = ["md"]);
     },
     "./node_modules/refractor/lang/markup.js": (module) => {
-      "use strict";
       function markup(Prism) {
         (Prism.languages.markup = {
           comment: { pattern: /<!--(?:(?!<!--)[\s\S])*?-->/, greedy: !0 },
@@ -4270,37 +4202,35 @@
             Prism.languages.markup.entity),
           (Prism.languages.markup.doctype.inside["internal-subset"].inside =
             Prism.languages.markup),
-          Prism.hooks.add("wrap", function (env) {
-            "entity" === env.type &&
+          Prism.hooks.add("wrap", (env) => {
+            env.type === "entity" &&
               (env.attributes.title = env.content.value.replace(/&amp;/, "&"));
           }),
           Object.defineProperty(Prism.languages.markup.tag, "addInlined", {
             value: function addInlined(tagName, lang) {
-              var includedCdataInside = {};
-              (includedCdataInside["language-" + lang] = {
+              const includedCdataInside = {};
+              (includedCdataInside[`language-${lang}`] = {
                 pattern: /(^<!\[CDATA\[)[\s\S]+?(?=\]\]>$)/i,
                 lookbehind: !0,
                 inside: Prism.languages[lang],
               }),
                 (includedCdataInside.cdata = /^<!\[CDATA\[|\]\]>$/i);
-              var inside = {
+              const inside = {
                 "included-cdata": {
                   pattern: /<!\[CDATA\[[\s\S]*?\]\]>/i,
                   inside: includedCdataInside,
                 },
               };
-              inside["language-" + lang] = {
+              inside[`language-${lang}`] = {
                 pattern: /[\s\S]+/,
                 inside: Prism.languages[lang],
               };
-              var def = {};
+              const def = {};
               (def[tagName] = {
                 pattern: RegExp(
                   /(<__[^>]*>)(?:<!\[CDATA\[(?:[^\]]|\](?!\]>))*\]\]>|(?!<!\[CDATA\[)[\s\S])*?(?=<\/__>)/.source.replace(
                     /__/g,
-                    function () {
-                      return tagName;
-                    }
+                    () => tagName
                   ),
                   "i"
                 ),
@@ -4312,14 +4242,12 @@
             },
           }),
           Object.defineProperty(Prism.languages.markup.tag, "addAttribute", {
-            value: function (attrName, lang) {
+            value(attrName, lang) {
               Prism.languages.markup.tag.inside["special-attr"].push({
                 pattern: RegExp(
-                  /(^|["'\s])/.source +
-                    "(?:" +
-                    attrName +
-                    ")" +
-                    /\s*=\s*(?:"[^"]*"|'[^']*'|[^\s'">=]+(?=[\s>]))/.source,
+                  `${/(^|["'\s])/.source}(?:${attrName})${
+                    /\s*=\s*(?:"[^"]*"|'[^']*'|[^\s'">=]+(?=[\s>]))/.source
+                  }`,
                   "i"
                 ),
                 lookbehind: !0,
@@ -4331,7 +4259,7 @@
                       value: {
                         pattern: /(^=\s*(["']|(?!["'])))\S[\s\S]*(?=\2$)/,
                         lookbehind: !0,
-                        alias: [lang, "language-" + lang],
+                        alias: [lang, `language-${lang}`],
                         inside: Prism.languages[lang],
                       },
                       punctuation: [
@@ -4369,24 +4297,23 @@
       __unused_webpack_exports,
       __webpack_require__
     ) => {
-      "use strict";
-      var refractorJsx = __webpack_require__(
-          "./node_modules/refractor/lang/jsx.js"
-        ),
-        refractorTypescript = __webpack_require__(
-          "./node_modules/refractor/lang/typescript.js"
-        );
+      const refractorJsx = __webpack_require__(
+        "./node_modules/refractor/lang/jsx.js"
+      );
+      const refractorTypescript = __webpack_require__(
+        "./node_modules/refractor/lang/typescript.js"
+      );
       function tsx(Prism) {
         Prism.register(refractorJsx),
           Prism.register(refractorTypescript),
           (function (Prism) {
-            var typescript = Prism.util.clone(Prism.languages.typescript);
+            const typescript = Prism.util.clone(Prism.languages.typescript);
             (Prism.languages.tsx = Prism.languages.extend("jsx", typescript)),
               delete Prism.languages.tsx.parameter,
               delete Prism.languages.tsx["literal-property"];
-            var tag = Prism.languages.tsx.tag;
+            const { tag } = Prism.languages.tsx;
             (tag.pattern = RegExp(
-              /(^|[^\w$]|(?=<\/))/.source + "(?:" + tag.pattern.source + ")",
+              `${/(^|[^\w$]|(?=<\/))/.source}(?:${tag.pattern.source})`,
               tag.pattern.flags
             )),
               (tag.lookbehind = !0);
@@ -4395,7 +4322,6 @@
       (module.exports = tsx), (tsx.displayName = "tsx"), (tsx.aliases = []);
     },
     "./node_modules/refractor/lang/typescript.js": (module) => {
-      "use strict";
       function typescript(Prism) {
         !(function (Prism) {
           (Prism.languages.typescript = Prism.languages.extend("javascript", {
@@ -4416,7 +4342,7 @@
             ),
             delete Prism.languages.typescript.parameter,
             delete Prism.languages.typescript["literal-property"];
-          var typeInside = Prism.languages.extend("typescript", {});
+          const typeInside = Prism.languages.extend("typescript", {});
           delete typeInside["class-name"],
             (Prism.languages.typescript["class-name"].inside = typeInside),
             Prism.languages.insertBefore("typescript", "function", {
@@ -4450,41 +4376,26 @@
         (typescript.aliases = ["ts"]);
     },
     "./node_modules/refractor/lang/yaml.js": (module) => {
-      "use strict";
       function yaml(Prism) {
         !(function (Prism) {
-          var anchorOrAlias = /[*&][^\s[\]{},]+/,
-            tag =
-              /!(?:<[\w\-%#;/?:@&=+$,.!~*'()[\]]+>|(?:[a-zA-Z\d-]*!)?[\w\-%#;/?:@&=+$.~*'()]+)?/,
-            properties =
-              "(?:" +
-              tag.source +
-              "(?:[ \t]+" +
-              anchorOrAlias.source +
-              ")?|" +
-              anchorOrAlias.source +
-              "(?:[ \t]+" +
-              tag.source +
-              ")?)",
-            plainKey =
-              /(?:[^\s\x00-\x08\x0e-\x1f!"#%&'*,\-:>?@[\]`{|}\x7f-\x84\x86-\x9f\ud800-\udfff\ufffe\uffff]|[?:-]<PLAIN>)(?:[ \t]*(?:(?![#:])<PLAIN>|:<PLAIN>))*/.source.replace(
-                /<PLAIN>/g,
-                function () {
-                  return /[^\s\x00-\x08\x0e-\x1f,[\]{}\x7f-\x84\x86-\x9f\ud800-\udfff\ufffe\uffff]/
-                    .source;
-                }
-              ),
-            string = /"(?:[^"\\\r\n]|\\.)*"|'(?:[^'\\\r\n]|\\.)*'/.source;
+          const anchorOrAlias = /[*&][^\s[\]{},]+/;
+          const tag =
+            /!(?:<[\w\-%#;/?:@&=+$,.!~*'()[\]]+>|(?:[a-zA-Z\d-]*!)?[\w\-%#;/?:@&=+$.~*'()]+)?/;
+          const properties = `(?:${tag.source}(?:[ \t]+${anchorOrAlias.source})?|${anchorOrAlias.source}(?:[ \t]+${tag.source})?)`;
+          const plainKey =
+            /(?:[^\s\x00-\x08\x0e-\x1f!"#%&'*,\-:>?@[\]`{|}\x7f-\x84\x86-\x9f\ud800-\udfff\ufffe\uffff]|[?:-]<PLAIN>)(?:[ \t]*(?:(?![#:])<PLAIN>|:<PLAIN>))*/.source.replace(
+              /<PLAIN>/g,
+              () =>
+                /[^\s\x00-\x08\x0e-\x1f,[\]{}\x7f-\x84\x86-\x9f\ud800-\udfff\ufffe\uffff]/
+                  .source
+            );
+          const string = /"(?:[^"\\\r\n]|\\.)*"|'(?:[^'\\\r\n]|\\.)*'/.source;
           function createValuePattern(value, flags) {
-            flags = (flags || "").replace(/m/g, "") + "m";
-            var pattern =
+            flags = `${(flags || "").replace(/m/g, "")}m`;
+            const pattern =
               /([:\-,[{]\s*(?:\s<<prop>>[ \t]+)?)(?:<<value>>)(?=[ \t]*(?:$|,|\]|\}|(?:[\r\n]\s*)?#))/.source
-                .replace(/<<prop>>/g, function () {
-                  return properties;
-                })
-                .replace(/<<value>>/g, function () {
-                  return value;
-                });
+                .replace(/<<prop>>/g, () => properties)
+                .replace(/<<value>>/g, () => value);
             return RegExp(pattern, flags);
           }
           (Prism.languages.yaml = {
@@ -4492,9 +4403,7 @@
               pattern: RegExp(
                 /([\-:]\s*(?:\s<<prop>>[ \t]+)?[|>])[ \t]*(?:((?:\r?\n|\r)[ \t]+)\S[^\r\n]*(?:\2[^\r\n]+)*)/.source.replace(
                   /<<prop>>/g,
-                  function () {
-                    return properties;
-                  }
+                  () => properties
                 )
               ),
               lookbehind: !0,
@@ -4504,12 +4413,8 @@
             key: {
               pattern: RegExp(
                 /((?:^|[:\-,[{\r\n?])[ \t]*(?:<<prop>>[ \t]+)?)<<key>>(?=\s*:\s)/.source
-                  .replace(/<<prop>>/g, function () {
-                    return properties;
-                  })
-                  .replace(/<<key>>/g, function () {
-                    return "(?:" + plainKey + "|" + string + ")";
-                  })
+                  .replace(/<<prop>>/g, () => properties)
+                  .replace(/<<key>>/g, () => `(?:${plainKey}|${string})`)
               ),
               lookbehind: !0,
               greedy: !0,
@@ -4566,32 +4471,29 @@
       __unused_webpack_module,
       exports
     ) => {
-      "use strict";
       exports.Q = function parse(value) {
-        var input = String(value || "").trim();
-        return "" === input ? [] : input.split(whiteSpace);
+        const input = String(value || "").trim();
+        return input === "" ? [] : input.split(whiteSpace);
       };
       var whiteSpace = /[ \t\n\r\f]+/g;
     },
     "./node_modules/xtend/immutable.js": (module) => {
       module.exports = function extend() {
         for (var target = {}, i = 0; i < arguments.length; i++) {
-          var source = arguments[i];
-          for (var key in source)
+          const source = arguments[i];
+          for (const key in source)
             hasOwnProperty.call(source, key) && (target[key] = source[key]);
         }
         return target;
       };
-      var hasOwnProperty = Object.prototype.hasOwnProperty;
+      var { hasOwnProperty } = Object.prototype;
     },
     "./node_modules/character-entities-legacy/index.json": (module) => {
-      "use strict";
       module.exports = JSON.parse(
         '{"AElig":"Æ","AMP":"&","Aacute":"Á","Acirc":"Â","Agrave":"À","Aring":"Å","Atilde":"Ã","Auml":"Ä","COPY":"©","Ccedil":"Ç","ETH":"Ð","Eacute":"É","Ecirc":"Ê","Egrave":"È","Euml":"Ë","GT":">","Iacute":"Í","Icirc":"Î","Igrave":"Ì","Iuml":"Ï","LT":"<","Ntilde":"Ñ","Oacute":"Ó","Ocirc":"Ô","Ograve":"Ò","Oslash":"Ø","Otilde":"Õ","Ouml":"Ö","QUOT":"\\"","REG":"®","THORN":"Þ","Uacute":"Ú","Ucirc":"Û","Ugrave":"Ù","Uuml":"Ü","Yacute":"Ý","aacute":"á","acirc":"â","acute":"´","aelig":"æ","agrave":"à","amp":"&","aring":"å","atilde":"ã","auml":"ä","brvbar":"¦","ccedil":"ç","cedil":"¸","cent":"¢","copy":"©","curren":"¤","deg":"°","divide":"÷","eacute":"é","ecirc":"ê","egrave":"è","eth":"ð","euml":"ë","frac12":"½","frac14":"¼","frac34":"¾","gt":">","iacute":"í","icirc":"î","iexcl":"¡","igrave":"ì","iquest":"¿","iuml":"ï","laquo":"«","lt":"<","macr":"¯","micro":"µ","middot":"·","nbsp":" ","not":"¬","ntilde":"ñ","oacute":"ó","ocirc":"ô","ograve":"ò","ordf":"ª","ordm":"º","oslash":"ø","otilde":"õ","ouml":"ö","para":"¶","plusmn":"±","pound":"£","quot":"\\"","raquo":"»","reg":"®","sect":"§","shy":"­","sup1":"¹","sup2":"²","sup3":"³","szlig":"ß","thorn":"þ","times":"×","uacute":"ú","ucirc":"û","ugrave":"ù","uml":"¨","uuml":"ü","yacute":"ý","yen":"¥","yuml":"ÿ"}'
       );
     },
     "./node_modules/character-reference-invalid/index.json": (module) => {
-      "use strict";
       module.exports = JSON.parse(
         '{"0":"�","128":"€","130":"‚","131":"ƒ","132":"„","133":"…","134":"†","135":"‡","136":"ˆ","137":"‰","138":"Š","139":"‹","140":"Œ","142":"Ž","145":"‘","146":"’","147":"“","148":"”","149":"•","150":"–","151":"—","152":"˜","153":"™","154":"š","155":"›","156":"œ","158":"ž","159":"Ÿ"}'
       );

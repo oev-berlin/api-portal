@@ -6,14 +6,11 @@
 - Typescript
 - Testing:
   - End-to-End:
-    - [Cypress](https://docs.cypress.io/guides/getting-started/writing-your-first-test),
-    - [Cucumber](https://cucumber.io/docs/guides/10-minute-tutorial/),
-    - [Cypress-Cucumber-Preprocessor](https://www.npmjs.com/package/cypress-cucumber-preprocessor),
-    - [Playwrite (Safari testing)]() - optional,
+    - [Cucumber](https://github.com/cucumber/cucumber-js)
+    - [Playwright](https://playwright.dev/docs/intro)
   - Unit:
     - [Jest](https://jestjs.io/docs/getting-started)
     - [Storybook UI](https://storybook.js.org/blog/get-started-with-storybook-and-next-js/)
-- ...
 
 ## TDD Development Process
 
@@ -21,9 +18,7 @@
 
 ### Unit tests
 
-<img src="./assets/jest-logo.png" alt="drawing" width="50"/>
-<img src="./assets/white-plus.png" alt="drawing" width="20" style="position:relative; bottom:10px"/>
-<img src="./assets/storybook.svg" alt="drawing" width="50"/>
+<img src="./assets/jest-logo.png" alt="drawing" width="50"/><img src="./assets/white-plus.png" alt="drawing" width="20" style="position:relative; bottom:10px"/><img src="./assets/storybook.svg" alt="drawing" width="50"/>
 
 ---
 
@@ -38,21 +33,21 @@
 
 ### End-To-End tests
 
-Implementing the assertions with cypress and the behavior with cucumber will allow us to write user stories in an easy and understandable.
+Implementing the assertions with cypress and the behavior with cucumber will allow us to write user stories in an easy and understandable way.
 The user stories could be written by any stack-holder without any previous knowledge in development.
 This will contribute to the TDD approach.
 
+_We can test snapshots by pixels with Playwright_
+
 - Write requirement.
 - we translate into failed tests.
-- we imcplement the code to pass the test and fulfill the requirements.
+- we implement the code to pass the test and fulfill the requirements.
 
-<img src="./assets/cypress-logo.png" alt="drawing" width="50"/> 
-<img src="./assets/white-plus.png" alt="drawing" width="20" style="position:relative; bottom:10px; left: 2px"/> 
-<img src="./assets/cucumberjs-logo.png" alt="drawing" width="50"/>
+<img src="./assets/playwright.png" alt="drawing" width="50"/><img src="./assets/white-plus.png" alt="drawing" width="20" style="position:relative; bottom:10px; left: 2px"/><img src="./assets/cucumberjs-logo.png" alt="drawing" width="50"/>
 
 ---
 
-1. Before writing new Feature `feature`, add `.feature` file and a folder for its steps in `./rsc/cypress/integration/feat.feature, fature\main-app.steps.ts`
+1. Before writing new Feature `feature`, add `.feature` file and a folder for its steps in `./rsc/cypress/integration/feat.feature, fature\main.step.ts`
 2. Define different scenarios for this flow, make sure the tests exist before starting to develop the feature and its components
 3. For separate parts of the scenarios with `And` (inside the `When` part, `When I write my username And enter my password And agree to the terms...`) in order to follow the mistakes
 4. ...
@@ -88,7 +83,7 @@ Project
         integrations\           ................... E2E steps
             main-app.feature    ................... Describe the Feature to test with Gherkin
             main-app\
-                main-app.steps.ts        ................... Describe the step of the Gherkin feature test
+                main.step.ts        ................... Describe the step of the Gherkin feature test
         plugins\
             index.js
         support \
@@ -119,7 +114,7 @@ Project
         Home.modules.css
     .gitignore
     cypress.json                ................... Cypress configuration file
-    jest.config.js
+    jest.config.ts
     jest.setup.js
     package.json
     ...

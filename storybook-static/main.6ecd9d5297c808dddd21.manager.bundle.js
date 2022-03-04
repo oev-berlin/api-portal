@@ -2,7 +2,7 @@
   [179],
   { 24654: () => {} },
   (__webpack_require__) => {
-    var __webpack_exec__ = (moduleId) =>
+    const __webpack_exec__ = (moduleId) =>
       __webpack_require__((__webpack_require__.s = moduleId));
     __webpack_require__.O(
       0,
