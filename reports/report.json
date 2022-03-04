@@ -1,0 +1,108 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "homepage;i-navigate-to-the-documentation",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "I navigate to the documentation",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 277000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I navigate to the homepage",
+            "match": {
+              "location": "tests/e2e/src/steps/playwright.steps.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 210000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "The page is loaded",
+            "match": {
+              "location": "tests/e2e/src/steps/playwright.steps.ts:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 17000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "I click on the documentation button",
+            "match": {
+              "location": "tests/e2e/src/steps/playwright.steps.ts:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 257000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "I see the documentation page",
+            "match": {
+              "location": "tests/e2e/src/steps/playwright.steps.ts:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 11000000
+            },
+            "embeddings": [
+              {
+                "data": "Status: PASSED. Duration:0s",
+                "mime_type": "text/plain"
+              }
+            ]
+          }
+        ],
+        "tags": [
+          {
+            "name": "@foo",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "homepage",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "Homepage",
+    "tags": [
+      {
+        "name": "@foo",
+        "line": 1
+      }
+    ],
+    "uri": "tests/e2e/features/playwright.feature"
+  }
+]

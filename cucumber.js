@@ -1,10 +1,9 @@
 const common = `
   --require-module ts-node/register
-  --require tests/e2e/features/support/steps/**/*.steps.*
-  --require tests/e2e/features/support/common-hooks.ts
-  --format json:tests/e2e/reports/report.json 
-  --format message:tests/e2e/reports/report.ndjson
-  --format html:tests/e2e/reports/report.html
+  --require tests/e2e/src/**/*.ts
+  --format json:reports/report.json 
+  --format message:reports/report.ndjson
+  --format html:reports/report.html
   --format summary 
   --format progress-bar 
   --format @cucumber/pretty-formatter

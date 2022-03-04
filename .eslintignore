@@ -1,6 +1,6 @@
 mock.tsx
 *.test*
 test.setup.tsx
-*.steps.ts
+*.steps.tsx
 *.feature
-common-hooks.tsx
+hooks.tsx

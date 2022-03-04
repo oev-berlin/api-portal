@@ -1,0 +1,38 @@
+import { Given, When, Then } from '@cucumber/cucumber';
+import expect from 'expect';
+import { ICustomWorld } from '../support/custom-world';
+import { config } from '../support/config';
+
+Then('We see {string} mode', async function (this: ICustomWorld, mode: string) {
+  const page = this.page!;
+  const theme = await page.locator('html').getAttribute('data-theme');
+  expect(theme).toEqual(mode);
+});
+
+Given(
+  'I navigate to the homepage',
+  { timeout: 60 * 1000 },
+  async function (this: ICustomWorld) {
+    // Write code here that turns the phrase above into concrete actions
+    const page = this.page!;
+    await page.goto(config.BASE_URL);
+    return true;
+  }
+);
+
+When('The page is loaded', async function (this: ICustomWorld) {
+  const page = this.page!;
+  await page.waitForSelector('#__next');
+});
+When(
+  'I click on the documentation button',
+  async function (this: ICustomWorld) {
+    const page = this.page!;
+    await page.locator('text=Documentation →').click();
+  }
+);
+Then('I see the documentation page', async function (this: ICustomWorld) {
+  const page = this.page!;
+  const url = await page.url();
+  expect(url).toBe('https://nextjs.org/docs');
+});
