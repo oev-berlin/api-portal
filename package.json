@@ -9,6 +9,7 @@
     "test": "jest",
     "start": "next start",
     "test-e2e": "cucumber-js tests/e2e/features/**/*.feature --parallel 3",
+    "test-all-browsers": "BROWSER=webkit cucumber-js tests/e2e/features/**/*.feature --parallel 3 && BROWSER=chromium cucumber-js tests/e2e/features/**/*.feature --parallel 3 && BROWSER=firefox cucumber-js tests/e2e/features/**/*.feature --parallel 3",
     "debug": "PWDEBUG=1 cucumber-js",
     "lint": "next lint --fix",
     "prepare": "husky install",
