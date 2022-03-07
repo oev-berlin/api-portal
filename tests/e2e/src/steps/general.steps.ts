@@ -12,7 +12,6 @@ Then(
   async function (this: ICustomWorld, name: string) {
     const page = this.page!;
     await page.goto(config.BASE_URL);
-    // await this.page?.waitForTimeout(1000);
     const screenshot = await this.page!.screenshot();
     await compareToBaseSnapshot(screenshot as Buffer, name, this);
   }
