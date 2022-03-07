@@ -10,6 +10,7 @@ const browserOptions: LaunchOptions = {
     'media.navigator.streams.fake': true,
     'media.navigator.permission.disabled': true,
   },
+  // headless: false,
 };
 
 export const config = {
@@ -18,5 +19,4 @@ export const config = {
   BASE_URL: 'http://localhost:3000/',
   IMG_THRESHOLD: { threshold: 0.4 },
   BASE_API_URL: '',
-  headless: false,
 };

@@ -24,7 +24,7 @@
 
 ### Basic requirements
 
-NodeJS >= 14.0
+<mark style="background-color: red;">NodeJS >= 14.0
 
 ### Installation
 
@@ -63,7 +63,7 @@ e.g. : `BROWSER=webkit yarn ...`
       - For input field, for example, set assertion of the output with the errors
 3. Always use mockups, never built-in data in the tests.
 
-### End-To-End tests
+### <mark>End-To-End tests </mark>
 
 Implementing the assertions with cypress and the behavior with cucumber will allow us to write user stories in an easy and understandable way.
 The user stories could be written by any stack-holder without any previous knowledge in development.
@@ -75,8 +75,6 @@ This will contribute to the TDD approach.
 
 <img src="./assets/playwright.png" alt="drawing" width="50"/><img src="./assets/white-plus.png" alt="drawing" width="20" style="position:relative; bottom:10px; left: 2px"/><img src="./assets/cucumberjs-logo.png" alt="drawing" width="50"/>
 
----
-
 1. Before writing new Feature `feature`, add `.feature` file and a folder for its steps in `./tests/e2e/features/feat.feature, ./tests/e2e/src/steps/feat.step.ts`
 2. Define different scenarios for this flow, make sure the tests exist before starting to develop the feature and its components
 3. For separate parts of the scenarios with `And` (inside the `When` part, `When I write my username And enter my password And agree to the terms...`) in order to follow the mistakes
@@ -87,6 +85,8 @@ This will contribute to the TDD approach.
 For **debugging**, use debugging script, or add debug tag (`@debug`) in the first line of the feature
 
 To **ignore** a specific feature, add ignore tag (`@ignore`) in the first line of the feature
+
+---
 
 ## Project structure
 

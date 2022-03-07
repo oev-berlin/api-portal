@@ -43,12 +43,7 @@ BeforeAll(async () => {
   await ensureDir(tracesDir);
 });
 
-Before(
-  { tags: '@ignore' },
-  async () =>
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    'skipped' as any
-);
+Before({ tags: '@ignore' }, async () => 'skipped' as any);
 
 Before({ tags: '@debug' }, async function (this: ICustomWorld) {
   this.debug = true;
