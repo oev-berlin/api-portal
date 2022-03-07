@@ -1,17 +1,7 @@
 import { Then } from '@cucumber/cucumber';
 import { ICustomWorld } from '../support/custom-world';
-import { compareToBaseImage, getImagePath } from '../utils/compareImages';
-
-Then('Snapshot {string}', async function (this: ICustomWorld, name: string) {
-  const { page } = this;
-  await page?.screenshot({ path: getImagePath(this, name) });
-});
-
-Then('Snapshot', async function (this: ICustomWorld) {
-  const { page } = this;
-  const image = await page?.screenshot();
-  image && (await this.attach(image, 'image/png'));
-});
+import { config } from '../support/config';
+import { compareToBaseImage } from '../utils/compareSnapshot';
 
 Then('debug', async () => {
   debugger;
@@ -20,8 +10,21 @@ Then('debug', async () => {
 Then(
   'Screen matches the base image {string}',
   async function (this: ICustomWorld, name: string) {
-    await this.page?.waitForTimeout(1000);
+    const page = this.page!;
+    await page.goto(config.BASE_URL);
+    // await this.page?.waitForTimeout(1000);
     const screenshot = await this.page!.screenshot();
-    await compareToBaseImage(this, name, screenshot as Buffer);
+    await compareToBaseImage(screenshot as Buffer, name, this);
+  }
+);
+
+Then(
+  'Screen matches the base image {string} after {int} seconds',
+  async function (this: ICustomWorld, name: string, timeout: number) {
+    const page = this.page!;
+    await page.goto(config.BASE_URL);
+    await this.page?.waitForTimeout(timeout * 1000);
+    const screenshot = await this.page!.screenshot();
+    await compareToBaseImage(screenshot as Buffer, `${name}TO`, this);
   }
 );

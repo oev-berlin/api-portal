@@ -51,7 +51,7 @@ _We can test snapshots by pixels with Playwright_
 
 ---
 
-1. Before writing new Feature `feature`, add `.feature` file and a folder for its steps in `./rsc/cypress/integration/feat.feature, fature\main.step.ts`
+1. Before writing new Feature `feature`, add `.feature` file and a folder for its steps in `./rsc/cypress/integration/feat.feature, fature/main.step.ts`
 2. Define different scenarios for this flow, make sure the tests exist before starting to develop the feature and its components
 3. For separate parts of the scenarios with `And` (inside the `When` part, `When I write my username And enter my password And agree to the terms...`) in order to follow the mistakes
 4. ...
@@ -70,7 +70,7 @@ _We can test snapshots by pixels with Playwright_
 - `yarn run cucumber-js path/to/feature.feature` : Run specific E2E test - headless
 - `yarn run debug path/to/feature.feature` : Run specific E2E test in debug mode - headful
 
-For testing in a specific enging (firefox, chromium, webkit(safari) ) add an BROWSER enviroment variable with the engine you would like to test with.
+For testing in a specific engin (firefox, chromium, webkit(safari) ) add an BROWSER environment variable with the engine you would like to test with.
 
 e.g. : `BROWSER=webkit yarn ...`
 

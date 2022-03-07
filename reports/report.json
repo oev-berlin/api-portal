@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 328000000
+              "duration": 199000000
             }
           },
           {
@@ -27,7 +27,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 185000000
+              "duration": 469000000
             }
           },
           {
@@ -40,7 +40,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 17000000
+              "duration": 22000000
             }
           },
           {
@@ -53,7 +53,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 209000000
+              "duration": 183000000
             }
           },
           {
@@ -66,7 +66,20 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 2000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "Screen matches the base image \"Documentation\"",
+            "match": {
+              "location": "tests/e2e/src/steps/general.steps.ts:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 349000000
             }
           },
           {
@@ -74,7 +87,92 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 8000000
+              "duration": 11000000
+            },
+            "embeddings": [
+              {
+                "data": "Status: PASSED. Duration:0s",
+                "mime_type": "text/plain"
+              }
+            ]
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "homepage;i-navigate-to-the-documentation-and-wait-for-three-seconds-before-snapshot-comparison",
+        "keyword": "Scenario",
+        "line": 10,
+        "name": "I navigate to the documentation and wait for three seconds before snapshot comparison",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 202000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 11,
+            "name": "I navigate to the homepage",
+            "match": {
+              "location": "tests/e2e/src/steps/home-page.steps.ts:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 467000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "The page is loaded",
+            "match": {
+              "location": "tests/e2e/src/steps/home-page.steps.ts:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 20000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "I click on the documentation button",
+            "match": {
+              "location": "tests/e2e/src/steps/home-page.steps.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 177000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "Screen matches the base image \"Documentation\" after 2 seconds",
+            "match": {
+              "location": "tests/e2e/src/steps/general.steps.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2369000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 5000000
             },
             "embeddings": [
               {
