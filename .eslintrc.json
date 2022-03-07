@@ -103,6 +103,7 @@
     "react/function-component-definition": 0,
     "array-callback-return": 0,
     "import/no-extraneous-dependencies": 0,
+    "react/jsx-one-expression-per-line": 0,
     "import/extensions": [
       "warn",
       {
