@@ -41,8 +41,6 @@ Implementing the assertions with cypress and the behavior with cucumber will all
 The user stories could be written by any stack-holder without any previous knowledge in development.
 This will contribute to the TDD approach.
 
-_We can test snapshots by pixels with Playwright_
-
 - Write requirement.
 - we translate into failed tests.
 - we implement the code to pass the test and fulfill the requirements.
@@ -51,10 +49,12 @@ _We can test snapshots by pixels with Playwright_
 
 ---
 
-1. Before writing new Feature `feature`, add `.feature` file and a folder for its steps in `./rsc/cypress/integration/feat.feature, fature/main.step.ts`
+1. Before writing new Feature `feature`, add `.feature` file and a folder for its steps in `./tests/e2e/features/feat.feature, ./tests/e2e/src/steps/feat.step.ts`
 2. Define different scenarios for this flow, make sure the tests exist before starting to develop the feature and its components
 3. For separate parts of the scenarios with `And` (inside the `When` part, `When I write my username And enter my password And agree to the terms...`) in order to follow the mistakes
-4. ...
+4. Steps that are used often and are relevant for multiple tests can be written in the general step file.
+5. For pixel-wise snapshot comparison, use the steps defined in `./tests/e2e/src/steps/general.steps.ts`
+6. ...
 
 ## Running instructions
 
