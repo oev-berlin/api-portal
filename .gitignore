@@ -1,6 +1,15 @@
+# dependencies
 node_modules
+
+# local configurations
 .idea
 .DS_store
-storybook-static
+
+# next
 .next
+
+# playwright local artifacts
 traces
+
+# storybook
+storybook-static
