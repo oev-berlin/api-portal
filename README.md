@@ -18,13 +18,41 @@
   - [Prettier](https://prettier.io/) - Formatting the code (js, jsx, ts, tsx)
   - [Husky](https://typicode.github.io/husky/#/) - Git hooks
 
+---
+
+## Running instructions
+
+### Basic requirements
+
+NodeJS >= 14.0
+
+### Installation
+
+`yarn install`
+
+### Application scripts
+
+- `yarn build` : Build the application
+- `yarn start` : Start the application
+
+### Testing scripts
+
+- `yarn test` : Run all unit tests - headless
+- `yarn run test-e2e` : Run all E2E tests - headless
+- `yarn run cucumber-js path/to/feature.feature` : Run specific E2E test - headless
+- `yarn run debug path/to/feature.feature` : Run specific E2E test in debug mode - headful
+
+For testing in a specific engin (firefox, chromium, webkit(safari) ) add an BROWSER environment variable with the engine you would like to test with.
+
+e.g. : `BROWSER=webkit yarn ...`
+
+---
+
 ## TDD Development Process
 
 ### Unit tests
 
 <img src="./assets/jest-logo.png" alt="drawing" width="50"/><img src="./assets/white-plus.png" alt="drawing" width="20" style="position:relative; bottom:10px"/><img src="./assets/storybook.svg" alt="drawing" width="50"/>
-
----
 
 1. Before writing new Component `component`, add new jest component for this component in `__tests__/components/component.tsx`
 2. Write tests:
@@ -55,24 +83,6 @@ This will contribute to the TDD approach.
 4. Steps that are used often and are relevant for multiple tests can be written in the general step file.
 5. For pixel-wise snapshot comparison, use the steps defined in `./tests/e2e/src/steps/general.steps.ts`
 6. ...
-
-## Running instructions
-
-### Application scripts
-
-- `yarn build` : Build the application
-- `yarn start` : Start the application
-
-### Testing scripts
-
-- `yarn test` : Run all unit tests - headless
-- `yarn run test-e2e` : Run all E2E tests - headless
-- `yarn run cucumber-js path/to/feature.feature` : Run specific E2E test - headless
-- `yarn run debug path/to/feature.feature` : Run specific E2E test in debug mode - headful
-
-For testing in a specific engin (firefox, chromium, webkit(safari) ) add an BROWSER environment variable with the engine you would like to test with.
-
-e.g. : `BROWSER=webkit yarn ...`
 
 For **debugging**, use debugging script, or add debug tag (`@debug`) in the first line of the feature
 
