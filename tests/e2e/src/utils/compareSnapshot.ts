@@ -6,7 +6,7 @@ import { writeFileSync } from 'fs';
 import { ICustomWorld } from '../support/custom-world';
 import { config } from '../support/config';
 
-export const compareToBaseImage = async (
+export const compareToBaseSnapshot = async (
   screenshot: Buffer,
   name: string,
   customWorld: ICustomWorld,

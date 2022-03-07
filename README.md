@@ -110,7 +110,7 @@ Project
                     config.ts         ............. Configurations
                     custom-world.ts   ............. Enviroment definitions for the tests
                 utils\
-                    compareImages.ts  ............. For snapshot comparison
+                    compareSnapshots.ts  ............. For snapshot comparison
     node_modules\
     pages\                      ...................
         api\
