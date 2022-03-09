@@ -17,10 +17,17 @@
   - [Stylelint](https://https://stylelint.io/) - Cleaning the style files (css, scss, sass)
   - [Prettier](https://prettier.io/) - Formatting the code (js, jsx, ts, tsx)
   - [Husky](https://typicode.github.io/husky/#/) - Git hooks
+  - [Docker](https://docs.docker.com/get-docker/) - Build and run docker images
+  - [docker-compose](https://docs.docker.com/compose/install/) - orchestrate docker images
 
 ---
 
 ## Running instructions
+### Precondition
+
+- Docker and docker-compose installed
+
+Run the docker-compose file to start the backend and frontend together `docker-compose up`. Frontend will be build into a new image, backend will be pulled from registry.
 
 ### Basic requirements
 
