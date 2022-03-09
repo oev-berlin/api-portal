@@ -86,6 +86,19 @@ For **debugging**, use debugging script, or add debug tag (`@debug`) in the firs
 
 To **ignore** a specific feature, add ignore tag (`@ignore`) in the first line of the feature
 
+## Conventional Commits
+
+Commit messages have to comply with the [Conventional Commits Summary](https://www.conventionalcommits.org/en/v1.0.0/#summary). This will be enforced by husky.
+The commit message should be structured as follows:
+
+```
+<type>[optional scope]: <description>
+
+[optional body]
+
+[optional footer(s)]
+```
+
 ---
 
 ## Project structure
