@@ -6,7 +6,12 @@
     "jest": true,
     "node": 1
   },
-  "extends": ["plugin:react/recommended", "eslint:recommended", "airbnb"],
+  "extends": [
+    "plugin:react/recommended",
+    "eslint:recommended",
+    "airbnb",
+    "plugin:@next/next/recommended"
+  ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
