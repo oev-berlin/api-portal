@@ -12,6 +12,11 @@
   - Unit:
     - [Jest](https://jestjs.io/docs/getting-started) - Unit testing, snapshot testing (html comparison)
     - [Storybook UI](https://storybook.js.org/blog/get-started-with-storybook-and-next-js/) - Unit testing, snapshot testing (pixel-wise), development tool
+    - [React Testing Library](https://testing-library.com/docs/react-testing-library) as fundamental testing library.
+    - [Storybook](https://storybook.js.org/docs/react/) to visualize all components in different possible states. It's installed with some additional addons.
+    - [@storybook/testing-react](https://storybook.js.org/addons/@storybook/testing-react) to reuse Stories for tests.
+    - [Storyshoots](https://storybook.js.org/addons/@storybook/addon-storyshots) to be able to automatically perform DOM/screenshot snapshot test for every written story.
+    - [jest-axe](https://github.com/nickcolley/jest-axe) to test every story for accessibility.
 - Hooks and formatters
   - [ESlint](https://eslint.org/docs/user-guide/getting-started) - Cleaning the code (js, jsx, ts, tsx)
   - [Stylelint](https://https://stylelint.io/) - Cleaning the style files (css, scss, sass)
@@ -37,16 +42,18 @@
 
 ### Application scripts
 
-- `yarn build` : Build the application
-- `yarn start` : Start the application
+- `yarn build`: Build the application
+- `yarn start`: Start the application
 - `docker-compose up`: Frontend will be build into a new image, backend will be pulled from registry, the command will start backend and frontend together
 
 ### Testing scripts
 
-- `yarn test` : Run all unit tests - headless
-- `yarn run test-e2e` : Run all E2E tests - headless
-- `yarn run cucumber-js path/to/feature.feature` : Run specific E2E test - headless
-- `yarn run debug path/to/feature.feature` : Run specific E2E test in debug mode - headful
+- `yarn test`: Run all unit tests - headless
+- `yarn run test-e2e`: Run all E2E tests - headless
+- `yarn run cucumber-js path/to/feature.feature`: Run specific E2E test - headless
+- `yarn run debug path/to/feature.feature`: Run specific E2E test in debug mode - headful
+- `npm run storybook`: Runs storybook with HMR. Open [http://localhost:6006](http://localhost:6006) to view it in your browser.
+- `npm run build-storybook`: Builds storybook for production to the `storybook-static` folder.
 
 For testing in a specific engin (firefox, chromium, webkit(safari) ) add an BROWSER environment variable with the engine you would like to test with.
 
@@ -60,14 +67,19 @@ e.g. : `BROWSER=webkit yarn ...`
 
 <img src="./assets/jest-logo.png" alt="drawing" width="50"/><img src="./assets/white-plus.png" alt="drawing" width="20" style="position:relative; bottom:10px"/><img src="./assets/storybook.svg" alt="drawing" width="50"/>
 
-1. Before writing new Component `component`, add new jest component for this component in `__tests__/components/component.tsx`
-2. Write tests:
-   1. Screenshot test
+1. Before writing new Component `component`, add new jest component for this component in `__tests__/components/component.js`
+2. Create a basic `component` in `components/<component-name>/`
+3. Write a story in `components/<component-name>/` to achieve automated Tests for:
+   1. Screenshot Snapshots
+   1. DOM Snapshots
+4. Extend the Unit tests with the following:
+   1. Accessibility Test
    2. Test which describes a right behavior
       - For input field, for example, set assertion of the output with the right input
    3. Test which describes a wrong behavior
       - For input field, for example, set assertion of the output with the errors
-3. Always use mockups, never built-in data in the tests.
+5. Always use mockups, never built-in data in the tests.
+6. Write your component!
 
 ### <mark>End-To-End tests </mark>
 
@@ -112,21 +124,22 @@ The commit message should be structured as follows:
 ```
 Project
     .husky\
-        _\
-        package.json
-        pre-commit              ................... Precommit hook sctipt
-    .next\
+        commit-msg              ................... Commit message hook script
+        pre-commit              ................... Precommit hook script
     .storybook\
         main.js                 ................... Declare plugins and other configs
         preview.js              ................... Determine how to render the stories
-        components\             ................... Component unit tests
-        page\                   ................... Pages unit tests
-        index.test.tsx
+    components\
+        <component-Name>\       ................... A folder for every component including the component code and a story
     tests\
         unit\
             __mocks__\          ................... Mockups for the Unit tests
             __tests__\          ................... Unit tests
                 components\
+                    __image_snapshots__\     ................... Screenshot Snapshots of the current components. Used to identify changes while testing
+                    __snapshots__\           ................... DOM Snapshots of the current components. Used to identify changes while testing
+                    <component-name>.test.js .................. Unit tests for a component
+                    Storyshots.test.js       ................... Contains snapshot testing of written stories for every components
                 pages\
                 partials\
                 cta\

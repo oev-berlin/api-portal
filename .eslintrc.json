@@ -4,7 +4,7 @@
     "commonjs": true,
     "es2020": true,
     "jest": true,
-    "node": 1
+    "node": true
   },
   "extends": [
     "plugin:react/recommended",

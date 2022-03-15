@@ -4,6 +4,7 @@ import { config } from '../support/config';
 import { compareToBaseSnapshot } from '../utils/compareSnapshot';
 
 Then('debug', async () => {
+  // eslint-disable-next-line no-debugger
   debugger;
 });
 

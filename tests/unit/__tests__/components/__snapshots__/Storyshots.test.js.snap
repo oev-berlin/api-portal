@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DOM snapshots Button Large 1`] = `
+<button
+  className="button button-large button-secondary"
+  style={null}
+  type="button"
+>
+  Button
+</button>
+`;
+
+exports[`DOM snapshots Button Primary 1`] = `
+<button
+  className="button button-medium button-primary"
+  style={null}
+  type="button"
+>
+  Button
+</button>
+`;
+
+exports[`DOM snapshots Button Secondary 1`] = `
+<button
+  className="button button-medium button-secondary"
+  style={null}
+  type="button"
+>
+  Button
+</button>
+`;
+
+exports[`DOM snapshots Button Small 1`] = `
+<button
+  className="button button-small button-secondary"
+  style={null}
+  type="button"
+>
+  Button
+</button>
+`;
+
+exports[`DOM snapshots Card Card Complete 1`] = `
+<div
+  className="card"
+>
+  <h3
+    className="title"
+  >
+    Hello World
+  </h3>
+  <img
+    alt="Tier"
+    className="image"
+    src="https://image.geo.de/30147338/t/iL/v4/w1440/r0/-/nilpferd-wildlife-photographer-of-the-year-jpg--83937-.jpg"
+  />
+</div>
+`;
+
+exports[`DOM snapshots Card Card Image 1`] = `
+<div
+  className="card"
+>
+  <img
+    alt=""
+    className="image"
+    src="https://image.geo.de/30147338/t/iL/v4/w1440/r0/-/nilpferd-wildlife-photographer-of-the-year-jpg--83937-.jpg"
+  />
+</div>
+`;
+
+exports[`DOM snapshots Card Card Title 1`] = `
+<div
+  className="card"
+>
+  <h3
+    className="title"
+  >
+    Hello World
+  </h3>
+</div>
+`;

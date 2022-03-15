@@ -24,6 +24,7 @@ let browser: ChromiumBrowser | FirefoxBrowser | WebKitBrowser;
 const tracesDir = 'traces';
 
 declare global {
+  // eslint-disable-next-line no-unused-vars
   let browser: ChromiumBrowser | FirefoxBrowser | WebKitBrowser;
 }
 
@@ -45,6 +46,7 @@ BeforeAll(async () => {
 
 Before({ tags: '@ignore' }, async () => 'skipped' as any);
 
+// eslint-disable-next-line no-unused-vars
 Before({ tags: '@debug' }, async function (this: ICustomWorld) {
   this.debug = true;
 });

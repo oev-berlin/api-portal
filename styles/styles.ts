@@ -1,26 +1,26 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const MDBreakPoint = 640;
 export const LGBreakPoint = 1280;
 
 export const colors = {
-  VKBDunkelBlau: "#024589",
-  VKBHellBlau: "#E5EEFA",
-  VKBWeiss: "#FFF",
-  VKBHellgrau: "#E3E3E3",
-  VKBMittelgrau: "#BBBBBB",
-  VKBGrau: "#909090",
-  VKBDunkelgrau: "#666666",
-  VKBSchwarz: "#191919",
-  VKBBlattgruen: "#BAC800",
-  VKBHimmlblau: "#048DBB",
-  VKBEisblau: "#8CB9BE",
-  VKBWaldgruen: "#0B885E",
-  VKBPflaume: "#851573",
-  Alert: "#D90000",
-  SPKRot: "#FF0000",
-  VRBlau: "#2464AD",
-  VROrange: "#ED702D",
+  VKBDunkelBlau: '#024589',
+  VKBHellBlau: '#E5EEFA',
+  VKBWeiss: '#FFF',
+  VKBHellgrau: '#E3E3E3',
+  VKBMittelgrau: '#BBBBBB',
+  VKBGrau: '#909090',
+  VKBDunkelgrau: '#666666',
+  VKBSchwarz: '#191919',
+  VKBBlattgruen: '#BAC800',
+  VKBHimmlblau: '#048DBB',
+  VKBEisblau: '#8CB9BE',
+  VKBWaldgruen: '#0B885E',
+  VKBPflaume: '#851573',
+  Alert: '#D90000',
+  SPKRot: '#FF0000',
+  VRBlau: '#2464AD',
+  VROrange: '#ED702D',
 };
 
 const H1 = styled.h1`

@@ -4,6 +4,8 @@ import Head from 'next/head';
 import Image from 'next/image';
 import styled from 'styled-components';
 import styles from '../styles/Home.module.css';
+import { Card } from '../components/Card';
+import { Button } from '../components/Button';
 
 const Main = styled.div`
   padding: 0 2rem;
@@ -53,6 +55,12 @@ const Home: NextPage = () => (
           <p>Instantly deploy your Next.js site to a public URL with Vercel.</p>
         </a>
       </div>
+      <Card
+        title="Hello World"
+        imageSrc="https://image.geo.de/30147338/t/iL/v4/w1440/r0/-/nilpferd-wildlife-photographer-of-the-year-jpg--83937-.jpg"
+        imageAlt="Tier"
+      />
+      <Button label="Lets go" primary />
     </main>
 
     <footer className={styles.footer}>
