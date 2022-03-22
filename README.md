@@ -104,6 +104,15 @@ For **debugging**, use debugging script, or add debug tag (`@debug`) in the firs
 
 To **ignore** a specific feature, add ignore tag (`@ignore`) in the first line of the feature
 
+#### Update e2e images
+
+For consistent behaviour the end to end test [have tu run in a docker container](https://github.com/microsoft/playwright-test/issues/189).
+To update the images the docker-compose.e2e.yml has to be executed:
+
+- `docker-compose --file docker-compose.e2e.yml up --build`
+
+This will start the `tests/e2e/run.sh` script which will run the e2e tests in Chrome, Safari and Firefox inside a docker container.
+
 ## Conventional Commits
 
 Commit messages have to comply with the [Conventional Commits Summary](https://www.conventionalcommits.org/en/v1.0.0/#summary). This will be enforced by husky.
