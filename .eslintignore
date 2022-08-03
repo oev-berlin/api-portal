@@ -1,6 +1,13 @@
 mock.tsx
-*.test*
 test.setup.tsx
 *.steps.tsx
 *.feature
+style.tsx
+style.ts
+styles.tsx
+styles.ts
+testingTools.tsx
 hooks.tsx
+node_modules
+.next
+Button.test.tsx
