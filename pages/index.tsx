@@ -54,11 +54,7 @@ const Home: NextPage = () => (
           <p>Instantly deploy your Next.js site to a public URL with Vercel.</p>
         </a>
       </div>
-      <Card
-        title="Hello World"
-        imageSrc="https://image.geo.de/30147338/t/iL/v4/w1440/r0/-/nilpferd-wildlife-photographer-of-the-year-jpg--83937-.jpg"
-        imageAlt="Tier"
-      />
+      <Card title="Hello World" imageSrc="/image.jpeg" imageAlt="background" />
     </main>
 
     <footer className={styles.footer}>

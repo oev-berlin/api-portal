@@ -5,6 +5,10 @@ const nextConfig = {
   experimental: {
     outputStandalone: true,
   },
+  images: {
+    domains: ['assets.vercel.com'],
+    formats: ['image/avif', 'image/webp'],
+  },
 };
 
 module.exports = nextConfig;

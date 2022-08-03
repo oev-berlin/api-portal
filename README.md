@@ -81,7 +81,50 @@ e.g. : `BROWSER=webkit yarn ...`
 5. Always use mockups, never built-in data in the tests.
 6. Write your component!
 
-### <mark>End-To-End tests </mark>
+#### Unit Test Structure
+
+To have a better overview of the project, we will use a unified structure for the unit tests, which will group the different types of tests.
+
+```typescript
+const setupComponent = (version) =>
+  render(<ComponentName version={version}>children</ComponentName>);
+describe('Components Name', () => {
+  describe('Accessibility Tests', () => {
+    // make assertions over the accessibility of the components, using stories from the storybook
+    it('...', async () => {
+      //....
+    });
+  });
+  describe('UI Tests', () => {
+    // make assertions over the different elements in the components, check if buttons work..
+    it('Component Name should render without crashing', async () => {
+      const screen = setupComponent();
+      expect(screen.container).toBeDefined();
+    });
+    it('Component Name should render correctly', async () => {
+      const screen = setupComponent();
+      await screen
+        .findByText('title')
+        .then((title) => expect(title).toBeInTheDocument);
+      // Make assertion over all the available parts in the component
+    });
+  });
+  describe('Screenshot Tests', () => {
+    // make assertions over the DOM snapshots of the differtent versions of the component
+    it('Component Name should match basic snapshot', async () => {
+      const screen = setupComponent();
+      expect(screen.container).toMatchSnapshot();
+    });
+    it('Component Name should snapshot version 1', async () => {
+      const screen = setupComponent(1);
+      expect(screen.container).toMatchSnapshot();
+    });
+    // ...
+  });
+});
+```
+
+### End-To-End tests
 
 Implementing the assertions with cypress and the behavior with cucumber will allow us to write user stories in an easy and understandable way.
 The user stories could be written by any stack-holder without any previous knowledge in development.
@@ -98,11 +141,20 @@ This will contribute to the TDD approach.
 3. For separate parts of the scenarios with `And` (inside the `When` part, `When I write my username And enter my password And agree to the terms...`) in order to follow the mistakes
 4. Steps that are used often and are relevant for multiple tests can be written in the general step file.
 5. For pixel-wise snapshot comparison, use the steps defined in `./tests/e2e/src/steps/general.steps.ts`
-6. ...
+6. By adding `@ABC` Tag above the Scenario, we could control when we are running this test.
+   1. We will rung all `@ABC` tests by running `yarn test-e2e --Tags @ABC`
+   2. Without Tags we are running all tests with/without tags
 
 For **debugging**, use debugging script, or add debug tag (`@debug`) in the first line of the feature
 
 To **ignore** a specific feature, add ignore tag (`@ignore`) in the first line of the feature
+
+### E2E Scripts
+
+**All Tests\***: yarn test-e2e
+**Specific component**: `cucumber-js tests/e2e/features/**/XYZ.feature`
+**Debugging** : `PWDEBUG=1 cucumber-js tests/e2e/features/**/XYZ.feature` \ `yarn debug tests/e2e/features/**/XYZ.feature`
+**Tags**: yarn test-e2e --Tags @ABC
 
 #### Update e2e images
 

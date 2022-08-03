@@ -13,7 +13,7 @@ module.exports = {
     '^.+\\.module\\.(css|sass|scss)$': 'identity-obj-proxy',
 
     // Handle CSS imports (without CSS modules)
-    '^.+\\.(css|sass|scss)$': '<rootDir>/__mocks__/styleMock.js',
+    '^.+\\.(css|sass|scss)$': 'identity-obj-proxy',
 
     /*
      * Handle image imports
@@ -21,6 +21,7 @@ module.exports = {
      */
     '^.+\\.(jpg|jpeg|png|gif|webp|avif|svg)$':
       '<rootDir>/__mocks__/fileMock.js',
+    '^lodash-es$': 'lodash',
   },
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   // Ignore any files that match this pattern.
