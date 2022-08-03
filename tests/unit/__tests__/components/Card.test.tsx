@@ -1,9 +1,10 @@
-import { render, cleanup } from '@testing-library/react';
+import { render, cleanup, waitFor } from '@testing-library/react';
 import { axe, toHaveNoViolations } from 'jest-axe';
 import { composeStories } from '@storybook/testing-react';
 import React from 'react';
 import { Card } from '../../../../components/Card';
-import * as stories from '../../../../components/Card/Card.stories';
+// eslint-disable-next-line import/extensions
+import * as stories from '../../../../components/Button/Button.stories';
 
 expect.extend(toHaveNoViolations);
 
@@ -28,7 +29,7 @@ describe('Card', () => {
       // Run axe
       it(`${storyName} should have no accessibility violations`, async () => {
         const { container } = render(<ComposedStory />);
-        const results = await axe(container);
+        const results = await waitFor(() => axe(container));
         expect(results).toHaveNoViolations();
       });
     });

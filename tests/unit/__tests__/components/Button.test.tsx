@@ -1,4 +1,4 @@
-import { render, cleanup } from '@testing-library/react';
+import { render, cleanup, waitFor } from '@testing-library/react';
 import { composeStories } from '@storybook/testing-react';
 import { axe, toHaveNoViolations } from 'jest-axe';
 import * as stories from '../../../../components/Button/Button.stories';
@@ -49,7 +49,7 @@ describe('Button', () => {
       // Run axe
       it(`${storyName} should have no accessibility violations`, async () => {
         const { container } = render(<ComposedStory />);
-        const results = await axe(container);
+        const results = await waitFor(() => axe(container));
         expect(results).toHaveNoViolations();
       });
     }
