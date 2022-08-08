@@ -72,6 +72,8 @@ jobs:
           key: ${{ runner.os }}-yarn-v1-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-yarn-v1
+      - name: Start storybook
+        run: npm run storybook </dev/null &>/dev/null &
       - name: Run unit tests
         run: yarn test --coverage --watch=false
       - name: Archive code coverage report
