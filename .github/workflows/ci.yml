@@ -72,10 +72,8 @@ jobs:
           key: ${{ runner.os }}-yarn-v1-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-yarn-v1
-      - name: install playwritght
-        run: npx playwright install 
-      - name : Build storybook
-        run: npm run build-storybook
+      - name: Install Playwright
+        run: npx playwright install --with-deps
       - name: Start storybook
         run: npm run storybook </dev/null &>/dev/null &
       - name: Run unit tests
