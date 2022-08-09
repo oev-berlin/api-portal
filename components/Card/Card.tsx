@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Image from 'next/image';
 import { StyledCard, Title } from './styles';
 
-interface CardProps {
+export interface CardProps {
   title: string;
   imageSrc: string;
   imageAlt: string;

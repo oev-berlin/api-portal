@@ -77,7 +77,6 @@ jobs:
       - name: Start storybook
         run: npm run storybook </dev/null &>/dev/null &
       - name: Run unit tests
-        # run: yarn test --coverage -u
         run: yarn test --coverage --watch=false
       - name: Archive code coverage report
         uses: actions/upload-artifact@v3
