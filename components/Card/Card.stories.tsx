@@ -16,8 +16,7 @@ export const CardComplete = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 CardComplete.args = {
   title: 'Hello World',
-  imageSrc:
-    'https://image.geo.de/30147338/t/iL/v4/w1440/r0/-/nilpferd-wildlife-photographer-of-the-year-jpg--83937-.jpg',
+  imageSrc: '/image.jpeg',
   imageAlt: 'Tier',
 };
 
@@ -30,6 +29,5 @@ CardTitle.args = {
 export const CardImage = Template.bind({});
 CardImage.args = {
   title: '',
-  imageSrc:
-    'https://image.geo.de/30147338/t/iL/v4/w1440/r0/-/nilpferd-wildlife-photographer-of-the-year-jpg--83937-.jpg',
+  imageSrc: '/image.jpeg',
 };

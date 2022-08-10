@@ -1,6 +1,8 @@
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import { addDecorator } from '@storybook/react';
 import { withConsole } from '@storybook/addon-console';
+import * as NextImage from 'next/image';
+const OriginalNextImage = NextImage.default;
 
 addDecorator((storyFn, context) => withConsole()(storyFn)(context));
 
@@ -21,3 +23,8 @@ export const parameters = {
     },
   },
 };
+
+Object.defineProperty(NextImage, 'default', {
+  configurable: true,
+  value: (props) => <OriginalNextImage {...props} unoptimized />,
+});
