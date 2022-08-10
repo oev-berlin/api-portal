@@ -9,12 +9,12 @@ on:
       - '**/*.md'
   push:
     branches:
-      - 'main'
+      - main
+      - development
 
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
-  STAGE: ${GITHUB_REF##*/}
 
 jobs:
   cache:
@@ -58,7 +58,6 @@ jobs:
   unit-tests:
     name: Unit Tests
     runs-on: ubuntu-latest
-    timeout-minutes: 15
     needs: [cache]
     steps:
       - name: Checkout repository
@@ -86,7 +85,7 @@ jobs:
 
   sonarcloud:
     name: SonarCloud
-    needs: [unit-tests]
+    needs: [lint, unit-tests]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -97,5 +96,5 @@ jobs:
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information, if any
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
