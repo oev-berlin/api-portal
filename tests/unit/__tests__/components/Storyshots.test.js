@@ -9,6 +9,7 @@ initStoryshots({
 initStoryshots({
   suite: 'Image snapshots',
   test: imageSnapshot({
+    testTimout: 30_0000,
     getCustomBrowser: async () => {
       const browser = await playwright.chromium.launch();
       const context = await browser.newContext({
