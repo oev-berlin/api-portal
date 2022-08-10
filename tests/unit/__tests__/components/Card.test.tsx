@@ -5,14 +5,16 @@ import React from 'react';
 import { Card } from '../../../../components/Card';
 // eslint-disable-next-line import/extensions
 import * as stories from '../../../../components/Button/Button.stories';
+import 'jest-styled-components';
 
 expect.extend(toHaveNoViolations);
 
-const setupComponent = () => render(
-  <Card imageSrc="/image.jpeg" imageAlt="imageAlt" title="Example">
-    Pseudo Text
-  </Card>,
-);
+const setupComponent = () =>
+  render(
+    <Card imageSrc="/image.jpeg" imageAlt="imageAlt" title="Example">
+      Pseudo Text
+    </Card>
+  );
 
 describe('Card', () => {
   afterEach(() => {

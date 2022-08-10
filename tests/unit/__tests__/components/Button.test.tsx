@@ -4,6 +4,7 @@ import { axe, toHaveNoViolations } from 'jest-axe';
 import * as stories from '../../../../components/Button/Button.stories';
 import { ButtonProps, CustomButton } from '../../../../components/Button';
 import userEvent from '@testing-library/user-event';
+import 'jest-styled-components';
 
 expect.extend(toHaveNoViolations);
 
