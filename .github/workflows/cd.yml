@@ -4,14 +4,12 @@ on:
   push:
     branches:
       - main
-      - staging
-      - development
     paths-ignore:
       - '**/*.md'
 
 env:
   STACK: frontend
-  PROJECT: template 
+  PROJECT: template
   KUBE_CONFIG: ${{ secrets.KUBE_CONFIG }}
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
