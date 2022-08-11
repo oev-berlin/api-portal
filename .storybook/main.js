@@ -11,7 +11,6 @@ module.exports = {
     '@storybook/addon-a11y',
     '@whitespace/storybook-addon-html',
     'storybook-dark-mode',
-    '@storybook/addon-storyshots-puppeteer',
   ],
   framework: '@storybook/react',
   core: {
