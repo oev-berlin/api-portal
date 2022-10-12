@@ -11,7 +11,8 @@
   },
   "definitions":{},
   "paths":{"//":
-  {"get":{"responses":{"200":{"description":"Default Response"}}}},"/pdf/generate":{"post":{"responses":{"200":{"description":"Default Response"}}}},"/offer/calculate":{"post":{"responses":{"200":{"description":"Default Response"}}}},"/offer/send":{"post":{"responses":{"200":{"description":"Default Response"}}}},"/partners/":{"get":{"responses":{"200":{"description":"Default Response"}}}},"/partners/{id}":{"get":{"responses":{"200":{"description":"Default Response"}}}}}},
+  {"get":{"responses":
+  {"200":{"description":"Default Response"}}}},"/pdf/generate":{"post":{"responses":{"200":{"description":"Default Response"}}}},"/offer/calculate":{"post":{"responses":{"200":{"description":"Default Response"}}}},"/offer/send":{"post":{"responses":{"200":{"description":"Default Response"}}}},"/partners/":{"get":{"responses":{"200":{"description":"Default Response"}}}},"/partners/{id}":{"get":{"responses":{"200":{"description":"Default Response"}}}}}},
 
 "docsType": "microservice",
   "microservices": ["email-service"],
