@@ -7,7 +7,7 @@ import { createSwaggerSpec } from 'next-swagger-doc';
 import dynamic from 'next/dynamic';
 import styles from '../styles/Home.module.css';
 import 'swagger-ui-react/swagger-ui.css';
-import something from '../public/example.json';
+import something from '../public/apis_docs/example.json';
 
 const SwaggerUI = dynamic<{
   spec: any;
@@ -50,7 +50,7 @@ const Home: NextPage = ({ spec }: any) => (
 
 export const getStaticProps: GetStaticProps = async () => {
   const spec: Record<string, any> = createSwaggerSpec({
-    definition: something,
+    definition: something.swaggerInformation,
   });
 
   return {

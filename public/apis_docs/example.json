@@ -1,0 +1,19 @@
+
+{
+  "id": "project-a",
+  "name": "Project A",
+  "description": "description of the project",
+"swaggerInformation":
+{"swagger":"2.0",
+  "info":
+  {
+    "title":"Example API"
+  },
+  "definitions":{},
+  "paths":{"//":
+  {"get":{"responses":{"200":{"description":"Default Response"}}}},"/pdf/generate":{"post":{"responses":{"200":{"description":"Default Response"}}}},"/offer/calculate":{"post":{"responses":{"200":{"description":"Default Response"}}}},"/offer/send":{"post":{"responses":{"200":{"description":"Default Response"}}}},"/partners/":{"get":{"responses":{"200":{"description":"Default Response"}}}},"/partners/{id}":{"get":{"responses":{"200":{"description":"Default Response"}}}}}},
+
+"docsType": "backend",
+  "microservices": ["email-service"],
+  "externalServices": ["WRZRechner"]
+}
