@@ -9,12 +9,11 @@ import 'jest-styled-components';
 
 expect.extend(toHaveNoViolations);
 
-const setupComponent = () =>
-  render(
-    <Card imageSrc="/image.jpeg" imageAlt="imageAlt" title="Example">
-      Pseudo Text
-    </Card>
-  );
+const setupComponent = () => render(
+  <Card imageSrc="/image.jpeg" imageAlt="imageAlt" title="Example">
+    Pseudo Text
+  </Card>,
+);
 
 describe('Card', () => {
   afterEach(() => {

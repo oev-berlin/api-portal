@@ -1,0 +1,36 @@
+swagger: "2.0"
+info:
+  version: 8.0.0
+  title: "@fastify/swagger"
+definitions: {}
+paths:
+  //:
+    get:
+      responses:
+        "200":
+          description: Default Response
+  /pdf/generate:
+    post:
+      responses:
+        "200":
+          description: Default Response
+  /offer/calculate:
+    post:
+      responses:
+        "200":
+          description: Default Response
+  /offer/send:
+    post:
+      responses:
+        "200":
+          description: Default Response
+  /partners/:
+    get:
+      responses:
+        "200":
+          description: Default Response
+  "/partners/{id}":
+    get:
+      responses:
+        "200":
+          description: Default Response

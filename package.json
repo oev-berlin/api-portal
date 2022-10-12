@@ -26,9 +26,11 @@
     "husky": "^7.0.4",
     "jest-styled-components": "^7.1.0",
     "next": "12.1.0",
+    "next-swagger-doc": "^0.3.6",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "styled-components": "^5.3.3"
+    "styled-components": "^5.3.3",
+    "swagger-ui-react": "^4.14.3"
   },
   "devDependencies": {
     "@babel/core": "^7.17.5",
@@ -59,6 +61,7 @@
     "@types/pngjs": "^6.0.1",
     "@types/react": "17.0.39",
     "@types/styled-components": "^5.1.23",
+    "@types/swagger-ui-react": "^4.11.0",
     "@typescript-eslint/eslint-plugin": "^5.12.1",
     "@typescript-eslint/parser": "^5.12.1",
     "@whitespace/storybook-addon-html": "^5.0.0",
