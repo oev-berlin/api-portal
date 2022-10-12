@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Snapshots Tests Button should match a basic snapshot 1`] = `
+<div>
+  <button
+    class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButtonBase-root  css-11qr2p8-MuiButtonBase-root-MuiButton-root"
+    tabindex="0"
+    type="submit"
+  >
+    children
+    <span
+      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+    />
+  </button>
+</div>
+`;
+
+exports[`Button Snapshots Tests Button should match a contained button snapshot 1`] = `
+<div>
+  <button
+    class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButtonBase-root  css-11qr2p8-MuiButtonBase-root-MuiButton-root"
+    tabindex="0"
+    type="submit"
+  >
+    children
+    <span
+      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+    />
+  </button>
+</div>
+`;
+
+exports[`Button Snapshots Tests Button should match a disabled button snapshot 1`] = `
+<div>
+  <button
+    class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButtonBase-root Mui-disabled  css-11qr2p8-MuiButtonBase-root-MuiButton-root"
+    disabled=""
+    tabindex="-1"
+    type="submit"
+  >
+    children
+  </button>
+</div>
+`;
+
+exports[`Button Snapshots Tests Button should match a outlined button snapshot 1`] = `
+<div>
+  <button
+    class="MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButtonBase-root  css-1k23hlb-MuiButtonBase-root-MuiButton-root"
+    tabindex="0"
+    type="submit"
+  >
+    children
+    <span
+      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+    />
+  </button>
+</div>
+`;
+
+exports[`Button Snapshots Tests Button should match a text button snapshot 1`] = `
+<div>
+  <button
+    class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButtonBase-root  css-1knaqv7-MuiButtonBase-root-MuiButton-root"
+    tabindex="0"
+    type="submit"
+  >
+    children
+    <span
+      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+    />
+  </button>
+</div>
+`;
