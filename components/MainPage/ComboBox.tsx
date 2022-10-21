@@ -1,13 +1,13 @@
 import {Autocomplete, TextField} from "@mui/material";
-import {projects} from "./Data";
 
-export default function ComboBox (options:string[]){
+export default function ComboBox(options: string[]) {
+    // ToDo: ComboBox Funktionalitaet implementieren.
     return (
         <Autocomplete
             disablePortal
             id="combo-box-demo"
             options={options}
-            sx={{maxWidth:0.5, mx: "auto", my:4}}
+            sx={{width: 0.5, mx: "auto", my: 4}}
             renderInput={(params) => <TextField {...params} label="Project"/>}
         />);
 }

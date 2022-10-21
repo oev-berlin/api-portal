@@ -12,7 +12,7 @@ interface projectData {
 
 interface columnData {
     name: string,
-    projects: JSON[]
+    projects: projectData[]
 }
 
 export {projectData, columnData};
