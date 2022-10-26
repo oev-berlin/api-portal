@@ -1,13 +1,13 @@
 import {Grid} from "@mui/material";
-import {ProjectCard} from "../Card";
+import {Card} from "../Card";
 import {ColumnContainer, ColumnTitle} from "./styles";
 import {columnData} from "./interfaces";
 import {projectData} from "../../utils/interfaces";
 
-export const ProjectsColumn = ({projects,name}:columnData ) => {
+export const Column = ({projects,name}:columnData ) => {
 
     return (
-        <ColumnContainer xs={12} md={5.5} item container>
+        <ColumnContainer xs={12} md={6} item container>
             <Grid xs={10} item>
                 <ColumnTitle>
                     {name}
@@ -17,7 +17,7 @@ export const ProjectsColumn = ({projects,name}:columnData ) => {
                 {
                     projects.map((project:projectData) =>
                         (
-                            <ProjectCard
+                            <Card
                                 projectData={project}
                                 key={project.id}
                             />

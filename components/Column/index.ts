@@ -1,3 +1,3 @@
-import {ProjectsColumn} from "./ProjectsColumn";
+import {Column} from "./Column";
 
-export {ProjectsColumn};
+export {Column};

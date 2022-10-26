@@ -1,3 +1,3 @@
-import {ProjectCard} from "./ProjectCard";
+import {Card} from "./Card";
 
-export {ProjectCard}
+export {Card}

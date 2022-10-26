@@ -1,12 +1,17 @@
 import {styled} from "@mui/system";
-import {Card} from "@mui/material";
+import {Card, Grid} from "@mui/material";
 
-export const ProjectTitle = styled("h3")({
-    textAlign: "left",
-    paddingLeft: "0.5rem",
-    text_transform: "none"
-});
+export const CardTitle = styled("h3")`
+  text-align: left;
+  padding-left: 0.5rem;
+  text-transform: none;
+`;
 
-export const ProjectContainer = styled(Card)({
-    marginBottom: "1rem",
-})
+export const CardOuterContainer = styled(Card)`
+  margin-bottom: 1rem;
+`;
+
+export const CardInnerContainer = styled(Grid)`
+  padding: 1rem;
+  flex-wrap: wrap;
+`;

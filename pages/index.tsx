@@ -2,9 +2,9 @@ import {Header} from "../meta/Header";
 import React, {useMemo} from "react";
 import fs from "fs";
 import path from "path";
-import {ProjectsColumn} from "../components/Column";
+import {Column} from "../components/Column";
 import {MainPageInnerContainer, MainPageOuterContainer, MainPageTitle} from "../styles/pages/main/styles";
-import {projectData} from "../utils/interfaces";
+import {projectData, filterBy} from "../utils/interfaces";
 
 interface AppProps{
     projectsData: projectData[]
@@ -12,20 +12,16 @@ interface AppProps{
 
 export default function App({projectsData}: AppProps){
     const data = useMemo( () => projectsData, [projectsData])
-    const microservices: projectData[] = data.filter((obj:projectData) => {
-        return obj.docsType === "microservice";
-    } );
-    const backendProjects: projectData[] = data.filter((obj:projectData) => {
-        return obj.docsType === "backend";
-    } );
+    const backendProjects: projectData[] = filterBy(data,"backend");
+    const microservices: projectData[] = filterBy(data, "microservice");
     return(
         <>
             <Header/>
             <MainPageOuterContainer xs={12}>
                 <MainPageTitle>Swagger API</MainPageTitle>
                 <MainPageInnerContainer container>
-                    <ProjectsColumn projects={backendProjects} name={"Backend"} key={"backend"}/>
-                    <ProjectsColumn projects={microservices}  name={"Microservices"} key={"microservices"}/>
+                    <Column projects={backendProjects} name={"Backend"} key={"backend"}/>
+                    <Column projects={microservices} name={"Microservices"} key={"microservices"}/>
                 </MainPageInnerContainer>
             </MainPageOuterContainer>
         </>
