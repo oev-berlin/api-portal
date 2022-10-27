@@ -1,4 +1,4 @@
-import {styled} from "@mui/system";
+import styled from "styled-components";
 import {Card, Grid} from "@mui/material";
 
 export const CardTitle = styled("h3")`

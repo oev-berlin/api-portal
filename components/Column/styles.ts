@@ -1,4 +1,4 @@
-import {styled} from "@mui/system";
+import styled from "styled-components";
 import {Grid} from "@mui/material";
 
 export const ColumnContainer = styled(Grid)`
@@ -7,7 +7,7 @@ export const ColumnContainer = styled(Grid)`
   border: solid;
 `;
 
-export const ColumnTitle = styled("h2")`
+export const ColumnTitle = styled.h2`
   margin: 1rem;
   text-align: center;
 `;
