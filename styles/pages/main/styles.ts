@@ -1,4 +1,4 @@
-import {styled} from "@mui/system";
+import styled from "styled-components";
 import {Box, Grid} from "@mui/material";
 
 const MainPageOuterContainer = styled(Box)`
@@ -13,7 +13,7 @@ const MainPageInnerContainer = styled(Grid)`
     justify-content: space-between;
   }
 `;
-const MainPageTitle = styled("h1")`
+const MainPageTitle = styled.h1`
   text-align: center;
   padding-left: 0.5rem;
   margin-bottom: 5rem;

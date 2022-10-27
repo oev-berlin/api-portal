@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {Card, Grid} from "@mui/material";
 
-export const CardTitle = styled("h3")`
+export const CardTitle = styled.h3`
   text-align: left;
   padding-left: 0.5rem;
   text-transform: none;
