@@ -1,7 +1,7 @@
 {
-  "id": "microservice-b",
-  "name": "Microservice B",
-  "description": "description of the micro service",
+  "id": "project-c",
+  "name": "Project C",
+  "description": "description of the project",
   "swaggerInformation": {
     "swagger": "2.0",
     "info": {
@@ -65,9 +65,9 @@
       }
     }
   },
-  "docsType": "microservice",
+  "docsType": "backend",
   "microservices": [
-    "email-service"
+    "email-service", "PDF Service"
   ],
   "externalServices": [
     "WRZRechner"

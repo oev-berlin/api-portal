@@ -1,6 +1,6 @@
 {
-  "id": "microservice-b",
-  "name": "Microservice B",
+  "id": "microservice-d",
+  "name": "Microservice D",
   "description": "description of the micro service",
   "swaggerInformation": {
     "swagger": "2.0",
