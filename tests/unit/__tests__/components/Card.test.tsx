@@ -1,62 +1,110 @@
-import { render, cleanup, waitFor } from '@testing-library/react';
-import { axe, toHaveNoViolations } from 'jest-axe';
-import { composeStories } from '@storybook/testing-react';
+import {render, cleanup} from '@testing-library/react';
+import {toHaveNoViolations} from 'jest-axe';
 import React from 'react';
-import { Card } from '../../../../components/Card';
+import {Card} from '../../../../components/Card';
+import {createProjectData, projectData} from '../../../../utils/interfaces'
 // eslint-disable-next-line import/extensions
-import * as stories from '../../../../components/Button/Button.stories';
 import 'jest-styled-components';
 
 expect.extend(toHaveNoViolations);
 
-const setupComponent = () => render(
-  <Card imageSrc="/image.jpeg" imageAlt="imageAlt" title="Example">
-    Pseudo Text
-  </Card>,
+const setupComponent = ({projectData}: { projectData: projectData }) => render(
+    <Card projectData={projectData}
+    />,
 );
 
 describe('Card', () => {
-  afterEach(() => {
-    cleanup();
-  });
-
-  describe('Accessibility', () => {
-    const ComposedStories = composeStories(stories);
-
-    Object.keys(ComposedStories).forEach((storyName) => {
-      const ComposedStory = ComposedStories[storyName];
-
-      // Run axe
-      it(`${storyName} should have no accessibility violations`, async () => {
-        const { container } = render(<ComposedStory />);
-        const results = await waitFor(() => axe(container));
-        expect(results).toHaveNoViolations();
-      });
+    afterEach(() => {
+        cleanup();
     });
-  });
 
-  describe('UI Tests', () => {
-    it('Card component should render without crashing', async () => {
-      const screen = setupComponent();
-      expect(screen.container).toBeDefined();
+    describe('UI Tests', () => {
+        it('Card component (type microservice) should render without crashing', async () => {
+            const screen = setupComponent({
+                projectData: createProjectData({
+                    docsType: "microservice",
+                })
+            });
+            expect(screen.container).toBeDefined();
+        });
+
+        it('Card component (type backend) should render without crashing', async () => {
+            const screen = setupComponent({
+                projectData: createProjectData({
+                    docsType: "backend",
+                })
+            });
+            expect(screen.container).toBeDefined();
+        });
+
+        it('Card component (without microservices) should render without crashing', async () => {
+            const screen = setupComponent({
+                projectData: createProjectData({
+                    microservices: [],
+                })
+            });
+            expect(screen.container).toBeDefined();
+        });
+        it('Card component (without external services) should render without crashing', async () => {
+            const screen = setupComponent({
+                projectData: createProjectData({
+                    externalServices: []
+                })
+            });
+            expect(screen.container).toBeDefined();
+        });
+
+        it('Card component should render correctly', async () => {
+            const screen = setupComponent({
+                projectData: createProjectData({})
+            });
+            await screen
+                .findByText(/Test Project/)
+                .then((element) => expect(element).toBeInTheDocument());
+            await screen
+                .findByText(/PDF Service/)
+                .then((element) => expect(element).toBeInTheDocument());
+            await screen
+                .findByText(/Email Service/)
+                .then((element) => expect(element).toBeInTheDocument());
+        });
     });
-    it('Card component should render correctly', async () => {
-      const screen = setupComponent();
 
-      await screen
-        .findByRole('heading', { level: 3 })
-        .then((title) => expect(title).toHaveTextContent(/Example/));
+    describe('Snapshots Tests', () => {
+        it('should match a basic snapshot (type microservice)', () => {
+            const {container} = setupComponent({
+                projectData: createProjectData({
+                    docsType: "microservice",
+                })
+            });
+            expect(container).toMatchSnapshot();
+        });
 
-      await screen
-        .findByAltText('imageAlt')
-        .then((image) => expect(image).toBeInTheDocument());
+        it('should match a basic snapshot (type backend)', () => {
+            const {container} = setupComponent({
+                projectData: createProjectData({
+                    docsType: "backend",
+                })
+            });
+            expect(container).toMatchSnapshot();
+        });
+
+        it('should match a basic snapshot (without microservices)', () => {
+            const {container} = setupComponent({
+                projectData: createProjectData({
+                    microservices: [],
+                })
+            });
+            expect(container).toMatchSnapshot();
+        });
+
+        it('should match a basic snapshot (without external services)', () => {
+            const {container} = setupComponent({
+                projectData: createProjectData({
+                    externalServices: []
+                })
+            });
+            expect(container).toMatchSnapshot();
+        });
     });
-  });
-
-  describe('Snapshots Tests', () => {
-    it('should match a basic snapshot', () => {
-      const { container } = setupComponent();
-      expect(container).toMatchSnapshot();
-    });
-  });
 });
