@@ -146,6 +146,56 @@ exports[`Home Snapshots Tests should match a basic snapshot (with backend and mi
 </div>
 `;
 
+exports[`Home Snapshots Tests should match a basic snapshot (without any project) 1`] = `
+<div>
+  <div
+    class="sc-gKclnd httBzk MuiBox-root css-0"
+  >
+    <h1
+      class="sc-furwcr OIXHe"
+    >
+      Swagger API
+    </h1>
+    <div
+      class="MuiGrid-root MuiGrid-container sc-iCfMLu dTCvwJ css-11lq3yg-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 sc-eCImPb gVjbCp css-18kb45e-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 css-17p3wh3-MuiGrid-root"
+        >
+          <h2
+            class="sc-jRQBWg fUKCFJ"
+          >
+            Backend
+          </h2>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 css-17p3wh3-MuiGrid-root"
+        />
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 sc-eCImPb gVjbCp css-18kb45e-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 css-17p3wh3-MuiGrid-root"
+        >
+          <h2
+            class="sc-jRQBWg fUKCFJ"
+          >
+            Microservices
+          </h2>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 css-17p3wh3-MuiGrid-root"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Home Snapshots Tests should match a basic snapshot (without backend projects) 1`] = `
 <div>
   <div
