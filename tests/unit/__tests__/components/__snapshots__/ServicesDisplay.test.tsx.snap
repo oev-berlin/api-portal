@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ServicesDisplay Snapshots Tests should match a basic snapshot (type external, services is empty) 1`] = `
+exports[`ServicesDisplay Snapshots Tests should match a basic snapshot (services is empty) 1`] = `
 .c1 {
   margin: 1rem;
 }
@@ -23,6 +23,37 @@ exports[`ServicesDisplay Snapshots Tests should match a basic snapshot (type ext
   >
     External Services
   </h2>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 c1 css-ee20y-MuiPaper-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 c2 css-mhc70k-MuiGrid-root"
+    />
+  </div>
+</div>
+`;
+
+exports[`ServicesDisplay Snapshots Tests should match a basic snapshot (title and services are empty) 1`] = `
+.c1 {
+  margin: 1rem;
+}
+
+.c2 {
+  padding: 1rem;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c0 {
+  text-align: left;
+  margin-left: 2rem;
+}
+
+<div>
+  <h2
+    class="c0"
+  />
   <div
     class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 c1 css-ee20y-MuiPaper-root"
   >
@@ -123,39 +154,6 @@ exports[`ServicesDisplay Snapshots Tests should match a basic snapshot (type ext
         </div>
       </div>
     </div>
-  </div>
-</div>
-`;
-
-exports[`ServicesDisplay Snapshots Tests should match a basic snapshot (type internal, services is empty) 1`] = `
-.c1 {
-  margin: 1rem;
-}
-
-.c2 {
-  padding: 1rem;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.c0 {
-  text-align: left;
-  margin-left: 2rem;
-}
-
-<div>
-  <h2
-    class="c0"
-  >
-    Internal Services
-  </h2>
-  <div
-    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 c1 css-ee20y-MuiPaper-root"
-  >
-    <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 c2 css-mhc70k-MuiGrid-root"
-    />
   </div>
 </div>
 `;

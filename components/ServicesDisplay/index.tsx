@@ -1,3 +1,3 @@
-import {ServicesDisplay} from "./ServicesDisplay";
+import { ServicesDisplay } from './ServicesDisplay';
 
-export {ServicesDisplay};
+export { ServicesDisplay };
