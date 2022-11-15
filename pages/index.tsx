@@ -1,52 +1,45 @@
-import {Header} from "../meta/Header";
-import React, {useMemo} from "react";
-import fs from "fs";
-import path from "path";
-import {Column} from "../components/Column";
-import {MainPageInnerContainer, MainPageOuterContainer, MainPageTitle} from "../styles/pages/main/styles";
-import {projectData, filterBy} from "../utils/interfaces";
+import React, { useEffect, useContext } from 'react';
+
+import { Header } from '../meta/Header';
+import { Column } from '../components/Column';
+import { MainPageInnerContainer, MainPageOuterContainer, MainPageTitle } from '../styles/pages/main/styles';
+import { projectData, filterBy } from '../utils/interfaces';
+import { projectsContext, ContextProps } from '../context/ProjectsContext';
+import { fetchProjectsData } from '../utils/functions';
 
 interface AppProps{
     projectsData: projectData[]
 }
 
-export default function App({projectsData}: AppProps){
-    const data = useMemo( () => projectsData, [projectsData])
-    const backendProjects: projectData[] = filterBy(data,"backend");
-    const microservices: projectData[] = filterBy(data, "microservice");
-    return(
-        <>
-            <Header/>
-            <MainPageOuterContainer xs={12}>
-                <MainPageTitle>Swagger API</MainPageTitle>
-                <MainPageInnerContainer container>
-                    <Column projects={backendProjects} name={"Backend"} key={"backend"}/>
-                    <Column projects={microservices} name={"Microservices"} key={"microservices"}/>
-                </MainPageInnerContainer>
-            </MainPageOuterContainer>
-        </>
-     )
-};
-
-export async function getStaticProps(){
-    const projectsFiles =  fs.readdirSync('./public/apis_docs/').filter(file => path.extname(file) === '.json');
-    const projectsData:JSON[] = projectsFiles.map(projectFile => {
-        try{
-            const projectData = fs.readFileSync(path.join("./public/apis_docs/", projectFile));
-            const projectDataJSON : JSON = JSON.parse(projectData.toString());
-            return projectDataJSON;}
-        catch (err){
-            console.log(err);
-        }
-    });
-
-     return {
-        props: {
-            projectsData
-        }
+export default function App({ projectsData }: AppProps) {
+  const { projects, setProjects }:ContextProps = useContext(projectsContext);
+  useEffect(() => {
+    if (setProjects) {
+      setProjects(projectsData);
     }
+  }, []);
+
+  const backendProjects: projectData[] = filterBy(projects, 'backend');
+  const microservices: projectData[] = filterBy(projects, 'microservice');
+  return (
+    <>
+      <Header />
+      <MainPageOuterContainer xs={12}>
+        <MainPageTitle>Swagger API</MainPageTitle>
+        <MainPageInnerContainer container>
+          <Column projects={backendProjects} name="Backend" key="backend" />
+          <Column projects={microservices} name="Microservices" key="microservices" />
+        </MainPageInnerContainer>
+      </MainPageOuterContainer>
+    </>
+  );
 }
 
-
-
-
+export async function getStaticProps() {
+  const projectsData : projectData[] = fetchProjectsData();
+  return {
+    props: {
+      projectsData,
+    },
+  };
+}

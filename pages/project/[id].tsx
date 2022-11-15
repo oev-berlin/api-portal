@@ -1,52 +1,48 @@
-import React from 'react';
-import {projectData} from "../../utils/interfaces";
-import fs from "fs";
-import path from "path";
+import React, { useContext, useEffect, useState } from 'react';
+import { projectData } from '../../utils/interfaces';
+import { ContextProps, projectsContext } from '../../context/ProjectsContext';
+import { fetchProjectsData } from '../../utils/functions';
 
 export async function getStaticPaths() {
-    const projectsFiles = fs.readdirSync('./public/apis_docs/').filter(file => path.extname(file) === '.json');
-    const projectsData: JSON[] = projectsFiles.map(projectFile => {
-        try {
-            const projectData = fs.readFileSync(path.join("./public/apis_docs/", projectFile));
-            const projectDataJSON: JSON = JSON.parse(projectData.toString());
-            return projectDataJSON;
-        } catch (err) {
-            console.log(err);
-        }
-    });
-
-    const paths = projectsData.map((project) =>{
-        return{
-            params:{id: project["id"]}
-        }
-    })
-    return {
-        paths: paths,
-        fallback: false, // can also be true or 'blocking'
-    }
+  const projectsData: projectData[] = fetchProjectsData();
+  const paths = projectsData.map((project) => ({
+    params: { id: project.id },
+  }));
+  return {
+    paths,
+    fallback: false,
+  };
 }
+
 export const getStaticProps = async (context) => {
-    const projectsFiles = fs.readdirSync('./public/apis_docs/').filter(file => path.extname(file) === '.json');
-    const projectsData: projectData[] = projectsFiles.map(projectFile => {
-        try {
-            const projectData = fs.readFileSync(path.join("./public/apis_docs/", projectFile));
-            const projectDataJSON: projectData = JSON.parse(projectData.toString());
-            return projectDataJSON;
-        } catch (err) {
-            console.log(err);
-        }
-    });
-    const foundProject:projectData = projectsData.find((project:projectData)=> project.id == context.params.id);
-    return{
-        props: {finalProject: foundProject}
-    }
-}
+  const projectsData = fetchProjectsData();
+  return {
+    props: {
+      projectsData,
+      id: context.params.id,
+    },
+  };
+};
 
-export default function App({finalProject}:{finalProject: projectData}) {
-    return (<>
-        <h1>{finalProject.name}</h1>
-        <h1>{finalProject.description}</h1>
-        <h1>{finalProject.externalServices}</h1>
-        <h1>{finalProject.microservices}</h1>
-    </>);
+export default function App({ id, projectsData }: { id: string, projectsData: projectData[]}) {
+  const { projects, setProjects }:ContextProps = useContext(projectsContext);
+  const [project, setProject] = useState<projectData | null>(null);
+  useEffect(() => {
+    if (!projects) {
+      if (setProjects) {
+        setProjects(projectsData);
+      }
+    }
+    const project: projectData = projectsData.find((project: projectData) => project.id === id);
+    setProject(project);
+  }, []);
+
+  return (
+    <>
+      <h1>{project?.name}</h1>
+      <h1>{project?.description}</h1>
+      <h1>{project?.externalServices}</h1>
+      <h1>{project?.microservices}</h1>
+    </>
+  );
 }
