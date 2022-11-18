@@ -3,9 +3,9 @@ import { CardActionArea, Button } from '@mui/material';
 import Link from 'next/link';
 import { Microservice } from './fragments';
 import { CardOuterContainer, CardTitle, CardInnerContainer } from './styles';
-import { projectData } from '../../utils/interfaces';
+import { CardProps } from './interfaces';
 
-export function Card({ projectData }: projectData) {
+export function Card({ projectData }: CardProps) {
   return (
     <Link passHref href={`/project/${projectData.id}`}>
       <CardOuterContainer>

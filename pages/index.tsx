@@ -1,13 +1,14 @@
-import React, { useEffect, useContext } from 'react';
-
+import React, { useEffect, useContext, useCallback } from 'react';
 import { Header } from '../meta/Header';
 import { Column } from '../components/Column';
 import { MainPageInnerContainer, MainPageOuterContainer, MainPageTitle } from '../styles/pages/main/styles';
-import { projectData, filterBy } from '../utils/interfaces';
+import { projectData } from '../utils/interfaces';
+import { filterBy } from '../utils/fileSystemUtilities';
 import { projectsContext, ContextProps } from '../context/ProjectsContext';
 import { fetchProjectsData } from '../utils/functions';
+import { docType } from '../utils/types';
 
-interface AppProps{
+interface AppProps {
     projectsData: projectData[]
 }
 
@@ -19,16 +20,16 @@ export default function App({ projectsData }: AppProps) {
     }
   }, []);
 
-  const backendProjects: projectData[] = filterBy(projects, 'backend');
-  const microservices: projectData[] = filterBy(projects, 'microservice');
+  const filterProjects = useCallback((type: docType) => filterBy(projects, type), [projects]);
+
   return (
     <>
       <Header />
-      <MainPageOuterContainer xs={12}>
+      <MainPageOuterContainer>
         <MainPageTitle>Swagger API</MainPageTitle>
         <MainPageInnerContainer container>
-          <Column projects={backendProjects} name="Backend" key="backend" />
-          <Column projects={microservices} name="Microservices" key="microservices" />
+          <Column projects={filterProjects('backend')} name="Backend" key="backend" />
+          <Column projects={filterProjects('microservice')} name="Microservices" key="microservices" />
         </MainPageInnerContainer>
       </MainPageOuterContainer>
     </>
