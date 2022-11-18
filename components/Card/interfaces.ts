@@ -1,4 +1,4 @@
-import {projectData} from "../../utils/interfaces";
+import { projectData } from '../../utils/interfaces';
 
 interface MicroServiceProps{
     serviceName: string
@@ -8,4 +8,4 @@ interface CardProps{
     projectData: projectData
 }
 
-export {MicroServiceProps, CardProps}
+export type { MicroServiceProps, CardProps };

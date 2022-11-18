@@ -1,4 +1,5 @@
-import {Column} from "./Column";
-import {ColumnProps} from "./interfaces";
+import { Column } from './Column';
+import { ColumnProps } from './interfaces';
 
-export {Column, ColumnProps};
+export { Column };
+export type { ColumnProps };
