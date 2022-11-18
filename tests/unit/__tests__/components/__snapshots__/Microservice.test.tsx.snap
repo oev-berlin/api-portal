@@ -3,10 +3,10 @@
 exports[`Microservice Snapshots Tests should match a basic snapshot (with correct name) 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-6 MuiGrid-grid-lg-4 css-xp56uf-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-6 MuiGrid-grid-lg-4 css-13i4rnv-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 sc-bdvvtL khfPQh css-1ps6pg7-MuiPaper-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 styles__MicroserviceContainer-sc-k2frft-0 dLKXqv css-1ps6pg7-MuiPaper-root"
     >
       TestMicroservice
     </div>
@@ -17,10 +17,10 @@ exports[`Microservice Snapshots Tests should match a basic snapshot (with correc
 exports[`Microservice Snapshots Tests should match a basic snapshot (with empty name) 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-6 MuiGrid-grid-lg-4 css-xp56uf-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-6 MuiGrid-grid-lg-4 css-13i4rnv-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 sc-bdvvtL khfPQh css-1ps6pg7-MuiPaper-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 styles__MicroserviceContainer-sc-k2frft-0 dLKXqv css-1ps6pg7-MuiPaper-root"
     />
   </div>
 </div>
