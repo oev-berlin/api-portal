@@ -1,8 +1,8 @@
 import {projectData} from "../../utils/interfaces";
 
-interface columnData {
+interface ColumnProps {
     name: string,
     projects: projectData[],
 }
 
-export {columnData};
+export {ColumnProps};

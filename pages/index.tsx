@@ -4,7 +4,8 @@ import path from 'path';
 import { Header } from '../meta/Header';
 import { Column } from '../components/Column';
 import { MainPageInnerContainer, MainPageOuterContainer, MainPageTitle } from '../styles/pages/main/styles';
-import { projectData, filterBy } from '../utils/interfaces';
+import { projectData } from '../utils/interfaces';
+import { filterBy } from '../utils/testingUtils';
 
 interface AppProps{
     projectsData: projectData[]

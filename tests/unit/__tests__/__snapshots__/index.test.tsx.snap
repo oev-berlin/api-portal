@@ -1,0 +1,393 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Snapshots Tests should match a basic snapshot (with backend and microservice projects) 1`] = `
+<div>
+  <div
+    class="sc-gKclnd httBzk MuiBox-root css-0"
+  >
+    <h1
+      class="sc-furwcr OIXHe"
+    >
+      Swagger API
+    </h1>
+    <div
+      class="MuiGrid-root MuiGrid-container sc-iCfMLu dTCvwJ css-11lq3yg-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 sc-eCImPb gVjbCp css-18kb45e-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 css-17p3wh3-MuiGrid-root"
+        >
+          <h2
+            class="sc-jRQBWg fUKCFJ"
+          >
+            Backend
+          </h2>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 css-17p3wh3-MuiGrid-root"
+        >
+          <div
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root sc-dkPtRN bPJxQK css-bhp9pd-MuiPaper-root-MuiCard-root"
+          >
+            <button
+              class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root MuiButtonBase-root MuiCardActionArea-root css-1hu6zam-MuiButtonBase-root-MuiButton-root-MuiButtonBase-root-MuiCardActionArea-root"
+              role="button"
+              tabindex="0"
+              type="button"
+            >
+              <h3
+                class="sc-gsDKAQ hCuveX"
+              >
+                Test Project2
+              </h3>
+              <div
+                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 sc-hKwDye eSFnFF css-mhc70k-MuiGrid-root"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-6 MuiGrid-grid-lg-4 css-xp56uf-MuiGrid-root"
+                >
+                  <div
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 sc-bdvvtL khfPQh css-1ps6pg7-MuiPaper-root"
+                  >
+                    PDF Service
+                  </div>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-6 MuiGrid-grid-lg-4 css-xp56uf-MuiGrid-root"
+                >
+                  <div
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 sc-bdvvtL khfPQh css-1ps6pg7-MuiPaper-root"
+                  >
+                    Email Service
+                  </div>
+                </div>
+              </div>
+              <span
+                class="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
+              />
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 sc-eCImPb gVjbCp css-18kb45e-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 css-17p3wh3-MuiGrid-root"
+        >
+          <h2
+            class="sc-jRQBWg fUKCFJ"
+          >
+            Microservices
+          </h2>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 css-17p3wh3-MuiGrid-root"
+        >
+          <div
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root sc-dkPtRN bPJxQK css-bhp9pd-MuiPaper-root-MuiCard-root"
+          >
+            <button
+              class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root MuiButtonBase-root MuiCardActionArea-root css-1hu6zam-MuiButtonBase-root-MuiButton-root-MuiButtonBase-root-MuiCardActionArea-root"
+              role="button"
+              tabindex="0"
+              type="button"
+            >
+              <h3
+                class="sc-gsDKAQ hCuveX"
+              >
+                Test Project1
+              </h3>
+              <div
+                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 sc-hKwDye eSFnFF css-mhc70k-MuiGrid-root"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-6 MuiGrid-grid-lg-4 css-xp56uf-MuiGrid-root"
+                >
+                  <div
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 sc-bdvvtL khfPQh css-1ps6pg7-MuiPaper-root"
+                  >
+                    PDF Service
+                  </div>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-6 MuiGrid-grid-lg-4 css-xp56uf-MuiGrid-root"
+                >
+                  <div
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 sc-bdvvtL khfPQh css-1ps6pg7-MuiPaper-root"
+                  >
+                    Email Service
+                  </div>
+                </div>
+              </div>
+              <span
+                class="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
+              />
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Home Snapshots Tests should match a basic snapshot (without any project) 1`] = `
+<div>
+  <div
+    class="sc-gKclnd httBzk MuiBox-root css-0"
+  >
+    <h1
+      class="sc-furwcr OIXHe"
+    >
+      Swagger API
+    </h1>
+    <div
+      class="MuiGrid-root MuiGrid-container sc-iCfMLu dTCvwJ css-11lq3yg-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 sc-eCImPb gVjbCp css-18kb45e-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 css-17p3wh3-MuiGrid-root"
+        >
+          <h2
+            class="sc-jRQBWg fUKCFJ"
+          >
+            Backend
+          </h2>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 css-17p3wh3-MuiGrid-root"
+        />
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 sc-eCImPb gVjbCp css-18kb45e-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 css-17p3wh3-MuiGrid-root"
+        >
+          <h2
+            class="sc-jRQBWg fUKCFJ"
+          >
+            Microservices
+          </h2>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 css-17p3wh3-MuiGrid-root"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Home Snapshots Tests should match a basic snapshot (without backend projects) 1`] = `
+<div>
+  <div
+    class="sc-gKclnd httBzk MuiBox-root css-0"
+  >
+    <h1
+      class="sc-furwcr OIXHe"
+    >
+      Swagger API
+    </h1>
+    <div
+      class="MuiGrid-root MuiGrid-container sc-iCfMLu dTCvwJ css-11lq3yg-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 sc-eCImPb gVjbCp css-18kb45e-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 css-17p3wh3-MuiGrid-root"
+        >
+          <h2
+            class="sc-jRQBWg fUKCFJ"
+          >
+            Backend
+          </h2>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 css-17p3wh3-MuiGrid-root"
+        />
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 sc-eCImPb gVjbCp css-18kb45e-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 css-17p3wh3-MuiGrid-root"
+        >
+          <h2
+            class="sc-jRQBWg fUKCFJ"
+          >
+            Microservices
+          </h2>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 css-17p3wh3-MuiGrid-root"
+        >
+          <div
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root sc-dkPtRN bPJxQK css-bhp9pd-MuiPaper-root-MuiCard-root"
+          >
+            <button
+              class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root MuiButtonBase-root MuiCardActionArea-root css-1hu6zam-MuiButtonBase-root-MuiButton-root-MuiButtonBase-root-MuiCardActionArea-root"
+              role="button"
+              tabindex="0"
+              type="button"
+            >
+              <h3
+                class="sc-gsDKAQ hCuveX"
+              >
+                Test Project1
+              </h3>
+              <div
+                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 sc-hKwDye eSFnFF css-mhc70k-MuiGrid-root"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-6 MuiGrid-grid-lg-4 css-xp56uf-MuiGrid-root"
+                >
+                  <div
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 sc-bdvvtL khfPQh css-1ps6pg7-MuiPaper-root"
+                  >
+                    PDF Service
+                  </div>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-6 MuiGrid-grid-lg-4 css-xp56uf-MuiGrid-root"
+                >
+                  <div
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 sc-bdvvtL khfPQh css-1ps6pg7-MuiPaper-root"
+                  >
+                    Email Service
+                  </div>
+                </div>
+              </div>
+              <span
+                class="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
+              />
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Home Snapshots Tests should match a basic snapshot (without microservice projects) 1`] = `
+<div>
+  <div
+    class="sc-gKclnd httBzk MuiBox-root css-0"
+  >
+    <h1
+      class="sc-furwcr OIXHe"
+    >
+      Swagger API
+    </h1>
+    <div
+      class="MuiGrid-root MuiGrid-container sc-iCfMLu dTCvwJ css-11lq3yg-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 sc-eCImPb gVjbCp css-18kb45e-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 css-17p3wh3-MuiGrid-root"
+        >
+          <h2
+            class="sc-jRQBWg fUKCFJ"
+          >
+            Backend
+          </h2>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 css-17p3wh3-MuiGrid-root"
+        >
+          <div
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root sc-dkPtRN bPJxQK css-bhp9pd-MuiPaper-root-MuiCard-root"
+          >
+            <button
+              class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root MuiButtonBase-root MuiCardActionArea-root css-1hu6zam-MuiButtonBase-root-MuiButton-root-MuiButtonBase-root-MuiCardActionArea-root"
+              role="button"
+              tabindex="0"
+              type="button"
+            >
+              <h3
+                class="sc-gsDKAQ hCuveX"
+              >
+                Test Project2
+              </h3>
+              <div
+                class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 sc-hKwDye eSFnFF css-mhc70k-MuiGrid-root"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-6 MuiGrid-grid-lg-4 css-xp56uf-MuiGrid-root"
+                >
+                  <div
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 sc-bdvvtL khfPQh css-1ps6pg7-MuiPaper-root"
+                  >
+                    PDF Service
+                  </div>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-6 MuiGrid-grid-lg-4 css-xp56uf-MuiGrid-root"
+                >
+                  <div
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 sc-bdvvtL khfPQh css-1ps6pg7-MuiPaper-root"
+                  >
+                    Email Service
+                  </div>
+                </div>
+              </div>
+              <span
+                class="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
+              />
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 sc-eCImPb gVjbCp css-18kb45e-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 css-17p3wh3-MuiGrid-root"
+        >
+          <h2
+            class="sc-jRQBWg fUKCFJ"
+          >
+            Microservices
+          </h2>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 css-17p3wh3-MuiGrid-root"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
