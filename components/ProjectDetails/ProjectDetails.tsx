@@ -1,11 +1,11 @@
 import React from 'react';
-import { ProjectTitleContainer, DescriptionContainer, DescriptionTextContainer } from './styles';
+import { StyledH1, Description, Text } from './styles';
 import { projectData } from '../../utils/interfaces';
 
 export const ProjectDetails = ({ project }: { project: projectData }) => (
   <>
-    <ProjectTitleContainer> {project.name} </ProjectTitleContainer>
-    <DescriptionContainer>Description</DescriptionContainer>
-    <DescriptionTextContainer>{project.description}</DescriptionTextContainer>
+    <StyledH1> {project.name} </StyledH1>
+    <Description>Description</Description>
+    <Text>{project.description}</Text>
   </>
 );
