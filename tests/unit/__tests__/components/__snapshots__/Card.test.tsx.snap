@@ -28,7 +28,7 @@ exports[`Card Snapshots Tests should match a basic snapshot (type backend) 1`] =
     class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root c0 css-bhp9pd-MuiPaper-root-MuiCard-root"
   >
     <button
-      class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root MuiButtonBase-root MuiCardActionArea-root css-1hu6zam-MuiButtonBase-root-MuiButton-root-MuiButtonBase-root-MuiCardActionArea-root"
+      class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root MuiCardActionArea-root css-1hu6zam-MuiButtonBase-root-MuiButton-root-MuiButtonBase-root-MuiCardActionArea-root"
       role="button"
       tabindex="0"
       type="button"
@@ -102,7 +102,7 @@ exports[`Card Snapshots Tests should match a basic snapshot (type microservice) 
     class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root c0 css-bhp9pd-MuiPaper-root-MuiCard-root"
   >
     <button
-      class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root MuiButtonBase-root MuiCardActionArea-root css-1hu6zam-MuiButtonBase-root-MuiButton-root-MuiButtonBase-root-MuiCardActionArea-root"
+      class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root MuiCardActionArea-root css-1hu6zam-MuiButtonBase-root-MuiButton-root-MuiButtonBase-root-MuiCardActionArea-root"
       role="button"
       tabindex="0"
       type="button"
@@ -176,7 +176,7 @@ exports[`Card Snapshots Tests should match a basic snapshot (without external se
     class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root c0 css-bhp9pd-MuiPaper-root-MuiCard-root"
   >
     <button
-      class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root MuiButtonBase-root MuiCardActionArea-root css-1hu6zam-MuiButtonBase-root-MuiButton-root-MuiButtonBase-root-MuiCardActionArea-root"
+      class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root MuiCardActionArea-root css-1hu6zam-MuiButtonBase-root-MuiButton-root-MuiButtonBase-root-MuiCardActionArea-root"
       role="button"
       tabindex="0"
       type="button"
@@ -245,7 +245,7 @@ exports[`Card Snapshots Tests should match a basic snapshot (without microservic
     class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root c0 css-bhp9pd-MuiPaper-root-MuiCard-root"
   >
     <button
-      class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root MuiButtonBase-root MuiCardActionArea-root css-1hu6zam-MuiButtonBase-root-MuiButton-root-MuiButtonBase-root-MuiCardActionArea-root"
+      class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root MuiCardActionArea-root css-1hu6zam-MuiButtonBase-root-MuiButton-root-MuiButtonBase-root-MuiCardActionArea-root"
       role="button"
       tabindex="0"
       type="button"

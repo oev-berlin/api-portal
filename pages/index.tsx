@@ -1,28 +1,29 @@
-import React, { useMemo } from 'react';
+import React, { useCallback, useMemo } from 'react';
 import fs from 'fs';
 import path from 'path';
 import { Header } from '../meta/Header';
 import { Column } from '../components/Column';
 import { MainPageInnerContainer, MainPageOuterContainer, MainPageTitle } from '../styles/pages/main/styles';
 import { projectData } from '../utils/interfaces';
-import { filterBy } from '../utils/testingUtils';
+import { filterBy } from '../utils/fileSystemUtilities';
+import { docType } from '../utils/types';
 
-interface AppProps{
+interface AppProps {
     projectsData: projectData[]
 }
 
 export default function App({ projectsData }: AppProps) {
   const data = useMemo(() => projectsData, [projectsData]);
-  const backendProjects: projectData[] = filterBy(data, 'backend');
-  const microservices: projectData[] = filterBy(data, 'microservice');
+  const filterProjects = useCallback((type: docType) => filterBy(data, type), [data]);
+
   return (
     <>
       <Header />
-      <MainPageOuterContainer xs={12}>
+      <MainPageOuterContainer>
         <MainPageTitle>Swagger API</MainPageTitle>
         <MainPageInnerContainer container>
-          <Column projects={backendProjects} name="Backend" key="backend" />
-          <Column projects={microservices} name="Microservices" key="microservices" />
+          <Column projects={filterProjects('backend')} name="Backend" key="backend" />
+          <Column projects={filterProjects('microservice')} name="Microservices" key="microservices" />
         </MainPageInnerContainer>
       </MainPageOuterContainer>
     </>
@@ -31,10 +32,10 @@ export default function App({ projectsData }: AppProps) {
 
 export async function getStaticProps() {
   const projectsFiles = fs.readdirSync('./public/apis_docs/').filter((file) => path.extname(file) === '.json');
-  const projectsData:JSON[] = projectsFiles.map((projectFile) => {
+  const projectsData: JSON[] = projectsFiles.map((projectFile) => {
     try {
       const projectData = fs.readFileSync(path.join('./public/apis_docs/', projectFile));
-      const projectDataJSON : JSON = JSON.parse(projectData.toString());
+      const projectDataJSON: JSON = JSON.parse(projectData.toString());
       return projectDataJSON;
     } catch (err) {
       return err;

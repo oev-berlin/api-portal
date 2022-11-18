@@ -1,0 +1,125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProjectDetails Snapshots Tests should match a basic snapshot (project description is empty) 1`] = `
+.c0 {
+  text-align: left;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+}
+
+.c1 {
+  text-align: left;
+  margin-left: 2rem;
+}
+
+.c2 {
+  margin-left: 3rem;
+  margin-right: 3rem;
+  text-align: justify;
+}
+
+<div>
+  <h1
+    class="c0"
+  >
+     
+    Project A
+     
+  </h1>
+  <h2
+    class="c1"
+  >
+    Description
+  </h2>
+  <div
+    class="c2"
+  />
+</div>
+`;
+
+exports[`ProjectDetails Snapshots Tests should match a basic snapshot (project name and project description are not empty) 1`] = `
+.c0 {
+  text-align: left;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+}
+
+.c1 {
+  text-align: left;
+  margin-left: 2rem;
+}
+
+.c2 {
+  margin-left: 3rem;
+  margin-right: 3rem;
+  text-align: justify;
+}
+
+<div>
+  <h1
+    class="c0"
+  >
+     
+    Project A
+     
+  </h1>
+  <h2
+    class="c1"
+  >
+    Description
+  </h2>
+  <div
+    class="c2"
+  >
+    description of the project
+  </div>
+</div>
+`;
+
+exports[`ProjectDetails Snapshots Tests should match a basic snapshot (project name is empty) 1`] = `
+.c0 {
+  text-align: left;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+}
+
+.c1 {
+  text-align: left;
+  margin-left: 2rem;
+}
+
+.c2 {
+  margin-left: 3rem;
+  margin-right: 3rem;
+  text-align: justify;
+}
+
+<div>
+  <h1
+    class="c0"
+  >
+     
+    
+     
+  </h1>
+  <h2
+    class="c1"
+  >
+    Description
+  </h2>
+  <div
+    class="c2"
+  >
+    description of the project
+  </div>
+</div>
+`;
