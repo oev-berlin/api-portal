@@ -3,7 +3,7 @@
 exports[`ProjectDetails Snapshots Tests should match a basic snapshot (project description is empty) 1`] = `
 .c0 {
   text-align: left;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   margin-left: 1rem;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -43,7 +43,7 @@ exports[`ProjectDetails Snapshots Tests should match a basic snapshot (project d
 exports[`ProjectDetails Snapshots Tests should match a basic snapshot (project name and project description are not empty) 1`] = `
 .c0 {
   text-align: left;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   margin-left: 1rem;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -85,7 +85,7 @@ exports[`ProjectDetails Snapshots Tests should match a basic snapshot (project n
 exports[`ProjectDetails Snapshots Tests should match a basic snapshot (project name is empty) 1`] = `
 .c0 {
   text-align: left;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   margin-left: 1rem;
   -webkit-text-decoration: underline;
   text-decoration: underline;

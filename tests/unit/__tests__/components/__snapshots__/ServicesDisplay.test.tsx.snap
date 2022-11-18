@@ -1,0 +1,289 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ServicesDisplay Snapshots Tests should match a basic snapshot (services is empty) 1`] = `
+.c1 {
+  margin: 1rem;
+}
+
+.c2 {
+  padding: 1rem;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c0 {
+  text-align: left;
+  margin-left: 2rem;
+}
+
+<div>
+  <h2
+    class="c0"
+  >
+    External Services
+  </h2>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 c1 css-ee20y-MuiPaper-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 c2 css-mhc70k-MuiGrid-root"
+    />
+  </div>
+</div>
+`;
+
+exports[`ServicesDisplay Snapshots Tests should match a basic snapshot (title and services are empty) 1`] = `
+.c1 {
+  margin: 1rem;
+}
+
+.c2 {
+  padding: 1rem;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c0 {
+  text-align: left;
+  margin-left: 2rem;
+}
+
+<div>
+  <h2
+    class="c0"
+  />
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 c1 css-ee20y-MuiPaper-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 c2 css-mhc70k-MuiGrid-root"
+    />
+  </div>
+</div>
+`;
+
+exports[`ServicesDisplay Snapshots Tests should match a basic snapshot (type external, title and services are not empty) 1`] = `
+.c1 {
+  margin: 1rem;
+}
+
+.c2 {
+  padding: 1rem;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c0 {
+  text-align: left;
+  margin-left: 2rem;
+}
+
+.c3 {
+  text-align: center;
+  padding: 0.5rem;
+}
+
+<div>
+  <h2
+    class="c0"
+  >
+    External Services
+  </h2>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 c1 css-ee20y-MuiPaper-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 c2 css-mhc70k-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-6 MuiGrid-grid-lg-4 css-xp56uf-MuiGrid-root"
+      >
+        <div
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 c3 css-1ps6pg7-MuiPaper-root"
+        >
+          WRZRechner
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ServicesDisplay Snapshots Tests should match a basic snapshot (type external, title is empty) 1`] = `
+.c1 {
+  margin: 1rem;
+}
+
+.c2 {
+  padding: 1rem;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c0 {
+  text-align: left;
+  margin-left: 2rem;
+}
+
+.c3 {
+  text-align: center;
+  padding: 0.5rem;
+}
+
+<div>
+  <h2
+    class="c0"
+  />
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 c1 css-ee20y-MuiPaper-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 c2 css-mhc70k-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-6 MuiGrid-grid-lg-4 css-xp56uf-MuiGrid-root"
+      >
+        <div
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 c3 css-1ps6pg7-MuiPaper-root"
+        >
+          WRZRechner
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ServicesDisplay Snapshots Tests should match a basic snapshot (type internal, title and services are not empty) 1`] = `
+.c1 {
+  margin: 1rem;
+}
+
+.c2 {
+  padding: 1rem;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c0 {
+  text-align: left;
+  margin-left: 2rem;
+}
+
+.c3 {
+  text-align: center;
+  padding: 0.5rem;
+}
+
+<div>
+  <h2
+    class="c0"
+  >
+    Internal Services
+  </h2>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 c1 css-ee20y-MuiPaper-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 c2 css-mhc70k-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-6 MuiGrid-grid-lg-4 css-xp56uf-MuiGrid-root"
+      >
+        <div
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 c3 css-1ps6pg7-MuiPaper-root"
+        >
+          email-service
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-6 MuiGrid-grid-lg-4 css-xp56uf-MuiGrid-root"
+      >
+        <div
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 c3 css-1ps6pg7-MuiPaper-root"
+        >
+          PDF Service
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-6 MuiGrid-grid-lg-4 css-xp56uf-MuiGrid-root"
+      >
+        <div
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 c3 css-1ps6pg7-MuiPaper-root"
+        >
+          Email Service
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ServicesDisplay Snapshots Tests should match a basic snapshot (type internal, title is empty) 1`] = `
+.c1 {
+  margin: 1rem;
+}
+
+.c2 {
+  padding: 1rem;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c0 {
+  text-align: left;
+  margin-left: 2rem;
+}
+
+.c3 {
+  text-align: center;
+  padding: 0.5rem;
+}
+
+<div>
+  <h2
+    class="c0"
+  />
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 c1 css-ee20y-MuiPaper-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 c2 css-mhc70k-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-6 MuiGrid-grid-lg-4 css-xp56uf-MuiGrid-root"
+      >
+        <div
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 c3 css-1ps6pg7-MuiPaper-root"
+        >
+          email-service
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-6 MuiGrid-grid-lg-4 css-xp56uf-MuiGrid-root"
+      >
+        <div
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 c3 css-1ps6pg7-MuiPaper-root"
+        >
+          PDF Service
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-6 MuiGrid-grid-lg-4 css-xp56uf-MuiGrid-root"
+      >
+        <div
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 c3 css-1ps6pg7-MuiPaper-root"
+        >
+          Email Service
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
