@@ -1,8 +1,8 @@
 {
-  "name": "Frontend-boilerplate",
+  "name": "API-Protal",
   "version": "0.1.0",
   "private": true,
-  "description": "Boilerplate for Frontend application with server-side rendering and e2e and unit testing configurations",
+  "description": "Excessive documentation portal for a k8s clusters",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
