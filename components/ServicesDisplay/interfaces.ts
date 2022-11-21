@@ -1,4 +1,5 @@
 interface ServiceDisplayProps {
-    title: string, services: string[]
+    title: string,
+    services: string[] | undefined,
 }
 export type { ServiceDisplayProps };

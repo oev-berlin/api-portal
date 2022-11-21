@@ -1,11 +1,12 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { projectData } from '../../utils/interfaces';
 import { ContextProps, projectsContext } from '../../context/ProjectsContext';
-import { fetchProjectsData } from '../../utils/functions';
 import { ProjectDetails } from '../../components/ProjectDetails';
+import { ServicesDisplay } from '../../components/ServicesDisplay';
+import { fetchProjectsData } from '../../utils/fileSystemUtilities';
 
-export default function App({ id, projectsData }: { id: string, projectsData: projectData[]}) {
-  const { projects, setProjects }:ContextProps = useContext(projectsContext);
+export default function App({ id, projectsData }: { id: string, projectsData: projectData[] }) {
+  const { projects, setProjects }: ContextProps = useContext(projectsContext);
   const [project, setProject] = useState<projectData | null>(null);
   useEffect(() => {
     if (!projects) {
@@ -17,12 +18,15 @@ export default function App({ id, projectsData }: { id: string, projectsData: pr
     setProject(project);
   }, []);
 
+  if (!project) return <h2>Loading...</h2>;
+
   return (
     <>
       <ProjectDetails name={project?.name} description={project?.description} />
-      <h1>{project?.externalServices}</h1>
-      <h1>{project?.microservices}</h1>
+      <ServicesDisplay title="Internal Services" services={project?.microservices} />
+      <ServicesDisplay title="External Services" services={project?.externalServices} />
     </>
+
   );
 }
 

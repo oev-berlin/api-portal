@@ -2,7 +2,7 @@ import React from 'react';
 import { cleanup, render, screen } from '@testing-library/react';
 import Home from '../../../pages';
 import { projectData } from '../../../utils/interfaces';
-import { createProjectData } from '../../../utils/fileSystemUtilities';
+import { createProjectData } from '../../../utils/testUtilities';
 
 const testProject1: projectData = createProjectData({
   id: '1',

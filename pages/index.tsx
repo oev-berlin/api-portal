@@ -3,10 +3,10 @@ import { Header } from '../meta/Header';
 import { Column } from '../components/Column';
 import { MainPageInnerContainer, MainPageOuterContainer, MainPageTitle } from '../styles/pages/main/styles';
 import { projectData } from '../utils/interfaces';
-import { filterBy } from '../utils/fileSystemUtilities';
 import { projectsContext, ContextProps } from '../context/ProjectsContext';
-import { fetchProjectsData } from '../utils/functions';
 import { docType } from '../utils/types';
+import { fetchProjectsData } from '../utils/fileSystemUtilities';
+import { filterBy } from '../utils/testUtilities';
 
 interface AppProps {
     projectsData: projectData[]

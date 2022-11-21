@@ -5,7 +5,7 @@ import { Card } from '../../../../components/Card';
 import { projectData } from '../../../../utils/interfaces';
 // eslint-disable-next-line import/extensions
 import 'jest-styled-components';
-import { createProjectData } from '../../../../utils/fileSystemUtilities';
+import { createProjectData } from '../../../../utils/testUtilities';
 
 expect.extend(toHaveNoViolations);
 

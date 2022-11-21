@@ -8,6 +8,13 @@ import { projectData } from '../utils/interfaces';
 function MyApp({ Component, pageProps }: AppProps) {
   const [projects, setProjects] = useState<projectData[]>([]);
   const contextProps:ContextProps = useMemo(() => ({ projects, setProjects }), [projects, setProjects]);
-  return <projectsContext.Provider value={contextProps}><Grid sx={{ minWidth: '375px' }}> <Component {...pageProps} /></Grid></projectsContext.Provider>;
+
+  return (
+    <projectsContext.Provider value={contextProps}>
+      <Grid sx={{ minWidth: '375px' }}>
+        <Component {...pageProps} />
+      </Grid>
+    </projectsContext.Provider>
+  );
 }
 export default MyApp;
