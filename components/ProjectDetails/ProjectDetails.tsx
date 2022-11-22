@@ -1,11 +1,11 @@
 import React from 'react';
 import { StyledH1, Description, Text } from './styles';
-import { projectData } from '../../utils/interfaces';
+import { ProjectDetailsProps } from './interfaces';
 
-export const ProjectDetails = ({ project }: { project: projectData }) => (
+export const ProjectDetails = ({ name, description }: ProjectDetailsProps) => (
   <>
-    <StyledH1> {project.name} </StyledH1>
+    <StyledH1> {name} </StyledH1>
     <Description>Description</Description>
-    <Text>{project.description}</Text>
+    <Text>{description}</Text>
   </>
 );

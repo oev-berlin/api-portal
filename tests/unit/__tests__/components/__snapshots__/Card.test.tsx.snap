@@ -26,6 +26,7 @@ exports[`Card Snapshots Tests should match a basic snapshot (type backend) 1`] =
 <div>
   <div
     class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root c0 css-bhp9pd-MuiPaper-root-MuiCard-root"
+    href="/project/1"
   >
     <button
       class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root MuiCardActionArea-root css-1hu6zam-MuiButtonBase-root-MuiButton-root-MuiButtonBase-root-MuiCardActionArea-root"
@@ -100,6 +101,7 @@ exports[`Card Snapshots Tests should match a basic snapshot (type microservice) 
 <div>
   <div
     class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root c0 css-bhp9pd-MuiPaper-root-MuiCard-root"
+    href="/project/1"
   >
     <button
       class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root MuiCardActionArea-root css-1hu6zam-MuiButtonBase-root-MuiButton-root-MuiButtonBase-root-MuiCardActionArea-root"
@@ -174,6 +176,7 @@ exports[`Card Snapshots Tests should match a basic snapshot (without external se
 <div>
   <div
     class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root c0 css-bhp9pd-MuiPaper-root-MuiCard-root"
+    href="/project/1"
   >
     <button
       class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root MuiCardActionArea-root css-1hu6zam-MuiButtonBase-root-MuiButton-root-MuiButtonBase-root-MuiCardActionArea-root"
@@ -243,6 +246,7 @@ exports[`Card Snapshots Tests should match a basic snapshot (without microservic
 <div>
   <div
     class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root c0 css-bhp9pd-MuiPaper-root-MuiCard-root"
+    href="/project/1"
   >
     <button
       class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root MuiCardActionArea-root css-1hu6zam-MuiButtonBase-root-MuiButton-root-MuiButtonBase-root-MuiCardActionArea-root"

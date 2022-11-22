@@ -1,35 +1,18 @@
-import {docType} from "./types";
 import {projectData} from "./interfaces";
+import fs from "fs";
+import path from "path";
 
-export const filterBy = (data: projectData[], docType: string): projectData[] => {
-    return data.filter((projectData: projectData) => projectData.docsType === docType)
+export function fetchProjectsData(): projectData[] {
+    const projectsFiles = fs.readdirSync('./public/apis_docs/').filter(file => path.extname(file) === '.json');
+    const projectsData: projectData[] = projectsFiles.map(projectFile => {
+        try {
+            const projectsDataString = fs.readFileSync(path.join('./public/apis_docs/', projectFile));
+            const projectsData: projectData = JSON.parse(projectsDataString.toString());
+            return projectsData;
+        } catch (err) {
+            return err;
+        }
+    });
+    return projectsData;
 }
-export const createProjectData = (
-    {
-        id = "1",
-        name = "Test Project",
-        description = "Description",
-        swaggerInformation = {},
-        docsType = "microservices",
-        microservices = ["PDF Service", "Email Service"],
-        externalServices = ["WRZ Rechner"],
-    }: {
-        id?: string,
-        name?: string,
-        description?: string,
-        swaggerInformation?: object,
-        docsType?: docType,
-        microservices?: string[],
-        externalServices?: string[]
-    }
-): projectData => {
-    return {
-        id: id,
-        name: name,
-        description: description,
-        swaggerInformation: swaggerInformation,
-        docsType: docsType,
-        microservices: microservices,
-        externalServices: externalServices
-    };
-}
+

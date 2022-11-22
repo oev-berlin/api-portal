@@ -14,7 +14,7 @@ const testProject2: projectData = { ...exampleProject, name: '' };
 const testProject3: projectData = { ...exampleProject, description: '' };
 
 const setupComponent = ({ project }: { project: projectData }) => render(
-  <ProjectDetails project={project} />,
+  <ProjectDetails name={project.name} description={project.description} />,
 );
 
 describe('ProjectDetails', () => {

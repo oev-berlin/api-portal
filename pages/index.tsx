@@ -1,20 +1,26 @@
-import React, { useCallback, useMemo } from 'react';
-import fs from 'fs';
-import path from 'path';
+import React, { useEffect, useContext, useCallback } from 'react';
 import { Header } from '../meta/Header';
 import { Column } from '../components/Column';
 import { MainPageInnerContainer, MainPageOuterContainer, MainPageTitle } from '../styles/pages/main/styles';
 import { projectData } from '../utils/interfaces';
-import { filterBy } from '../utils/fileSystemUtilities';
+import { projectsContext, ContextProps } from '../context/ProjectsContext';
 import { docType } from '../utils/types';
+import { fetchProjectsData } from '../utils/fileSystemUtilities';
+import { filterBy } from '../utils/testUtilities';
 
 interface AppProps {
     projectsData: projectData[]
 }
 
 export default function App({ projectsData }: AppProps) {
-  const data = useMemo(() => projectsData, [projectsData]);
-  const filterProjects = useCallback((type: docType) => filterBy(data, type), [data]);
+  const { projects, setProjects }:ContextProps = useContext(projectsContext);
+  useEffect(() => {
+    if (setProjects) {
+      setProjects(projectsData);
+    }
+  }, []);
+
+  const filterProjects = useCallback((type: docType) => filterBy(projects, type), [projects]);
 
   return (
     <>
@@ -31,17 +37,7 @@ export default function App({ projectsData }: AppProps) {
 }
 
 export async function getStaticProps() {
-  const projectsFiles = fs.readdirSync('./public/apis_docs/').filter((file) => path.extname(file) === '.json');
-  const projectsData: JSON[] = projectsFiles.map((projectFile) => {
-    try {
-      const projectData = fs.readFileSync(path.join('./public/apis_docs/', projectFile));
-      const projectDataJSON: JSON = JSON.parse(projectData.toString());
-      return projectDataJSON;
-    } catch (err) {
-      return err;
-    }
-  });
-
+  const projectsData : projectData[] = fetchProjectsData();
   return {
     props: {
       projectsData,
