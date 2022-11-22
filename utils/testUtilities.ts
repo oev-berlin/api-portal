@@ -19,17 +19,15 @@ export const createProjectData = (
         microservices?: string[],
         externalServices?: string[]
     }
-): projectData => {
-    return {
-        id: id,
-        name: name,
-        description: description,
-        swaggerInformation: swaggerInformation,
-        docsType: docsType,
-        microservices: microservices,
-        externalServices: externalServices
-    };
-}
-export const filterBy = (data: projectData[], docType: string): projectData[] => {
-    return data.filter((projectData: projectData) => projectData.docsType === docType)
-}
+): projectData => (
+     {
+        id,
+        name,
+        description,
+        swaggerInformation,
+        docsType,
+        microservices,
+        externalServices
+    });
+
+export const filterBy = (data: projectData[], docType: string): projectData[] => data.filter((projectData: projectData) => projectData.docsType === docType)

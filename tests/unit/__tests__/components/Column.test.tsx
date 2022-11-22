@@ -1,5 +1,5 @@
 import { render, cleanup } from '@testing-library/react';
-import { toHaveNoViolations } from 'jest-axe';
+import { axe, toHaveNoViolations } from 'jest-axe';
 import React from 'react';
 import { Column, ColumnProps } from '../../../../components/Column';
 import { projectData } from '../../../../utils/interfaces';
@@ -79,6 +79,13 @@ describe('Column', () => {
     it('should match a basic snapshot (column projects is empty)', () => {
       const { container } = setupComponent({ projects: [], name: 'microservices' });
       expect(container).toMatchSnapshot();
+    });
+  });
+  describe('Accessibility Tests', () => {
+    it('should pass a basic accessibility test', async () => {
+      const { container } = setupComponent({ projects: [testProject1, testProject2], name: 'microservices' });
+      const results = await axe(container);
+      expect(results).toHaveNoViolations();
     });
   });
 });
