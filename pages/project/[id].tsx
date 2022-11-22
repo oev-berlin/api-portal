@@ -4,6 +4,7 @@ import { ContextProps, projectsContext } from '../../context/ProjectsContext';
 import { ProjectDetails } from '../../components/ProjectDetails';
 import { ServicesDisplay } from '../../components/ServicesDisplay';
 import { fetchProjectsData } from '../../utils/fileSystemUtilities';
+import { SwaggerComponent }from "../../components/SwaggerComponent/SwaggerComponent";
 
 export default function App({ id, projectsData }: { id: string, projectsData: projectData[] }) {
   const { projects, setProjects }: ContextProps = useContext(projectsContext);
@@ -25,6 +26,7 @@ export default function App({ id, projectsData }: { id: string, projectsData: pr
       <ProjectDetails name={project?.name} description={project?.description} />
       <ServicesDisplay title="Internal Services" services={project?.microservices} />
       <ServicesDisplay title="External Services" services={project?.externalServices} />
+      <SwaggerComponent spec={project?.swaggerInformation}></SwaggerComponent>
     </>
 
   );
