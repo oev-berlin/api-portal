@@ -1,0 +1,201 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Snapshots Tests should match a basic snapshot (with backend and microservice projects) 1`] = `
+<div>
+  <div
+    class="styles__MainPageOuterContainer-sc-1ytqs8x-0 kiEjCe MuiBox-root css-0"
+  >
+    <h1
+      class="styles__MainPageTitle-sc-1ytqs8x-2 vQPJo"
+    >
+      Swagger API
+    </h1>
+    <div
+      class="MuiGrid-root MuiGrid-container styles__MainPageInnerContainer-sc-1ytqs8x-1 cfOEaC css-11lq3yg-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 styles__ColumnContainer-sc-17no1iy-0 gcYOrf css-18kb45e-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 css-17p3wh3-MuiGrid-root"
+        >
+          <h2
+            class="styles__ColumnTitle-sc-17no1iy-1 HkuwM"
+          >
+            Backend
+          </h2>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 css-17p3wh3-MuiGrid-root"
+        />
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 styles__ColumnContainer-sc-17no1iy-0 gcYOrf css-18kb45e-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 css-17p3wh3-MuiGrid-root"
+        >
+          <h2
+            class="styles__ColumnTitle-sc-17no1iy-1 HkuwM"
+          >
+            Microservices
+          </h2>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 css-17p3wh3-MuiGrid-root"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Home Snapshots Tests should match a basic snapshot (without any project) 1`] = `
+<div>
+  <div
+    class="styles__MainPageOuterContainer-sc-1ytqs8x-0 kiEjCe MuiBox-root css-0"
+  >
+    <h1
+      class="styles__MainPageTitle-sc-1ytqs8x-2 vQPJo"
+    >
+      Swagger API
+    </h1>
+    <div
+      class="MuiGrid-root MuiGrid-container styles__MainPageInnerContainer-sc-1ytqs8x-1 cfOEaC css-11lq3yg-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 styles__ColumnContainer-sc-17no1iy-0 gcYOrf css-18kb45e-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 css-17p3wh3-MuiGrid-root"
+        >
+          <h2
+            class="styles__ColumnTitle-sc-17no1iy-1 HkuwM"
+          >
+            Backend
+          </h2>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 css-17p3wh3-MuiGrid-root"
+        />
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 styles__ColumnContainer-sc-17no1iy-0 gcYOrf css-18kb45e-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 css-17p3wh3-MuiGrid-root"
+        >
+          <h2
+            class="styles__ColumnTitle-sc-17no1iy-1 HkuwM"
+          >
+            Microservices
+          </h2>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 css-17p3wh3-MuiGrid-root"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Home Snapshots Tests should match a basic snapshot (without backend projects) 1`] = `
+<div>
+  <div
+    class="styles__MainPageOuterContainer-sc-1ytqs8x-0 kiEjCe MuiBox-root css-0"
+  >
+    <h1
+      class="styles__MainPageTitle-sc-1ytqs8x-2 vQPJo"
+    >
+      Swagger API
+    </h1>
+    <div
+      class="MuiGrid-root MuiGrid-container styles__MainPageInnerContainer-sc-1ytqs8x-1 cfOEaC css-11lq3yg-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 styles__ColumnContainer-sc-17no1iy-0 gcYOrf css-18kb45e-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 css-17p3wh3-MuiGrid-root"
+        >
+          <h2
+            class="styles__ColumnTitle-sc-17no1iy-1 HkuwM"
+          >
+            Backend
+          </h2>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 css-17p3wh3-MuiGrid-root"
+        />
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 styles__ColumnContainer-sc-17no1iy-0 gcYOrf css-18kb45e-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 css-17p3wh3-MuiGrid-root"
+        >
+          <h2
+            class="styles__ColumnTitle-sc-17no1iy-1 HkuwM"
+          >
+            Microservices
+          </h2>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 css-17p3wh3-MuiGrid-root"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Home Snapshots Tests should match a basic snapshot (without microservice projects) 1`] = `
+<div>
+  <div
+    class="styles__MainPageOuterContainer-sc-1ytqs8x-0 kiEjCe MuiBox-root css-0"
+  >
+    <h1
+      class="styles__MainPageTitle-sc-1ytqs8x-2 vQPJo"
+    >
+      Swagger API
+    </h1>
+    <div
+      class="MuiGrid-root MuiGrid-container styles__MainPageInnerContainer-sc-1ytqs8x-1 cfOEaC css-11lq3yg-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 styles__ColumnContainer-sc-17no1iy-0 gcYOrf css-18kb45e-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 css-17p3wh3-MuiGrid-root"
+        >
+          <h2
+            class="styles__ColumnTitle-sc-17no1iy-1 HkuwM"
+          >
+            Backend
+          </h2>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 css-17p3wh3-MuiGrid-root"
+        />
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 styles__ColumnContainer-sc-17no1iy-0 gcYOrf css-18kb45e-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 css-17p3wh3-MuiGrid-root"
+        >
+          <h2
+            class="styles__ColumnTitle-sc-17no1iy-1 HkuwM"
+          >
+            Microservices
+          </h2>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 css-17p3wh3-MuiGrid-root"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

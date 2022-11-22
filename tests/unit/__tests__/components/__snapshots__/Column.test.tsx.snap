@@ -1,0 +1,342 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Column Snapshots Tests should match a basic snapshot (column name and projects are not empty) 1`] = `
+.c5 {
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.c3 {
+  text-align: left;
+  padding-left: 0.5rem;
+  text-transform: none;
+}
+
+.c2 {
+  margin-bottom: 1rem;
+}
+
+.c4 {
+  padding: 1rem;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c0 {
+  margin-top: 1rem;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: solid;
+}
+
+.c1 {
+  margin: 1rem;
+  text-align: center;
+}
+
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 c0 css-18kb45e-MuiGrid-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 css-17p3wh3-MuiGrid-root"
+    >
+      <h2
+        class="c1"
+      >
+        microservices
+      </h2>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 css-17p3wh3-MuiGrid-root"
+    >
+      <div
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root c2 css-bhp9pd-MuiPaper-root-MuiCard-root"
+        href="/project/1"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root MuiCardActionArea-root css-1hu6zam-MuiButtonBase-root-MuiButton-root-MuiButtonBase-root-MuiCardActionArea-root"
+          role="button"
+          tabindex="0"
+          type="button"
+        >
+          <h3
+            class="c3"
+          >
+            Test Project1
+          </h3>
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 c4 css-mhc70k-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-6 MuiGrid-grid-lg-4 css-xp56uf-MuiGrid-root"
+            >
+              <div
+                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 c5 css-1ps6pg7-MuiPaper-root"
+              >
+                PDF Service
+              </div>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-6 MuiGrid-grid-lg-4 css-xp56uf-MuiGrid-root"
+            >
+              <div
+                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 c5 css-1ps6pg7-MuiPaper-root"
+              >
+                Email Service
+              </div>
+            </div>
+          </div>
+          <span
+            class="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
+          />
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+      <div
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root c2 css-bhp9pd-MuiPaper-root-MuiCard-root"
+        href="/project/2"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root MuiCardActionArea-root css-1hu6zam-MuiButtonBase-root-MuiButton-root-MuiButtonBase-root-MuiCardActionArea-root"
+          role="button"
+          tabindex="0"
+          type="button"
+        >
+          <h3
+            class="c3"
+          >
+            Test Project2
+          </h3>
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 c4 css-mhc70k-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-6 MuiGrid-grid-lg-4 css-xp56uf-MuiGrid-root"
+            >
+              <div
+                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 c5 css-1ps6pg7-MuiPaper-root"
+              >
+                PDF Service
+              </div>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-6 MuiGrid-grid-lg-4 css-xp56uf-MuiGrid-root"
+            >
+              <div
+                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 c5 css-1ps6pg7-MuiPaper-root"
+              >
+                Email Service
+              </div>
+            </div>
+          </div>
+          <span
+            class="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
+          />
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Column Snapshots Tests should match a basic snapshot (column name is empty) 1`] = `
+.c5 {
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.c3 {
+  text-align: left;
+  padding-left: 0.5rem;
+  text-transform: none;
+}
+
+.c2 {
+  margin-bottom: 1rem;
+}
+
+.c4 {
+  padding: 1rem;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c0 {
+  margin-top: 1rem;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: solid;
+}
+
+.c1 {
+  margin: 1rem;
+  text-align: center;
+}
+
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 c0 css-18kb45e-MuiGrid-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 css-17p3wh3-MuiGrid-root"
+    >
+      <h2
+        class="c1"
+      />
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 css-17p3wh3-MuiGrid-root"
+    >
+      <div
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root c2 css-bhp9pd-MuiPaper-root-MuiCard-root"
+        href="/project/1"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root MuiCardActionArea-root css-1hu6zam-MuiButtonBase-root-MuiButton-root-MuiButtonBase-root-MuiCardActionArea-root"
+          role="button"
+          tabindex="0"
+          type="button"
+        >
+          <h3
+            class="c3"
+          >
+            Test Project1
+          </h3>
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 c4 css-mhc70k-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-6 MuiGrid-grid-lg-4 css-xp56uf-MuiGrid-root"
+            >
+              <div
+                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 c5 css-1ps6pg7-MuiPaper-root"
+              >
+                PDF Service
+              </div>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-6 MuiGrid-grid-lg-4 css-xp56uf-MuiGrid-root"
+            >
+              <div
+                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 c5 css-1ps6pg7-MuiPaper-root"
+              >
+                Email Service
+              </div>
+            </div>
+          </div>
+          <span
+            class="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
+          />
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+      <div
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root c2 css-bhp9pd-MuiPaper-root-MuiCard-root"
+        href="/project/2"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root MuiCardActionArea-root css-1hu6zam-MuiButtonBase-root-MuiButton-root-MuiButtonBase-root-MuiCardActionArea-root"
+          role="button"
+          tabindex="0"
+          type="button"
+        >
+          <h3
+            class="c3"
+          >
+            Test Project2
+          </h3>
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 c4 css-mhc70k-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-6 MuiGrid-grid-lg-4 css-xp56uf-MuiGrid-root"
+            >
+              <div
+                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 c5 css-1ps6pg7-MuiPaper-root"
+              >
+                PDF Service
+              </div>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-6 MuiGrid-grid-lg-4 css-xp56uf-MuiGrid-root"
+            >
+              <div
+                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 c5 css-1ps6pg7-MuiPaper-root"
+              >
+                Email Service
+              </div>
+            </div>
+          </div>
+          <span
+            class="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
+          />
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Column Snapshots Tests should match a basic snapshot (column projects is empty) 1`] = `
+.c0 {
+  margin-top: 1rem;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: solid;
+}
+
+.c1 {
+  margin: 1rem;
+  text-align: center;
+}
+
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 c0 css-18kb45e-MuiGrid-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 css-17p3wh3-MuiGrid-root"
+    >
+      <h2
+        class="c1"
+      >
+        microservices
+      </h2>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 css-17p3wh3-MuiGrid-root"
+    />
+  </div>
+</div>
+`;

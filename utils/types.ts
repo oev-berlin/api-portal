@@ -1,0 +1,1 @@
+export type docType = "backend" | "microservice";

@@ -1,11 +1,11 @@
 {
-  "id": "microservice-b",
-  "name": "Microservice B",
-  "description": "description of the micro service",
+  "id": "project-a",
+  "name": "Project A",
+  "description": "description of the project",
   "swaggerInformation": {
     "swagger": "2.0",
     "info": {
-      "title": "Example API 2"
+      "title": "Example API 1"
     },
     "definitions": {},
     "paths": {
@@ -65,9 +65,9 @@
       }
     }
   },
-  "docsType": "microservice",
+  "docsType": "backend",
   "microservices": [
-    "email-service"
+    "email-service", "PDF Service", "Email Service"
   ],
   "externalServices": [
     "WRZRechner"

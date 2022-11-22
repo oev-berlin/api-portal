@@ -1,8 +1,8 @@
 {
-  "name": "Frontend-boilerplate",
+  "name": "API-Protal",
   "version": "0.1.0",
   "private": true,
-  "description": "Boilerplate for Frontend application with server-side rendering and e2e and unit testing configurations",
+  "description": "Excessive documentation portal for a k8s clusters",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -22,6 +22,7 @@
     "@emotion/react": "^11.8.2",
     "@emotion/styled": "^11.8.1",
     "@mui/material": "^5.5.0",
+    "babel-plugin-styled-components": "^2.0.7",
     "eslint-plugin-testing-library": "^5.6.0",
     "jest-styled-components": "^7.1.0",
     "next": "12.1.0",
