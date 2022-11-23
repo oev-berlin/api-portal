@@ -2,4 +2,4 @@ interface MicroServiceProps {
     serviceName: string
 }
 
-export {MicroServiceProps};
+export type { MicroServiceProps };
