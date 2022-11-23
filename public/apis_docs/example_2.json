@@ -1,75 +1,649 @@
 {
-  "id": "microservice-b",
-  "name": "Microservice B",
-  "description": "description of the micro service",
-  "swaggerInformation": {
-    "swagger": "2.0",
-    "info": {
-      "title": "Example API 2"
+  "swagger": "2.0",
+  "info": {
+    "title": "Salneo_2",
+    "description": "this is a salneo project",
+    "type": "backend",
+    "microservices": [
+      "mail-service",
+      "pdf-service"
+    ],
+    "externalservices": [
+      "wrz"
+    ]
+  },
+  "definitions": {},
+  "paths": {
+    "//": {
+      "get": {
+        "summary": "qwerty",
+        "description": "Sanity check, used for testing",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "schema": {
+              "description": "Successful response",
+              "type": "string",
+              "example": {
+                "resp": "OK"
+              }
+            }
+          },
+          "500": {
+            "description": "Server side error",
+            "schema": {
+              "description": "Server side error",
+              "type": "string"
+            }
+          }
+        }
+      }
     },
-    "definitions": {},
-    "paths": {
-      "//": {
-        "get": {
-          "responses": {
-            "200": {
-              "description": "Default Response"
+    "/pdf/generate": {
+      "post": {
+        "summary": "Generate pdf file from given data",
+        "description": "Generate PDF file",
+        "parameters": [
+          {
+            "type": "string",
+            "description": "The offers name",
+            "required": true,
+            "in": "path",
+            "name": "tarif"
+          },
+          {
+            "type": "string",
+            "description": "garantie level (1-4)",
+            "required": true,
+            "in": "path",
+            "name": "garantie"
+          },
+          {
+            "type": "string",
+            "description": "The initial capital",
+            "required": true,
+            "in": "path",
+            "name": "anlagebetrag"
+          },
+          {
+            "type": "string",
+            "description": "The duration of the investment",
+            "required": true,
+            "in": "path",
+            "name": "anlagedauer"
+          },
+          {
+            "type": "string",
+            "description": "Development level over the years",
+            "required": true,
+            "in": "path",
+            "name": "wertentwicklung"
+          },
+          {
+            "type": "array",
+            "description": "A list of benefits (upd: benefits name, erlautung: information about the benefit)",
+            "items": {
+              "type": "object",
+              "properties": {
+                "ups": {
+                  "type": "string"
+                },
+                "erlautung": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": true,
+            "in": "path",
+            "name": "benefits"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "schema": {
+              "description": "Successful response",
+              "type": "string",
+              "format": "byte"
+            }
+          },
+          "400": {
+            "description": "Client side failure - some of the given data were not correct",
+            "schema": {
+              "description": "Client side failure - some of the given data were not correct",
+              "type": "string"
+            }
+          },
+          "500": {
+            "description": "Server side failure - something went wrong on the server",
+            "schema": {
+              "description": "Server side failure - something went wrong on the server",
+              "type": "string"
             }
           }
         }
-      },
-      "/pdf/generate": {
-        "post": {
-          "responses": {
-            "200": {
-              "description": "Default Response"
+      }
+    },
+    "/offer/calculate": {
+      "post": {
+        "summary": "Get packages from WRZ",
+        "description": "Calculate different packages",
+        "parameters": [
+          {
+            "type": "string",
+            "description": "The initial capital",
+            "required": true,
+            "in": "path",
+            "name": "anlagebetrag"
+          },
+          {
+            "type": "string",
+            "description": "The duration of the investment",
+            "required": true,
+            "in": "path",
+            "name": "anlagedauer"
+          },
+          {
+            "type": "number",
+            "description": "Age of the client",
+            "required": true,
+            "in": "path",
+            "name": "alter"
+          },
+          {
+            "type": "string",
+            "description": "Main investment reason",
+            "required": true,
+            "in": "path",
+            "name": "grund"
+          },
+          {
+            "type": "number",
+            "description": "Risk affinity",
+            "required": true,
+            "in": "path",
+            "name": "affinity"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "schema": {
+              "description": "Successful response",
+              "type": "array",
+              "elements": [
+                {
+                  "identifier": "string",
+                  "offer": {
+                    "tarif": "string",
+                    "duration": "number",
+                    "wertentwicklung": "string",
+                    "verwahrentgeld": "string",
+                    "betrag": "string"
+                  },
+                  "client": {
+                    "name": "string",
+                    "age": "number",
+                    "tel": "string",
+                    "client_email": "string"
+                  }
+                }
+              ],
+              "example": [
+                {
+                  "data": {
+                    "fehlerkz": 0,
+                    "fehler": "",
+                    "garantiert": 199999.8,
+                    "gesamt": 340931.05,
+                    "vwanlage": 199019.13
+                  },
+                  "tarif": "FARIS",
+                  "title": "PrivatTresor WachstumsGarant",
+                  "benefits": [
+                    {
+                      "usp": "Maximale Flexibilität",
+                      "erlautung": "Entnahmen des Kapitals sind jederzeit möglich"
+                    },
+                    {
+                      "usp": "Attraktive Steuervorteile",
+                      "erlautung": "Sie profitieren von einzigartigen Steuervorteilen, sowohl in der Anspar- als auch in der Auszahlungsphase."
+                    },
+                    {
+                      "usp": "Attraktive Ertragschancen",
+                      "erlautung": "Attraktive Ertragschancen durch eine moderate Investmentbeteiligung"
+                    },
+                    {
+                      "usp": "Best-of im Todesfall",
+                      "erlautung": "Im Todesfall erhalten die begünstigten Hinterbliebenen mindestens den eingezahlten Einmalbeitrag."
+                    }
+                  ],
+                  "text": "<div><b>PrivatTresor WachstumGarant</b> ist eine Rentenversicherung mit Kapitaloption gegen Einmalbeitrag. Der Einmalbeitrag wird zu Vertragsbeginn in Abhängigkeit von der Laufzeit des Vertrags zwischen dem Sicherungsvermögen und der Indexorientierten Kapitalanlage aufgeteilt.</div><br/>\n               <div>Entwickelt sich die Indexorientierte Kapitalanlage (IOK2) innerhalb eines Monats positiv, so werden außerdem monatlich zehn Prozent dieser <b>Erträge gesichert</b> (Lock-in) und können nicht mehr verloren gehen. </div><br/>\n               <div>Durch die Erträge aus dem Lock-in sowie die Überschüsse, die zur Erhöhung des Mindestkapitals verwendet werden, erhöht sich die endfällig garantierte Kapitalleistung.</div>",
+                  "anlagebetrag": "222222",
+                  "anlagedauer": "22",
+                  "geburtsjahr": 2000,
+                  "garantieniveau": 90,
+                  "wertentwicklung": 3.5,
+                  "chosen": true
+                },
+                {
+                  "data": {
+                    "fehlerkz": 0,
+                    "fehler": "",
+                    "garantiert": 155555.4,
+                    "gesamt": 454201.66,
+                    "vwanlage": 199019.13
+                  },
+                  "tarif": "FARDV",
+                  "title": "PrivatTresor FlexVario",
+                  "benefits": [
+                    {
+                      "usp": "Maximale Flexibilität",
+                      "erlautung": "Entnahmen des Kapitals sind jederzeit möglich"
+                    },
+                    {
+                      "usp": "Lebenslange garantierte Rente",
+                      "erlautung": "Entscheiden Sie sich für eine Rente statt einer einmaligen Auszahlung und erhalten Sie diese lebenslang."
+                    },
+                    {
+                      "usp": "Attraktive Steuervorteile",
+                      "erlautung": "Sie profitieren von einzigartigen Steuervorteilen, sowohl in der Anspar- als auch in der Auszahlungsphase."
+                    },
+                    {
+                      "usp": "Attraktive Ertragschancen",
+                      "erlautung": "Attraktive Ertragschancen durch eine moderate Investmentbeteiligung"
+                    }
+                  ],
+                  "text": "<div><b>PrivatTresor FlexVario</b> bietet Ihnen über eine <b>individuelle</b> und <b>flexible Fondsauswahl</b> attraktive Renditechancen mit steuerlichen Vorteilen. Um die Ertragschancen selbst zu bestimmen, können Sie das Chance-Profil individuell wählen.</div><br/>\n          <div>Maximale Flexibilität erlangen Sie durch <b>flexible Entnahmen</b> und das <b>Wahlrecht</b>, anstelle der <b>lebenslangen Rente</b> das Kapital in Anspruch nehmen zu können.</div>",
+                  "anlagebetrag": "222222",
+                  "anlagedauer": "22",
+                  "geburtsjahr": 2000,
+                  "garantieniveau": 70,
+                  "wertentwicklung": 4,
+                  "chosen": false
+                },
+                {
+                  "data": {
+                    "fehlerkz": 0,
+                    "fehler": "",
+                    "garantiert": 111111,
+                    "gesamt": 503236.47,
+                    "vwanlage": 199019.13
+                  },
+                  "tarif": "FARDV",
+                  "title": "PrivatTresor FlexVario",
+                  "benefits": [
+                    {
+                      "usp": "Maximale Flexibilität",
+                      "erlautung": "Entnahmen des Kapitals sind jederzeit möglich"
+                    },
+                    {
+                      "usp": "Lebenslange garantierte Rente",
+                      "erlautung": "Entscheiden Sie sich für eine Rente statt einer einmaligen Auszahlung und erhalten Sie diese lebenslang."
+                    },
+                    {
+                      "usp": "Attraktive Steuervorteile",
+                      "erlautung": "Sie profitieren von einzigartigen Steuervorteilen, sowohl in der Anspar- als auch in der Auszahlungsphase."
+                    },
+                    {
+                      "usp": "Attraktive Ertragschancen",
+                      "erlautung": "Attraktive Ertragschancen durch eine moderate Investmentbeteiligung"
+                    }
+                  ],
+                  "text": "<div><b>PrivatTresor FlexVario</b> bietet Ihnen über eine <b>individuelle</b> und <b>flexible Fondsauswahl</b> attraktive Renditechancen mit steuerlichen Vorteilen. Um die Ertragschancen selbst zu bestimmen, können Sie das Chance-Profil individuell wählen.</div><br/>\n          <div>Maximale Flexibilität erlangen Sie durch <b>flexible Entnahmen</b> und das <b>Wahlrecht</b>, anstelle der <b>lebenslangen Rente</b> das Kapital in Anspruch nehmen zu können.</div>",
+                  "anlagebetrag": "222222",
+                  "anlagedauer": "22",
+                  "geburtsjahr": 2000,
+                  "garantieniveau": 50,
+                  "wertentwicklung": 4.5,
+                  "chosen": false
+                },
+                {
+                  "data": {
+                    "fehlerkz": 0,
+                    "fehler": "",
+                    "garantiert": 0,
+                    "gesamt": 616827.34,
+                    "vwanlage": 199019.13
+                  },
+                  "tarif": "FARA",
+                  "title": "PrivatTresor FlexInvest",
+                  "benefits": [
+                    {
+                      "usp": "Maximale Flexibilität",
+                      "erlautung": "Entnahmen des Kapitals sind jederzeit möglich"
+                    },
+                    {
+                      "usp": "Attraktive Steuervorteile",
+                      "erlautung": "Sie profitieren von einzigartigen Steuervorteilen, sowohl in der Anspar- als auch in der Auszahlungsphase."
+                    },
+                    {
+                      "usp": "Attraktive Ertragschancen",
+                      "erlautung": "Attraktive Ertragschancen durch eine moderate Investmentbeteiligung"
+                    },
+                    {
+                      "usp": "Best-of im Todesfall",
+                      "erlautung": "Im Todesfall erhalten die begünstigten Hinterbliebenen mindestens den eingezahlten Einmalbeitrag."
+                    }
+                  ],
+                  "text": "<div><b>PrivatTresor FlexInvest</b> ist eine fondsgebundene Rentenversicherung mit Kapitaloption gegen Einmalbeitrag.</div> <br/>\n        <div>Hier profitieren Sie maximal von den <b>Chancen</b> des Kapitalmarkts. Bei Ihrer Anlage steht Ihnen ein <b>breites Angebot</b> von ausgesuchten Einzelfonds zur Verfügung oder Sie entscheiden sich für unsere professionell gemanagte <b>renditeoptimierte Kapitalanlage</b> (ROK).</div>",
+                  "anlagebetrag": "222222",
+                  "anlagedauer": "22",
+                  "geburtsjahr": 2000,
+                  "garantieniveau": 0,
+                  "wertentwicklung": 5.5,
+                  "chosen": false
+                }
+              ]
+            }
+          },
+          "400": {
+            "description": "Client side failure - some of the given data were not correct",
+            "schema": {
+              "description": "Client side failure - some of the given data were not correct",
+              "type": "string"
+            }
+          },
+          "500": {
+            "description": "Server side failure - something went wrong on the server",
+            "schema": {
+              "description": "Server side failure - something went wrong on the server",
+              "type": "string"
             }
           }
         }
-      },
-      "/offer/calculate": {
-        "post": {
-          "responses": {
-            "200": {
-              "description": "Default Response"
+      }
+    },
+    "/offer/send": {
+      "post": {
+        "summary": "Send an Email to a given client and partner with offer",
+        "description": "Send an Email to a given client and partner with offer",
+        "parameters": [
+          {
+            "type": "string",
+            "required": true,
+            "in": "path",
+            "name": "identifier"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "tarif": {
+                "type": "string"
+              },
+              "duration": {
+                "type": "number"
+              },
+              "wertentwicklung": {
+                "type": "string"
+              },
+              "verwahrentgeld": {
+                "type": "string"
+              },
+              "betrag": {
+                "type": "string"
+              }
+            },
+            "required": true,
+            "in": "path",
+            "name": "offer"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "age": {
+                "type": "number"
+              },
+              "tel": {
+                "type": "string"
+              },
+              "client_email": {
+                "type": "string"
+              }
+            },
+            "required": true,
+            "in": "path",
+            "name": "client"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "schema": {
+              "description": "Successful response",
+              "type": "array",
+              "elements": [
+                {
+                  "accepted": {
+                    "type": "array",
+                    "elements": {
+                      "type": "string"
+                    }
+                  },
+                  "rejected": {
+                    "type": "array",
+                    "elements": {
+                      "type": "string"
+                    }
+                  },
+                  "EnvelopeTime": {
+                    "type": "number"
+                  },
+                  "messageTime": {
+                    "type": "number"
+                  },
+                  "messageSize": {
+                    "type": "number"
+                  },
+                  "response": {
+                    "type": "string"
+                  },
+                  "envelope": {
+                    "type": "object",
+                    "properties": {
+                      "from": {
+                        "type": "string"
+                      },
+                      "to": {
+                        "type": "array",
+                        "elements": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "messageId": "string"
+                }
+              ],
+              "example": [
+                {
+                  "accepted": [
+                    "Fürth@oev.de"
+                  ],
+                  "rejected": [],
+                  "envelopeTime": 98,
+                  "messageTime": 76,
+                  "messageSize": 1850,
+                  "response": "250 2.0.0 Ok: queued as D526060E0B",
+                  "envelope": {
+                    "from": "no-reply@salneo.de",
+                    "to": [
+                      "Fürth@oev.de"
+                    ]
+                  },
+                  "messageId": "<c6272ee7-ad7e-ee97-92a4-65fb0af43ebd@salneo.de>"
+                },
+                {
+                  "accepted": [
+                    "tduani@oev.de"
+                  ],
+                  "rejected": [],
+                  "envelopeTime": 82,
+                  "messageTime": 93,
+                  "messageSize": 1855,
+                  "response": "250 2.0.0 Ok: queued as D021260DCB",
+                  "envelope": {
+                    "from": "no-reply@salneo.de",
+                    "to": [
+                      "tduani@oev.de"
+                    ]
+                  },
+                  "messageId": "<15f687f6-f584-1803-6c76-b272a489b20a@salneo.de>"
+                }
+              ]
+            }
+          },
+          "400": {
+            "description": "Client side failure - some of the given data were not correct",
+            "schema": {
+              "description": "Client side failure - some of the given data were not correct",
+              "type": "string"
+            }
+          },
+          "500": {
+            "description": "Server side failure - something went wrong on the server",
+            "schema": {
+              "description": "Server side failure - something went wrong on the server",
+              "type": "string"
             }
           }
         }
-      },
-      "/offer/send": {
-        "post": {
-          "responses": {
-            "200": {
-              "description": "Default Response"
+      }
+    },
+    "/partners/": {
+      "get": {
+        "summary": "Get all partners from the databank",
+        "description": "Get all partners",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "schema": {
+              "description": "Successful response",
+              "type": "array",
+              "elements": {
+                "name": {
+                  "type": "string",
+                  "description": "Partners name"
+                },
+                "identifier": {
+                  "type": "string",
+                  "description": "Partners Identifier - provided by the different partners"
+                },
+                "bookingUrl": {
+                  "type": "string",
+                  "description": "Booking URL for the partner"
+                },
+                "url": {
+                  "type": "string",
+                  "description": "URL to the partners page"
+                },
+                "uuid": {
+                  "type": "string",
+                  "description": "Unique Identifier for the partner, provided by us"
+                }
+              },
+              "example": [
+                {
+                  "name": "Sparkasse Ansbach",
+                  "url": "https://www.sparkasse-ansbach.de",
+                  "bookingUrl": "https://www.sparkasse-ansbach.de",
+                  "identifier": "xxx",
+                  "uuid": "xxxx-xxxx-xxxx"
+                },
+                {
+                  "name": "Sparkasse Rottal-Inn",
+                  "url": "https://www.sparkasse-rottal-inn.de",
+                  "bookingUrl": "https://www.sparkasse-rottal-inn.de",
+                  "identifier": "xxx",
+                  "uuid": "xxxx-xxxx-xxxx"
+                },
+                {
+                  "name": "Sparkasse Fürth",
+                  "url": "https://www.sparkasse-fuerth.de",
+                  "bookingUrl": "https://www.sparkasse-fuerth.de",
+                  "identifier": "xxx",
+                  "uuid": "xxxx-xxxx-xxxx"
+                }
+              ]
+            }
+          },
+          "404": {
+            "description": "Client side failure - No Partners found",
+            "schema": {
+              "description": "Client side failure - No Partners found",
+              "type": "string"
+            }
+          },
+          "500": {
+            "description": "Server side failure - something went wrong on the server",
+            "schema": {
+              "description": "Server side failure - something went wrong on the server",
+              "type": "string"
             }
           }
         }
-      },
-      "/partners/": {
-        "get": {
-          "responses": {
-            "200": {
-              "description": "Default Response"
+      }
+    },
+    "/partners/{id}": {
+      "get": {
+        "summary": "Get Partner by its ID",
+        "description": "Get partner by ID",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "schema": {
+              "description": "Successful response",
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "Partners name"
+                },
+                "identifier": {
+                  "type": "string",
+                  "description": "Partners Identifier - provided by the different partners"
+                },
+                "bookingUrl": {
+                  "type": "string",
+                  "description": "Booking URL for the partner"
+                },
+                "url": {
+                  "type": "string",
+                  "description": "URL to the partners page"
+                },
+                "uuid": {
+                  "type": "string",
+                  "description": "Unique Identifier for the partner, provided by us"
+                }
+              },
+              "example": {
+                "name": "Sparkasse Ansbach",
+                "url": "https://www.sparkasse-ansbach.de",
+                "bookingUrl": "https://www.sparkasse-ansbach.de",
+                "identifier": "xxx",
+                "uuid": "xxxx-xxxx-xxxx"
+              }
             }
-          }
-        }
-      },
-      "/partners/{id}": {
-        "get": {
-          "responses": {
-            "200": {
-              "description": "Default Response"
+          },
+          "404": {
+            "description": "Client side failure - No partner with this ID found",
+            "schema": {
+              "description": "Client side failure - No partner with this ID found",
+              "type": "string"
+            }
+          },
+          "500": {
+            "description": "Server side failure - something went wrong on the server",
+            "schema": {
+              "description": "Server side failure - something went wrong on the server",
+              "type": "string"
             }
           }
         }
       }
     }
-  },
-  "docsType": "microservice",
-  "microservices": [
-    "email-service"
-  ],
-  "externalServices": [
-    "WRZRechner"
-  ]
+  }
 }

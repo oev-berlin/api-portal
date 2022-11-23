@@ -22,7 +22,7 @@ describe('Card', () => {
     it('Card component (type microservice) should render without crashing', async () => {
       const screen = setupComponent({
         projectData: createProjectData({
-          docsType: 'microservice',
+          type: 'microservice',
         }),
       });
       expect(screen.container).toBeDefined();
@@ -31,7 +31,7 @@ describe('Card', () => {
     it('Card component (type backend) should render without crashing', async () => {
       const screen = setupComponent({
         projectData: createProjectData({
-          docsType: 'backend',
+          type: 'backend',
         }),
       });
       expect(screen.container).toBeDefined();
@@ -48,7 +48,7 @@ describe('Card', () => {
     it('Card component (without external services) should render without crashing', async () => {
       const screen = setupComponent({
         projectData: createProjectData({
-          externalServices: [],
+          externalservices: [],
         }),
       });
       expect(screen.container).toBeDefined();
@@ -74,7 +74,7 @@ describe('Card', () => {
     it('should match a basic snapshot (type microservice)', () => {
       const { container } = setupComponent({
         projectData: createProjectData({
-          docsType: 'microservice',
+          type: 'microservice',
         }),
       });
       expect(container).toMatchSnapshot();
@@ -83,7 +83,7 @@ describe('Card', () => {
     it('should match a basic snapshot (type backend)', () => {
       const { container } = setupComponent({
         projectData: createProjectData({
-          docsType: 'backend',
+          type: 'backend',
         }),
       });
       expect(container).toMatchSnapshot();
@@ -101,7 +101,7 @@ describe('Card', () => {
     it('should match a basic snapshot (without external services)', () => {
       const { container } = setupComponent({
         projectData: createProjectData({
-          externalServices: [],
+          externalservices: [],
         }),
       });
       expect(container).toMatchSnapshot();

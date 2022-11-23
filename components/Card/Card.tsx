@@ -7,15 +7,15 @@ import { CardProps } from './interfaces';
 
 export function Card({ projectData }: CardProps) {
   return (
-    <Link passHref href={`/project/${projectData.id}`}>
+    <Link passHref href={`/project/${projectData.info.title}`}>
       <CardOuterContainer>
         <CardActionArea component={Button} sx={{ textTransform: 'none' }}>
           <CardTitle>
-            {projectData.name}
+            {projectData.info.title}
           </CardTitle>
           <CardInnerContainer container spacing={2}>
             {
-                        projectData.microservices.map((microserviceName: string) => (
+                        projectData.info.microservices.map((microserviceName: string) => (
                           <Microservice
                             serviceName={microserviceName}
                             key={microserviceName}

@@ -17,7 +17,7 @@ export const Column = ({ projects, name }:ColumnProps) => (
                     projects.map((project:projectData) => (
                       <Card
                         projectData={project}
-                        key={project.id}
+                        key={project.info.title}
                       />
                     ))
                 }

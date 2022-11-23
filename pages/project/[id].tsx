@@ -4,7 +4,7 @@ import { ContextProps, projectsContext } from '../../context/ProjectsContext';
 import { ProjectDetails } from '../../components/ProjectDetails';
 import { ServicesDisplay } from '../../components/ServicesDisplay';
 import { fetchProjectsData } from '../../utils/fileSystemUtilities';
-import { SwaggerComponent }from "../../components/SwaggerComponent/SwaggerComponent";
+import { SwaggerComponent } from '../../components/SwaggerComponent/SwaggerComponent';
 
 export default function App({ id, projectsData }: { id: string, projectsData: projectData[] }) {
   const { projects, setProjects }: ContextProps = useContext(projectsContext);
@@ -15,7 +15,7 @@ export default function App({ id, projectsData }: { id: string, projectsData: pr
         setProjects(projectsData);
       }
     }
-    const project: projectData = projectsData.find((project: projectData) => project.id === id);
+    const project: projectData = projectsData.find((project: projectData) => project.info.title === id);
     setProject(project);
   }, []);
 
@@ -23,10 +23,10 @@ export default function App({ id, projectsData }: { id: string, projectsData: pr
 
   return (
     <>
-      <ProjectDetails name={project?.name} description={project?.description} />
-      <ServicesDisplay title="Internal Services" services={project?.microservices} />
-      <ServicesDisplay title="External Services" services={project?.externalServices} />
-      <SwaggerComponent spec={project?.swaggerInformation}></SwaggerComponent>
+      <ProjectDetails name={project?.info.title} description={project?.info.description} />
+      <ServicesDisplay title="Internal Services" services={project?.info.microservices} />
+      <ServicesDisplay title="External Services" services={project?.info.externalservices} />
+      <SwaggerComponent spec={project} />
     </>
 
   );
@@ -34,8 +34,8 @@ export default function App({ id, projectsData }: { id: string, projectsData: pr
 
 export async function getStaticPaths() {
   const projectsData: projectData[] = fetchProjectsData();
-  const paths = projectsData.map((project) => ({
-    params: { id: project.id },
+  const paths = projectsData.map((project:projectData) => ({
+    params: { id: project.info.title },
   }));
   return {
     paths,
