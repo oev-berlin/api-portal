@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import {Card, Grid} from "@mui/material";
+import styled from 'styled-components';
+import { Card, Grid } from '@mui/material';
 
 export const CardTitle = styled.h3`
   text-align: left;

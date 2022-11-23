@@ -1,4 +1,4 @@
-import {projectData} from '../../utils/interfaces';
+import { projectData } from '../../utils/interfaces';
 
 interface CardProps{
     projectData: projectData

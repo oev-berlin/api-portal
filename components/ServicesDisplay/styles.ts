@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import {Grid, Paper} from "@mui/material";
+import styled from 'styled-components';
+import { Grid, Paper } from '@mui/material';
 
 export const ServicesOuterContainer = styled(Paper)`
   margin: 1rem;

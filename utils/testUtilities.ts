@@ -1,12 +1,11 @@
-import {projectData, projectInfo} from "./interfaces";
+import {projectData} from "./interfaces";
 import {docType} from "./types";
-import {JsonValue} from "type-fest";
 
 export const createProjectData = (
     {
         title = "Test Project",
         description = "Description",
-        type = "microservices",
+        type = "microservice",
         microservices= ["PDF Service", "Email Service"],
         externalservices= ["WRZ Rechner"],
 

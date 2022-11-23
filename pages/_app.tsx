@@ -3,10 +3,10 @@ import type { AppProps } from 'next/app';
 import React, { useMemo, useState } from 'react';
 import { Grid } from '@mui/material';
 import { ContextProps, projectsContext } from '../context/ProjectsContext';
-import { projectInfo } from '../utils/interfaces';
+import { projectData } from '../utils/interfaces';
 
-function MyApp({ Component, pageProps }: AppProps) {
-  const [projects, setProjects] = useState<projectInfo[]>([]);
+function MyApp({ Component, pageProps }: AppProps):JSX.Element {
+  const [projects, setProjects] = useState<projectData[]>([]);
   const contextProps:ContextProps = useMemo(() => ({ projects, setProjects }), [projects, setProjects]);
 
   return (

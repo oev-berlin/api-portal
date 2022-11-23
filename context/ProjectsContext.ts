@@ -1,5 +1,5 @@
 import {createContext, Dispatch} from 'react';
-import {projectData, projectInfo} from "../utils/interfaces";
+import {projectData} from "../utils/interfaces";
 
 export interface ContextProps{
     projects:projectData[],

@@ -15,8 +15,8 @@ export default function App({ id, projectsData }: { id: string, projectsData: pr
         setProjects(projectsData);
       }
     }
-    const project: projectData = projectsData.find((project: projectData) => project.info.title === id);
-    setProject(project);
+    const project: projectData|undefined = projectsData.find((project: projectData) => project.info.title === id);
+    if (typeof project !== 'undefined') setProject(project);
   }, []);
 
   if (!project) return <h2>Loading...</h2>;
@@ -43,7 +43,7 @@ export async function getStaticPaths() {
   };
 }
 
-export const getStaticProps = async (context) => {
+export const getStaticProps = async (context:any) => {
   const projectsData = fetchProjectsData();
   return {
     props: {
