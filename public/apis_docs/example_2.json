@@ -1,7 +1,7 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "Salneo_2",
+    "title": "Salneo_21",
     "description": "this is a salneo project",
     "type": "backend",
     "microservices": [
@@ -14,9 +14,10 @@
   },
   "definitions": {},
   "paths": {
-    "//": {
+    "/": {
       "get": {
-        "summary": "qwerty",
+        "tags": ["Health check"],
+        "summary": "Simple health check",
         "description": "Sanity check, used for testing",
         "responses": {
           "200": {
@@ -41,6 +42,7 @@
     },
     "/pdf/generate": {
       "post": {
+        "tags": ["PDF generator"],
         "summary": "Generate pdf file from given data",
         "description": "Generate PDF file",
         "parameters": [
@@ -126,6 +128,7 @@
     },
     "/offer/calculate": {
       "post": {
+        "tags": ["Offers"],
         "summary": "Get packages from WRZ",
         "description": "Calculate different packages",
         "parameters": [
@@ -356,6 +359,7 @@
     },
     "/offer/send": {
       "post": {
+        "tags": ["Offers"],
         "summary": "Send an Email to a given client and partner with offer",
         "description": "Send an Email to a given client and partner with offer",
         "parameters": [
@@ -515,6 +519,7 @@
     },
     "/partners/": {
       "get": {
+        "tags": ["Partners"],
         "summary": "Get all partners from the databank",
         "description": "Get all partners",
         "responses": {
@@ -589,6 +594,7 @@
     },
     "/partners/{id}": {
       "get": {
+      "tags": ["Partners"],
         "summary": "Get Partner by its ID",
         "description": "Get partner by ID",
         "responses": {
