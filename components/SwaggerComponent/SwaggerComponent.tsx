@@ -3,7 +3,10 @@ import dynamic from 'next/dynamic';
 import 'swagger-ui-react/swagger-ui.css';
 
 const SwaggerUI = dynamic<{
-  spec: any;
+    spec: any;
 }>(import('swagger-ui-react'), { ssr: false });
 
-export const SwaggerComponent = ({ spec }: Record<string, any>) => <SwaggerUI spec={spec} />;
+export function SwaggerComponent({ spec }: Record<string, any>) {
+  delete spec.info;
+  return <SwaggerUI spec={spec} />;
+}

@@ -10,12 +10,10 @@ import { createProjectData } from '../../../../utils/testUtilities';
 expect.extend(toHaveNoViolations);
 
 const testProject1: projectData = createProjectData({
-  id: '1',
-  name: 'Test Project1',
+  title: 'Test Project1',
 });
 const testProject2: projectData = createProjectData({
-  id: '2',
-  name: 'Test Project2',
+  title: 'Test Project2',
 });
 
 const setupComponent = ({ projects, name }: ColumnProps) => render(

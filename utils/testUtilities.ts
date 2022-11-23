@@ -1,33 +1,34 @@
-import {projectData} from "./interfaces";
+import {projectData, projectInfo} from "./interfaces";
 import {docType} from "./types";
+import {JsonValue} from "type-fest";
 
 export const createProjectData = (
     {
-        id = "1",
-        name = "Test Project",
+        title = "Test Project",
         description = "Description",
-        swaggerInformation = {},
-        docsType = "microservices",
-        microservices = ["PDF Service", "Email Service"],
-        externalServices = ["WRZ Rechner"],
+        type = "microservices",
+        microservices= ["PDF Service", "Email Service"],
+        externalservices= ["WRZ Rechner"],
+
     }: {
-        id?: string,
-        name?: string,
+        title?: string,
         description?: string,
-        swaggerInformation?: object,
-        docsType?: docType,
+        type?: docType,
         microservices?: string[],
-        externalServices?: string[]
+        externalservices?: string[],
     }
 ): projectData => (
      {
-        id,
-        name,
-        description,
-        swaggerInformation,
-        docsType,
-        microservices,
-        externalServices
+         swagger: "2.0",
+         info: {
+             title,
+             description,
+             type,
+             microservices,
+             externalservices,
+         },
+         definitions: {},
+         paths: {},
     });
 
-export const filterBy = (data: projectData[], docType: string): projectData[] => data.filter((projectData: projectData) => projectData.docsType === docType)
+export const filterBy = (data: projectData[], docType: string): projectData[] => data.filter((projectData: projectData) => projectData.info.type === docType)

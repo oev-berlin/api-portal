@@ -1,21 +1,21 @@
 import React from 'react';
 import { cleanup, render, screen } from '@testing-library/react';
 import Home from '../../../pages';
-import { projectData } from '../../../utils/interfaces';
+import { projectInfo } from '../../../utils/interfaces';
 import { createProjectData } from '../../../utils/testUtilities';
 
-const testProject1: projectData = createProjectData({
+const testProject1: projectInfo = createProjectData({
   id: '1',
   name: 'Test Project1',
   docsType: 'microservice',
 });
-const testProject2: projectData = createProjectData({
+const testProject2: projectInfo = createProjectData({
   id: '2',
   name: 'Test Project2',
   docsType: 'backend',
 });
 
-const setupComponent = ({ projects }: {projects: projectData[] }) => render(<Home projectsData={projects} />);
+const setupComponent = ({ projects }: {projects: projectInfo[] }) => render(<Home projectsData={projects} />);
 
 describe('Home', () => {
   afterEach(() => {

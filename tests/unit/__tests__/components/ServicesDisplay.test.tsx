@@ -3,12 +3,12 @@ import { toHaveNoViolations } from 'jest-axe';
 import React from 'react';
 import 'jest-styled-components';
 import { ServicesDisplay } from '../../../../components/ServicesDisplay';
-import { projectData } from '../../../../utils/interfaces';
+import { projectInfo } from '../../../../utils/interfaces';
 import exampleProject from '../../../../public/apis_docs/example_1.json';
 
 expect.extend(toHaveNoViolations);
 
-const testProject: projectData = exampleProject;
+const testProject: projectInfo = exampleProject.info;
 const setupComponent = ({ title, services }: { title: string, services: string[] }) => render(
   <ServicesDisplay title={title} services={services} />,
 );
@@ -28,7 +28,7 @@ describe('ServicesDisplay', () => {
     it('ServicesDisplay component (type external, title and services are not empty) should render without crashing', async () => {
       const screen = setupComponent({
         title: 'External Services',
-        services: testProject.externalServices,
+        services: testProject.externalservices,
       });
       expect(screen.container).toBeDefined();
     });
@@ -42,7 +42,7 @@ describe('ServicesDisplay', () => {
     it('ServicesDisplay component (type external, title is empty) should render without crashing', async () => {
       const screen = setupComponent({
         title: '',
-        services: testProject.externalServices,
+        services: testProject.externalservices,
       });
       expect(screen.container).toBeDefined();
     });
@@ -68,13 +68,10 @@ describe('ServicesDisplay', () => {
       .findByText(/internal services/i)
       .then((element) => expect(element).toBeInTheDocument());
     await screen
-      .findByText(/email-service/)
+      .findByText(/mail-service/)
       .then((element) => expect(element).toBeInTheDocument());
     await screen
-      .findByText(/pdf service/i)
-      .then((element) => expect(element).toBeInTheDocument());
-    await screen
-      .findByText(/email service/i)
+      .findByText(/pdf-service/i)
       .then((element) => expect(element).toBeInTheDocument());
   });
 
@@ -86,7 +83,7 @@ describe('ServicesDisplay', () => {
     it('should match a basic snapshot (type external, title and services are not empty)', () => {
       const { container } = setupComponent({
         title: 'External Services',
-        services: testProject.externalServices,
+        services: testProject.externalservices,
       });
       expect(container).toMatchSnapshot();
     });
@@ -95,7 +92,7 @@ describe('ServicesDisplay', () => {
       expect(container).toMatchSnapshot();
     });
     it('should match a basic snapshot (type external, title is empty)', () => {
-      const { container } = setupComponent({ title: '', services: testProject.externalServices });
+      const { container } = setupComponent({ title: '', services: testProject.externalservices });
       expect(container).toMatchSnapshot();
     });
     it('should match a basic snapshot (services is empty)', () => {
