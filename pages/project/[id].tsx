@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect, useMemo, useState } from 'react';
 import { projectData } from '../../utils/interfaces';
 import { ContextProps, projectsContext } from '../../context/ProjectsContext';
 import { ProjectDetails } from '../../components/ProjectDetails';
@@ -7,6 +7,8 @@ import { fetchProjectsData } from '../../utils/fileSystemUtilities';
 import { SwaggerComponent } from '../../components/SwaggerComponent/SwaggerComponent';
 
 export default function App({ id, projectsData }: { id: string, projectsData: projectData[] }) {
+  projectsData = useMemo(() => (projectsData), [projectsData]);
+  id = useMemo(() => (id), [id]);
   const { projects, setProjects }: ContextProps = useContext(projectsContext);
   const [project, setProject] = useState<projectData | null>(null);
   useEffect(() => {
@@ -18,7 +20,6 @@ export default function App({ id, projectsData }: { id: string, projectsData: pr
     const project: projectData|undefined = projectsData.find((project: projectData) => project.info.title === id);
     if (typeof project !== 'undefined') setProject(project);
   }, []);
-
   if (!project) return <h2>Loading...</h2>;
 
   return (

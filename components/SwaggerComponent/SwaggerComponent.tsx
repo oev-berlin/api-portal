@@ -7,6 +7,6 @@ const SwaggerUI = dynamic<{
 }>(import('swagger-ui-react'), { ssr: false });
 
 export function SwaggerComponent({ spec }: Record<string, any>) {
-  delete spec.info;
-  return <SwaggerUI spec={spec} />;
+  const swaggerComponentData = { ...spec, info: null };
+  return <SwaggerUI spec={swaggerComponentData} />;
 }
