@@ -1,7 +1,7 @@
 import {docType} from "./types";
 import { JsonValue } from "type-fest";
 
-export interface projectInfo {
+export interface ProjectInfo {
     title: string,
     description: string,
     type: docType,
@@ -9,10 +9,15 @@ export interface projectInfo {
     externalservices: string[]
 }
 
-export interface projectData {
+export interface ProjectData {
     swagger?:string,
-    info: projectInfo,
+    info: ProjectInfo,
     definitions?: JsonValue,
     paths?: JsonValue,
+}
+
+export interface ProjectProps {
+    id: string,
+    projectsData: ProjectData[]
 }
 

@@ -1,4 +1,4 @@
-import {projectData} from "./interfaces";
+import {ProjectData} from "./interfaces";
 import {docType} from "./types";
 
 export const createProjectData = (
@@ -16,7 +16,7 @@ export const createProjectData = (
         microservices?: string[],
         externalservices?: string[],
     }
-): projectData => (
+): ProjectData => (
      {
          swagger: "2.0",
          info: {
@@ -30,4 +30,4 @@ export const createProjectData = (
          paths: {},
     });
 
-export const filterBy = (data: projectData[], docType: string): projectData[] => data.filter((projectData: projectData) => projectData.info.type === docType)
+export const filterBy = (data: ProjectData[], docType: string): ProjectData[] => data.filter((projectData: ProjectData) => projectData.info.type === docType)

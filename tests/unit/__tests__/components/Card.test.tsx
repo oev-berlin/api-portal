@@ -2,14 +2,14 @@ import { render, cleanup } from '@testing-library/react';
 import { toHaveNoViolations } from 'jest-axe';
 import React from 'react';
 import { Card } from '../../../../components/Card';
-import { projectData } from '../../../../utils/interfaces';
+import { ProjectData } from '../../../../utils/interfaces';
 // eslint-disable-next-line import/extensions
 import 'jest-styled-components';
 import { createProjectData } from '../../../../utils/testUtilities';
 
 expect.extend(toHaveNoViolations);
 
-const setupComponent = ({ projectData }: { projectData: projectData }) => render(
+const setupComponent = ({ projectData }: { projectData: ProjectData }) => render(
   <Card projectData={projectData} />,
 );
 

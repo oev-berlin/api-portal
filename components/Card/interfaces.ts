@@ -1,7 +1,7 @@
-import { projectData } from '../../utils/interfaces';
+import { ProjectData } from '../../utils/interfaces';
 
 interface CardProps{
-    projectData: projectData
+    projectData: ProjectData
 }
 
 export type { CardProps };

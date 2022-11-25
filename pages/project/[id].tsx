@@ -1,23 +1,24 @@
 import React, { useContext, useEffect, useMemo, useState } from 'react';
-import { projectData } from '../../utils/interfaces';
+import {ProjectData, ProjectProps } from '../../utils/interfaces';
 import { ContextProps, projectsContext } from '../../context/ProjectsContext';
 import { ProjectDetails } from '../../components/ProjectDetails';
 import { ServicesDisplay } from '../../components/ServicesDisplay';
 import { fetchProjectsData } from '../../utils/fileSystemUtilities';
 import { SwaggerComponent } from '../../components/SwaggerComponent/SwaggerComponent';
+import { GetStaticPropsContext } from "next";
 
-export default function App({ id, projectsData }: { id: string, projectsData: projectData[] }) {
+export default function App({ id, projectsData }: ProjectProps) {
   projectsData = useMemo(() => (projectsData), [projectsData]);
   id = useMemo(() => (id), [id]);
   const { projects, setProjects }: ContextProps = useContext(projectsContext);
-  const [project, setProject] = useState<projectData | null>(null);
+  const [project, setProject] = useState<ProjectData | null>(null);
   useEffect(() => {
     if (!projects) {
       if (setProjects) {
         setProjects(projectsData);
       }
     }
-    const project: projectData|undefined = projectsData.find((project: projectData) => project.info.title === id);
+    const project: ProjectData|undefined = projectsData.find((project: ProjectData) => project.info.title === id);
     if (typeof project !== 'undefined') setProject(project);
   }, []);
   if (!project) return <h2>Loading...</h2>;
@@ -34,8 +35,8 @@ export default function App({ id, projectsData }: { id: string, projectsData: pr
 }
 
 export async function getStaticPaths() {
-  const projectsData: projectData[] = fetchProjectsData();
-  const paths = projectsData.map((project:projectData) => ({
+  const projectsData: ProjectData[] = fetchProjectsData();
+  const paths = projectsData.map((project:ProjectData) => ({
     params: { id: project.info.title },
   }));
   return {
@@ -44,12 +45,12 @@ export async function getStaticPaths() {
   };
 }
 
-export const getStaticProps = async (context:any) => {
+export const getStaticProps = async (context: GetStaticPropsContext) => {
   const projectsData = fetchProjectsData();
   return {
     props: {
       projectsData,
-      id: context.params.id,
+      id: context?.params?.id,
     },
   };
 };

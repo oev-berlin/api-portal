@@ -1,7 +1,7 @@
 import {createContext, Dispatch} from 'react';
-import {projectData} from "../utils/interfaces";
+import {ProjectData} from "../utils/interfaces";
 
 export interface ContextProps{
-    projects:projectData[],
-    setProjects: Dispatch<projectData[]>|null}
+    projects:ProjectData[],
+    setProjects: Dispatch<ProjectData[]>|null}
 export const projectsContext = createContext<ContextProps>({projects:[], setProjects:null});

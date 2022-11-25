@@ -2,17 +2,17 @@ import { render, cleanup } from '@testing-library/react';
 import { axe, toHaveNoViolations } from 'jest-axe';
 import React from 'react';
 import { Column, ColumnProps } from '../../../../components/Column';
-import { projectData } from '../../../../utils/interfaces';
+import { ProjectData } from '../../../../utils/interfaces';
 // eslint-disable-next-line import/extensions
 import 'jest-styled-components';
 import { createProjectData } from '../../../../utils/testUtilities';
 
 expect.extend(toHaveNoViolations);
 
-const testProject1: projectData = createProjectData({
+const testProject1: ProjectData = createProjectData({
   title: 'Test Project1',
 });
-const testProject2: projectData = createProjectData({
+const testProject2: ProjectData = createProjectData({
   title: 'Test Project2',
 });
 
