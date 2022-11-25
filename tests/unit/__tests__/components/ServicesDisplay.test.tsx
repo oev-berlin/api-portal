@@ -3,12 +3,12 @@ import { toHaveNoViolations } from 'jest-axe';
 import React from 'react';
 import 'jest-styled-components';
 import { ServicesDisplay } from '../../../../components/ServicesDisplay';
-import { projectInfo } from '../../../../utils/interfaces';
+import { ProjectInfo } from '../../../../utils/interfaces';
 import exampleProject from '../../../../public/apis_docs/example_1.json';
 
 expect.extend(toHaveNoViolations);
 
-const testProject: projectInfo = exampleProject.info;
+const testProject: ProjectInfo = exampleProject.info;
 const setupComponent = ({ title, services }: { title: string, services: string[] }) => render(
   <ServicesDisplay title={title} services={services} />,
 );

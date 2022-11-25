@@ -1,8 +1,8 @@
-import { projectData } from '../../utils/interfaces';
+import { ProjectData } from '../../utils/interfaces';
 
 interface ColumnProps {
     name: string,
-    projects: projectData[],
+    projects: ProjectData[],
 }
 
 export type { ColumnProps };

@@ -2,14 +2,14 @@ import React, { useEffect, useContext, useCallback } from 'react';
 import { Header } from '../meta/Header';
 import { Column } from '../components/Column';
 import { MainPageInnerContainer, MainPageOuterContainer, MainPageTitle } from '../styles/pages/main/styles';
-import { projectData } from '../utils/interfaces';
+import { ProjectData } from '../utils/interfaces';
 import { projectsContext, ContextProps } from '../context/ProjectsContext';
 import { docType } from '../utils/types';
 import { fetchProjectsData } from '../utils/fileSystemUtilities';
 import { filterBy } from '../utils/testUtilities';
 
 interface AppProps {
-    projectsData: projectData[]
+    projectsData: ProjectData[]
 }
 
 export default function App({ projectsData }: AppProps) {
@@ -37,7 +37,7 @@ export default function App({ projectsData }: AppProps) {
 }
 
 export async function getStaticProps() {
-  const projectsData : projectData[] = fetchProjectsData();
+  const projectsData : ProjectData[] = fetchProjectsData();
   return {
     props: {
       projectsData,

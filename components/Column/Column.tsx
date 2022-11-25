@@ -3,7 +3,7 @@ import { Grid } from '@mui/material';
 import { Card } from '../Card';
 import { ColumnContainer, ColumnTitle } from './styles';
 import { ColumnProps } from './interfaces';
-import { projectData } from '../../utils/interfaces';
+import { ProjectData } from '../../utils/interfaces';
 
 export const Column = ({ projects, name }:ColumnProps) => (
   <ColumnContainer xs={12} md={6} item container>
@@ -14,7 +14,7 @@ export const Column = ({ projects, name }:ColumnProps) => (
     </Grid>
     <Grid item xs={10}>
       {
-                    projects.map((project:projectData) => (
+                    projects.map((project:ProjectData) => (
                       <Card
                         projectData={project}
                         key={project.info.title}

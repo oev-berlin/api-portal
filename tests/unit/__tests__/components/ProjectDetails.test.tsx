@@ -1,7 +1,7 @@
 import { render, cleanup } from '@testing-library/react';
 import { toHaveNoViolations } from 'jest-axe';
 import React from 'react';
-import { projectInfo } from '../../../../utils/interfaces';
+import { ProjectInfo } from '../../../../utils/interfaces';
 // eslint-disable-next-line import/extensions
 import 'jest-styled-components';
 import { ProjectDetails } from '../../../../components/ProjectDetails';
@@ -9,11 +9,11 @@ import exampleProject from '../../../../public/apis_docs/example_1.json';
 
 expect.extend(toHaveNoViolations);
 
-const testProject1: projectInfo = exampleProject.info;
-const testProject2: projectInfo = { ...exampleProject, title: '' };
-const testProject3: projectInfo = { ...exampleProject, description: '' };
+const testProject1: ProjectInfo = exampleProject.info;
+const testProject2: ProjectInfo = { ...exampleProject, title: '' };
+const testProject3: ProjectInfo = { ...exampleProject, description: '' };
 
-const setupComponent = ({ project }: { project: projectInfo }) => render(
+const setupComponent = ({ project }: { project: ProjectInfo }) => render(
   <ProjectDetails name={project.title} description={project.description} />,
 );
 

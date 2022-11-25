@@ -1,3 +1,3 @@
-import {Microservice} from "./MicroService/Microservice";
+import { Microservice } from './MicroService/Microservice';
 
-export {Microservice}
+export { Microservice };
