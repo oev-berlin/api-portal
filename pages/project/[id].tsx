@@ -1,11 +1,11 @@
 import React, { useContext, useEffect, useMemo, useState } from 'react';
-import {ProjectData, ProjectProps } from '../../utils/interfaces';
+import { GetStaticPropsContext } from 'next';
+import { ProjectData, ProjectProps } from '../../utils/interfaces';
 import { ContextProps, projectsContext } from '../../context/ProjectsContext';
 import { ProjectDetails } from '../../components/ProjectDetails';
 import { ServicesDisplay } from '../../components/ServicesDisplay';
 import { fetchProjectsData } from '../../utils/fileSystemUtilities';
 import { SwaggerComponent } from '../../components/SwaggerComponent/SwaggerComponent';
-import { GetStaticPropsContext } from "next";
 
 export default function App({ id, projectsData }: ProjectProps) {
   projectsData = useMemo(() => (projectsData), [projectsData]);
