@@ -1,9 +1,9 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "Salneo_3",
+    "title": "tidy",
     "description": "this is a salneo project",
-    "type": "microservice",
+    "type": "backend",
     "microservices": [
       "mail-service",
       "pdf-service"

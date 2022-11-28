@@ -5,7 +5,7 @@ import { ProjectInfo } from '../../../../utils/interfaces';
 // eslint-disable-next-line import/extensions
 import 'jest-styled-components';
 import { ProjectDetails } from '../../../../components/ProjectDetails';
-import exampleProject from '../../../../public/apis_docs/example_1.json';
+import exampleProject from '../../../../public/apis_docs/tidy.json';
 
 expect.extend(toHaveNoViolations);
 

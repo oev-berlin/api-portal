@@ -1,13 +1,10 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "Salneo_4",
+    "title": "email-service",
     "description": "this is a salneo project",
     "type": "microservice",
-    "microservices": [
-      "mail-service",
-      "pdf-service"
-    ],
+    "microservices": [],
     "externalservices": [
       "wrz"
     ]

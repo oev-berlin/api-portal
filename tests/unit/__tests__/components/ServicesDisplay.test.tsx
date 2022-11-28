@@ -4,7 +4,7 @@ import React from 'react';
 import 'jest-styled-components';
 import { ServicesDisplay } from '../../../../components/ServicesDisplay';
 import { ProjectInfo } from '../../../../utils/interfaces';
-import exampleProject from '../../../../public/apis_docs/example_1.json';
+import exampleProject from '../../../../public/apis_docs/tidy.json';
 
 expect.extend(toHaveNoViolations);
 
