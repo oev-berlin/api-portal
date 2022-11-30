@@ -26,8 +26,8 @@ export default function App({ id, projectsData }: ProjectProps) {
   return (
     <>
       <ProjectDetails name={project?.info.title} description={project?.info.description} />
-      <ServicesDisplay title="Internal Services" services={project?.info.microservices} />
-      <ServicesDisplay title="External Services" services={project?.info.externalservices} />
+      <ServicesDisplay title="Internal Services" services={project?.info.microservices} isMicroservice />
+      <ServicesDisplay title="External Services" services={project?.info.externalservices} isMicroservice={false} />
       <SwaggerComponent spec={project} />
     </>
 

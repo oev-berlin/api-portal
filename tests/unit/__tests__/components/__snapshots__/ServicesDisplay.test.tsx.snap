@@ -198,7 +198,7 @@ exports[`ServicesDisplay Snapshots Tests should match a basic snapshot (type int
         <div
           class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 c3 css-1ps6pg7-MuiPaper-root"
         >
-          mail-service
+          email-service
         </div>
       </div>
       <div
@@ -253,7 +253,7 @@ exports[`ServicesDisplay Snapshots Tests should match a basic snapshot (type int
         <div
           class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 c3 css-1ps6pg7-MuiPaper-root"
         >
-          mail-service
+          email-service
         </div>
       </div>
       <div
