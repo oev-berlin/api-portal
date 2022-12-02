@@ -8,8 +8,8 @@ import { act } from 'react-dom/test-utils';
 
 expect.extend(toHaveNoViolations);
 
-const setupComponent = ({ text }: ButtonProps ) => render(
-  <Button text={text} />,
+const setupComponent = ({ text, link }: ButtonProps ) => render(
+  <Button text={text} link={link} />,
 );
 
 let screen;
@@ -20,17 +20,25 @@ describe('Button', () => {
 
   describe('UI Tests', () => {
     it('Button component should render without crashing', async () => {
-      act(()=>{screen = setupComponent({text:"Back"})});
+      act(()=>{screen = setupComponent({text:"Back", link:"/"})});
       expect(screen.container).toBeDefined();
     });
 
     it('Card component (empty text) should render without crashing', async () => {
-      act( ()=>{screen = setupComponent({text: ""})});
+      act( ()=>{screen = setupComponent({text: "", link:"/"})});
+      expect(screen.container).toBeDefined();
+    });
+    it('Card component (empty link) should render without crashing', async () => {
+      act( ()=>{screen = setupComponent({text: "Back", link:""})});
+      expect(screen.container).toBeDefined();
+    });
+    it('Card component (empty text and empty link) should render without crashing', async () => {
+      act( ()=>{screen = setupComponent({text: "", link:""})});
       expect(screen.container).toBeDefined();
     });
 
     it('Card component should be enabled', async () => {
-      act( ()=>{screen = setupComponent({text: "Back"})});
+      act( ()=>{screen = setupComponent({text: "Back", link:"/"})});
       await screen
           .findByText(/back/i)
           .then((element) =>
@@ -38,7 +46,7 @@ describe('Button', () => {
     });
 
     it('Button component should render correctly', async () => {
-      act( ()=>{screen = setupComponent({text:"Back"})});
+      act( ()=>{screen = setupComponent({text:"Back", link:"/"})});
       await screen
         .findByText(/back/i)
         .then((element) => expect(element).toBeInTheDocument());
@@ -47,19 +55,27 @@ describe('Button', () => {
 
   describe('Snapshots Tests', () => {
     it('should match a basic snapshot', () => {
-      act( ()=>{screen  = setupComponent({text:"Back"})});
+      act( ()=>{screen  = setupComponent({text:"Back", link:"/"})});
       expect(screen.container).toMatchSnapshot();
     });
 
     it('should match a basic snapshot (empty text)', () => {
-      act(()=>{ screen = setupComponent({text:""})});
+      act(()=>{ screen = setupComponent({text:"", link:"/"})});
+      expect(screen.container).toMatchSnapshot();
+    });
+    it('should match a basic snapshot (empty link)', () => {
+      act(()=>{ screen = setupComponent({text:"Back", link:""})});
+      expect(screen.container).toMatchSnapshot();
+    });
+    it('should match a basic snapshot (empty text and empty link)', () => {
+      act(()=>{ screen = setupComponent({text:"", link:""})});
       expect(screen.container).toMatchSnapshot();
     });
   });
 
   describe('Accessibility Tests', () => {
     it('should pass a basic accessibility test', async () => {
-      act(()=>{ screen = setupComponent({ text:"Back"})});
+      act(()=>{ screen = setupComponent({ text:"Back", link:"/"})});
       const results = await axe(screen.container);
       expect(results).toHaveNoViolations();
     });
