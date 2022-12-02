@@ -19,7 +19,6 @@ export function Card({ projectData }: CardProps) {
                           <Microservice
                             serviceName={microserviceName}
                             key={microserviceName}
-                            isMicroservice={false}
                           />
                         ))
             }

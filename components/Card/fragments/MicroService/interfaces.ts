@@ -1,6 +1,6 @@
 interface MicroServiceProps {
     serviceName: string,
-    isMicroservice: boolean,
+    isMicroservice?: boolean,
 }
 
 export type { MicroServiceProps };

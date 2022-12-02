@@ -1,17 +1,22 @@
 import React from 'react';
-import { CardActionArea, Grid } from '@mui/material';
+import { Button, CardActionArea, Grid } from '@mui/material';
+import { useRouter } from 'next/router';
 import { MicroserviceContainer } from './styles';
 import { MicroServiceProps } from './interfaces';
 
 export function Microservice({ serviceName, isMicroservice }: MicroServiceProps) {
+  const router = useRouter();
+  function handelClick() {
+    router.push(`/project/${serviceName}`, undefined, { shallow: false }).then(() => console.log('redirected')).catch((e) => console.error(e));
+  }
   if (isMicroservice) {
     return (
       <Grid item xs={12} sm={4} md={6} lg={4}>
-        <a href={`/project/${serviceName}`}>
-            <MicroserviceContainer>
-              {serviceName}
-            </MicroserviceContainer>
-        </a>
+        <CardActionArea component={Button} onClick={() => handelClick()}>
+          <MicroserviceContainer>
+            {serviceName}
+          </MicroserviceContainer>
+        </CardActionArea>
       </Grid>
     );
   }
