@@ -30,7 +30,7 @@ export default function App({ id, projectsData }: ProjectProps) {
       <ServicesDisplay title="Internal Services" services={project?.info.microservices} />
       <ServicesDisplay title="External Services" services={project?.info.externalservices} />
       <SwaggerComponent spec={project} />
-      <Button text="Back" />
+      <Button text="Back" link="/" />
     </>
 
   );
