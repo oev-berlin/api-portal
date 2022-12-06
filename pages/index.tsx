@@ -6,7 +6,8 @@ import { ProjectData } from '../utils/interfaces';
 import { projectsContext, ContextProps } from '../context/ProjectsContext';
 import { docType } from '../utils/types';
 import { fetchProjectsData } from '../utils/fileSystemUtilities';
-import { filterBy } from '../utils/testUtilities';
+import { filterBy, mapToTitle } from '../utils/testUtilities';
+import { ComboBox } from '../components/ComboBox';
 
 interface AppProps {
     projectsData: ProjectData[]
@@ -21,12 +22,14 @@ export default function App({ projectsData }: AppProps) {
   }, []);
 
   const filterProjects = useCallback((type: docType) => filterBy(projects, type), [projects]);
+  const getProjectTitles = useCallback(() => mapToTitle(projects), [projects]);
 
   return (
     <>
       <Header />
       <MainPageOuterContainer>
         <MainPageTitle>Swagger API</MainPageTitle>
+        <ComboBox searchOptions={getProjectTitles()} />
         <MainPageInnerContainer container>
           <Column projects={filterProjects('backend')} name="Backend" key="backend" />
           <Column projects={filterProjects('microservice')} name="Microservices" key="microservices" />
