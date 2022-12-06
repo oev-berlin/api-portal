@@ -1,6 +1,6 @@
 interface ServiceDisplayProps {
     title: string,
-    services: string[] | undefined,
+    services?: string[],
     isMicroservice?: boolean,
 }
 export type { ServiceDisplayProps };
