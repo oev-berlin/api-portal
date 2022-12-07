@@ -6,6 +6,7 @@ import { ProjectDetails } from '../../components/ProjectDetails';
 import { ServicesDisplay } from '../../components/ServicesDisplay';
 import { fetchProjectsData } from '../../utils/fileSystemUtilities';
 import { SwaggerComponent } from '../../components/SwaggerComponent/SwaggerComponent';
+import { Button } from '../../components/Button';
 
 export default function App({ id, projectsData }: ProjectProps) {
   projectsData = useMemo(() => (projectsData), [projectsData]);
@@ -29,6 +30,7 @@ export default function App({ id, projectsData }: ProjectProps) {
       <ServicesDisplay title="Internal Services" services={project?.info.microservices} isMicroservice />
       <ServicesDisplay title="External Services" services={project?.info.externalservices} />
       <SwaggerComponent spec={project} />
+      <Button text="Back" link="/" />
     </>
 
   );
