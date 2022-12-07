@@ -1,4 +1,4 @@
-import { render, cleanup } from '@testing-library/react';
+import { render, cleanup, waitFor } from '@testing-library/react';
 import { axe, toHaveNoViolations } from 'jest-axe';
 import React from 'react';
 import { Column, ColumnProps } from '../../../../components/Column';
@@ -82,7 +82,7 @@ describe('Column', () => {
   describe('Accessibility Tests', () => {
     it('should pass a basic accessibility test', async () => {
       const { container } = setupComponent({ projects: [testProject1, testProject2], name: 'microservices' });
-      const results = await axe(container);
+      const results = await waitFor(() => axe(container));
       expect(results).toHaveNoViolations();
     });
   });

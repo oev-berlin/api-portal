@@ -45,7 +45,7 @@ describe('ProjectDetails', () => {
     it('ProjectDetails component should render correctly', async () => {
       const screen = setupComponent({ project: testProject1 });
       await screen
-        .findByText(/Salneo_1/i)
+        .findByText(/Salneo/i)
         .then((element) => expect(element).toBeInTheDocument());
       await screen
         .findByText(/Description/)

@@ -3,13 +3,13 @@ import { ServicesOuterContainer, ServicesContainer, TitleContainer } from './sty
 import { Microservice } from '../Card/fragments';
 import { ServiceDisplayProps } from './interfaces';
 
-export const ServicesDisplay = ({ title, services }: ServiceDisplayProps) => (
+export const ServicesDisplay = ({ title, services, isMicroservice }: ServiceDisplayProps) => (
   <>
     <TitleContainer>{title}</TitleContainer>
     <ServicesOuterContainer elevation={0}>
       <ServicesContainer container spacing={2}>
         {services?.map((serviceName: string) => (
-          <Microservice key={serviceName} serviceName={serviceName} />
+          <Microservice key={serviceName} serviceName={serviceName} isMicroservice={isMicroservice} />
         ))}
       </ServicesContainer>
     </ServicesOuterContainer>
