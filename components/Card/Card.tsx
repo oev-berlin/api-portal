@@ -21,7 +21,7 @@ export function Card({ projectData }: CardProps) {
                             key={microserviceName}
                           />
                         ))
-}
+            }
           </CardInnerContainer>
         </CardActionArea>
       </CardOuterContainer>

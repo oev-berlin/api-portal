@@ -1,12 +1,23 @@
 import React from 'react';
-import { Grid } from '@mui/material';
+import { CardActionArea, Grid } from '@mui/material';
+import { useRouter } from 'next/router';
 import { MicroserviceContainer } from './styles';
 import { MicroServiceProps } from './interfaces';
 
-export const Microservice = ({ serviceName }: MicroServiceProps) => (
-  <Grid item xs={12} sm={4} md={6} lg={4}>
-    <MicroserviceContainer>
-      {serviceName}
-    </MicroserviceContainer>
-  </Grid>
-);
+export function Microservice({ serviceName, isMicroservice }: MicroServiceProps) {
+  const router = useRouter();
+  function handelClick() {
+    if (isMicroservice) {
+      router.push(`/project/${serviceName}`);
+    }
+  }
+  return (
+    <Grid item xs={12} sm={4} md={6} lg={4}>
+      <CardActionArea onClick={() => handelClick()} disabled={!isMicroservice}>
+        <MicroserviceContainer>
+          {serviceName}
+        </MicroserviceContainer>
+      </CardActionArea>
+    </Grid>
+  );
+}
