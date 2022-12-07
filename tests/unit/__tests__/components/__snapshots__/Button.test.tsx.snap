@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Snapshots Tests should match a basic snapshot (empty link) 1`] = `
+.c0 {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+<div>
+  <button
+    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium c0 css-sghohy-MuiButtonBase-root-MuiButton-root"
+    tabindex="0"
+    type="button"
+  >
+     
+    Back
+     
+    <span
+      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+    />
+  </button>
+</div>
+`;
+
+exports[`Button Snapshots Tests should match a basic snapshot (empty text and empty link) 1`] = `
+.c0 {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+<div>
+  <button
+    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium c0 css-sghohy-MuiButtonBase-root-MuiButton-root"
+    tabindex="0"
+    type="button"
+  >
+     
+    
+     
+    <span
+      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+    />
+  </button>
+</div>
+`;
+
+exports[`Button Snapshots Tests should match a basic snapshot (empty text) 1`] = `
+.c0 {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+<div>
+  <button
+    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium c0 css-sghohy-MuiButtonBase-root-MuiButton-root"
+    tabindex="0"
+    type="button"
+  >
+     
+    
+     
+    <span
+      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+    />
+  </button>
+</div>
+`;
+
+exports[`Button Snapshots Tests should match a basic snapshot 1`] = `
+.c0 {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+<div>
+  <button
+    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium c0 css-sghohy-MuiButtonBase-root-MuiButton-root"
+    tabindex="0"
+    type="button"
+  >
+     
+    Back
+     
+    <span
+      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+    />
+  </button>
+</div>
+`;
