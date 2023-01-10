@@ -58,21 +58,6 @@ describe('Home', () => {
       .then((element) => expect(element).toBeInTheDocument());
   });
 
-  it('renders a heading', () => {
-    render(<Home projectsData={[testProject1, testProject2]} />);
-    const heading = screen.getByRole('heading', {
-      name: /Swagger API/i,
-    });
-    expect(heading).toBeInTheDocument();
-  });
-  it('renders a heading without projects', () => {
-    render(<Home projectsData={[]} />);
-    const heading = screen.getByRole('heading', {
-      name: /Swagger API/i,
-    });
-    expect(heading).toBeInTheDocument();
-  });
-
   describe('Snapshots Tests', () => {
     it('should match a basic snapshot (with backend and microservice projects)', () => {
       const { container } = setupComponent({ projects: [testProject1, testProject2] });

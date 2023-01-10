@@ -13,10 +13,5 @@ const MainPageInnerContainer = styled(Grid)`
     justify-content: space-between;
   }
 `;
-const MainPageTitle = styled.h1`
-  text-align: center;
-  padding-left: 0.5rem;
-  margin-bottom: 5rem;
-`;
 
-export {MainPageTitle, MainPageInnerContainer, MainPageOuterContainer};
+export { MainPageInnerContainer, MainPageOuterContainer};

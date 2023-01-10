@@ -31,3 +31,4 @@ export const createProjectData = (
     });
 
 export const filterBy = (data: ProjectData[], docType: string): ProjectData[] => data.filter((projectData: ProjectData) => projectData.info.type === docType)
+export const mapToTitle = (projects:ProjectData[]):string[] => projects.map((project:ProjectData) => project.info.title)

@@ -1,7 +1,7 @@
 import React, { useEffect, useContext, useCallback } from 'react';
 import { Header } from '../meta/Header';
 import { Column } from '../components/Column';
-import { MainPageInnerContainer, MainPageOuterContainer, MainPageTitle } from '../styles/pages/main/styles';
+import { MainPageInnerContainer, MainPageOuterContainer } from '../styles/pages/main/styles';
 import { ProjectData } from '../utils/interfaces';
 import { projectsContext, ContextProps } from '../context/ProjectsContext';
 import { docType } from '../utils/types';
@@ -26,7 +26,6 @@ export default function App({ projectsData }: AppProps) {
     <>
       <Header />
       <MainPageOuterContainer>
-        <MainPageTitle>Swagger API</MainPageTitle>
         <MainPageInnerContainer container>
           <Column projects={filterProjects('backend')} name="Backend" key="backend" />
           <Column projects={filterProjects('microservice')} name="Microservices" key="microservices" />

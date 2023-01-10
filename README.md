@@ -219,7 +219,7 @@ Project
         api\
             helo.ts             ...................
         _app.tsx
-        index.tsx               ................... Main app
+        index.ts               ................... Main app
     public\                     ................... Public files
         favicon.ico
         vercel.svg

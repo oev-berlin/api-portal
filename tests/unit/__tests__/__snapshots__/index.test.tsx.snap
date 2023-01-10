@@ -5,11 +5,6 @@ exports[`Home Snapshots Tests should match a basic snapshot (with backend and mi
   <div
     class="styles__MainPageOuterContainer-sc-138x4mg-0 bUphQo MuiBox-root css-0"
   >
-    <h1
-      class="styles__MainPageTitle-sc-138x4mg-2 bcHjKy"
-    >
-      Swagger API
-    </h1>
     <div
       class="MuiGrid-root MuiGrid-container styles__MainPageInnerContainer-sc-138x4mg-1 bnqOnA css-11lq3yg-MuiGrid-root"
     >
@@ -55,11 +50,6 @@ exports[`Home Snapshots Tests should match a basic snapshot (without any project
   <div
     class="styles__MainPageOuterContainer-sc-138x4mg-0 bUphQo MuiBox-root css-0"
   >
-    <h1
-      class="styles__MainPageTitle-sc-138x4mg-2 bcHjKy"
-    >
-      Swagger API
-    </h1>
     <div
       class="MuiGrid-root MuiGrid-container styles__MainPageInnerContainer-sc-138x4mg-1 bnqOnA css-11lq3yg-MuiGrid-root"
     >
@@ -105,11 +95,6 @@ exports[`Home Snapshots Tests should match a basic snapshot (without backend pro
   <div
     class="styles__MainPageOuterContainer-sc-138x4mg-0 bUphQo MuiBox-root css-0"
   >
-    <h1
-      class="styles__MainPageTitle-sc-138x4mg-2 bcHjKy"
-    >
-      Swagger API
-    </h1>
     <div
       class="MuiGrid-root MuiGrid-container styles__MainPageInnerContainer-sc-138x4mg-1 bnqOnA css-11lq3yg-MuiGrid-root"
     >
@@ -155,11 +140,6 @@ exports[`Home Snapshots Tests should match a basic snapshot (without microservic
   <div
     class="styles__MainPageOuterContainer-sc-138x4mg-0 bUphQo MuiBox-root css-0"
   >
-    <h1
-      class="styles__MainPageTitle-sc-138x4mg-2 bcHjKy"
-    >
-      Swagger API
-    </h1>
     <div
       class="MuiGrid-root MuiGrid-container styles__MainPageInnerContainer-sc-138x4mg-1 bnqOnA css-11lq3yg-MuiGrid-root"
     >
